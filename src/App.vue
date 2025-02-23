@@ -10,8 +10,7 @@
 			v-model:selected-r-m-a-t="selectedRMAT"
 			v-model:selected-advisor="selectedAdvisor"
 			v-model:zipcode-search="zipcodeSearch"
-			:rmat-options="rmatOptions"
-			:advisor-options="advisorOptions"
+			@save-all-changes="saveAllChanges"
 		/>
 
 		<v-main>
@@ -22,6 +21,7 @@
 							:zipcodes="filteredZipcodes"
 							:selected-r-m-a-t="selectedRMAT"
 							:selected-advisor="selectedAdvisor"
+							:loading="loading"
 							@zipcode-clicked="openRMATDialog"
 						/>
 					</v-col>
@@ -34,34 +34,33 @@
 						/>
 					</v-col>
 				</v-row>
-				<v-row>
-					<v-col>
-						<v-btn
-							color="success"
-							@click="saveAllChanges"
-							:disabled="!hasPendingChanges"
-						>
-							Save All Changes
-						</v-btn>
-					</v-col>
-				</v-row>
 			</v-container>
 
-			<v-snackbar v-model="snackbar" color="success" timeout="2000">
-				Changes Saved Successfully
-				<template #actions>
-					<v-btn color="white" variant="text" @click="snackbar = false"
-						>Close</v-btn
-					>
-				</template>
-			</v-snackbar>
-
-			<v-dialog v-model="dialog" max-width="400">
+			<v-dialog v-model="dialog" max-width="600">
 				<v-card>
 					<v-card-title
-						>Reassign RMAT for ZipCode {{ selectedZipCode }}</v-card-title
+						>Reassign RMAT for ZipCode
+						{{ selectedZipCode.zipCode }}</v-card-title
 					>
 					<v-card-text>
+						<v-table density="compact" class="mb-4">
+							<thead>
+								<tr class="text-center">
+									<th>RMAT</th>
+									<th>Total Companies</th>
+									<th>Total Employees</th>
+									<th>Total Sales</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="text-center">
+									<td>{{ selectedZipCode.rmatNumber }}</td>
+									<td>{{ selectedZipCode.totalNumberOfCompanies }}</td>
+									<td>{{ selectedZipCode.totalEmployees }}</td>
+									<td>${{ selectedZipCode.totalSales.toLocaleString() }}</td>
+								</tr>
+							</tbody>
+						</v-table>
 						<v-select
 							v-model="newRMAT"
 							:items="rmatOptions"
@@ -75,12 +74,27 @@
 					</v-card-actions>
 				</v-card>
 			</v-dialog>
+
+			<v-snackbar v-model="snackbar" color="success" timeout="2000">
+				Changes Saved Successfully
+				<template #actions>
+					<v-btn color="white" variant="text" @click="snackbar = false"
+						>Close</v-btn
+					>
+				</template>
+			</v-snackbar>
+
+			<v-overlay :model-value="loading" class="align-center justify-center">
+				<v-progress-circular indeterminate size="128" color="primary">
+					{{ loadingMessage }}
+				</v-progress-circular>
+			</v-overlay>
 		</v-main>
 	</v-app>
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onBeforeMount } from "vue";
+import { ref, computed, onMounted } from "vue";
 import { useStore } from "./stores/dataStore";
 import NavigationDrawer from "./components/NavigationDrawer.vue";
 import RmatMap from "./components/RmatMap.vue";
@@ -99,16 +113,18 @@ const dialog = ref(false);
 const selectedZipCode = ref(null);
 const newRMAT = ref(null);
 
-const snackbar = ref(false);
+const rmatOptions = computed(() =>
+	[...new Set(store.rmatData.map((r) => r.rmatNumber))].sort((a, b) => a - b)
+);
 
-const rmatOptions = computed(() => [
-	...new Set(store.rmatData.map((item) => item.rmatNumber)),
-]);
-const advisorOptions = computed(() => [
-	...new Set(store.rmatData.map((item) => item.clientAdvisor)),
-]);
+const snackbar = ref(false);
+const loading = ref(false);
+const loadingMessage = ref("Loading Data...");
 
 const filteredZipcodes = computed(() => {
+	loading.value = true;
+	loadingMessage.value = "Filtering Data...";
+
 	const mergedData = store.zipcodeData.map((zip) => {
 		const rmat =
 			store.rmatData.find((r) => r.rmatNumber === zip.rmatNumber) || {};
@@ -119,7 +135,7 @@ const filteredZipcodes = computed(() => {
 		};
 	});
 
-	return mergedData.filter((item) => {
+	const result = mergedData.filter((item) => {
 		const matchesRMAT = selectedRMAT.value
 			? item.rmatNumber === selectedRMAT.value
 			: true;
@@ -132,14 +148,16 @@ const filteredZipcodes = computed(() => {
 				: true;
 		return matchesRMAT && matchesAdvisor && matchesSearch;
 	});
-});
 
-const hasPendingChanges = computed(
-	() => Object.keys(store.pendingChanges).length > 0
-);
+	loading.value = false;
+	return result;
+});
 
 const loadFiles = async () => {
 	try {
+		loading.value = true;
+		loadingMessage.value = "Loading Data...";
+
 		const rmatResponse = await fetch("/RMATs.csv"); // Updated filename
 		const rmatText = await rmatResponse.text();
 		store.loadRMATData({ text: () => rmatText });
@@ -149,13 +167,21 @@ const loadFiles = async () => {
 		store.loadZipcodeData({ text: () => zipText });
 	} catch (error) {
 		console.error("Error loading CSV files:", error);
+	} finally {
+		loading.value = false;
 	}
 };
 
 const openRMATDialog = (zipcode) => {
-	selectedZipCode.value = zipcode;
-	const rmat = store.rmatData.find((r) => r.ZipCode == zipcode);
-	newRMAT.value = rmat ? rmat["RMAT Number"] : null;
+	const zipCodeObject = store.zipcodeData.find((z) => z.zipCode === zipcode);
+	selectedZipCode.value = zipCodeObject ?? {
+		zipCode: zipcode,
+		rmatNumber: null,
+		totalNumberOfCompanies: 0,
+		totalEmployees: 0,
+		totalSales: 0,
+	};
+	newRMAT.value = zipCodeObject ? zipCodeObject.rmatNumber : null;
 	dialog.value = true;
 };
 
@@ -171,10 +197,6 @@ const saveAllChanges = () => {
 	snackbar.value = true;
 };
 
-onBeforeMount(async () => {
-	await loadFiles();
-});
-
 onMounted(() => {
 	delete L.Icon.Default.prototype._getIconUrl;
 	L.Icon.Default.mergeOptions({
@@ -182,6 +204,8 @@ onMounted(() => {
 		iconUrl: markerIcon,
 		shadowUrl: markerShadow,
 	});
+
+	loadFiles();
 });
 </script>
 

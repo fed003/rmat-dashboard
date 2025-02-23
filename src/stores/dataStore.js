@@ -66,4 +66,9 @@ export const useStore = defineStore("dataStore", {
 			this.pendingChanges = {};
 		},
 	},
+	getters: {
+		clientAdvisorOptions: (state) => [
+			...new Set(state.rmatData.map((r) => r.clientAdvisor)),
+		],
+	},
 });

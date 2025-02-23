@@ -11,7 +11,7 @@
 			name="OpenStreetMap"
 		></l-tile-layer>
 		<l-geo-json
-			v-if="geoJsonData"
+			v-if="geoJsonData && !props.loading"
 			:geojson="geoJsonData"
 			:options-style="geoJsonStyle"
 			:key="mapKey"
@@ -29,7 +29,8 @@ import geoJsonData from "../assets/ca_california_zip_codes_geo.min.json";
 const props = defineProps({
 	zipcodes: { type: Array, required: true },
 	selectedRMAT: { type: [Number, null], default: null },
-	selectedAdvisor: { type: [Number, null], default: null },
+	selectedAdvisor: { type: [String, null], default: null },
+	loading: { type: Boolean, default: false },
 });
 
 // Emits
@@ -76,15 +77,10 @@ const geoJsonStyle = (feature) => {
 	};
 };
 
-const mapKey = computed(() => {
-	console.log(
-		"mapKey computed",
-		props.zipcodes,
-		props.selectedRMAT,
-		props.selectedAdvisor
-	);
-	return `${props.selectedRMAT}-${props.selectedAdvisor}-${props.zipcodes.length}`;
-});
+const mapKey = computed(
+	() =>
+		`${props.selectedRMAT}-${props.selectedAdvisor}-${props.zipcodes.length}`
+);
 
 // Watch filters and zoom to selected regions
 watch([() => props.selectedRMAT, () => props.selectedAdvisor], () => {
