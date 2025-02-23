@@ -25,8 +25,6 @@ import { ref, watch } from "vue";
 import { LMap, LTileLayer, LGeoJson } from "@vue-leaflet/vue-leaflet";
 import geoJsonData from "../assets/ca_california_zip_codes_geo.min.json";
 
-console.log(geoJsonData.features.length);
-
 // Props
 const props = defineProps({
 	zipcodes: { type: Array, required: true },
@@ -50,24 +48,32 @@ const leafletMap = ref(null);
 // GeoJSON styling
 const geoJsonStyle = (feature) => {
 	const zipcode = feature.properties.ZCTA5CE10;
-	const zipData = props.zipcodes.find((z) => z.ZipCode == zipcode);
-	const rmat = zipData ? zipData["RMAT Number"] : null;
-	const advisor = zipData ? zipData["Client Advisor"] : null;
+	const zipData = props.zipcodes.find((z) => z.zipCode == zipcode);
+	const rmat = zipData?.rmatNumber;
+	const advisor = zipData?.clientAdvisor;
 	// Default color unless matched by filter
-	let color = zipData ? zipData["Color"] : unassignedMapColor;
+	let color = zipData?.color || unassignedMapColor;
 
 	// Check if we need to filter
 	if (props.selectedRMAT || props.selectedAdvisor) {
 		//  If this zipcode is assigned, then we check the filter
 		if (company) {
 			if (
-				(props.selectedRMAT && rmat != props.selectedRMAT) ||
+				(props.selectedRMAT && rmat != Number(props.selectedRMAT)) ||
 				(props.selectedAdvisor && advisor != props.selectedAdvisor)
 			) {
 				color = darkMapColor;
 			}
 		}
 	}
+
+	console.log(
+		zipcode,
+		zipData,
+		props.selectedRMAT,
+		props.selectedAdvisor,
+		color
+	);
 
 	return {
 		fillColor: color,
@@ -89,7 +95,8 @@ watch([() => props.selectedRMAT, () => props.selectedAdvisor], () => {
 
 	const selectedZipcodes = props.zipcodes.filter((zip) => {
 		return (
-			(props.selectedRMAT && zip["RMAT Number"] === props.selectedRMAT) ||
+			(props.selectedRMAT &&
+				zip["RMAT Number"] === Number(props.selectedRMAT)) ||
 			(props.selectedAdvisor && zip["Client Advisor"] === props.selectedAdvisor)
 		);
 	});
@@ -114,7 +121,7 @@ watch([() => props.selectedRMAT, () => props.selectedAdvisor], () => {
 });
 
 const onGeoJsonClick = (event) => {
-	const zipcode = event.layer.feature.properties.ZCTA5CE10;
+	const zipcode = Number(event.layer.feature.properties.ZCTA5CE10);
 	emit("zipcode-clicked", zipcode);
 };
 </script>

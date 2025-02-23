@@ -41,7 +41,6 @@ const zipcodeSearch = defineModel("zipcodeSearch", {
 	type: String,
 	default: "",
 });
-
 defineProps({
 	rmatOptions: { type: Array, required: true },
 	advisorOptions: { type: Array, required: true },

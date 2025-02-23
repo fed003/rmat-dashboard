@@ -102,33 +102,34 @@ const newRMAT = ref(null);
 const snackbar = ref(false);
 
 const rmatOptions = computed(() => [
-	...new Set(store.rmatData.map((item) => item["RMAT Number"])),
+	...new Set(store.rmatData.map((item) => item.rmatNumber)),
 ]);
 const advisorOptions = computed(() => [
-	...new Set(store.rmatData.map((item) => item["Client Advisor"])),
+	...new Set(store.rmatData.map((item) => item.clientAdvisor)),
 ]);
 
 const filteredZipcodes = computed(() => {
 	const mergedData = store.zipcodeData.map((zip) => {
 		const rmat =
-			store.rmatData.find((r) => r["RMAT Number"] == zip["RMAT Number"]) || {};
+			store.rmatData.find((r) => r.rmatNumber === zip.rmatNumber) || {};
 		return {
 			...zip,
-			"Client Advisor": rmat["Client Advisor"],
-			Color: rmat["Color"],
+			clientAdvisor: rmat.clientAdvisor,
+			color: rmat.color,
 		};
 	});
 
 	return mergedData.filter((item) => {
 		const matchesRMAT = selectedRMAT.value
-			? item["RMAT Number"] === selectedRMAT.value
+			? item.rmatNumber === Number(selectedRMAT.value)
 			: true;
 		const matchesAdvisor = selectedAdvisor.value
-			? item["Client Advisor"] === selectedAdvisor.value
+			? item.clientAdvisor === selectedAdvisor.value
 			: true;
-		const matchesSearch = zipcodeSearch.value
-			? item.ZipCode.toLowerCase().includes(zipcodeSearch.value.toLowerCase())
-			: true;
+		const matchesSearch =
+			zipcodeSearch.value.length > 0
+				? String(item.zipCode).includes(zipcodeSearch.value)
+				: true;
 		return matchesRMAT && matchesAdvisor && matchesSearch;
 	});
 });
@@ -153,7 +154,7 @@ const loadFiles = async () => {
 
 const openRMATDialog = (zipcode) => {
 	selectedZipCode.value = zipcode;
-	const rmat = store.rmatData.find((r) => r.ZipCode === zipcode);
+	const rmat = store.rmatData.find((r) => r.ZipCode == zipcode);
 	newRMAT.value = rmat ? rmat["RMAT Number"] : null;
 	dialog.value = true;
 };

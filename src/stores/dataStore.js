@@ -12,6 +12,10 @@ export const useStore = defineStore("dataStore", {
 			const text = await file.text();
 			Papa.parse(text, {
 				header: true,
+				transform: (value, header) => {
+					if (header === "rmatNumber") return Number(value);
+					return value; // clientAdvisor and color stay strings
+				},
 				complete: (result) => {
 					this.rmatData = result.data;
 				},
@@ -21,13 +25,27 @@ export const useStore = defineStore("dataStore", {
 			const text = await file.text();
 			Papa.parse(text, {
 				header: true,
+				transform: (value, header) => {
+					if (
+						[
+							"zipCode",
+							"totalNumberOfCompanies",
+							"totalSales",
+							"totalEmployees",
+							"rmatNumber",
+						].includes(header)
+					) {
+						return Number(value);
+					}
+					return value; // No strings here, but future-proofed
+				},
 				complete: (result) => {
 					this.zipcodeData = result.data;
 				},
 			});
-			console.log(this.zipcodeData.length);
 		},
 		assignRMAT(zipcode, newRMAT) {
+			newRMAT = Number(newRMAT);
 			const rmatEntry = this.rmatData.find((r) => r["RMAT Number"] === newRMAT);
 			const newAdvisor = rmatEntry ? rmatEntry["Client Advisor"] : null;
 			this.pendingChanges[zipcode] = {
