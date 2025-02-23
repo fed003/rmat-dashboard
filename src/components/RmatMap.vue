@@ -14,22 +14,22 @@
 			v-if="geoJsonData"
 			:geojson="geoJsonData"
 			:options-style="geoJsonStyle"
-			:key="`${props.selectedRMAT}-${props.selectedAdvisor}`"
+			:key="mapKey"
 			@click="onGeoJsonClick"
 		></l-geo-json>
 	</l-map>
 </template>
 
 <script setup>
-import { ref, watch } from "vue";
+import { ref, watch, computed } from "vue";
 import { LMap, LTileLayer, LGeoJson } from "@vue-leaflet/vue-leaflet";
 import geoJsonData from "../assets/ca_california_zip_codes_geo.min.json";
 
 // Props
 const props = defineProps({
 	zipcodes: { type: Array, required: true },
-	selectedRMAT: { type: [String, null], default: null },
-	selectedAdvisor: { type: [String, null], default: null },
+	selectedRMAT: { type: [Number, null], default: null },
+	selectedAdvisor: { type: [Number, null], default: null },
 });
 
 // Emits
@@ -57,7 +57,7 @@ const geoJsonStyle = (feature) => {
 	// Check if we need to filter
 	if (props.selectedRMAT || props.selectedAdvisor) {
 		//  If this zipcode is assigned, then we check the filter
-		if (company) {
+		if (zipData) {
 			if (
 				(props.selectedRMAT && rmat != Number(props.selectedRMAT)) ||
 				(props.selectedAdvisor && advisor != props.selectedAdvisor)
@@ -67,14 +67,6 @@ const geoJsonStyle = (feature) => {
 		}
 	}
 
-	console.log(
-		zipcode,
-		zipData,
-		props.selectedRMAT,
-		props.selectedAdvisor,
-		color
-	);
-
 	return {
 		fillColor: color,
 		weight: 2,
@@ -83,6 +75,16 @@ const geoJsonStyle = (feature) => {
 		fillOpacity: 0.7,
 	};
 };
+
+const mapKey = computed(() => {
+	console.log(
+		"mapKey computed",
+		props.zipcodes,
+		props.selectedRMAT,
+		props.selectedAdvisor
+	);
+	return `${props.selectedRMAT}-${props.selectedAdvisor}-${props.zipcodes.length}`;
+});
 
 // Watch filters and zoom to selected regions
 watch([() => props.selectedRMAT, () => props.selectedAdvisor], () => {

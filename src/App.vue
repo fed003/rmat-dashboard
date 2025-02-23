@@ -80,7 +80,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from "vue";
+import { ref, computed, onMounted, onBeforeMount } from "vue";
 import { useStore } from "./stores/dataStore";
 import NavigationDrawer from "./components/NavigationDrawer.vue";
 import RmatMap from "./components/RmatMap.vue";
@@ -121,7 +121,7 @@ const filteredZipcodes = computed(() => {
 
 	return mergedData.filter((item) => {
 		const matchesRMAT = selectedRMAT.value
-			? item.rmatNumber === Number(selectedRMAT.value)
+			? item.rmatNumber === selectedRMAT.value
 			: true;
 		const matchesAdvisor = selectedAdvisor.value
 			? item.clientAdvisor === selectedAdvisor.value
@@ -171,6 +171,10 @@ const saveAllChanges = () => {
 	snackbar.value = true;
 };
 
+onBeforeMount(async () => {
+	await loadFiles();
+});
+
 onMounted(() => {
 	delete L.Icon.Default.prototype._getIconUrl;
 	L.Icon.Default.mergeOptions({
@@ -178,7 +182,6 @@ onMounted(() => {
 		iconUrl: markerIcon,
 		shadowUrl: markerShadow,
 	});
-	loadFiles();
 });
 </script>
 

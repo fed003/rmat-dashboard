@@ -4,7 +4,7 @@
 			<v-list-item>
 				<v-select
 					v-model="selectedRMAT"
-					:items="rmatOptions"
+					:items="rmatOptions.sort((a, b) => a - b)"
 					label="Filter by RMAT"
 					clearable
 				></v-select>
@@ -30,7 +30,7 @@
 
 <script setup>
 const selectedRMAT = defineModel("selectedRMAT", {
-	type: [String, null],
+	type: [Number, null],
 	default: null,
 });
 const selectedAdvisor = defineModel("selectedAdvisor", {
