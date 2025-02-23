@@ -21,13 +21,15 @@
 </template>
 
 <script setup>
-import { ref, watch, computed } from "vue";
+import { ref, watch } from "vue";
 import { LMap, LTileLayer, LGeoJson } from "@vue-leaflet/vue-leaflet";
 import geoJsonData from "../assets/ca_california_zip_codes_geo.min.json";
 
+console.log(geoJsonData.features.length);
+
 // Props
 const props = defineProps({
-	companies: { type: Array, required: true },
+	zipcodes: { type: Array, required: true },
 	selectedRMAT: { type: [String, null], default: null },
 	selectedAdvisor: { type: [String, null], default: null },
 });
@@ -38,7 +40,8 @@ const emit = defineEmits(["zipcode-clicked"]);
 // Map state
 const darkMapColor = "#D3D3D3";
 const unassignedMapColor = "#D3D3D3";
-const dfltCenter = [37.127655, -118.480532];
+// const dfltCenter = [37.127655, -118.480532];
+const dfltCenter = [36.7783, -119.4179];
 const dfltZoom = 6;
 const zoom = ref(dfltZoom);
 const center = ref(dfltCenter);
@@ -47,11 +50,11 @@ const leafletMap = ref(null);
 // GeoJSON styling
 const geoJsonStyle = (feature) => {
 	const zipcode = feature.properties.ZCTA5CE10;
-	const company = props.companies.find((c) => c.ZipCode === zipcode);
-	const rmat = company ? company["RMAT Number"] : null;
-	const advisor = company ? company["Client Advisor"] : null;
+	const zipData = props.zipcodes.find((z) => z.ZipCode == zipcode);
+	const rmat = zipData ? zipData["RMAT Number"] : null;
+	const advisor = zipData ? zipData["Client Advisor"] : null;
 	// Default color unless matched by filter
-	let color = company ? company["Color"] : unassignedMapColor;
+	let color = zipData ? zipData["Color"] : unassignedMapColor;
 
 	// Check if we need to filter
 	if (props.selectedRMAT || props.selectedAdvisor) {
@@ -66,8 +69,6 @@ const geoJsonStyle = (feature) => {
 		}
 	}
 
-	console.log(company, zipcode, color);
-
 	return {
 		fillColor: color,
 		weight: 2,
@@ -80,25 +81,23 @@ const geoJsonStyle = (feature) => {
 // Watch filters and zoom to selected regions
 watch([() => props.selectedRMAT, () => props.selectedAdvisor], () => {
 	if (!leafletMap.value || (!props.selectedRMAT && !props.selectedAdvisor)) {
-		console.log("No leafletMap or no filters - set defaults");
 		center.value = dfltCenter;
 		zoom.value = dfltZoom;
 		leafletMap.value.leafletObject.setView(dfltCenter, dfltZoom); // Reset to default
 		return;
 	}
 
-	const selectedCompanies = props.companies.filter((company) => {
+	const selectedZipcodes = props.zipcodes.filter((zip) => {
 		return (
-			(props.selectedRMAT && company["RMAT Number"] === props.selectedRMAT) ||
-			(props.selectedAdvisor &&
-				company["Client Advisor"] === props.selectedAdvisor)
+			(props.selectedRMAT && zip["RMAT Number"] === props.selectedRMAT) ||
+			(props.selectedAdvisor && zip["Client Advisor"] === props.selectedAdvisor)
 		);
 	});
 
-	if (selectedCompanies.length === 0) return;
+	if (selectedZipcodes.length === 0) return;
 
 	const bounds = [];
-	selectedCompanies.forEach((company) => {
+	selectedZipcodes.forEach((company) => {
 		const feature = geoJsonData.features.find(
 			(f) => f.properties.ZCTA5CE10 === company.ZipCode
 		);

@@ -1,7 +1,7 @@
 <template>
 	<v-data-table
 		:headers="headers"
-		:items="companies"
+		:items="zipcodes"
 		:items-per-page="10"
 		:item-class="getRowClass"
 		@click:row="rowClicked"
@@ -10,8 +10,9 @@
 
 <script setup>
 import { ref } from "vue";
+
 const props = defineProps({
-	companies: { type: Array, required: true },
+	zipcodes: { type: Array, required: true }, // Renamed from companies
 });
 
 const emit = defineEmits(["row-clicked"]);

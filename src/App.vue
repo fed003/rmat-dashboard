@@ -9,7 +9,7 @@
 		<navigation-drawer
 			v-model:selected-r-m-a-t="selectedRMAT"
 			v-model:selected-advisor="selectedAdvisor"
-			v-model:company-search="companySearch"
+			v-model:zipcode-search="zipcodeSearch"
 			:rmat-options="rmatOptions"
 			:advisor-options="advisorOptions"
 		/>
@@ -19,7 +19,7 @@
 				<v-row>
 					<v-col cols="12">
 						<rmat-map
-							:companies="filteredCompanies"
+							:zipcodes="filteredZipcodes"
 							:selected-r-m-a-t="selectedRMAT"
 							:selected-advisor="selectedAdvisor"
 							@zipcode-clicked="openRMATDialog"
@@ -29,7 +29,7 @@
 				<v-row>
 					<v-col cols="12">
 						<rmat-data-table
-							:companies="filteredCompanies"
+							:zipcodes="filteredZipcodes"
 							@row-clicked="openRMATDialog"
 						/>
 					</v-col>
@@ -46,6 +46,15 @@
 					</v-col>
 				</v-row>
 			</v-container>
+
+			<v-snackbar v-model="snackbar" color="success" timeout="2000">
+				Changes Saved Successfully
+				<template #actions>
+					<v-btn color="white" variant="text" @click="snackbar = false"
+						>Close</v-btn
+					>
+				</template>
+			</v-snackbar>
 
 			<v-dialog v-model="dialog" max-width="400">
 				<v-card>
@@ -85,10 +94,12 @@ const store = useStore();
 
 const selectedRMAT = ref(null);
 const selectedAdvisor = ref(null);
-const companySearch = ref("");
+const zipcodeSearch = ref("");
 const dialog = ref(false);
 const selectedZipCode = ref(null);
 const newRMAT = ref(null);
+
+const snackbar = ref(false);
 
 const rmatOptions = computed(() => [
 	...new Set(store.rmatData.map((item) => item["RMAT Number"])),
@@ -97,11 +108,15 @@ const advisorOptions = computed(() => [
 	...new Set(store.rmatData.map((item) => item["Client Advisor"])),
 ]);
 
-const filteredCompanies = computed(() => {
-	const mergedData = store.companyData.map((company) => {
+const filteredZipcodes = computed(() => {
+	const mergedData = store.zipcodeData.map((zip) => {
 		const rmat =
-			store.rmatData.find((r) => r.ZipCode === company.ZipCode) || {};
-		return { ...company, ...rmat };
+			store.rmatData.find((r) => r["RMAT Number"] == zip["RMAT Number"]) || {};
+		return {
+			...zip,
+			"Client Advisor": rmat["Client Advisor"],
+			Color: rmat["Color"],
+		};
 	});
 
 	return mergedData.filter((item) => {
@@ -111,8 +126,8 @@ const filteredCompanies = computed(() => {
 		const matchesAdvisor = selectedAdvisor.value
 			? item["Client Advisor"] === selectedAdvisor.value
 			: true;
-		const matchesSearch = companySearch.value
-			? item.ZipCode.toLowerCase().includes(companySearch.value.toLowerCase())
+		const matchesSearch = zipcodeSearch.value
+			? item.ZipCode.toLowerCase().includes(zipcodeSearch.value.toLowerCase())
 			: true;
 		return matchesRMAT && matchesAdvisor && matchesSearch;
 	});
@@ -124,13 +139,13 @@ const hasPendingChanges = computed(
 
 const loadFiles = async () => {
 	try {
-		const rmatResponse = await fetch("/RMATs_and_ZipCodes.csv");
+		const rmatResponse = await fetch("/RMATs.csv"); // Updated filename
 		const rmatText = await rmatResponse.text();
 		store.loadRMATData({ text: () => rmatText });
 
-		const companyResponse = await fetch("/Companies.csv");
-		const companyText = await companyResponse.text();
-		store.loadCompanyData({ text: () => companyText });
+		const zipResponse = await fetch("/ZipCodes.csv"); // Updated filename
+		const zipText = await zipResponse.text();
+		store.loadZipcodeData({ text: () => zipText });
 	} catch (error) {
 		console.error("Error loading CSV files:", error);
 	}
@@ -152,6 +167,7 @@ const saveRMATChange = () => {
 
 const saveAllChanges = () => {
 	store.saveChanges();
+	snackbar.value = true;
 };
 
 onMounted(() => {

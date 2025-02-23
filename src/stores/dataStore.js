@@ -3,9 +3,9 @@ import Papa from "papaparse";
 
 export const useStore = defineStore("dataStore", {
 	state: () => ({
-		rmatData: [],
-		companyData: [],
-		pendingChanges: {}, // Stores { zipcode: { rmat: 'newRMAT', advisor: 'newAdvisor' } }
+		rmatData: [], // Now RMAT Number, Client Advisor, Color
+		zipcodeData: [], // Now ZipCode, Total number of companies, Total sales, Total employees, RMAT Number
+		pendingChanges: {},
 	}),
 	actions: {
 		async loadRMATData(file) {
@@ -17,17 +17,17 @@ export const useStore = defineStore("dataStore", {
 				},
 			});
 		},
-		async loadCompanyData(file) {
+		async loadZipcodeData(file) {
 			const text = await file.text();
 			Papa.parse(text, {
 				header: true,
 				complete: (result) => {
-					this.companyData = result.data;
+					this.zipcodeData = result.data;
 				},
 			});
+			console.log(this.zipcodeData.length);
 		},
 		assignRMAT(zipcode, newRMAT) {
-			// Find the Client Advisor associated with the new RMAT
 			const rmatEntry = this.rmatData.find((r) => r["RMAT Number"] === newRMAT);
 			const newAdvisor = rmatEntry ? rmatEntry["Client Advisor"] : null;
 			this.pendingChanges[zipcode] = {
@@ -37,10 +37,12 @@ export const useStore = defineStore("dataStore", {
 		},
 		saveChanges() {
 			for (const [zipcode, changes] of Object.entries(this.pendingChanges)) {
-				const rmatIndex = this.rmatData.findIndex((r) => r.ZipCode === zipcode);
-				if (rmatIndex !== -1) {
-					this.rmatData[rmatIndex]["RMAT Number"] = changes.rmat;
-					this.rmatData[rmatIndex]["Client Advisor"] = changes.advisor;
+				const zipIndex = this.zipcodeData.findIndex(
+					(z) => z.ZipCode === zipcode
+				);
+				if (zipIndex !== -1) {
+					this.zipcodeData[zipIndex]["RMAT Number"] = changes.rmat;
+					// Client Advisor is derived, not stored directly in zipcodeData
 				}
 			}
 			this.pendingChanges = {};

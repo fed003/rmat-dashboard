@@ -19,8 +19,8 @@
 			</v-list-item>
 			<v-list-item>
 				<v-text-field
-					v-model="companySearch"
-					label="Search by Company"
+					v-model="zipcodeSearch"
+					label="Search by ZipCode"
 					clearable
 				></v-text-field>
 			</v-list-item>
@@ -29,7 +29,6 @@
 </template>
 
 <script setup>
-// Define models for two-way binding
 const selectedRMAT = defineModel("selectedRMAT", {
 	type: [String, null],
 	default: null,
@@ -38,12 +37,11 @@ const selectedAdvisor = defineModel("selectedAdvisor", {
 	type: [String, null],
 	default: null,
 });
-const companySearch = defineModel("companySearch", {
+const zipcodeSearch = defineModel("zipcodeSearch", {
 	type: String,
 	default: "",
 });
 
-// Props for options (no v-model needed here)
 defineProps({
 	rmatOptions: { type: Array, required: true },
 	advisorOptions: { type: Array, required: true },
