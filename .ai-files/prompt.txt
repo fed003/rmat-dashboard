@@ -1,0 +1,25 @@
+I'd like to build a small, interactive web app to assist the sales manager on my team. She needs a way to analyze our client and potential client data and would like to be able to filter the data by various criteria. She's not very tech-savvy, so the app needs to be user-friendly and intuitive. She's also very busy, so the app needs to be fast and responsive. She's asked for the following features:
+
+1. View data on a map, color coded by sales person
+2. Companies are assigned to a region, called an RMAT, by their zipcode
+3. RMATs are assigned to sales people, called client advisors. They can have multiple RMATs
+4. Filter data by RMAT and client advisor
+5. View a list of companies in a table, color coded by sales person
+6. From either the map or table, click on a zipcode and be able to assign it to a different RMAT. The original RMAT assignment should be maintained until all changes are complete and saved.
+
+Initially, I'd like to be able to load data from 2 CSV files. The data will include the following columns:
+File 1: RMATs and ZipCodes
+- RMAT Number
+- ZipCode
+- Client Advisor
+File 2: Companies
+- ZipCode
+- Total number of companies
+- Total sales
+- Total employees
+
+I'd like to be able to load the data from the CSV files and display it in the app. I'd also like to be able to filter the data by RMAT, client advisor, and company name. I'd like to be able to view the data on a map, color coded by sales person, and in a table, color coded by RMAT. I'd like to be able to click on a zipcode in either the map or table and assign it to a different RMAT. The original RMAT assignment should be maintained until all changes are complete and saved.
+
+I have experience with Vue and would like to use it to build the app. I'd like to use a Vue component library to speed up development. I'd like to use a mapping library to display the data on a map. I'd like to use a table library to display the data in a table. I'd like to use a state management library to manage the data and state of the app. I'd like to use a build tool to bundle the app and optimize it for production. 
+
+If this all makes sense, then we can begin by setting up our project and installing the necessary dependencies. I'd then like to work on the basic page layout, followed by loading the data from the CSV files and displaying it in the app. Once we have the data loaded and displayed, we can work on filtering the data and displaying it on a map and in a table. Finally, we can work on the ability to assign zipcodes to different RMATs.
