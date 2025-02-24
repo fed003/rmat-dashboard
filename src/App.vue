@@ -10,7 +10,6 @@
 			v-model:selected-r-m-a-t="selectedRMAT"
 			v-model:selected-advisor="selectedAdvisor"
 			v-model:zipcode-search="zipcodeSearch"
-			@save-all-changes="saveAllChanges"
 		/>
 
 		<v-main>
@@ -21,8 +20,9 @@
 							:zipcodes="filteredZipcodes"
 							:selected-r-m-a-t="selectedRMAT"
 							:selected-advisor="selectedAdvisor"
-							:loading="loading"
 							@zipcode-clicked="openRMATDialog"
+							@zipcode-hovered="onZipcodeHovered"
+							@zipcode-left="onZipcodeLeft"
 						/>
 					</v-col>
 				</v-row>
@@ -37,11 +37,10 @@
 			</v-container>
 
 			<v-dialog v-model="dialog" max-width="600">
-				<v-card>
-					<v-card-title
-						>Reassign RMAT for ZipCode
-						{{ selectedZipCode.zipCode }}</v-card-title
-					>
+				<v-card
+					:title="`RMAT for Zip Code ${selectedZipCode.zipCode}`"
+					:subtitle="selectedZipCode.clientAdvisor"
+				>
 					<v-card-text>
 						<v-table density="compact" class="mb-4">
 							<thead>
@@ -75,8 +74,8 @@
 				</v-card>
 			</v-dialog>
 
-			<v-snackbar v-model="snackbar" color="success" timeout="2000">
-				Changes Saved Successfully
+			<v-snackbar v-model="snackbar" :color="snackbarColor" timeout="3000">
+				{{ snackbarMessage }}
 				<template #actions>
 					<v-btn color="white" variant="text" @click="snackbar = false"
 						>Close</v-btn
@@ -118,24 +117,20 @@ const rmatOptions = computed(() =>
 );
 
 const snackbar = ref(false);
+const snackbarColor = ref("success");
+const snackbarMessage = ref("");
+
 const loading = ref(false);
 const loadingMessage = ref("Loading Data...");
 
+const hoveredZipData = ref(null);
+
 const filteredZipcodes = computed(() => {
+	console.log("Filtering Data...");
 	loading.value = true;
 	loadingMessage.value = "Filtering Data...";
 
-	const mergedData = store.zipcodeData.map((zip) => {
-		const rmat =
-			store.rmatData.find((r) => r.rmatNumber === zip.rmatNumber) || {};
-		return {
-			...zip,
-			clientAdvisor: rmat.clientAdvisor,
-			color: rmat.color,
-		};
-	});
-
-	const result = mergedData.filter((item) => {
+	const result = store.zipcodeData.filter((item) => {
 		const matchesRMAT = selectedRMAT.value
 			? item.rmatNumber === selectedRMAT.value
 			: true;
@@ -187,14 +182,28 @@ const openRMATDialog = (zipcode) => {
 
 const saveRMATChange = () => {
 	if (selectedZipCode.value && newRMAT.value) {
-		store.assignRMAT(selectedZipCode.value, newRMAT.value);
+		let rmatUpdated = store.assignRMAT(selectedZipCode.value, newRMAT.value);
+		if (rmatUpdated) {
+			selectedZipCode.value.originalRmatNumber =
+				selectedZipCode.value.rmatNumber;
+			selectedZipCode.value.rmatNumber = newRMAT.value;
+			snackbarMessage.value = `RMAT for Zip Code ${selectedZipCode.value.zipCode} updated to ${newRMAT.value}`;
+			snackbarColor.value = "success";
+		} else {
+			snackbarMessage.value = `RMAT for Zip Code ${selectedZipCode.value.zipCode} could not be updated`;
+			snackbarColor.value = "error";
+		}
 	}
 	dialog.value = false;
+	snackbar.value = true;
 };
 
-const saveAllChanges = () => {
-	store.saveChanges();
-	snackbar.value = true;
+const onZipcodeHovered = (zipData) => {
+	hoveredZipData.value = zipData;
+};
+
+const onZipcodeLeft = () => {
+	hoveredZipData.value = null;
 };
 
 onMounted(() => {
