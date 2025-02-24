@@ -8,6 +8,7 @@ export const useStore = defineStore("dataStore", () => {
 	const zipcodeData = ref([]); // Now ZipCode, Total number of companies, Total sales, Total employees, RMAT Number
 	const pendingChanges = ref({});
 	const hoveredZipData = ref(null);
+	const changeLog = ref([]);
 
 	// actions
 	const loadRMATData = async (file) => {
@@ -75,12 +76,23 @@ export const useStore = defineStore("dataStore", () => {
 		const zipEntryIndex = zipcodeData.value.findIndex(
 			(z) => z.zipCode == zipcodeObject.zipCode
 		);
+
 		if (zipEntryIndex < 0) {
 			console.error("Zip code not found", zipcodeObject);
 			return false;
 		}
 
 		const zipEntry = zipcodeData.value[zipEntryIndex];
+
+		//	Add the change to the change log
+		for (let i = 0; i < 10; i++) {
+			changeLog.value.unshift({
+				zipCode: zipEntry.zipCode,
+				oldRmat: zipEntry.rmatNumber,
+				newRmat: newRMAT,
+				timestamp: new Date().toISOString(),
+			});
+		}
 
 		//	Find the RMAT entry
 		const rmatEntry = rmatData.value.find((r) => r.rmatNumber === newRMAT);
@@ -111,6 +123,9 @@ export const useStore = defineStore("dataStore", () => {
 				zip.color = zip.originalColor;
 			}
 		}
+
+		//	Reset the change log
+		changeLog.value = [];
 	};
 
 	const setHoveredZipData = (zipData) => {
@@ -127,6 +142,7 @@ export const useStore = defineStore("dataStore", () => {
 		zipcodeData,
 		pendingChanges,
 		hoveredZipData,
+		changeLog,
 		loadRMATData,
 		loadZipcodeData,
 		assignRMAT,

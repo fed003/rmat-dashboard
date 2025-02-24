@@ -103,6 +103,8 @@ import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
 
+import ChangeLog from "./components/ChangeLog.vue";
+
 const store = useStore();
 
 const selectedRMAT = ref(null);
