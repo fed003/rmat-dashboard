@@ -1,5 +1,5 @@
 <template>
-	<v-navigation-drawer app permanent>
+	<v-navigation-drawer app permanent width="300">
 		<v-list>
 			<v-list-item>
 				<v-select
@@ -24,13 +24,33 @@
 					clearable
 				></v-text-field>
 			</v-list-item>
-			<v-list-item>
-				<v-btn
-					color="success"
-					:disabled="!hasPendingChanges"
-					@click="$emit('save-all-changes')"
-				>
-					Save All Changes
+			<v-list-item class="zip-tooltip">
+				<v-list density="compact" class="elevation-1">
+					<v-list-item class="pb-0 border-b">
+						<strong>RMAT:</strong> {{ displayedHoveredZipData.rmatNumber }}
+					</v-list-item>
+					<v-list-item class="pb-0 border-b">
+						<strong>ZipCode:</strong> {{ displayedHoveredZipData.zipCode }}
+					</v-list-item>
+					<v-list-item class="pb-0 border-b">
+						<strong>Advisor:</strong>
+						{{ displayedHoveredZipData.clientAdvisor }}
+					</v-list-item>
+					<v-list-item class="pb-0 border-b">
+						<strong>Employees:</strong>
+						{{ displayedHoveredZipData.totalEmployees }}
+					</v-list-item>
+					<v-list-item class="pb-0 border-b">
+						<strong>Sales:</strong>
+						{{ formatCurrency(displayedHoveredZipData.totalSales) }}
+					</v-list-item>
+					<v-list-item class="pb-0 border-b">
+						<strong>Companies:</strong>
+						{{ displayedHoveredZipData.totalNumberOfCompanies }}
+					</v-list-item>
+				</v-list>
+				<v-btn color="primary" block class="mt-4" @click="store.revertChanges">
+					Revert Changes
 				</v-btn>
 			</v-list-item>
 		</v-list>
@@ -40,6 +60,7 @@
 <script setup>
 import { computed } from "vue";
 import { useStore } from "../stores/dataStore";
+import { formatCurrency } from "../utilities/formatters";
 
 const selectedRMAT = defineModel("selectedRMAT", {
 	type: [Number, null],
@@ -58,6 +79,19 @@ const zipcodeSearch = defineModel("zipcodeSearch", {
 
 const store = useStore();
 
+const displayedHoveredZipData = computed(() => {
+	return (
+		store.hoveredZipData ?? {
+			zipCode: "",
+			totalNumberOfCompanies: "",
+			totalSales: "",
+			totalEmployees: "",
+			rmatNumber: "",
+			clientAdvisor: "",
+		}
+	);
+});
+
 const advisorOptions = computed(() => {
 	return store.clientAdvisorOptions.sort();
 });
@@ -74,10 +108,13 @@ const rmatOptions = computed(() => {
 		),
 	].sort();
 });
-
-const hasPendingChanges = computed(
-	() => Object.keys(store.pendingChanges).length > 0
-);
-
-defineEmits(["save-all-changes"]);
 </script>
+
+<style scoped>
+.zip-tooltip {
+	background-color: rgba(255, 255, 255, 0.9);
+	padding: 8px;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+</style>

@@ -7,9 +7,10 @@ export const useStore = defineStore("dataStore", () => {
 	const rmatData = ref([]); // Now RMAT Number, Client Advisor, Color
 	const zipcodeData = ref([]); // Now ZipCode, Total number of companies, Total sales, Total employees, RMAT Number
 	const pendingChanges = ref({});
+	const hoveredZipData = ref(null);
 
 	// actions
-	async function loadRMATData(file) {
+	const loadRMATData = async (file) => {
 		const text = await file.text();
 		Papa.parse(text, {
 			header: true,
@@ -24,9 +25,9 @@ export const useStore = defineStore("dataStore", () => {
 
 		//	Merge RMAT data into Zipcode data
 		mergeRmatData();
-	}
+	};
 
-	async function loadZipcodeData(file) {
+	const loadZipcodeData = async (file) => {
 		const text = await file.text();
 		Papa.parse(text, {
 			header: true,
@@ -51,9 +52,9 @@ export const useStore = defineStore("dataStore", () => {
 
 		//	Merge RMAT data into Zipcode data
 		mergeRmatData();
-	}
+	};
 
-	function mergeRmatData() {
+	const mergeRmatData = async () => {
 		//	Check that we have both zipcode data to update
 		if (!zipcodeData.value.length) return;
 
@@ -67,29 +68,54 @@ export const useStore = defineStore("dataStore", () => {
 				zip.color = rmatEntry.color;
 			}
 		}
-	}
+	};
 
-	function assignRMAT(zipcode, newRMAT) {
-		newRMAT = Number(newRMAT);
-		const rmatEntry = rmatData.value.find((r) => r["RMAT Number"] === newRMAT);
-		const newAdvisor = rmatEntry ? rmatEntry["Client Advisor"] : null;
-		pendingChanges.value[zipcode] = {
-			rmat: newRMAT,
-			advisor: newAdvisor,
-		};
-	}
+	const assignRMAT = (zipcodeObject, newRMAT) => {
+		//	Get the zip code entry
+		const zipEntryIndex = zipcodeData.value.findIndex(
+			(z) => z.zipCode == zipcodeObject.zipCode
+		);
+		if (zipEntryIndex < 0) {
+			console.error("Zip code not found", zipcodeObject);
+			return false;
+		}
 
-	function saveChanges() {
-		for (const [zipcode, changes] of Object.entries(pendingChanges.value)) {
-			const zipIndex = zipcodeData.value.findIndex(
-				(z) => z.ZipCode === zipcode
-			);
-			if (zipIndex !== -1) {
-				zipcodeData.value[zipIndex]["RMAT Number"] = changes.rmat;
+		const zipEntry = zipcodeData.value[zipEntryIndex];
+
+		//	Find the RMAT entry
+		const rmatEntry = rmatData.value.find((r) => r.rmatNumber === newRMAT);
+
+		//	If the zip code entry does not have original RMAT number, client advisor, or color, then add those properties
+		if (!zipEntry.originalRmatNumber) {
+			zipEntry.originalRmatNumber = zipEntry.rmatNumber;
+			zipEntry.originalClientAdvisor = zipEntry.clientAdvisor;
+			zipEntry.originalColor = zipEntry.color;
+		}
+
+		//	Update the zip code entry
+		zipEntry.rmatNumber = newRMAT;
+		zipEntry.clientAdvisor = rmatEntry ? rmatEntry.clientAdvisor : null;
+		zipEntry.color = rmatEntry ? rmatEntry.color : null;
+
+		zipcodeData.value[zipEntryIndex] = zipEntry;
+
+		return true;
+	};
+
+	const revertChanges = () => {
+		//	Find all zip codes that have the originalRmatNumber property and revert them
+		for (const zip of zipcodeData.value) {
+			if (zip.originalRmatNumber) {
+				zip.rmatNumber = zip.originalRmatNumber;
+				zip.clientAdvisor = zip.originalClientAdvisor;
+				zip.color = zip.originalColor;
 			}
 		}
-		pendingChanges.value = {};
-	}
+	};
+
+	const setHoveredZipData = (zipData) => {
+		hoveredZipData.value = zipData;
+	};
 
 	// getters
 	const clientAdvisorOptions = computed(() => [
@@ -100,10 +126,12 @@ export const useStore = defineStore("dataStore", () => {
 		rmatData,
 		zipcodeData,
 		pendingChanges,
+		hoveredZipData,
 		loadRMATData,
 		loadZipcodeData,
 		assignRMAT,
-		saveChanges,
+		revertChanges,
+		setHoveredZipData,
 		clientAdvisorOptions,
 	};
 });

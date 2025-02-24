@@ -30,6 +30,8 @@
 <script setup>
 import { ref, computed } from "vue";
 import { useStore } from "../stores/dataStore";
+import { formatCurrency } from "../utilities/formatters";
+
 const store = useStore();
 
 const props = defineProps({
@@ -78,15 +80,6 @@ const groupTotals = (advisor) => {
 			totals.totalEmployees += zip.totalEmployees || 0;
 		});
 	return totals;
-};
-
-const formatCurrency = (value) => {
-	return new Intl.NumberFormat("en-US", {
-		style: "currency",
-		currency: "USD",
-		minimumFractionDigits: 0,
-		maximumFractionDigits: 0,
-	}).format(value);
 };
 </script>
 

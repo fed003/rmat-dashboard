@@ -1,5 +1,6 @@
 <template>
 	<l-map
+		id="rmat-map"
 		ref="leafletMap"
 		v-model:zoom="zoom"
 		:center="center"
@@ -16,6 +17,8 @@
 			:options-style="geoJsonStyle"
 			:key="mapKey"
 			@click="onGeoJsonClick"
+			@mouseover="onGeoJsonHover"
+			@mouseout="onGeoJsonLeave"
 		></l-geo-json>
 	</l-map>
 </template>
@@ -23,6 +26,7 @@
 <script setup>
 import { ref, watch, computed } from "vue";
 import { LMap, LTileLayer, LGeoJson } from "@vue-leaflet/vue-leaflet";
+import { useStore } from "../stores/dataStore";
 import geoJsonData from "../assets/ca_california_zip_codes_geo.min.json";
 
 // Props
@@ -30,16 +34,17 @@ const props = defineProps({
 	zipcodes: { type: Array, required: true },
 	selectedRMAT: { type: [Number, null], default: null },
 	selectedAdvisor: { type: [String, null], default: null },
-	loading: { type: Boolean, default: false },
 });
 
 // Emits
 const emit = defineEmits(["zipcode-clicked"]);
 
+// Store
+const store = useStore();
+
 // Map state
 const darkMapColor = "#D3D3D3";
 const unassignedMapColor = "#D3D3D3";
-// const dfltCenter = [37.127655, -118.480532];
 const dfltCenter = [36.7783, -119.4179];
 const dfltZoom = 6;
 const zoom = ref(dfltZoom);
@@ -93,9 +98,8 @@ watch([() => props.selectedRMAT, () => props.selectedAdvisor], () => {
 
 	const selectedZipcodes = props.zipcodes.filter((zip) => {
 		return (
-			(props.selectedRMAT &&
-				zip["RMAT Number"] === Number(props.selectedRMAT)) ||
-			(props.selectedAdvisor && zip["Client Advisor"] === props.selectedAdvisor)
+			(props.selectedRMAT && zip.rmatNumber === Number(props.selectedRMAT)) ||
+			(props.selectedAdvisor && zip.clientAdvisor === props.selectedAdvisor)
 		);
 	});
 
@@ -122,4 +126,17 @@ const onGeoJsonClick = (event) => {
 	const zipcode = Number(event.layer.feature.properties.ZCTA5CE10);
 	emit("zipcode-clicked", zipcode);
 };
+
+const onGeoJsonHover = (event) => {
+	const zipcode = event.layer.feature.properties.ZCTA5CE10;
+	const zipData =
+		props.zipcodes.find((z) => String(z.zipCode) === zipcode) || null;
+	store.setHoveredZipData(zipData);
+};
+
+const onGeoJsonLeave = () => {
+	// store.setHoveredZipData(null);
+};
 </script>
+
+<style scoped></style>
