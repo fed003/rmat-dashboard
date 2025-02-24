@@ -126,9 +126,13 @@ const loadingMessage = ref("Loading Data...");
 const hoveredZipData = ref(null);
 
 const filteredZipcodes = computed(() => {
-	console.log("Filtering Data...");
 	loading.value = true;
 	loadingMessage.value = "Filtering Data...";
+
+	if (!selectedRMAT.value && !selectedAdvisor.value && !zipcodeSearch.value) {
+		loading.value = false;
+		return store.zipcodeData;
+	}
 
 	const result = store.zipcodeData.filter((item) => {
 		const matchesRMAT = selectedRMAT.value
@@ -181,7 +185,12 @@ const openRMATDialog = (zipcode) => {
 };
 
 const saveRMATChange = () => {
-	if (selectedZipCode.value && newRMAT.value) {
+	//	Have to check for null and undefined because 0 is a valid value
+	if (
+		selectedZipCode.value &&
+		newRMAT.value !== null &&
+		newRMAT.value !== undefined
+	) {
 		let rmatUpdated = store.assignRMAT(selectedZipCode.value, newRMAT.value);
 		if (rmatUpdated) {
 			selectedZipCode.value.originalRmatNumber =

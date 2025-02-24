@@ -106,7 +106,7 @@ const rmatOptions = computed(() => {
 				: rmats
 			).map((r) => r.rmatNumber)
 		),
-	].sort();
+	].sort((a, b) => a - b);
 });
 </script>
 

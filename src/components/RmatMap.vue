@@ -50,6 +50,7 @@ const dfltZoom = 6;
 const zoom = ref(dfltZoom);
 const center = ref(dfltCenter);
 const leafletMap = ref(null);
+const mapKey = ref("");
 
 // GeoJSON styling
 const geoJsonStyle = (feature) => {
@@ -82,17 +83,33 @@ const geoJsonStyle = (feature) => {
 	};
 };
 
-const mapKey = computed(
-	() =>
-		`${props.selectedRMAT}-${props.selectedAdvisor}-${props.zipcodes.length}`
+function updateMapKey() {
+	mapKey.value = Math.random();
+}
+
+function resetMapZoom() {
+	console.log("Resetting map...");
+	center.value = dfltCenter;
+	zoom.value = dfltZoom;
+	leafletMap.value.leafletObject.setView(dfltCenter, dfltZoom); // Reset to default
+}
+
+watch(
+	() => props.zipcodes,
+	() => {
+		updateMapKey();
+	},
+	{ deep: true }
 );
 
 // Watch filters and zoom to selected regions
 watch([() => props.selectedRMAT, () => props.selectedAdvisor], () => {
-	if (!leafletMap.value || (!props.selectedRMAT && !props.selectedAdvisor)) {
-		center.value = dfltCenter;
-		zoom.value = dfltZoom;
-		leafletMap.value.leafletObject.setView(dfltCenter, dfltZoom); // Reset to default
+	//	Reset map key to force re-render
+	updateMapKey();
+
+	// Reset map if no filters are selected
+	if (!props.selectedRMAT && !props.selectedAdvisor) {
+		resetMapZoom();
 		return;
 	}
 
@@ -103,23 +120,44 @@ watch([() => props.selectedRMAT, () => props.selectedAdvisor], () => {
 		);
 	});
 
-	if (selectedZipcodes.length === 0) return;
+	if (selectedZipcodes.length === 0) {
+		resetMapZoom();
+		return;
+	}
 
-	const bounds = [];
+	const bounds = {
+		latMin: undefined,
+		latMax: undefined,
+		lngMin: undefined,
+		lngMax: undefined,
+	};
 	selectedZipcodes.forEach((company) => {
 		const feature = geoJsonData.features.find(
-			(f) => f.properties.ZCTA5CE10 === company.ZipCode
+			(f) => f.properties.ZCTA5CE10 === String(company.zipCode)
 		);
 		if (feature) {
 			feature.geometry.coordinates[0].forEach((coord) =>
-				bounds.push([coord[1], coord[0]])
+				coord.forEach((c) => {
+					if (c[0]) {
+						bounds.lngMin = Math.min(bounds.lngMin ?? c[0], c[0]);
+						bounds.lngMax = Math.max(bounds.lngMax ?? c[0], c[0]);
+					}
+					if (c[1]) {
+						bounds.latMin = Math.min(bounds.latMin ?? c[1], c[1]);
+						bounds.latMax = Math.max(bounds.latMax ?? c[1], c[1]);
+					}
+				})
 			);
 		}
 	});
 
-	if (bounds.length > 0) {
-		leafletMap.value.leafletObject.fitBounds(bounds, { padding: [50, 50] });
-	}
+	leafletMap.value.leafletObject.fitBounds(
+		[
+			[bounds.latMin, bounds.lngMin],
+			[bounds.latMax, bounds.lngMax],
+		],
+		{ padding: [50, 50] }
+	);
 });
 
 const onGeoJsonClick = (event) => {
@@ -135,7 +173,7 @@ const onGeoJsonHover = (event) => {
 };
 
 const onGeoJsonLeave = () => {
-	// store.setHoveredZipData(null);
+	store.setHoveredZipData(null);
 };
 </script>
 
