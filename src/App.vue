@@ -2,11 +2,13 @@
 	<v-app>
 		<v-app-bar app>
 			<v-toolbar>
-				<v-toolbar-title>Sales Manager Dashboard</v-toolbar-title>
+				<v-btn icon="mdi-menu" @click="drawer = !drawer"></v-btn>
+				<v-toolbar-title>RMAT Dashboard</v-toolbar-title>
 			</v-toolbar>
 		</v-app-bar>
 
 		<navigation-drawer
+			v-model="drawer"
 			v-model:selected-r-m-a-t="selectedRMAT"
 			v-model:selected-advisor="selectedAdvisor"
 			v-model:zipcode-search="zipcodeSearch"
@@ -88,6 +90,10 @@
 					{{ loadingMessage }}
 				</v-progress-circular>
 			</v-overlay>
+
+			<v-card class="hover-card">
+				<zip-code-data-card />
+			</v-card>
 		</v-main>
 	</v-app>
 </template>
@@ -98,12 +104,11 @@ import { useStore } from "./stores/dataStore";
 import NavigationDrawer from "./components/NavigationDrawer.vue";
 import RmatMap from "./components/RmatMap.vue";
 import RmatDataTable from "./components/RmatDataTable.vue";
+import ZipCodeDataCard from "./components/ZipCodeDataCard.vue";
 import L from "leaflet";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
-
-import ChangeLog from "./components/ChangeLog.vue";
 
 const store = useStore();
 
@@ -118,13 +123,14 @@ const rmatOptions = computed(() =>
 	[...new Set(store.rmatData.map((r) => r.rmatNumber))].sort((a, b) => a - b)
 );
 
+const drawer = ref(true);
+
 const snackbar = ref(false);
 const snackbarColor = ref("success");
 const snackbarMessage = ref("");
 
 const loading = ref(false);
 const loadingMessage = ref("Loading Data...");
-
 const hoveredZipData = ref(null);
 
 const filteredZipcodes = computed(() => {
@@ -229,8 +235,16 @@ onMounted(() => {
 });
 </script>
 
-<style>
-.custom-marker {
-	border: none;
+<style scoped>
+.hover-card {
+	position: fixed;
+	top: 80px;
+	right: 10px;
+	width: 300px;
+	background: rgba(255, 255, 255, 0.9);
+	padding: 8px;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	z-index: 1000; /* Above map and overlays */
 }
 </style>

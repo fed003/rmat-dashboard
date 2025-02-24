@@ -25,40 +25,6 @@
 						clearable
 					></v-text-field>
 				</v-list-item>
-				<v-list-item class="zip-tooltip">
-					<v-list density="compact" class="elevation-1">
-						<v-list-item class="pb-0 border-b">
-							<strong>RMAT:</strong> {{ displayedHoveredZipData.rmatNumber }}
-						</v-list-item>
-						<v-list-item class="pb-0 border-b">
-							<strong>ZipCode:</strong> {{ displayedHoveredZipData.zipCode }}
-						</v-list-item>
-						<v-list-item class="pb-0 border-b">
-							<strong>Advisor:</strong>
-							{{ displayedHoveredZipData.clientAdvisor }}
-						</v-list-item>
-						<v-list-item class="pb-0 border-b">
-							<strong>Employees:</strong>
-							{{ displayedHoveredZipData.totalEmployees }}
-						</v-list-item>
-						<v-list-item class="pb-0 border-b">
-							<strong>Sales:</strong>
-							{{ formatCurrency(displayedHoveredZipData.totalSales) }}
-						</v-list-item>
-						<v-list-item class="pb-0 border-b">
-							<strong>Companies:</strong>
-							{{ displayedHoveredZipData.totalNumberOfCompanies }}
-						</v-list-item>
-					</v-list>
-					<v-btn
-						color="primary"
-						block
-						class="mt-4"
-						@click="store.revertChanges"
-					>
-						Revert Changes
-					</v-btn>
-				</v-list-item>
 			</v-list>
 			<change-log class="change-log-flex" />
 		</div>
@@ -68,7 +34,7 @@
 <script setup>
 import { computed } from "vue";
 import { useStore } from "../stores/dataStore";
-import { formatCurrency } from "../utilities/formatters";
+
 import ChangeLog from "./ChangeLog.vue";
 
 const selectedRMAT = defineModel("selectedRMAT", {
@@ -87,19 +53,6 @@ const zipcodeSearch = defineModel("zipcodeSearch", {
 });
 
 const store = useStore();
-
-const displayedHoveredZipData = computed(() => {
-	return (
-		store.hoveredZipData ?? {
-			zipCode: "",
-			totalNumberOfCompanies: "",
-			totalSales: "",
-			totalEmployees: "",
-			rmatNumber: "",
-			clientAdvisor: "",
-		}
-	);
-});
 
 const advisorOptions = computed(() => {
 	return store.clientAdvisorOptions.sort();

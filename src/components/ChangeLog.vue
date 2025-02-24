@@ -2,23 +2,34 @@
 	<v-card class="change-log" elevation="0">
 		<v-card-title class="border-b">Change Log</v-card-title>
 		<v-card-text class="pa-0">
+			<v-list class="pa-0 mb-6 border-b">
+				<v-list-item>
+					<v-btn
+						v-if="store.changeLog.length > 0"
+						color="primary"
+						block
+						@click="store.revertChanges"
+					>
+						Revert Changes
+					</v-btn>
+					<div v-else class="text-center">No changes yet</div>
+				</v-list-item>
+			</v-list>
 			<v-virtual-scroll
 				:items="store.changeLog"
 				:item-height="48"
 				class="scrollable-list"
 			>
 				<template #default="{ item }">
-					<v-hover v-slot="{ hover }">
-						<v-list-item class="border-b hover-item">
-							<v-list-item-title>
-								Zip {{ item.zipCode }}: RMAT {{ item.oldRmat }} →
-								{{ item.newRmat }}
-							</v-list-item-title>
-							<v-list-item-subtitle>
-								{{ new Date(item.timestamp).toLocaleString() }}
-							</v-list-item-subtitle>
-						</v-list-item>
-					</v-hover>
+					<v-list-item class="border-b hover-item">
+						<v-list-item-title>
+							Zip {{ item.zipCode }}: RMAT {{ item.oldRmat }} →
+							{{ item.newRmat }}
+						</v-list-item-title>
+						<v-list-item-subtitle>
+							{{ new Date(item.timestamp).toLocaleString() }}
+						</v-list-item-subtitle>
+					</v-list-item>
 				</template>
 			</v-virtual-scroll>
 		</v-card-text>
@@ -28,6 +39,8 @@
 <script setup>
 import { useStore } from "../stores/dataStore";
 const store = useStore();
+
+console.log(store.changeLog.length);
 </script>
 
 <style>
