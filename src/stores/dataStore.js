@@ -61,12 +61,19 @@ export const useStore = defineStore("dataStore", () => {
 
 		//	Merge RMAT data into Zipcode data
 		for (const zip of zipcodeData.value) {
+			zip.originalRmatNumber = zip.rmatNumber;
+
 			const rmatEntry = rmatData.value.find(
 				(r) => r.rmatNumber === zip.rmatNumber
 			);
+
 			if (rmatEntry) {
 				zip.clientAdvisor = rmatEntry.clientAdvisor;
 				zip.color = rmatEntry.color;
+
+				//	Set the original data values
+				zip.originalClientAdvisor = rmatEntry.clientAdvisor;
+				zip.originalColor = rmatEntry.color;
 			}
 		}
 	};
@@ -84,25 +91,26 @@ export const useStore = defineStore("dataStore", () => {
 
 		const zipEntry = zipcodeData.value[zipEntryIndex];
 
-		//	Add the change to the change log
-		for (let i = 0; i < 10; i++) {
-			changeLog.value.unshift({
-				zipCode: zipEntry.zipCode,
-				oldRmat: zipEntry.rmatNumber,
-				newRmat: newRMAT,
-				timestamp: new Date().toISOString(),
-			});
-		}
-
 		//	Find the RMAT entry
 		const rmatEntry = rmatData.value.find((r) => r.rmatNumber === newRMAT);
 
-		//	If the zip code entry does not have original RMAT number, client advisor, or color, then add those properties
-		if (!zipEntry.originalRmatNumber) {
-			zipEntry.originalRmatNumber = zipEntry.rmatNumber;
-			zipEntry.originalClientAdvisor = zipEntry.clientAdvisor;
-			zipEntry.originalColor = zipEntry.color;
-		}
+		//	Add the change to the change log
+		changeLog.value.unshift({
+			zipCode: zipEntry.zipCode,
+			oldRmat: zipEntry.rmatNumber,
+			newRmat: newRMAT,
+			// oldEmployees: zipEntry.totalEmployees,
+			// oldSales: zipEntry.totalSales,
+			// oldCompanies: zipEntry.totalNumberOfCompanies,
+			// oldClientAdvisor: zipEntry.clientAdvisor,
+			// oldColor: zipEntry.color,
+			// newEmployees: zipEntry.totalEmployees,
+			// newSales: zipEntry.totalSales,
+			// newCompanies: zipEntry.totalNumberOfCompanies,
+			// newClientAdvisor: rmatEntry ? rmatEntry.clientAdvisor : null,
+			// newColor: rmatEntry ? rmatEntry.color : null,
+			timestamp: new Date().toISOString(),
+		});
 
 		//	Update the zip code entry
 		zipEntry.rmatNumber = newRMAT;
@@ -118,9 +126,13 @@ export const useStore = defineStore("dataStore", () => {
 		//	Find all zip codes that have the originalRmatNumber property and revert them
 		for (const zip of zipcodeData.value) {
 			if (zip.originalRmatNumber) {
-				zip.rmatNumber = zip.originalRmatNumber;
-				zip.clientAdvisor = zip.originalClientAdvisor;
-				zip.color = zip.originalColor;
+				zip.rmatNumber = zip.originalRmatNumber.value;
+				zip.clientAdvisor = zip.originalClientAdvisor.value;
+				zip.color = zip.originalColor.value;
+
+				// delete zip.originalRmatNumber;
+				// delete zip.originalClientAdvisor;
+				// delete zip.originalColor;
 			}
 		}
 

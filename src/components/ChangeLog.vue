@@ -44,8 +44,6 @@ const store = useStore();
 	height: 100%; /* Fill remaining space */
 
 	.hover-item {
-		cursor: pointer;
-
 		&:hover {
 			background-color: rgba(0, 0, 0, 0.1);
 		}

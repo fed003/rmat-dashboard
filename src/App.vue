@@ -195,9 +195,6 @@ const saveRMATChange = () => {
 	) {
 		let rmatUpdated = store.assignRMAT(selectedZipCode.value, newRMAT.value);
 		if (rmatUpdated) {
-			selectedZipCode.value.originalRmatNumber =
-				selectedZipCode.value.rmatNumber;
-			selectedZipCode.value.rmatNumber = newRMAT.value;
 			snackbarMessage.value = `RMAT for Zip Code ${selectedZipCode.value.zipCode} updated to ${newRMAT.value}`;
 			snackbarColor.value = "success";
 		} else {
@@ -205,8 +202,8 @@ const saveRMATChange = () => {
 			snackbarColor.value = "error";
 		}
 	}
-	dialog.value = false;
 	snackbar.value = true;
+	dialog.value = false;
 };
 
 const onZipcodeHovered = (zipData) => {

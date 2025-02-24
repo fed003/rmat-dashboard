@@ -16,9 +16,31 @@
 					></v-btn>
 				</td>
 				<td>{{ item.value }}</td>
-				<td>{{ groupTotals(item.value).totalNumberOfCompanies }}</td>
-				<td>{{ formatCurrency(groupTotals(item.value).totalSales) }}</td>
-				<td>{{ groupTotals(item.value).totalEmployees }}</td>
+				<td
+					v-html="
+						displayValues(
+							getGroupTotal(item.value, 'totalEmployees'),
+							getGroupTotal(item.value, 'originalEmployees')
+						)
+					"
+				></td>
+				<td
+					v-html="
+						displayValues(
+							getGroupTotal(item.value, 'totalNumberOfCompanies'),
+							getGroupTotal(item.value, 'originalNumberOfCompanies')
+						)
+					"
+				></td>
+				<td
+					v-html="
+						displayValues(
+							getGroupTotal(item.value, 'totalSales'),
+							getGroupTotal(item.value, 'originalSales'),
+							formatCurrency
+						)
+					"
+				></td>
 			</tr>
 		</template>
 		<template #item.totalSales="{ item }">
@@ -29,10 +51,7 @@
 
 <script setup>
 import { ref, computed } from "vue";
-import { useStore } from "../stores/dataStore";
 import { formatCurrency } from "../utilities/formatters";
-
-const store = useStore();
 
 const props = defineProps({
 	zipcodes: { type: Array, required: true },
@@ -40,46 +59,142 @@ const props = defineProps({
 
 const rmatHeaders = ref([
 	{ title: "RMAT", value: "rmatNumber" },
+	{ title: "Total Employees", value: "totalEmployees" },
 	{ title: "Total Companies", value: "totalNumberOfCompanies" },
 	{ title: "Total Sales", value: "totalSales" },
-	{ title: "Total Employees", value: "totalEmployees" },
 ]);
+
+//	Placeholder for the group totals
+const groupTotals = ref({});
 
 //	Summarize the data by RMAT, this will  be our table input
 const rmatTotals = computed(() => {
 	const totals = {};
-	props.zipcodes.forEach((zip) => {
-		const rmat = zip.rmatNumber || 0;
-		if (!totals[rmat]) {
-			totals[rmat] = {
-				rmatNumber: rmat,
-				clientAdvisor: zip.clientAdvisor,
+
+	function addToRmat(
+		rmatNumber,
+		clientAdvisor,
+		companies,
+		employees,
+		sales,
+		type
+	) {
+		if (!totals[rmatNumber]) {
+			totals[rmatNumber] = {
+				rmatNumber,
+				clientAdvisor: clientAdvisor,
 				totalNumberOfCompanies: 0,
 				totalSales: 0,
 				totalEmployees: 0,
+
+				originalNumberOfCompanies: 0,
+				originalSales: 0,
+				originalEmployees: 0,
 			};
 		}
-		totals[rmat].totalNumberOfCompanies += zip.totalNumberOfCompanies || 0;
-		totals[rmat].totalSales += zip.totalSales || 0;
-		totals[rmat].totalEmployees += zip.totalEmployees || 0;
+
+		if (type === "new" || type === "both") {
+			totals[rmatNumber].totalNumberOfCompanies += companies;
+			totals[rmatNumber].totalSales += sales;
+			totals[rmatNumber].totalEmployees += employees;
+		}
+		if (type === "original" || type === "both") {
+			totals[rmatNumber].originalNumberOfCompanies += companies;
+			totals[rmatNumber].originalSales += sales;
+			totals[rmatNumber].originalEmployees += employees;
+		}
+	}
+
+	props.zipcodes.forEach((zip) => {
+		const rmat = zip.rmatNumber || 0;
+		const originalRmat = zip.originalRmatNumber;
+		const type = rmat != originalRmat ? "new" : "both";
+
+		//	We will add the data to the totals object
+		addToRmat(
+			rmat,
+			zip.clientAdvisor,
+			zip.totalNumberOfCompanies,
+			zip.totalEmployees,
+			zip.totalSales,
+			type
+		);
+		//	If there is an original RMAT, we will add that data as well
+		if (zip.rmatNumber != zip.originalRmatNumber) {
+			addToRmat(
+				zip.originalRmatNumber,
+				zip.clientAdvisor,
+				zip.totalNumberOfCompanies,
+				zip.totalEmployees,
+				zip.totalSales,
+				"original"
+			);
+		}
 	});
-	return Object.values(totals);
+
+	let result = Object.values(totals);
+	createGroupTotals(result);
+	return result;
 });
 
-const groupTotals = (advisor) => {
-	const totals = {
-		totalNumberOfCompanies: 0,
-		totalSales: 0,
-		totalEmployees: 0,
-	};
-	props.zipcodes
-		.filter((zip) => zip.clientAdvisor === advisor)
-		.forEach((zip) => {
-			totals.totalNumberOfCompanies += zip.totalNumberOfCompanies || 0;
-			totals.totalSales += zip.totalSales || 0;
-			totals.totalEmployees += zip.totalEmployees || 0;
-		});
-	return totals;
+//	We will use this function to calculate the totals for each group
+const createGroupTotals = (detailTotals) => {
+	groupTotals.value = {};
+
+	detailTotals.forEach((rmat) => {
+		const group = rmat.clientAdvisor;
+		if (!groupTotals.value[group]) {
+			groupTotals.value[group] = {
+				totalEmployees: 0,
+				originalEmployees: 0,
+				totalNumberOfCompanies: 0,
+				originalNumberOfCompanies: 0,
+				totalSales: 0,
+				originalSales: 0,
+
+				employeeDelta: 0,
+				companyDelta: 0,
+				salesDelta: 0,
+			};
+		}
+		groupTotals.value[group].totalEmployees += rmat.totalEmployees;
+		groupTotals.value[group].originalEmployees += rmat.originalEmployees;
+		groupTotals.value[group].employeeDelta +=
+			rmat.totalEmployees - rmat.originalEmployees;
+
+		groupTotals.value[group].totalNumberOfCompanies +=
+			rmat.totalNumberOfCompanies;
+		groupTotals.value[group].originalNumberOfCompanies +=
+			rmat.originalNumberOfCompanies;
+		groupTotals.value[group].companyDelta +=
+			rmat.totalNumberOfCompanies - rmat.originalNumberOfCompanies;
+
+		groupTotals.value[group].totalSales += rmat.totalSales;
+		groupTotals.value[group].originalSales += rmat.originalSales;
+		groupTotals.value[group].salesDelta += rmat.totalSales - rmat.originalSales;
+	});
+};
+
+const getGroupTotal = (groupName, propertyName) => {
+	if (!groupTotals.value[groupName]) return 0;
+	return groupTotals.value[groupName][propertyName];
+};
+
+const displayValues = (value, originalValue, formatter) => {
+	const displayValue = formatter ? formatter(value) : value;
+
+	if (value == originalValue) {
+		return displayValue;
+	}
+
+	let delta = value - originalValue;
+	if (formatter) {
+		value = formatter(value);
+		delta = formatter(delta);
+	}
+
+	const className = value > originalValue ? "success" : "error";
+	return `${value} <span class="text-${className} font-weight-bold">(${delta})</span>`;
 };
 </script>
 
