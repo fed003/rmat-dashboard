@@ -43,7 +43,7 @@ const emit = defineEmits(["zipcode-clicked"]);
 const store = useStore();
 
 // Map state
-const darkMapColor = "#D3D3D3";
+const darkMapColor = "#020202";
 const unassignedMapColor = "#D3D3D3";
 const dfltCenter = [36.7783, -119.4179];
 const dfltZoom = 6;
