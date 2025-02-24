@@ -159,15 +159,18 @@ const loadFiles = async () => {
 		loading.value = true;
 		loadingMessage.value = "Loading Data...";
 
-		const rmatResponse = await fetch("/RMATs.csv"); // Updated filename
+		const rmatResponse = await fetch("RMATs.csv"); // Updated filename
 		const rmatText = await rmatResponse.text();
 		store.loadRMATData({ text: () => rmatText });
 
-		const zipResponse = await fetch("/ZipCodes.csv"); // Updated filename
+		const zipResponse = await fetch("ZipCodes.csv"); // Updated filename
 		const zipText = await zipResponse.text();
 		store.loadZipcodeData({ text: () => zipText });
 	} catch (error) {
-		console.error("Error loading CSV files:", error);
+		console.error(error);
+		snackbarMessage.value = "Error loading data files";
+		snackbarColor.value = "error";
+		snackbar.value = true;
 	} finally {
 		loading.value = false;
 	}
