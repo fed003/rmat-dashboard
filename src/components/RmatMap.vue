@@ -4,7 +4,7 @@
 		ref="leafletMap"
 		v-model:zoom="zoom"
 		:center="center"
-		style="height: 80vh; width: 100%"
+		style="height: 65vh; width: 100%"
 	>
 		<l-tile-layer
 			url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

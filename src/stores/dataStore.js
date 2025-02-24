@@ -4,8 +4,8 @@ import Papa from "papaparse";
 
 export const useStore = defineStore("dataStore", () => {
 	// state
-	const rmatData = ref([]); // Now RMAT Number, Client Advisor, Color
-	const zipcodeData = ref([]); // Now ZipCode, Total number of companies, Total sales, Total employees, RMAT Number
+	const rmatData = ref([]);
+	const zipcodeData = ref([]);
 	const pendingChanges = ref({});
 	const hoveredZipData = ref(null);
 	const changeLog = ref([]);
@@ -17,7 +17,7 @@ export const useStore = defineStore("dataStore", () => {
 			header: true,
 			transform: (value, header) => {
 				if (header === "rmatNumber") return Number(value);
-				return value; // clientAdvisor and color stay strings
+				return value;
 			},
 			complete: (result) => {
 				rmatData.value = result.data;
@@ -126,13 +126,9 @@ export const useStore = defineStore("dataStore", () => {
 		//	Find all zip codes that have the originalRmatNumber property and revert them
 		for (const zip of zipcodeData.value) {
 			if (zip.originalRmatNumber) {
-				zip.rmatNumber = zip.originalRmatNumber.value;
-				zip.clientAdvisor = zip.originalClientAdvisor.value;
-				zip.color = zip.originalColor.value;
-
-				// delete zip.originalRmatNumber;
-				// delete zip.originalClientAdvisor;
-				// delete zip.originalColor;
+				zip.rmatNumber = zip.originalRmatNumber;
+				zip.clientAdvisor = zip.originalClientAdvisor;
+				zip.color = zip.originalColor;
 			}
 		}
 
