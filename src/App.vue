@@ -98,9 +98,12 @@
 	</v-app>
 </template>
 
-<script setup>
-import { ref, computed, onMounted } from "vue";
+<script setup lang="ts">
+import { type Ref, ref, computed, onMounted } from "vue";
 import { useStore } from "./stores/dataStore";
+import { type RmatData } from "./types/RmatData";
+import { type ZipCodeData } from "./types/ZipCodeData";
+
 import NavigationDrawer from "./components/NavigationDrawer.vue";
 import RmatMap from "./components/RmatMap.vue";
 import RmatDataTable from "./components/RmatDataTable.vue";
@@ -112,7 +115,7 @@ import markerShadow from "leaflet/dist/images/marker-shadow.png";
 
 const store = useStore();
 
-const selectedRMAT = ref(null);
+const selectedRMAT: Ref<RmatData> = ref(null);
 const selectedAdvisor = ref(null);
 const zipcodeSearch = ref("");
 const dialog = ref(false);
