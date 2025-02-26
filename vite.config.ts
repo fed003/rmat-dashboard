@@ -1,8 +1,7 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 
-// https://vite.dev/config/
 export default defineConfig({
-	base: "/rmat-dashboard/",
 	plugins: [vue()],
+	base: "/rmat-dashboard/", // Already set for GitHub Pages
 });
