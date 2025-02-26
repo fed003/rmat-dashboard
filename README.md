@@ -27,3 +27,12 @@ She's asked for the following features:
    b. The ZipCode data are stored in a Pinia data store as part of the state, so that all components update when the state changes
 8. We maintain a changelog of all changes and have a button to revert all changes
    a. In a future update, we will allow for reverting single changes - however we must verify that the change being reverted is the last change for that ZipCode or disable the revert option for all but the last change if a ZipCode is updated more than once
+
+The app is broken into a few components
+
+1. App.vue - main app component. Holds the basic layout and top-level elements
+2. RmatMap.vue - holds the map for visually displaying the geographic data. Uses vue-leaflet and Leaflet to display the data.
+3. RmatDataTable.vue - holds the data table and associated grouping logic
+4. NavigationDrawer.vue - holds the sidebar navigation drawer that contains the grouping and filtering options, as well as the changelog
+5. Changelog.vue - holds the changelog and revert changes button
+6. ZipCodeDataCard.vue - the floating window that displays ZipCode detail data when the user hovers over a ZipCode on the map
