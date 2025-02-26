@@ -39,8 +39,6 @@
 <script setup>
 import { useStore } from "../stores/dataStore";
 const store = useStore();
-
-console.log(store.changeLog.length);
 </script>
 
 <style>

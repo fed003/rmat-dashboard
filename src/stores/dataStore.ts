@@ -138,13 +138,21 @@ export const useStore = defineStore("dataStore", () => {
 	};
 
 	// getters
-	const clientAdvisorOptions = computed(() => [
-		...new Set(rmatData.value.map((r) => r.ClientAdvisor)),
-	]);
+	const rmatOptions = computed(() =>
+		[...new Set(rmatData.value.map((r) => r.RmatNumber))].sort((a, b) => a - b)
+	);
 
-	const adsRepOptions = computed(() => [
-		...new Set(rmatData.value.map((r) => r.AdsRep)),
-	]);
+	const clientAdvisorOptions = computed(() =>
+		[...new Set(rmatData.value.map((r) => r.ClientAdvisor))].sort()
+	);
+
+	const adsRepOptions = computed(() =>
+		[...new Set(rmatData.value.map((r) => r.AdsRep))].sort()
+	);
+
+	const countyOptions = computed(() =>
+		[...new Set(zipcodeData.value.map((z) => z.County))].sort()
+	);
 
 	return {
 		rmatData,
@@ -158,5 +166,7 @@ export const useStore = defineStore("dataStore", () => {
 		setHoveredZipData,
 		clientAdvisorOptions,
 		adsRepOptions,
+		rmatOptions,
+		countyOptions,
 	};
 });

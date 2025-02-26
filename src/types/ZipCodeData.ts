@@ -2,7 +2,7 @@ import { type RmatData } from "./RmatData";
 
 export interface ZipCodeData {
 	ZipCode: number;
-	TotalNumberOfCompanie: number;
+	TotalNumberOfCompanies: number;
 	TotalEmployees: number;
 	TotalSales: number;
 	City: string;

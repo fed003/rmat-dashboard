@@ -1,4 +1,6 @@
-export const formatCurrency = (value: number | string | null | undefined) => {
+export const formatCurrency = (
+	value: number | string | null | undefined
+): string => {
 	if (!value) return "";
 
 	//	Ensure that the input is a number
