@@ -5,6 +5,11 @@ export interface ZipCodeData {
 	TotalNumberOfCompanies: number;
 	TotalEmployees: number;
 	TotalSales: number;
+
+	Small: number;
+	Medium: number;
+	Large: number;
+
 	City: string;
 	County: string;
 
