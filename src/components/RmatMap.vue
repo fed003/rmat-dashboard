@@ -113,67 +113,71 @@ function resetMapZoom() {
 }
 
 // Watch filters and zoom to selected regions
-watch([() => props.zipcodes, () => props.selectedGrouping], () => {
-	// If the map is not yet loaded, stop here
-	if (!leafletMap.value?.leafletObject) {
-		return;
-	}
-
-	// Reset map if no filters are selected
-	if (
-		!props.selectedRmat?.length > 0 &&
-		!props.selectedAdvisor?.length > 0 &&
-		!props.selectedAdsRep?.length > 0 &&
-		!props.selectedCounty?.length > 0
-	) {
-		resetMapZoom();
-		return;
-	}
-
-	// If no zipcodes are selected, reset map
-	if (props.zipcodes.length === 0) {
-		resetMapZoom();
-		return;
-	}
-
-	const bounds = {
-		latMin: undefined,
-		latMax: undefined,
-		lngMin: undefined,
-		lngMax: undefined,
-	};
-	props.zipcodes.forEach((zip) => {
-		const feature = geoJsonData.features.find(
-			(f) => f.properties.ZCTA5CE10 === String(zip.ZipCode)
-		);
-		if (feature) {
-			feature.geometry.coordinates[0].forEach((c) => {
-				if (typeof c[0] == "number") {
-					bounds.lngMin = Math.min(bounds.lngMin ?? c[0], c[0]);
-					bounds.lngMax = Math.max(bounds.lngMax ?? c[0], c[0]);
-				}
-				if (typeof c[1] == "number") {
-					bounds.latMin = Math.min(bounds.latMin ?? c[1], c[1]);
-					bounds.latMax = Math.max(bounds.latMax ?? c[1], c[1]);
-				}
-			});
+watch(
+	[() => props.zipcodes, () => props.selectedGrouping],
+	() => {
+		// If the map is not yet loaded, stop here
+		if (!leafletMap.value?.leafletObject) {
+			return;
 		}
-	});
 
-	if (!bounds.latMin || !bounds.latMax || !bounds.lngMin || !bounds.lngMax) {
-		return;
-	}
+		// Reset map if no filters are selected
+		if (
+			!props.selectedRmat?.length > 0 &&
+			!props.selectedAdvisor?.length > 0 &&
+			!props.selectedAdsRep?.length > 0 &&
+			!props.selectedCounty?.length > 0
+		) {
+			resetMapZoom();
+			return;
+		}
 
-	updateMapKey();
+		// If no zipcodes are selected, reset map
+		if (props.zipcodes.length === 0) {
+			resetMapZoom();
+			return;
+		}
 
-	leafletMap.value.leafletObject.fitBounds(
-		[
-			[bounds.latMin, bounds.lngMin],
-			[bounds.latMax, bounds.lngMax],
-		],
-		{ padding: [50, 50] }
-	);
-});
+		const bounds = {
+			latMin: undefined,
+			latMax: undefined,
+			lngMin: undefined,
+			lngMax: undefined,
+		};
+		props.zipcodes.forEach((zip) => {
+			const feature = geoJsonData.features.find(
+				(f) => f.properties.ZCTA5CE10 === String(zip.ZipCode)
+			);
+			if (feature) {
+				feature.geometry.coordinates[0].forEach((c) => {
+					if (typeof c[0] == "number") {
+						bounds.lngMin = Math.min(bounds.lngMin ?? c[0], c[0]);
+						bounds.lngMax = Math.max(bounds.lngMax ?? c[0], c[0]);
+					}
+					if (typeof c[1] == "number") {
+						bounds.latMin = Math.min(bounds.latMin ?? c[1], c[1]);
+						bounds.latMax = Math.max(bounds.latMax ?? c[1], c[1]);
+					}
+				});
+			}
+		});
+
+		if (!bounds.latMin || !bounds.latMax || !bounds.lngMin || !bounds.lngMax) {
+			return;
+		}
+
+		updateMapKey();
+
+		leafletMap.value.leafletObject.fitBounds(
+			[
+				[bounds.latMin, bounds.lngMin],
+				[bounds.latMax, bounds.lngMax],
+			],
+			{ padding: [50, 50] }
+		);
+	},
+	{ deep: true }
+);
 
 const onGeoJsonClick = (event) => {
 	const zipcode = Number(event.layer.feature.properties.ZCTA5CE10);

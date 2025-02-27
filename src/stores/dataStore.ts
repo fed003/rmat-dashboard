@@ -88,35 +88,33 @@ export const useStore = defineStore("dataStore", () => {
 		}
 	};
 
-	const assignRMAT = (zipcode: number, newRMAT: number) => {
+	const assignRMAT = (zipCodeObj: ZipCodeData, newRMAT: number) => {
 		//	Get the zip code entry
 		const zipEntryIndex = zipcodeData.value.findIndex(
-			(z) => z.ZipCode == zipcode
+			(z) => z.ZipCode == zipCodeObj.ZipCode
 		);
 
 		if (zipEntryIndex < 0) {
-			console.error("Zip code not found", zipcode);
+			console.error("Zip code not found", zipCodeObj.ZipCode);
 			return false;
 		}
-
-		const zipEntry = zipcodeData.value[zipEntryIndex];
 
 		//	Find the RMAT entry
 		const rmatEntry = rmatData.value.find((r) => r.RmatNumber === newRMAT);
 
 		//	Add the change to the change log
 		changeLog.value.unshift({
-			ZipCode: zipEntry.ZipCode,
-			PreviousRmatNumber: zipEntry.RmatNumber,
+			ZipCode: zipCodeObj.ZipCode,
+			PreviousRmatNumber: zipCodeObj.RmatNumber,
 			NewRmatNumber: newRMAT,
 			TimeStamp: new Date().toISOString(),
 		} as ChangeData);
 
 		//	Update the zip code entry
-		zipEntry.RmatNumber = newRMAT;
-		zipEntry.RmatData = { ...rmatEntry } as RmatData;
+		zipCodeObj.RmatNumber = newRMAT;
+		zipCodeObj.RmatData = { ...rmatEntry } as RmatData;
 
-		zipcodeData.value[zipEntryIndex] = zipEntry;
+		zipcodeData.value[zipEntryIndex] = zipCodeObj;
 
 		return true;
 	};
