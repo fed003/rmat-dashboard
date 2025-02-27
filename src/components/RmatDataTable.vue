@@ -38,6 +38,15 @@
 						)
 					"
 				></td>
+				<td>
+					{{ item.items.reduce((acc, i) => acc + i.raw.SmallBusinesses, 0) }}
+				</td>
+				<td>
+					{{ item.items.reduce((acc, i) => acc + i.raw.MediumBusinesses, 0) }}
+				</td>
+				<td>
+					{{ item.items.reduce((acc, i) => acc + i.raw.LargeBusinesses, 0) }}
+				</td>
 				<td
 					v-html="
 						displayValues(
@@ -69,6 +78,9 @@ interface RmatTotal {
 	RmatNumber: number;
 	TotalEmployees: number;
 	TotalNumberOfCompanies: number;
+	SmallBusinesses: number;
+	MediumBusinesses: number;
+	LargeBusinesses: number;
 	TotalSales: number;
 	AdsRep: string;
 	ClientAdvisor: string;
@@ -80,21 +92,23 @@ interface RmatTotal {
 const rmatHeaders = ref([
 	{ title: "RMAT", value: "RmatNumber" },
 	{ title: "Total Employees", value: "TotalEmployees" },
-	{ title: "Total Companies", value: "TotalNumberOfCompanies" },
+	{ title: "Total Companies", value: "SmallBusinesses" },
+	{ title: "Small ", value: "TotalNumberOfCompanies" },
+	{ title: "Medium ", value: "TotalNumberOfCompanies" },
+	{ title: "Large ", value: "TotalNumberOfCompanies" },
 	{ title: "Total Sales", value: "TotalSales" },
 ]);
 
 //	Summarize the data by RMAT, this will  be our table input
 const rmatTotals: Ref<RmatTotal[]> = computed(() => {
+	console.log("Computing RMAT Totals");
 	const totals: Record<number, RmatTotal> = {};
 
 	function addToRmat(
 		rmatNumber: number,
 		adsRep: string,
 		clientAdvisor: string,
-		companies: number,
-		employees: number,
-		sales: number,
+		zip: ZipCodeData,
 		type: "new" | "original" | "both"
 	) {
 		if (!totals[rmatNumber]) {
@@ -103,6 +117,9 @@ const rmatTotals: Ref<RmatTotal[]> = computed(() => {
 				AdsRep: adsRep,
 				ClientAdvisor: clientAdvisor,
 				TotalNumberOfCompanies: 0,
+				SmallBusinesses: 0,
+				MediumBusinesses: 0,
+				LargeBusinesses: 0,
 				TotalSales: 0,
 				TotalEmployees: 0,
 
@@ -112,27 +129,29 @@ const rmatTotals: Ref<RmatTotal[]> = computed(() => {
 			} as RmatTotal;
 		}
 
-		if (isNaN(companies)) {
-			companies = 0;
-		}
-
-		if (isNaN(employees)) {
-			employees = 0;
-		}
-
-		if (isNaN(sales)) {
-			sales = 0;
+		function addNumber(value: any) {
+			if (typeof value === "number") {
+				return value;
+			}
+			return 0;
 		}
 
 		if (type === "new" || type === "both") {
-			totals[rmatNumber].TotalNumberOfCompanies += companies;
-			totals[rmatNumber].TotalSales += sales;
-			totals[rmatNumber].TotalEmployees += employees;
+			totals[rmatNumber].TotalNumberOfCompanies += addNumber(
+				zip.TotalNumberOfCompanies
+			);
+			totals[rmatNumber].SmallBusinesses += addNumber(zip.Small);
+			totals[rmatNumber].MediumBusinesses += addNumber(zip.Medium);
+			totals[rmatNumber].LargeBusinesses += addNumber(zip.Large);
+			totals[rmatNumber].TotalSales += addNumber(zip.TotalSales);
+			totals[rmatNumber].TotalEmployees += addNumber(zip.TotalEmployees);
 		}
 		if (type === "original" || type === "both") {
-			totals[rmatNumber].OriginalNumberOfCompanies += companies;
-			totals[rmatNumber].OriginalSales += sales;
-			totals[rmatNumber].OriginalEmployees += employees;
+			totals[rmatNumber].OriginalNumberOfCompanies += addNumber(
+				zip.TotalNumberOfCompanies
+			);
+			totals[rmatNumber].OriginalSales += addNumber(zip.TotalSales);
+			totals[rmatNumber].OriginalEmployees += addNumber(zip.TotalEmployees);
 		}
 	}
 
@@ -145,26 +164,10 @@ const rmatTotals: Ref<RmatTotal[]> = computed(() => {
 		const clientAdvisor = zip.RmatData?.ClientAdvisor ?? "Unassigned";
 
 		//	We will add the data to the totals object
-		addToRmat(
-			rmat,
-			adsRep,
-			clientAdvisor,
-			zip.TotalNumberOfCompanies,
-			zip.TotalEmployees,
-			zip.TotalSales,
-			type
-		);
+		addToRmat(rmat, adsRep, clientAdvisor, zip, type);
 		//	If there is an original RMAT, we will add that data as well
 		if (zip.RmatNumber != zip.OriginalRmatNumber) {
-			addToRmat(
-				zip.OriginalRmatNumber,
-				adsRep,
-				clientAdvisor,
-				zip.TotalNumberOfCompanies,
-				zip.TotalEmployees,
-				zip.TotalSales,
-				"original"
-			);
+			addToRmat(zip.OriginalRmatNumber, adsRep, clientAdvisor, zip, "original");
 		}
 	});
 

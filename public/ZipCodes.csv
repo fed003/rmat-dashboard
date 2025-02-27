@@ -1,83 +1,83 @@
 ﻿ZipCode,RmatNumber,TotalNumberOfCompanies,Small,Medium,Large,TotalEmployees,TotalSales,City,County
-90001,13,37,18,11,8,1178,0,Los Angeles,Los  Angeles
-90002,13,6,4,2,0,97,0,Los Angeles,Los  Angeles
-90003,13,10,4,3,3,615,0,Los Angeles,Los  Angeles
-90004,9,5,3,2,0,66,0,Los Angeles,Los  Angeles
-90005,13,2,1,0,1,85,0,Los Angeles,Los  Angeles
-90006,13,8,2,4,2,205,0,Los Angeles,Los  Angeles
-90007,9,30,16,10,4,881,0,Los Angeles,Los  Angeles
-90008,9,4,1,3,0,94,0,Los Angeles,Los  Angeles
+90001,13,37,18,11,8,1178,112470568.5,Los Angeles,Los  Angeles
+90002,13,6,4,2,0,97,40290191.78,Los Angeles,Los  Angeles
+90003,13,10,4,3,3,615,19345616.79,Los Angeles,Los  Angeles
+90004,9,5,3,2,0,66,2996895.01,Los Angeles,Los  Angeles
+90005,13,2,1,0,1,85,3203328.88,Los Angeles,Los  Angeles
+90006,13,8,2,4,2,205,23257052.22,Los Angeles,Los  Angeles
+90007,9,30,16,10,4,881,103432893.8,Los Angeles,Los  Angeles
+90008,9,4,1,3,0,94,14886124.98,Los Angeles,Los  Angeles
 90009,9,1,0,1,0,47,0,Los Angeles,Los  Angeles
-90010,13,10,6,4,0,159,0,Los Angeles,Los  Angeles
-90011,13,40,20,17,3,763,0,Los Angeles,Los  Angeles
-90012,13,18,12,5,1,280,0,Los Angeles,Los  Angeles
-90013,13,34,18,13,3,636,0,Los Angeles,Los  Angeles
-90014,13,39,23,13,3,662,0,Los Angeles,Los  Angeles
-90015,13,68,29,28,11,2168,0,Los Angeles,Los  Angeles
-90016,9,43,20,20,3,1143,0,Los Angeles,Los  Angeles
-90017,9,56,25,20,11,1441,0,Los Angeles,Los  Angeles
-90018,9,8,3,4,1,151,0,Los Angeles,Los  Angeles
-90019,9,10,5,5,0,156,0,Los Angeles,Los  Angeles
-90020,9,2,0,2,0,28,0,Los Angeles,Los  Angeles
-90021,9,116,48,47,21,4212,0,Los Angeles,Los  Angeles
-90022,13,29,10,10,9,2680,0,Los Angeles,Los  Angeles
-90023,13,90,36,37,17,2859,0,Los Angeles,Los  Angeles
-90024,13,34,12,18,4,821,0,Los Angeles,Los  Angeles
-90025,13,39,17,14,8,4323,0,Los Angeles,Los  Angeles
-90026,13,6,1,3,2,342,0,Los Angeles,Los  Angeles
-90027,13,9,7,2,0,82,0,Los Angeles,Los  Angeles
-90028,13,14,5,6,3,457,0,Los Angeles,Los  Angeles
-90029,13,5,0,4,1,286,0,Los Angeles,Los  Angeles
+90010,13,10,6,4,0,159,35872318.79,Los Angeles,Los  Angeles
+90011,13,40,20,17,3,763,92810626.19,Los Angeles,Los  Angeles
+90012,13,18,12,5,1,280,27600640,Los Angeles,Los  Angeles
+90013,13,34,18,13,3,636,111541833.7,Los Angeles,Los  Angeles
+90014,13,39,23,13,3,662,128318935.8,Los Angeles,Los  Angeles
+90015,13,68,29,28,11,2168,351648110.5,Los Angeles,Los  Angeles
+90016,9,43,20,20,3,1143,123387244.4,Los Angeles,Los  Angeles
+90017,9,56,25,20,11,1441,134426539.1,Los Angeles,Los  Angeles
+90018,9,8,3,4,1,151,18501020.71,Los Angeles,Los  Angeles
+90019,9,10,5,5,0,156,18334767.36,Los Angeles,Los  Angeles
+90020,9,2,0,2,0,28,5753979.79,Los Angeles,Los  Angeles
+90021,9,116,48,47,21,4212,3216323598,Los Angeles,Los  Angeles
+90022,13,29,10,10,9,2680,94984405.22,Los Angeles,Los  Angeles
+90023,13,90,36,37,17,2859,250085114.6,Los Angeles,Los  Angeles
+90024,13,34,12,18,4,821,2139687324,Los Angeles,Los  Angeles
+90025,13,39,17,14,8,4323,828361549,Los Angeles,Los  Angeles
+90026,13,6,1,3,2,342,11219912.01,Los Angeles,Los  Angeles
+90027,13,9,7,2,0,82,8750830.01,Los Angeles,Los  Angeles
+90028,13,14,5,6,3,457,70487148.81,Los Angeles,Los  Angeles
+90029,13,5,0,4,1,286,42622198.9,Los Angeles,Los  Angeles
 90030,13,0,0,0,0,0,0,Los Angeles,Los  Angeles
-90031,13,22,8,8,6,702,0,Los Angeles,Los  Angeles
-90032,13,18,7,7,4,509,0,Los Angeles,Los  Angeles
-90033,13,24,8,8,8,1151,0,Los Angeles,Los  Angeles
-90034,13,27,17,7,3,657,0,Los Angeles,Los  Angeles
-90035,13,13,7,3,3,595,0,Los Angeles,Los  Angeles
-90036,13,23,13,8,2,535,0,Los Angeles,Los  Angeles
-90037,13,14,6,4,4,538,0,Los Angeles,Los  Angeles
-90038,13,14,7,5,2,239,0,Los Angeles,Los  Angeles
-90039,13,46,19,20,7,2151,0,Los Angeles,Los  Angeles
-90040,13,219,62,98,59,11513,0,Los Angeles,Los  Angeles
-90041,13,4,3,1,0,37,0,Los Angeles,Los  Angeles
-90042,13,6,4,2,0,85,0,Los Angeles,Los  Angeles
-90043,13,3,3,0,0,22,0,Los Angeles,Los  Angeles
-90044,13,4,2,1,1,94,0,Los Angeles,Los  Angeles
-90045,13,40,17,14,9,2206,0,Los Angeles,Los  Angeles
-90046,13,22,10,10,2,420,0,Los Angeles,Los  Angeles
-90047,13,6,4,1,1,307,0,Los Angeles,Los  Angeles
-90048,13,18,8,8,2,488,0,Los Angeles,Los  Angeles
-90049,13,18,12,4,2,342,0,Los Angeles,Los  Angeles
+90031,13,22,8,8,6,702,137023840.9,Los Angeles,Los  Angeles
+90032,13,18,7,7,4,509,229677937.5,Los Angeles,Los  Angeles
+90033,13,24,8,8,8,1151,128860077.1,Los Angeles,Los  Angeles
+90034,13,27,17,7,3,657,89132695.78,Los Angeles,Los  Angeles
+90035,13,13,7,3,3,595,8899074.86,Los Angeles,Los  Angeles
+90036,13,23,13,8,2,535,107337929,Los Angeles,Los  Angeles
+90037,13,14,6,4,4,538,31762907.76,Los Angeles,Los  Angeles
+90038,13,14,7,5,2,239,46551461.93,Los Angeles,Los  Angeles
+90039,13,46,19,20,7,2151,97298241.72,Los Angeles,Los  Angeles
+90040,13,219,62,98,59,11513,2805191828,Los Angeles,Los  Angeles
+90041,13,4,3,1,0,37,1199949.98,Los Angeles,Los  Angeles
+90042,13,6,4,2,0,85,5324507.92,Los Angeles,Los  Angeles
+90043,13,3,3,0,0,22,3384187.96,Los Angeles,Los  Angeles
+90044,13,4,2,1,1,94,11158784.1,Los Angeles,Los  Angeles
+90045,13,40,17,14,9,2206,5560425392,Los Angeles,Los  Angeles
+90046,13,22,10,10,2,420,52409452.3,Los Angeles,Los  Angeles
+90047,13,6,4,1,1,307,28350473,Los Angeles,Los  Angeles
+90048,13,18,8,8,2,488,25370836.44,Los Angeles,Los  Angeles
+90049,13,18,12,4,2,342,41999391.12,Los Angeles,Los  Angeles
 90050,9,0,0,0,0,0,0,Los Angeles,Los  Angeles
 90051,9,0,0,0,0,0,0,Los Angeles,Los  Angeles
 90052,13,0,0,0,0,0,0,Los Angeles,Los  Angeles
 90053,13,0,0,0,0,0,0,Los Angeles,Los  Angeles
 90054,13,0,0,0,0,0,0,Los Angeles,Los  Angeles
 90055,13,0,0,0,0,0,0,Los Angeles,Los  Angeles
-90056,9,2,2,0,0,18,0,Los Angeles,Los  Angeles
-90057,9,7,4,2,1,243,0,Los Angeles,Los  Angeles
-90058,9,302,83,139,80,17649,0,Los Angeles,Los  Angeles
-90059,13,6,3,3,0,80,0,Los Angeles,Los  Angeles
+90056,9,2,2,0,0,18,601038.99,Los Angeles,Los  Angeles
+90057,9,7,4,2,1,243,33638355.92,Los Angeles,Los  Angeles
+90058,9,302,83,139,80,17649,4475270584,Los Angeles,Los  Angeles
+90059,13,6,3,3,0,80,10791256.98,Los Angeles,Los  Angeles
 90060,13,0,0,0,0,0,0,Los Angeles,Los  Angeles
-90061,9,56,26,20,10,1648,0,Los Angeles,Los  Angeles
-90062,9,1,1,0,0,7,0,Los Angeles,Los  Angeles
-90063,13,28,11,11,6,858,0,Los Angeles,Los  Angeles
-90064,13,52,27,18,7,1478,0,Los Angeles,Los  Angeles
-90065,13,33,15,11,7,926,0,Los Angeles,Los  Angeles
-90066,13,20,11,4,5,1558,0,Los Angeles,Los  Angeles
-90067,13,28,6,15,7,3571,0,Los Angeles,Los  Angeles
-90068,9,8,4,3,1,196,0,Los Angeles,Los  Angeles
-90069,8,26,9,15,2,559,0,West Hollywood,Los  Angeles
+90061,9,56,26,20,10,1648,369054634.8,Los Angeles,Los  Angeles
+90062,9,1,1,0,0,7,281003,Los Angeles,Los  Angeles
+90063,13,28,11,11,6,858,81268368.09,Los Angeles,Los  Angeles
+90064,13,52,27,18,7,1478,1304515132,Los Angeles,Los  Angeles
+90065,13,33,15,11,7,926,193350475.8,Los Angeles,Los  Angeles
+90066,13,20,11,4,5,1558,164628365.9,Los Angeles,Los  Angeles
+90067,13,28,6,15,7,3571,5449973484,Los Angeles,Los  Angeles
+90068,9,8,4,3,1,196,16228934.77,Los Angeles,Los  Angeles
+90069,8,26,9,15,2,559,54207224.73,West Hollywood,Los  Angeles
 90070,9,0,0,0,0,0,0,Los Angeles,Los  Angeles
-90071,9,47,17,19,11,11568,0,Los Angeles,Los  Angeles
+90071,9,47,17,19,11,11568,4490617298,Los Angeles,Los  Angeles
 90072,9,0,0,0,0,0,0,Los Angeles,Los  Angeles
 90073,9,0,0,0,0,0,0,Los Angeles,Los  Angeles
 90074,13,0,0,0,0,0,0,Los Angeles,Los  Angeles
 90075,9,0,0,0,0,0,0,Los Angeles,Los  Angeles
 90076,9,0,0,0,0,0,0,Los Angeles,Los  Angeles
-90077,9,6,2,4,0,93,0,Los Angeles,Los  Angeles
+90077,9,6,2,4,0,93,9766213.23,Los Angeles,Los  Angeles
 90078,9,0,0,0,0,0,0,Los Angeles,Los  Angeles
-90079,9,2,2,0,0,14,0,Los Angeles,Los  Angeles
+90079,9,2,2,0,0,14,1250034.99,Los Angeles,Los  Angeles
 90080,9,0,0,0,0,0,0,Los Angeles,Los  Angeles
 90081,13,0,0,0,0,0,0,Los Angeles,Los  Angeles
 90082,13,0,0,0,0,0,0,Los Angeles,Los  Angeles
@@ -86,71 +86,71 @@
 90086,13,0,0,0,0,0,0,Los Angeles,Los  Angeles
 90087,13,0,0,0,0,0,0,Los Angeles,Los  Angeles
 90088,13,0,0,0,0,0,0,Los Angeles,Los  Angeles
-90089,9,2,1,1,0,19,0,Los Angeles,Los  Angeles
+90089,9,2,1,1,0,19,1102196.01,Los Angeles,Los  Angeles
 90091,13,0,0,0,0,0,0,Los Angeles,Los  Angeles
 90093,9,0,0,0,0,0,0,Los Angeles,Los  Angeles
-90094,14,3,1,1,1,200,0,Los Angeles,Los  Angeles
-90095,9,2,1,0,1,62,0,Los Angeles,Los  Angeles
+90094,14,3,1,1,1,200,345970717,Los Angeles,Los  Angeles
+90095,9,2,1,0,1,62,2890346.91,Los Angeles,Los  Angeles
 90096,13,0,0,0,0,0,0,Los Angeles,Los  Angeles
 90099,13,0,0,0,0,0,0,Los Angeles,Los  Angeles
 90101,9,0,0,0,0,0,0,Los Angeles,Los  Angeles
 90102,0,0,0,0,0,0,0,Los Angeles,Los  Angeles
 90103,9,0,0,0,0,0,0,Los Angeles,Los  Angeles
 90189,13,0,0,0,0,0,0,Los Angeles,Los  Angeles
-90201,13,52,20,17,15,2239,0,Bell,Los  Angeles
+90201,13,52,20,17,15,2239,304284338.5,Bell,Los  Angeles
 90202,13,0,0,0,0,0,0,Bell Gardens,Los  Angeles
 90209,9,0,0,0,0,0,0,Beverly Hills,Los  Angeles
-90210,13,27,14,12,1,558,0,Beverly Hills,Los  Angeles
-90211,13,21,9,9,3,776,0,Beverly Hills,Los  Angeles
-90212,13,21,12,9,0,281,0,Beverly Hills,Los  Angeles
+90210,13,27,14,12,1,558,91469460.08,Beverly Hills,Los  Angeles
+90211,13,21,9,9,3,776,91047119.86,Beverly Hills,Los  Angeles
+90212,13,21,12,9,0,281,42783548.03,Beverly Hills,Los  Angeles
 90213,9,0,0,0,0,0,0,Beverly Hills,Los  Angeles
-90220,13,95,25,45,25,4885,0,Compton,Los  Angeles
-90221,13,73,18,29,26,4302,0,Compton,Los  Angeles
-90222,13,31,10,13,8,1199,0,Compton,Los  Angeles
+90220,13,95,25,45,25,4885,2972892295,Compton,Los  Angeles
+90221,13,73,18,29,26,4302,524197918.7,Compton,Los  Angeles
+90222,13,31,10,13,8,1199,140031677.4,Compton,Los  Angeles
 90223,13,0,0,0,0,0,0,Compton,Los  Angeles
 90224,13,0,0,0,0,0,0,Compton,Los  Angeles
-90230,13,34,13,14,7,1298,0,Culver City,Los  Angeles
+90230,13,34,13,14,7,1298,149145286.2,Culver City,Los  Angeles
 90231,9,0,0,0,0,0,0,Culver City,Los  Angeles
-90232,13,37,11,15,11,3283,0,Culver City,Los  Angeles
+90232,13,37,11,15,11,3283,419131799.1,Culver City,Los  Angeles
 90233,9,0,0,0,0,0,0,Culver City,Los  Angeles
 90239,13,0,0,0,0,0,0,Downey,Los  Angeles
-90240,13,3,3,0,0,20,0,Downey,Los  Angeles
-90241,13,46,16,20,10,1669,0,Downey,Los  Angeles
-90242,13,16,3,7,6,811,0,Downey,Los  Angeles
-90245,14,164,54,62,48,26518,0,El Segundo,Los  Angeles
-90247,14,32,17,11,4,785,0,Gardena,Los  Angeles
-90248,14,208,83,81,44,19115,0,Gardena,Los  Angeles
-90249,14,97,47,37,13,2955,0,Gardena,Los  Angeles
-90250,14,63,26,21,16,5360,0,Hawthorne,Los  Angeles
+90240,13,3,3,0,0,20,2848144.01,Downey,Los  Angeles
+90241,13,46,16,20,10,1669,197028717.3,Downey,Los  Angeles
+90242,13,16,3,7,6,811,280178698.1,Downey,Los  Angeles
+90245,14,164,54,62,48,26518,10768995523,El Segundo,Los  Angeles
+90247,14,32,17,11,4,785,68446282.47,Gardena,Los  Angeles
+90248,14,208,83,81,44,19115,2174120839,Gardena,Los  Angeles
+90249,14,97,47,37,13,2955,585001706.4,Gardena,Los  Angeles
+90250,14,63,26,21,16,5360,4076697555,Hawthorne,Los  Angeles
 90251,14,0,0,0,0,0,0,Hawthorne,Los  Angeles
-90254,14,13,6,4,3,394,0,Hermosa Beach,Los  Angeles
-90255,13,33,13,12,8,1204,0,Huntington Park,Los  Angeles
-90260,14,6,4,2,0,105,0,Lawndale,Los  Angeles
+90254,14,13,6,4,3,394,720021723.1,Hermosa Beach,Los  Angeles
+90255,13,33,13,12,8,1204,151420866.4,Huntington Park,Los  Angeles
+90260,14,6,4,2,0,105,17806891.29,Lawndale,Los  Angeles
 90261,14,0,0,0,0,0,0,Lawndale,Los  Angeles
-90262,13,24,7,9,8,1038,0,Lynwood,Los  Angeles
+90262,13,24,7,9,8,1038,64412068.22,Lynwood,Los  Angeles
 90263,9,0,0,0,0,0,0,Malibu,Los  Angeles
-90264,9,1,0,1,0,11,0,Malibu,Los  Angeles
-90265,9,16,4,10,2,421,0,Malibu,Los  Angeles
-90266,14,16,4,7,5,4655,0,Manhattan Beach,Los  Angeles
+90264,9,1,0,1,0,11,4935023.8,Malibu,Los  Angeles
+90265,9,16,4,10,2,421,16173758.9,Malibu,Los  Angeles
+90266,14,16,4,7,5,4655,8372115464,Manhattan Beach,Los  Angeles
 90267,14,0,0,0,0,0,0,Manhattan Beach,Los  Angeles
-90270,13,7,2,3,2,317,0,Maywood,Los  Angeles
-90272,14,11,5,6,0,135,0,Pacific Palisades,Los  Angeles
-90274,14,13,8,4,1,248,0,Palos Verdes Peninsula,Los  Angeles
-90275,14,11,10,1,0,101,0,Rancho Palos Verdes,Los  Angeles
-90277,14,16,10,5,1,357,0,Redondo Beach,Los  Angeles
-90278,14,18,8,1,9,1404,0,Redondo Beach,Los  Angeles
-90280,13,66,21,19,26,4475,0,South Gate,Los  Angeles
-90290,8,2,2,0,0,18,0,Topanga,Los  Angeles
-90291,14,22,13,9,0,338,0,Venice,Los  Angeles
-90292,14,31,11,17,3,903,0,Marina Del Rey,Los  Angeles
-90293,14,3,2,0,1,113,0,Playa Del Rey,Los  Angeles
+90270,13,7,2,3,2,317,13950022.48,Maywood,Los  Angeles
+90272,14,11,5,6,0,135,51723992.12,Pacific Palisades,Los  Angeles
+90274,14,13,8,4,1,248,33576756.09,Palos Verdes Peninsula,Los  Angeles
+90275,14,11,10,1,0,101,11490421.04,Rancho Palos Verdes,Los  Angeles
+90277,14,16,10,5,1,357,38620355.71,Redondo Beach,Los  Angeles
+90278,14,18,8,1,9,1404,111913132.9,Redondo Beach,Los  Angeles
+90280,13,66,21,19,26,4475,605712058.4,South Gate,Los  Angeles
+90290,8,2,2,0,0,18,960258.04,Topanga,Los  Angeles
+90291,14,22,13,9,0,338,65078072.65,Venice,Los  Angeles
+90292,14,31,11,17,3,903,252487873.9,Marina Del Rey,Los  Angeles
+90293,14,3,2,0,1,113,9623130.99,Playa Del Rey,Los  Angeles
 90294,14,0,0,0,0,0,0,Venice,Los  Angeles
 90295,14,0,0,0,0,0,0,Marina Del Rey,Los  Angeles
 90296,14,0,0,0,0,0,0,Playa Del Rey,Los  Angeles
-90301,14,17,9,3,5,646,0,Inglewood,Los  Angeles
-90302,14,11,7,1,3,1182,0,Inglewood,Los  Angeles
+90301,14,17,9,3,5,646,87538835.03,Inglewood,Los  Angeles
+90302,14,11,7,1,3,1182,228684226.9,Inglewood,Los  Angeles
 90303,14,1,0,0,1,73,0,Inglewood,Los  Angeles
-90304,14,6,2,4,0,126,0,Inglewood,Los  Angeles
+90304,14,6,2,4,0,126,11855352.01,Inglewood,Los  Angeles
 90305,14,0,0,0,0,0,0,Inglewood,Los  Angeles
 90306,14,0,0,0,0,0,0,Inglewood,Los  Angeles
 90307,14,0,0,0,0,0,0,Inglewood,Los  Angeles
@@ -162,105 +162,105 @@
 90313,0,0,0,0,0,0,0,Inglewood,Los  Angeles
 90397,0,0,0,0,0,0,0,Inglewood,Los  Angeles
 90398,0,0,0,0,0,0,0,Inglewood,Los  Angeles
-90401,13,27,10,13,4,955,0,Santa Monica,Los  Angeles
-90402,13,1,1,0,0,7,0,Santa Monica,Los  Angeles
-90403,13,10,5,4,1,386,0,Santa Monica,Los  Angeles
-90404,13,43,20,14,9,1656,0,Santa Monica,Los  Angeles
-90405,13,25,12,10,3,518,0,Santa Monica,Los  Angeles
+90401,13,27,10,13,4,955,4359284528,Santa Monica,Los  Angeles
+90402,13,1,1,0,0,7,403254.99,Santa Monica,Los  Angeles
+90403,13,10,5,4,1,386,115387527.9,Santa Monica,Los  Angeles
+90404,13,43,20,14,9,1656,1057484773,Santa Monica,Los  Angeles
+90405,13,25,12,10,3,518,824874234.9,Santa Monica,Los  Angeles
 90406,9,0,0,0,0,0,0,Santa Monica,Los  Angeles
 90407,9,0,0,0,0,0,0,Santa Monica,Los  Angeles
 90408,9,0,0,0,0,0,0,Santa Monica,Los  Angeles
 90409,9,0,0,0,0,0,0,Santa Monica,Los  Angeles
 90410,9,0,0,0,0,0,0,Santa Monica,Los  Angeles
 90411,9,0,0,0,0,0,0,Santa Monica,Los  Angeles
-90501,14,143,57,55,31,8153,0,Torrance,Los  Angeles
-90502,14,47,16,19,12,2144,0,Torrance,Los  Angeles
-90503,14,92,39,35,18,3822,0,Torrance,Los  Angeles
-90504,14,18,8,4,6,2180,0,Torrance,Los  Angeles
-90505,14,84,22,44,18,6496,0,Torrance,Los  Angeles
+90501,14,143,57,55,31,8153,14181685831,Torrance,Los  Angeles
+90502,14,47,16,19,12,2144,528082687.4,Torrance,Los  Angeles
+90503,14,92,39,35,18,3822,1347453096,Torrance,Los  Angeles
+90504,14,18,8,4,6,2180,139743008,Torrance,Los  Angeles
+90505,14,84,22,44,18,6496,1507807810,Torrance,Los  Angeles
 90506,14,0,0,0,0,0,0,Torrance,Los  Angeles
 90507,14,0,0,0,0,0,0,Torrance,Los  Angeles
 90508,14,0,0,0,0,0,0,Torrance,Los  Angeles
 90509,14,0,0,0,0,0,0,Torrance,Los  Angeles
 90510,14,0,0,0,0,0,0,Torrance,Los  Angeles
-90601,12,37,11,19,7,2085,0,Whittier,Los  Angeles
-90602,12,14,5,9,0,304,0,Whittier,Los  Angeles
-90603,12,1,1,0,0,9,0,Whittier,Los  Angeles
-90604,12,1,1,0,0,6,0,Whittier,Los  Angeles
-90605,12,19,5,10,4,704,0,Whittier,Los  Angeles
-90606,12,17,8,5,4,740,0,Whittier,Los  Angeles
+90601,12,37,11,19,7,2085,135148565.6,Whittier,Los  Angeles
+90602,12,14,5,9,0,304,39489100.53,Whittier,Los  Angeles
+90603,12,1,1,0,0,9,768998.98,Whittier,Los  Angeles
+90604,12,1,1,0,0,6,427430.99,Whittier,Los  Angeles
+90605,12,19,5,10,4,704,75615121.59,Whittier,Los  Angeles
+90606,12,17,8,5,4,740,73058193.75,Whittier,Los  Angeles
 90607,12,0,0,0,0,0,0,Whittier,Los  Angeles
 90608,12,0,0,0,0,0,0,Whittier,Los  Angeles
 90609,12,0,0,0,0,0,0,Whittier,Los  Angeles
 90610,12,0,0,0,0,0,0,Whittier,Los  Angeles
 90612,0,0,0,0,0,0,0,Whittier,Los  Angeles
-90620,15,55,13,23,19,3272,0,Buena Park,Orange
-90621,15,49,22,23,4,1290,0,Buena Park,Orange
+90620,15,55,13,23,19,3272,3252579443,Buena Park,Orange
+90621,15,49,22,23,4,1290,200157203,Buena Park,Orange
 90622,15,0,0,0,0,0,0,Buena Park,Orange
-90623,15,15,3,10,2,2582,0,La Palma,Orange
+90623,15,15,3,10,2,2582,491053350.8,La Palma,Orange
 90624,15,0,0,0,0,0,0,Buena Park,Orange
-90630,16,87,21,38,28,6856,0,Cypress,Orange
-90631,15,48,27,13,8,1247,0,La Habra,Orange
+90630,16,87,21,38,28,6856,2027336945,Cypress,Orange
+90631,15,48,27,13,8,1247,200371224.7,La Habra,Orange
 90632,15,0,0,0,0,0,0,La Habra,Orange
 90633,15,0,0,0,0,0,0,La Habra,Orange
 90637,12,0,0,0,0,0,0,La Mirada,Los  Angeles
-90638,12,60,19,28,13,2193,0,La Mirada,Los  Angeles
+90638,12,60,19,28,13,2193,211272405,La Mirada,Los  Angeles
 90639,12,0,0,0,0,0,0,La Mirada,Los  Angeles
-90640,13,74,21,31,22,3624,0,Montebello,Los  Angeles
-90650,12,36,13,13,10,1186,0,Norwalk,Los  Angeles
+90640,13,74,21,31,22,3624,500715428.9,Montebello,Los  Angeles
+90650,12,36,13,13,10,1186,123052897.9,Norwalk,Los  Angeles
 90651,12,0,0,0,0,0,0,Norwalk,Los  Angeles
 90652,12,0,0,0,0,0,0,Norwalk,Los  Angeles
 90659,0,0,0,0,0,0,0,Norwalk,Los  Angeles
-90660,13,47,20,12,15,1784,0,Pico Rivera,Los  Angeles
+90660,13,47,20,12,15,1784,934732932.5,Pico Rivera,Los  Angeles
 90661,13,0,0,0,0,0,0,Pico Rivera,Los  Angeles
 90662,13,0,0,0,0,0,0,Pico Rivera,Los  Angeles
-90670,12,467,157,229,81,17256,0,Santa Fe Springs,Los  Angeles
+90670,12,467,157,229,81,17256,4055691477,Santa Fe Springs,Los  Angeles
 90671,12,0,0,0,0,0,0,Santa Fe Springs,Los  Angeles
-90680,16,42,21,18,3,811,0,Stanton,Orange
-90701,12,10,6,3,1,184,0,Artesia,Los  Angeles
+90680,16,42,21,18,3,811,261240886.2,Stanton,Orange
+90701,12,10,6,3,1,184,14741175.81,Artesia,Los  Angeles
 90702,12,0,0,0,0,0,0,Artesia,Los  Angeles
-90703,12,111,38,46,27,4587,0,Cerritos,Los  Angeles
+90703,12,111,38,46,27,4587,1786086739,Cerritos,Los  Angeles
 90704,14,0,0,0,0,0,0,Avalon,Los  Angeles
-90706,13,18,10,5,3,468,0,Bellflower,Los  Angeles
+90706,13,18,10,5,3,468,25056496.58,Bellflower,Los  Angeles
 90707,13,0,0,0,0,0,0,Bellflower,Los  Angeles
-90710,14,33,15,12,6,1228,0,Harbor City,Los  Angeles
+90710,14,33,15,12,6,1228,98515803.22,Harbor City,Los  Angeles
 90711,12,0,0,0,0,0,0,Lakewood,Los  Angeles
-90712,12,11,6,3,2,289,0,Lakewood,Los  Angeles
-90713,12,1,1,0,0,9,0,Lakewood,Los  Angeles
+90712,12,11,6,3,2,289,32613824.29,Lakewood,Los  Angeles
+90713,12,1,1,0,0,9,375544.01,Lakewood,Los  Angeles
 90714,12,0,0,0,0,0,0,Lakewood,Los  Angeles
-90715,12,2,2,0,0,16,0,Lakewood,Los  Angeles
-90716,12,3,2,1,0,40,0,Hawaiian Gardens,Los  Angeles
-90717,14,5,4,1,0,41,0,Lomita,Los  Angeles
-90720,16,50,23,16,11,3751,0,Los Alamitos,Orange
+90715,12,2,2,0,0,16,2599920.08,Lakewood,Los  Angeles
+90716,12,3,2,1,0,40,9946635.02,Hawaiian Gardens,Los  Angeles
+90717,14,5,4,1,0,41,3691147.02,Lomita,Los  Angeles
+90720,16,50,23,16,11,3751,705224258.2,Los Alamitos,Orange
 90721,16,0,0,0,0,0,0,Los Alamitos,Orange
-90723,13,123,54,52,17,2931,0,Paramount,Los  Angeles
-90731,12,25,15,8,2,506,0,San Pedro,Los  Angeles
-90732,12,6,3,2,1,151,0,San Pedro,Los  Angeles
+90723,13,123,54,52,17,2931,787252610.8,Paramount,Los  Angeles
+90731,12,25,15,8,2,506,41497444.66,San Pedro,Los  Angeles
+90732,12,6,3,2,1,151,11541430.02,San Pedro,Los  Angeles
 90733,12,0,0,0,0,0,0,San Pedro,Los  Angeles
 90734,12,0,0,0,0,0,0,San Pedro,Los  Angeles
-90740,16,14,5,6,3,492,0,Seal Beach,Orange
+90740,16,14,5,6,3,492,267812952.1,Seal Beach,Orange
 90742,16,0,0,0,0,0,0,Sunset Beach,Orange
 90743,16,0,0,0,0,0,0,Surfside,Orange
-90744,12,34,13,14,7,5774,0,Wilmington,Los  Angeles
-90745,12,44,11,17,16,3528,0,Carson,Los  Angeles
-90746,12,73,14,36,23,5323,0,Carson,Los  Angeles
+90744,12,34,13,14,7,5774,123707709.7,Wilmington,Los  Angeles
+90745,12,44,11,17,16,3528,399276315.4,Carson,Los  Angeles
+90746,12,73,14,36,23,5323,624545329.7,Carson,Los  Angeles
 90747,12,0,0,0,0,0,0,Carson,Los  Angeles
 90748,12,0,0,0,0,0,0,Wilmington,Los  Angeles
 90749,12,1,0,1,0,43,0,Carson,Los  Angeles
-90755,12,62,31,25,6,1512,0,Signal Hill,Los  Angeles
+90755,12,62,31,25,6,1512,233049631.2,Signal Hill,Los  Angeles
 90801,12,0,0,0,0,0,0,Long Beach,Los  Angeles
-90802,12,31,17,10,4,1125,0,Long Beach,Los  Angeles
-90803,12,8,3,5,0,121,0,Long Beach,Los  Angeles
-90804,12,7,2,3,2,239,0,Long Beach,Los  Angeles
-90805,12,44,11,19,14,2156,0,Long Beach,Los  Angeles
-90806,12,36,14,14,8,1671,0,Long Beach,Los  Angeles
-90807,12,12,8,4,0,180,0,Long Beach,Los  Angeles
-90808,12,34,8,15,11,5829,0,Long Beach,Los  Angeles
+90802,12,31,17,10,4,1125,340409452.5,Long Beach,Los  Angeles
+90803,12,8,3,5,0,121,12205112.89,Long Beach,Los  Angeles
+90804,12,7,2,3,2,239,42071811.11,Long Beach,Los  Angeles
+90805,12,44,11,19,14,2156,1241865483,Long Beach,Los  Angeles
+90806,12,36,14,14,8,1671,699005328.6,Long Beach,Los  Angeles
+90807,12,12,8,4,0,180,15269013.11,Long Beach,Los  Angeles
+90808,12,34,8,15,11,5829,696167288.5,Long Beach,Los  Angeles
 90809,12,0,0,0,0,0,0,Long Beach,Los  Angeles
-90810,12,51,9,19,23,3618,0,Long Beach,Los  Angeles
-90813,12,65,29,29,7,1682,0,Long Beach,Los  Angeles
-90814,12,4,3,1,0,43,0,Long Beach,Los  Angeles
-90815,12,24,10,8,6,1231,0,Long Beach,Los  Angeles
+90810,12,51,9,19,23,3618,882783855.2,Long Beach,Los  Angeles
+90813,12,65,29,29,7,1682,235725630.1,Long Beach,Los  Angeles
+90814,12,4,3,1,0,43,3367441.91,Long Beach,Los  Angeles
+90815,12,24,10,8,6,1231,302261623.6,Long Beach,Los  Angeles
 90822,12,0,0,0,0,0,0,Long Beach,Los  Angeles
 90831,12,0,0,0,0,0,0,Long Beach,Los  Angeles
 90832,12,0,0,0,0,0,0,Long Beach,Los  Angeles
@@ -277,38 +277,38 @@
 90888,0,0,0,0,0,0,0,Long Beach,Los  Angeles
 90895,12,0,0,0,0,0,0,Carson,Los  Angeles
 90899,12,0,0,0,0,0,0,Long Beach,Los  Angeles
-91001,10,11,8,2,1,164,0,Altadena,Los  Angeles
+91001,10,11,8,2,1,164,8085548.93,Altadena,Los  Angeles
 91003,10,0,0,0,0,0,0,Altadena,Los  Angeles
-91006,10,39,23,11,5,846,0,Arcadia,Los  Angeles
-91007,10,12,9,2,1,163,0,Arcadia,Los  Angeles
+91006,10,39,23,11,5,846,120985649.1,Arcadia,Los  Angeles
+91007,10,12,9,2,1,163,20132491.79,Arcadia,Los  Angeles
 91008,10,0,0,0,0,0,0,#N/A,#N/A
 91009,10,0,0,0,0,0,0,Duarte,Los  Angeles
-91010,10,28,12,11,5,1254,0,Duarte,Los  Angeles
-91011,10,7,5,2,0,71,0,La Canada Flintridge,Los  Angeles
+91010,10,28,12,11,5,1254,147094739.2,Duarte,Los  Angeles
+91011,10,7,5,2,0,71,7524556.9,La Canada Flintridge,Los  Angeles
 91012,10,0,0,0,0,0,0,La Canada Flintridge,Los  Angeles
-91016,10,72,22,36,14,3651,0,Monrovia,Los  Angeles
+91016,10,72,22,36,14,3651,523232280.9,Monrovia,Los  Angeles
 91017,10,0,0,0,0,0,0,Monrovia,Los  Angeles
-91020,10,9,4,4,1,210,0,Montrose,Los  Angeles
+91020,10,9,4,4,1,210,10436103.02,Montrose,Los  Angeles
 91021,10,0,0,0,0,0,0,Montrose,Los  Angeles
 91023,10,0,0,0,0,0,0,Mount Wilson,Los  Angeles
-91024,10,5,4,1,0,43,0,Sierra Madre,Los  Angeles
+91024,10,5,4,1,0,43,3023646.01,Sierra Madre,Los  Angeles
 91025,10,0,0,0,0,0,0,Sierra Madre,Los  Angeles
-91030,10,11,7,4,0,153,0,South Pasadena,Los  Angeles
+91030,10,11,7,4,0,153,11086589.81,South Pasadena,Los  Angeles
 91031,10,0,0,0,0,0,0,South Pasadena,Los  Angeles
-91040,8,3,3,0,0,26,0,Sunland,Los  Angeles
+91040,8,3,3,0,0,26,4632881.93,Sunland,Los  Angeles
 91041,8,0,0,0,0,0,0,Sunland,Los  Angeles
-91042,8,8,2,5,1,234,0,Tujunga,Los  Angeles
+91042,8,8,2,5,1,234,9854186.09,Tujunga,Los  Angeles
 91043,8,0,0,0,0,0,0,Tujunga,Los  Angeles
 91046,8,0,0,0,0,0,0,Verdugo City,Los  Angeles
 91066,10,0,0,0,0,0,0,Arcadia,Los  Angeles
-91101,10,37,12,18,7,4347,0,Pasadena,Los  Angeles
+91101,10,37,12,18,7,4347,160247437.6,Pasadena,Los  Angeles
 91102,10,0,0,0,0,0,0,Pasadena,Los  Angeles
-91103,10,29,15,12,2,605,0,Pasadena,Los  Angeles
-91104,10,9,8,1,0,79,0,Pasadena,Los  Angeles
-91105,10,31,18,8,5,906,0,Pasadena,Los  Angeles
-91106,10,13,8,3,2,411,0,Pasadena,Los  Angeles
-91107,10,56,30,19,7,1816,0,Pasadena,Los  Angeles
-91108,10,6,4,1,1,1984,0,San Marino,Los  Angeles
+91103,10,29,15,12,2,605,137003590.6,Pasadena,Los  Angeles
+91104,10,9,8,1,0,79,9380576.03,Pasadena,Los  Angeles
+91105,10,31,18,8,5,906,73941300.08,Pasadena,Los  Angeles
+91106,10,13,8,3,2,411,62184824.3,Pasadena,Los  Angeles
+91107,10,56,30,19,7,1816,5485229053,Pasadena,Los  Angeles
+91108,10,6,4,1,1,1984,354501055.9,San Marino,Los  Angeles
 91109,10,1,0,0,1,6000,0,Pasadena,Los  Angeles
 91110,10,0,0,0,0,0,0,Pasadena,Los  Angeles
 91114,10,0,0,0,0,0,0,Pasadena,Los  Angeles
@@ -318,8 +318,8 @@
 91118,10,0,0,0,0,0,0,San Marino,Los  Angeles
 91121,10,0,0,0,0,0,0,Pasadena,Los  Angeles
 91123,10,0,0,0,0,0,0,Pasadena,Los  Angeles
-91124,10,9,2,2,5,4373,0,Pasadena,Los  Angeles
-91125,10,1,0,1,0,19,0,Pasadena,Los  Angeles
+91124,10,9,2,2,5,4373,61709570.2,Pasadena,Los  Angeles
+91125,10,1,0,1,0,19,5442562.1,Pasadena,Los  Angeles
 91126,10,0,0,0,0,0,0,Pasadena,Los  Angeles
 91129,10,0,0,0,0,0,0,Pasadena,Los  Angeles
 91131,0,0,0,0,0,0,0,Pasadena,Los  Angeles
@@ -330,139 +330,139 @@
 91189,10,0,0,0,0,0,0,Pasadena,Los  Angeles
 91191,0,0,0,0,0,0,0,Pasadena,Los  Angeles
 91199,10,1,0,1,0,21,0,Pasadena,Los  Angeles
-91201,9,30,11,16,3,1727,0,Glendale,Los  Angeles
-91202,9,15,8,6,1,324,0,Glendale,Los  Angeles
-91203,9,38,12,17,9,2154,0,Glendale,Los  Angeles
-91204,9,33,18,13,2,544,0,Glendale,Los  Angeles
-91205,9,6,3,3,0,101,0,Glendale,Los  Angeles
-91206,9,10,4,4,2,243,0,Glendale,Los  Angeles
+91201,9,30,11,16,3,1727,766749511.9,Glendale,Los  Angeles
+91202,9,15,8,6,1,324,34344217.27,Glendale,Los  Angeles
+91203,9,38,12,17,9,2154,150916890.8,Glendale,Los  Angeles
+91204,9,33,18,13,2,544,254913685.4,Glendale,Los  Angeles
+91205,9,6,3,3,0,101,4642669.99,Glendale,Los  Angeles
+91206,9,10,4,4,2,243,22221230.09,Glendale,Los  Angeles
 91207,9,0,0,0,0,0,0,Glendale,Los  Angeles
-91208,9,1,0,1,0,20,0,Glendale,Los  Angeles
+91208,9,1,0,1,0,20,807740.99,Glendale,Los  Angeles
 91209,9,0,0,0,0,0,0,Glendale,Los  Angeles
 91210,9,1,0,1,0,22,0,Glendale,Los  Angeles
-91214,10,8,7,1,0,76,0,La Crescenta,Los  Angeles
+91214,10,8,7,1,0,76,7691968.98,La Crescenta,Los  Angeles
 91221,9,0,0,0,0,0,0,Glendale,Los  Angeles
 91222,9,0,0,0,0,0,0,Glendale,Los  Angeles
 91224,10,0,0,0,0,0,0,La Crescenta,Los  Angeles
 91225,9,0,0,0,0,0,0,Glendale,Los  Angeles
 91226,9,0,0,0,0,0,0,Glendale,Los  Angeles
-91301,5,39,23,6,10,2412,0,Agoura Hills,Los  Angeles
-91302,8,36,16,11,9,1284,0,Calabasas,Los  Angeles
-91303,8,16,8,6,2,706,0,Canoga Park,Los  Angeles
-91304,5,72,38,24,10,2399,0,Canoga Park,Los  Angeles
+91301,5,39,23,6,10,2412,4100562380,Agoura Hills,Los  Angeles
+91302,8,36,16,11,9,1284,199993308,Calabasas,Los  Angeles
+91303,8,16,8,6,2,706,21168988.79,Canoga Park,Los  Angeles
+91304,5,72,38,24,10,2399,1104806506,Canoga Park,Los  Angeles
 91305,5,0,0,0,0,0,0,Canoga Park,Los  Angeles
-91306,5,2,1,1,0,43,0,Winnetka,Los  Angeles
-91307,5,4,3,1,0,31,0,West Hills,Los  Angeles
+91306,5,2,1,1,0,43,840083.99,Winnetka,Los  Angeles
+91307,5,4,3,1,0,31,2281467.02,West Hills,Los  Angeles
 91308,5,0,0,0,0,0,0,West Hills,Los  Angeles
 91309,5,0,0,0,0,0,0,Canoga Park,Los  Angeles
 91310,8,0,0,0,0,0,0,Castaic,Los  Angeles
-91311,8,301,117,121,63,13612,0,Chatsworth,Los  Angeles
+91311,8,301,117,121,63,13612,4337599739,Chatsworth,Los  Angeles
 91313,8,0,0,0,0,0,0,Chatsworth,Los  Angeles
-91316,8,14,8,5,1,289,0,Encino,Los  Angeles
+91316,8,14,8,5,1,289,17189761.04,Encino,Los  Angeles
 91319,5,0,0,0,0,0,0,Newbury Park,Ventura
-91320,5,96,40,37,19,8439,0,Newbury Park,Ventura
-91321,8,9,6,1,2,828,0,Newhall,Los  Angeles
+91320,5,96,40,37,19,8439,29094828841,Newbury Park,Ventura
+91321,8,9,6,1,2,828,89264304.65,Newhall,Los  Angeles
 91322,8,0,0,0,0,0,0,Newhall,Los  Angeles
-91324,8,51,24,19,8,2239,0,Northridge,Los  Angeles
-91325,8,8,3,4,1,1273,0,Northridge,Los  Angeles
-91326,8,6,1,4,1,170,0,Porter Ranch,Los  Angeles
+91324,8,51,24,19,8,2239,213692910.2,Northridge,Los  Angeles
+91325,8,8,3,4,1,1273,458016590.7,Northridge,Los  Angeles
+91326,8,6,1,4,1,170,5883775,Porter Ranch,Los  Angeles
 91327,8,0,0,0,0,0,0,Northridge,Los  Angeles
 91328,8,0,0,0,0,0,0,Northridge,Los  Angeles
-91329,8,2,0,0,2,575,0,Northridge,Los  Angeles
+91329,8,2,0,0,2,575,171307515.9,Northridge,Los  Angeles
 91330,8,0,0,0,0,0,0,Northridge,Los  Angeles
-91331,8,66,27,28,11,1834,0,Pacoima,Los  Angeles
+91331,8,66,27,28,11,1834,292133543.2,Pacoima,Los  Angeles
 91333,8,0,0,0,0,0,0,Pacoima,Los  Angeles
 91334,8,0,0,0,0,0,0,Pacoima,Los  Angeles
-91335,8,7,5,2,0,60,0,Reseda,Los  Angeles
+91335,8,7,5,2,0,60,10419484.2,Reseda,Los  Angeles
 91337,8,0,0,0,0,0,0,Reseda,Los  Angeles
-91340,8,74,33,30,11,1890,0,San Fernando,Los  Angeles
+91340,8,74,33,30,11,1890,350093859.5,San Fernando,Los  Angeles
 91341,8,0,0,0,0,0,0,San Fernando,Los  Angeles
-91342,8,72,20,32,20,6528,0,Sylmar,Los  Angeles
-91343,8,13,7,3,3,422,0,North Hills,Los  Angeles
-91344,8,11,9,2,0,117,0,Granada Hills,Los  Angeles
-91345,8,7,4,1,2,284,0,Mission Hills,Los  Angeles
+91342,8,72,20,32,20,6528,6415727846,Sylmar,Los  Angeles
+91343,8,13,7,3,3,422,50598806.86,North Hills,Los  Angeles
+91344,8,11,9,2,0,117,15039776.69,Granada Hills,Los  Angeles
+91345,8,7,4,1,2,284,43548037,Mission Hills,Los  Angeles
 91346,8,0,0,0,0,0,0,Mission Hills,Los  Angeles
-91350,8,25,6,15,4,813,0,Santa Clarita,Los  Angeles
-91351,8,12,6,5,1,222,0,Canyon Country,Los  Angeles
-91352,8,147,72,48,27,4436,0,Sun Valley,Los  Angeles
+91350,8,25,6,15,4,813,106145519,Santa Clarita,Los  Angeles
+91351,8,12,6,5,1,222,45568724.97,Canyon Country,Los  Angeles
+91352,8,147,72,48,27,4436,2858374700,Sun Valley,Los  Angeles
 91353,8,0,0,0,0,0,0,Sun Valley,Los  Angeles
-91354,8,1,1,0,0,6,0,Valencia,Los  Angeles
-91355,8,269,85,107,77,13676,0,Valencia,Los  Angeles
-91356,5,15,12,3,0,165,0,Tarzana,Los  Angeles
+91354,8,1,1,0,0,6,252876.01,Valencia,Los  Angeles
+91355,8,269,85,107,77,13676,2916763183,Valencia,Los  Angeles
+91356,5,15,12,3,0,165,35704699.19,Tarzana,Los  Angeles
 91357,5,0,0,0,0,0,0,Tarzana,Los  Angeles
-91358,5,1,0,1,0,33,0,Thousand Oaks,Ventura
+91358,5,1,0,1,0,33,476403,Thousand Oaks,Ventura
 91359,5,0,0,0,0,0,0,Westlake Village,Ventura
-91360,5,16,6,8,2,594,0,Thousand Oaks,Ventura
-91361,5,42,15,20,7,1160,0,Westlake Village,Ventura
-91362,5,56,22,22,12,77306,0,Thousand Oaks,Ventura
+91360,5,16,6,8,2,594,5693556071,Thousand Oaks,Ventura
+91361,5,42,15,20,7,1160,1091075055,Westlake Village,Ventura
+91362,5,56,22,22,12,77306,474419468.1,Thousand Oaks,Ventura
 91363,0,0,0,0,0,0,0,Westlake Village,Los  Angeles
-91364,8,15,11,4,0,179,0,Woodland Hills,Los  Angeles
+91364,8,15,11,4,0,179,9682078.05,Woodland Hills,Los  Angeles
 91365,8,0,0,0,0,0,0,Woodland Hills,Los  Angeles
-91367,8,49,22,9,18,4408,0,Woodland Hills,Los  Angeles
+91367,8,49,22,9,18,4408,3312980735,Woodland Hills,Los  Angeles
 91371,5,0,0,0,0,0,0,Woodland Hills,Los  Angeles
 91372,8,0,0,0,0,0,0,Calabasas,Los  Angeles
 91376,5,0,0,0,0,0,0,Agoura Hills,Los  Angeles
-91377,5,1,0,1,0,22,0,Oak Park,Ventura
+91377,5,1,0,1,0,22,847889.01,Oak Park,Ventura
 91380,8,1,0,0,1,69,0,Santa Clarita,Los  Angeles
-91381,8,3,2,0,1,152,0,Stevenson Ranch,Los  Angeles
+91381,8,3,2,0,1,152,2553733,Stevenson Ranch,Los  Angeles
 91382,8,0,0,0,0,0,0,Santa Clarita,Los  Angeles
 91383,8,0,0,0,0,0,0,Santa Clarita,Los  Angeles
-91384,8,8,7,1,0,74,0,Castaic,Los  Angeles
+91384,8,8,7,1,0,74,8894970.02,Castaic,Los  Angeles
 91385,8,0,0,0,0,0,0,Valencia,Los  Angeles
 91386,8,0,0,0,0,0,0,Canyon Country,Los  Angeles
-91387,8,4,3,1,0,66,0,Canyon Country,Los  Angeles
+91387,8,4,3,1,0,66,7534648.83,Canyon Country,Los  Angeles
 91388,0,0,0,0,0,0,0,Van Nuys,Los  Angeles
-91390,8,7,4,3,0,82,0,Santa Clarita,Los  Angeles
+91390,8,7,4,3,0,82,11486792.07,Santa Clarita,Los  Angeles
 91392,8,0,0,0,0,0,0,Sylmar,Los  Angeles
 91393,8,0,0,0,0,0,0,North Hills,Los  Angeles
 91394,8,0,0,0,0,0,0,Granada Hills,Los  Angeles
 91395,8,0,0,0,0,0,0,Mission Hills,Los  Angeles
 91396,5,0,0,0,0,0,0,Winnetka,Los  Angeles
 91399,0,0,0,0,0,0,0,Woodland Hills,Los  Angeles
-91401,8,4,4,0,0,29,0,Van Nuys,Los  Angeles
-91402,8,23,11,8,4,824,0,Panorama City,Los  Angeles
-91403,8,20,11,4,5,789,0,Sherman Oaks,Los  Angeles
+91401,8,4,4,0,0,29,3105867,Van Nuys,Los  Angeles
+91402,8,23,11,8,4,824,155579461.5,Panorama City,Los  Angeles
+91403,8,20,11,4,5,789,934104569.1,Sherman Oaks,Los  Angeles
 91404,8,0,0,0,0,0,0,Van Nuys,Los  Angeles
-91405,8,27,15,8,4,864,0,Van Nuys,Los  Angeles
-91406,8,102,49,37,16,3211,0,Van Nuys,Los  Angeles
+91405,8,27,15,8,4,864,184185906.8,Van Nuys,Los  Angeles
+91406,8,102,49,37,16,3211,1042969534,Van Nuys,Los  Angeles
 91407,8,0,0,0,0,0,0,Van Nuys,Los  Angeles
 91408,8,0,0,0,0,0,0,Van Nuys,Los  Angeles
 91409,8,0,0,0,0,0,0,Van Nuys,Los  Angeles
 91410,8,0,0,0,0,0,0,Van Nuys,Los  Angeles
-91411,8,23,10,12,1,435,0,Van Nuys,Los  Angeles
+91411,8,23,10,12,1,435,65336519.93,Van Nuys,Los  Angeles
 91412,8,0,0,0,0,0,0,Panorama City,Los  Angeles
 91413,8,0,0,0,0,0,0,Sherman Oaks,Los  Angeles
-91416,8,1,1,0,0,6,0,Encino,Los  Angeles
-91423,8,12,7,5,0,164,0,Sherman Oaks,Los  Angeles
+91416,8,1,1,0,0,6,823899.98,Encino,Los  Angeles
+91423,8,12,7,5,0,164,14415918.04,Sherman Oaks,Los  Angeles
 91426,8,0,0,0,0,0,0,Encino,Los  Angeles
-91436,8,27,13,12,2,1155,0,Encino,Los  Angeles
+91436,8,27,13,12,2,1155,852647673.2,Encino,Los  Angeles
 91470,8,0,0,0,0,0,0,Van Nuys,Los  Angeles
 91482,8,0,0,0,0,0,0,Van Nuys,Los  Angeles
 91495,8,0,0,0,0,0,0,Sherman Oaks,Los  Angeles
 91496,8,0,0,0,0,0,0,Van Nuys,Los  Angeles
 91497,0,0,0,0,0,0,0,Van Nuys,Los  Angeles
 91499,8,0,0,0,0,0,0,Van Nuys,Los  Angeles
-91501,9,3,3,0,0,26,0,Burbank,Los  Angeles
-91502,9,56,30,18,8,1419,0,Burbank,Los  Angeles
+91501,9,3,3,0,0,26,2749356.12,Burbank,Los  Angeles
+91502,9,56,30,18,8,1419,282157976.4,Burbank,Los  Angeles
 91503,9,0,0,0,0,0,0,Burbank,Los  Angeles
-91504,9,48,17,19,12,2352,0,Burbank,Los  Angeles
-91505,9,45,17,19,9,2903,0,Burbank,Los  Angeles
-91506,9,21,10,9,2,400,0,Burbank,Los  Angeles
+91504,9,48,17,19,12,2352,376648223.6,Burbank,Los  Angeles
+91505,9,45,17,19,9,2903,201344599.3,Burbank,Los  Angeles
+91506,9,21,10,9,2,400,38194680.29,Burbank,Los  Angeles
 91507,9,0,0,0,0,0,0,Burbank,Los  Angeles
 91508,9,0,0,0,0,0,0,Burbank,Los  Angeles
 91510,9,0,0,0,0,0,0,Burbank,Los  Angeles
-91521,9,2,1,0,1,58,0,Burbank,Los  Angeles
-91522,9,1,1,0,0,6,0,Burbank,Los  Angeles
+91521,9,2,1,0,1,58,1595652,Burbank,Los  Angeles
+91522,9,1,1,0,0,6,461001.01,Burbank,Los  Angeles
 91523,9,0,0,0,0,0,0,Burbank,Los  Angeles
 91526,9,0,0,0,0,0,0,Burbank,Los  Angeles
-91601,8,25,12,8,5,696,0,North Hollywood,Los  Angeles
-91602,8,3,2,1,0,54,0,North Hollywood,Los  Angeles
+91601,8,25,12,8,5,696,67978794.91,North Hollywood,Los  Angeles
+91602,8,3,2,1,0,54,9926577.13,North Hollywood,Los  Angeles
 91603,8,0,0,0,0,0,0,North Hollywood,Los  Angeles
-91604,8,13,10,3,0,113,0,Studio City,Los  Angeles
-91605,8,105,60,36,9,3073,0,North Hollywood,Los  Angeles
-91606,8,1,1,0,0,8,0,North Hollywood,Los  Angeles
-91607,8,9,8,0,1,153,0,Valley Village,Los  Angeles
-91608,8,3,2,0,1,737,0,Universal City,Los  Angeles
+91604,8,13,10,3,0,113,15018564.88,Studio City,Los  Angeles
+91605,8,105,60,36,9,3073,537562601.3,North Hollywood,Los  Angeles
+91606,8,1,1,0,0,8,508647.02,North Hollywood,Los  Angeles
+91607,8,9,8,0,1,153,13027197.98,Valley Village,Los  Angeles
+91608,8,3,2,0,1,737,453369331,Universal City,Los  Angeles
 91609,8,0,0,0,0,0,0,North Hollywood,Los  Angeles
 91610,8,0,0,0,0,0,0,Toluca Lake,Los  Angeles
 91611,8,0,0,0,0,0,0,North Hollywood,Los  Angeles
@@ -472,216 +472,216 @@
 91616,8,0,0,0,0,0,0,North Hollywood,Los  Angeles
 91617,8,0,0,0,0,0,0,Valley Village,Los  Angeles
 91618,8,0,0,0,0,0,0,North Hollywood,Los  Angeles
-91701,11,4,3,1,0,37,0,Rancho Cucamonga,San  Bernardino
-91702,10,105,39,42,24,10338,0,Azusa,Los  Angeles
-91706,10,139,51,56,32,7289,0,Baldwin Park,Los  Angeles
-91708,11,10,4,6,0,203,0,Chino,San  Bernardino
-91709,11,18,11,4,3,574,0,Chino Hills,San  Bernardino
-91710,11,254,108,94,52,10124,0,Chino,San  Bernardino
-91711,10,21,8,9,4,1469,0,Claremont,Los  Angeles
+91701,11,4,3,1,0,37,2571952.03,Rancho Cucamonga,San  Bernardino
+91702,10,105,39,42,24,10338,915650997.6,Azusa,Los  Angeles
+91706,10,139,51,56,32,7289,2094685981,Baldwin Park,Los  Angeles
+91708,11,10,4,6,0,203,418571447,Chino,San  Bernardino
+91709,11,18,11,4,3,574,977292603.1,Chino Hills,San  Bernardino
+91710,11,254,108,94,52,10124,2340718595,Chino,San  Bernardino
+91711,10,21,8,9,4,1469,78290270.55,Claremont,Los  Angeles
 91714,10,2,1,0,1,85,0,City Of Industry,Los  Angeles
 91715,10,0,0,0,0,0,0,City Of Industry,Los  Angeles
 91716,10,0,0,0,0,0,0,City Of Industry,Los  Angeles
-91722,10,24,9,13,2,600,0,Covina,Los  Angeles
-91723,10,19,13,5,1,307,0,Covina,Los  Angeles
-91724,10,24,8,12,4,760,0,Covina,Los  Angeles
-91729,11,1,1,0,0,10,0,Rancho Cucamonga,San  Bernardino
-91730,11,220,74,93,53,14743,0,Rancho Cucamonga,San  Bernardino
-91731,10,32,12,11,9,1456,0,El Monte,Los  Angeles
-91732,10,19,13,5,1,250,0,El Monte,Los  Angeles
-91733,10,136,79,41,16,4008,0,South El Monte,Los  Angeles
+91722,10,24,9,13,2,600,97713637.67,Covina,Los  Angeles
+91723,10,19,13,5,1,307,79935723.2,Covina,Los  Angeles
+91724,10,24,8,12,4,760,133223724.2,Covina,Los  Angeles
+91729,11,1,1,0,0,10,982832.01,Rancho Cucamonga,San  Bernardino
+91730,11,220,74,93,53,14743,1758271140,Rancho Cucamonga,San  Bernardino
+91731,10,32,12,11,9,1456,321265912.8,El Monte,Los  Angeles
+91732,10,19,13,5,1,250,10888616.85,El Monte,Los  Angeles
+91733,10,136,79,41,16,4008,522944860.5,South El Monte,Los  Angeles
 91734,10,0,0,0,0,0,0,El Monte,Los  Angeles
 91735,10,0,0,0,0,0,0,El Monte,Los  Angeles
-91737,11,1,1,0,0,6,0,Rancho Cucamonga,San  Bernardino
-91739,11,17,6,11,0,293,0,Rancho Cucamonga,San  Bernardino
-91740,10,17,9,7,1,306,0,Glendora,Los  Angeles
-91741,10,12,5,5,2,280,0,Glendora,Los  Angeles
+91737,11,1,1,0,0,6,506609.02,Rancho Cucamonga,San  Bernardino
+91739,11,17,6,11,0,293,40078448.29,Rancho Cucamonga,San  Bernardino
+91740,10,17,9,7,1,306,54429676.87,Glendora,Los  Angeles
+91741,10,12,5,5,2,280,909474073.8,Glendora,Los  Angeles
 91743,11,0,0,0,0,0,0,Guasti,San  Bernardino
-91744,10,39,14,19,6,1198,0,La Puente,Los  Angeles
-91745,10,62,27,17,18,2914,0,Hacienda Heights,Los  Angeles
-91746,10,95,35,31,29,5859,0,La Puente,Los  Angeles
+91744,10,39,14,19,6,1198,181158888.3,La Puente,Los  Angeles
+91745,10,62,27,17,18,2914,1195476665,Hacienda Heights,Los  Angeles
+91746,10,95,35,31,29,5859,1225551964,La Puente,Los  Angeles
 91747,10,0,0,0,0,0,0,La Puente,Los  Angeles
-91748,10,108,35,34,39,10779,0,Rowland Heights,Los  Angeles
+91748,10,108,35,34,39,10779,1159786259,Rowland Heights,Los  Angeles
 91749,10,0,0,0,0,0,0,La Puente,Los  Angeles
-91750,10,56,28,25,3,1121,0,La Verne,Los  Angeles
-91752,11,74,25,26,23,4172,0,Mira Loma,Riverside
-91754,13,31,13,11,7,952,0,Monterey Park,Los  Angeles
-91755,13,7,3,4,0,112,0,Monterey Park,Los  Angeles
+91750,10,56,28,25,3,1121,179640799.8,La Verne,Los  Angeles
+91752,11,74,25,26,23,4172,546898566.8,Mira Loma,Riverside
+91754,13,31,13,11,7,952,528096984.5,Monterey Park,Los  Angeles
+91755,13,7,3,4,0,112,11873773.88,Monterey Park,Los  Angeles
 91756,13,0,0,0,0,0,0,Monterey Park,Los  Angeles
 91758,11,0,0,0,0,0,0,Ontario,San  Bernardino
 91759,11,0,0,0,0,0,0,Mt Baldy,Los  Angeles
-91761,11,406,140,183,83,20205,0,Ontario,San  Bernardino
-91762,11,57,23,28,6,1232,0,Ontario,San  Bernardino
-91763,11,49,21,21,7,1323,0,Montclair,San  Bernardino
-91764,11,38,18,11,9,1940,0,Ontario,San  Bernardino
-91765,10,36,22,9,5,1118,0,Diamond Bar,Los  Angeles
-91766,10,78,32,32,14,2711,0,Pomona,Los  Angeles
-91767,10,38,19,14,5,1636,0,Pomona,Los  Angeles
-91768,10,71,28,34,9,1889,0,Pomona,Los  Angeles
+91761,11,406,140,183,83,20205,2093744950,Ontario,San  Bernardino
+91762,11,57,23,28,6,1232,322965902.5,Ontario,San  Bernardino
+91763,11,49,21,21,7,1323,144966572,Montclair,San  Bernardino
+91764,11,38,18,11,9,1940,947799872.1,Ontario,San  Bernardino
+91765,10,36,22,9,5,1118,99765064.08,Diamond Bar,Los  Angeles
+91766,10,78,32,32,14,2711,333437714.5,Pomona,Los  Angeles
+91767,10,38,19,14,5,1636,125990291.5,Pomona,Los  Angeles
+91768,10,71,28,34,9,1889,348979164.1,Pomona,Los  Angeles
 91769,10,2,0,0,2,208,0,Pomona,Los  Angeles
-91770,10,15,6,5,4,578,0,Rosemead,Los  Angeles
+91770,10,15,6,5,4,578,118776911.8,Rosemead,Los  Angeles
 91771,10,0,0,0,0,0,0,Rosemead,Los  Angeles
 91772,10,0,0,0,0,0,0,Rosemead,Los  Angeles
-91773,10,54,22,19,13,2213,0,San Dimas,Los  Angeles
-91775,10,2,2,0,0,12,0,San Gabriel,Los  Angeles
-91776,10,22,16,5,1,273,0,San Gabriel,Los  Angeles
+91773,10,54,22,19,13,2213,434607081.1,San Dimas,Los  Angeles
+91775,10,2,2,0,0,12,1454178,San Gabriel,Los  Angeles
+91776,10,22,16,5,1,273,31016848.17,San Gabriel,Los  Angeles
 91778,10,0,0,0,0,0,0,San Gabriel,Los  Angeles
-91780,10,9,6,3,0,121,0,Temple City,Los  Angeles
-91784,11,2,1,1,0,23,0,Upland,San  Bernardino
+91780,10,9,6,3,0,121,15099742,Temple City,Los  Angeles
+91784,11,2,1,1,0,23,3733806,Upland,San  Bernardino
 91785,11,0,0,0,0,0,0,Upland,San  Bernardino
-91786,11,61,25,29,7,1540,0,Upland,San  Bernardino
+91786,11,61,25,29,7,1540,189930738.4,Upland,San  Bernardino
 91788,10,0,0,0,0,0,0,Walnut,Los  Angeles
-91789,10,119,50,52,17,4753,0,Walnut,Los  Angeles
-91790,10,13,10,3,0,163,0,West Covina,Los  Angeles
-91791,10,5,3,2,0,55,0,West Covina,Los  Angeles
+91789,10,119,50,52,17,4753,766793261.9,Walnut,Los  Angeles
+91790,10,13,10,3,0,163,11149212.04,West Covina,Los  Angeles
+91791,10,5,3,2,0,55,4058650.99,West Covina,Los  Angeles
 91792,10,1,0,1,0,12,0,West Covina,Los  Angeles
 91793,10,0,0,0,0,0,0,West Covina,Los  Angeles
 91795,10,0,0,0,0,0,0,Walnut,Los  Angeles
 91797,0,0,0,0,0,0,0,Pomona,Los  Angeles
 91798,0,0,0,0,0,0,0,Ontario,San  Bernardino
 91799,0,0,0,0,0,0,0,Pomona,Los  Angeles
-91801,10,13,8,5,0,148,0,Alhambra,Los  Angeles
+91801,10,13,8,5,0,148,11447278.98,Alhambra,Los  Angeles
 91802,10,0,0,0,0,0,0,Alhambra,Los  Angeles
-91803,10,23,14,8,1,770,0,Alhambra,Los  Angeles
+91803,10,23,14,8,1,770,23877804.93,Alhambra,Los  Angeles
 91804,10,0,0,0,0,0,0,Alhambra,Los  Angeles
 91896,10,0,0,0,0,0,0,Alhambra,Los  Angeles
 91899,10,0,0,0,0,0,0,Alhambra,Los  Angeles
-91901,21,3,2,1,0,36,0,Alpine,San  Diego
-91902,19,7,4,2,1,283,0,Bonita,San  Diego
+91901,21,3,2,1,0,36,5417921.11,Alpine,San  Diego
+91902,19,7,4,2,1,283,21903841.09,Bonita,San  Diego
 91903,21,0,0,0,0,0,0,Alpine,San  Diego
 91905,21,0,0,0,0,0,0,Boulevard,San  Diego
 91906,21,0,0,0,0,0,0,Campo,San  Diego
 91908,19,0,0,0,0,0,0,Bonita,San  Diego
 91909,19,0,0,0,0,0,0,Chula Vista,San  Diego
-91910,19,18,4,8,6,2805,0,Chula Vista,San  Diego
-91911,19,61,22,24,15,2851,0,Chula Vista,San  Diego
+91910,19,18,4,8,6,2805,1169217927,Chula Vista,San  Diego
+91911,19,61,22,24,15,2851,313122732.2,Chula Vista,San  Diego
 91912,19,0,0,0,0,0,0,Chula Vista,San  Diego
 91913,19,0,0,0,0,0,0,Chula Vista,San  Diego
-91914,19,18,11,7,0,255,0,Chula Vista,San  Diego
-91915,19,2,1,1,0,24,0,Chula Vista,San  Diego
+91914,19,18,11,7,0,255,70706067.51,Chula Vista,San  Diego
+91915,19,2,1,1,0,24,615430,Chula Vista,San  Diego
 91916,21,0,0,0,0,0,0,Descanso,San  Diego
 91917,21,0,0,0,0,0,0,Dulzura,San  Diego
 91921,19,0,0,0,0,0,0,Chula Vista,San  Diego
-91931,21,1,1,0,0,10,0,Guatay,San  Diego
-91932,19,4,3,1,0,35,0,Imperial Beach,San  Diego
+91931,21,1,1,0,0,10,2714435.1,Guatay,San  Diego
+91932,19,4,3,1,0,35,1116034.01,Imperial Beach,San  Diego
 91933,19,0,0,0,0,0,0,Imperial Beach,San  Diego
 91934,21,0,0,0,0,0,0,Jacumba,San  Diego
-91935,21,4,2,2,0,43,0,Jamul,San  Diego
-91941,19,7,4,3,0,81,0,La Mesa,San  Diego
-91942,19,19,11,8,0,248,0,La Mesa,San  Diego
+91935,21,4,2,2,0,43,5211452.21,Jamul,San  Diego
+91941,19,7,4,3,0,81,6044268.11,La Mesa,San  Diego
+91942,19,19,11,8,0,248,22562800.93,La Mesa,San  Diego
 91943,19,0,0,0,0,0,0,La Mesa,San  Diego
 91944,19,0,0,0,0,0,0,La Mesa,San  Diego
-91945,19,9,4,3,2,228,0,Lemon Grove,San  Diego
+91945,19,9,4,3,2,228,40107841.19,Lemon Grove,San  Diego
 91946,19,0,0,0,0,0,0,Lemon Grove,San  Diego
 91947,19,0,0,0,0,0,0,Lincoln Acres,San  Diego
 91948,21,0,0,0,0,0,0,Mount Laguna,San  Diego
-91950,19,57,23,24,10,1735,0,National City,San  Diego
+91950,19,57,23,24,10,1735,154227790.9,National City,San  Diego
 91951,19,0,0,0,0,0,0,National City,San  Diego
 91962,21,0,0,0,0,0,0,Pine Valley,San  Diego
 91963,21,0,0,0,0,0,0,Potrero,San  Diego
 91976,19,0,0,0,0,0,0,Spring Valley,San  Diego
-91977,19,20,13,6,1,359,0,Spring Valley,San  Diego
-91978,19,18,12,6,0,235,0,Spring Valley,San  Diego
+91977,19,20,13,6,1,359,57589495.76,Spring Valley,San  Diego
+91978,19,18,12,6,0,235,53965559.77,Spring Valley,San  Diego
 91979,19,0,0,0,0,0,0,Spring Valley,San  Diego
-91980,21,3,0,0,3,772,0,Tecate,San  Diego
+91980,21,3,0,0,3,772,13401664.3,Tecate,San  Diego
 91987,21,0,0,0,0,0,0,Tecate,San  Diego
 91990,0,0,0,0,0,0,0,Potrero,San  Diego
-92003,18,2,2,0,0,18,0,Bonsall,San  Diego
+92003,18,2,2,0,0,18,972485.99,Bonsall,San  Diego
 92004,21,0,0,0,0,0,0,Borrego Springs,San  Diego
-92007,18,14,8,5,1,294,0,Cardiff By The Sea,San  Diego
-92008,18,182,55,80,47,10092,0,Carlsbad,San  Diego
-92009,18,28,12,10,6,4919,0,Carlsbad,San  Diego
-92010,18,87,25,40,22,4409,0,Carlsbad,San  Diego
-92011,18,75,29,36,10,1818,0,Carlsbad,San  Diego
+92007,18,14,8,5,1,294,74475191.01,Cardiff By The Sea,San  Diego
+92008,18,182,55,80,47,10092,8291723107,Carlsbad,San  Diego
+92009,18,28,12,10,6,4919,4371560468,Carlsbad,San  Diego
+92010,18,87,25,40,22,4409,2852573750,Carlsbad,San  Diego
+92011,18,75,29,36,10,1818,299978025.2,Carlsbad,San  Diego
 92013,18,0,0,0,0,0,0,Carlsbad,San  Diego
-92014,18,9,6,3,0,95,0,Del Mar,San  Diego
+92014,18,9,6,3,0,95,86953446.01,Del Mar,San  Diego
 92018,18,0,0,0,0,0,0,Carlsbad,San  Diego
-92019,21,4,4,0,0,33,0,El Cajon,San  Diego
-92020,21,125,50,58,17,4269,0,El Cajon,San  Diego
-92021,21,28,15,11,2,443,0,El Cajon,San  Diego
+92019,21,4,4,0,0,33,3205545.11,El Cajon,San  Diego
+92020,21,125,50,58,17,4269,729366211.9,El Cajon,San  Diego
+92021,21,28,15,11,2,443,69627455.65,El Cajon,San  Diego
 92022,21,0,0,0,0,0,0,El Cajon,San  Diego
 92023,18,0,0,0,0,0,0,Encinitas,San  Diego
-92024,18,25,14,7,4,595,0,Encinitas,San  Diego
-92025,18,28,17,10,1,548,0,Escondido,San  Diego
-92026,18,8,5,2,1,283,0,Escondido,San  Diego
-92027,18,7,4,3,0,103,0,Escondido,San  Diego
-92028,18,20,13,4,3,462,0,Fallbrook,San  Diego
-92029,18,86,37,34,15,2262,0,Escondido,San  Diego
+92024,18,25,14,7,4,595,227042021,Encinitas,San  Diego
+92025,18,28,17,10,1,548,45834586.28,Escondido,San  Diego
+92026,18,8,5,2,1,283,28618375.87,Escondido,San  Diego
+92027,18,7,4,3,0,103,7120240,Escondido,San  Diego
+92028,18,20,13,4,3,462,50970803.18,Fallbrook,San  Diego
+92029,18,86,37,34,15,2262,618661223.1,Escondido,San  Diego
 92030,18,0,0,0,0,0,0,Escondido,San  Diego
 92033,18,0,0,0,0,0,0,Escondido,San  Diego
 92036,21,0,0,0,0,0,0,Julian,San  Diego
-92037,19,72,23,31,18,4379,0,La Jolla,San  Diego
+92037,19,72,23,31,18,4379,1336781745,La Jolla,San  Diego
 92038,19,0,0,0,0,0,0,La Jolla,San  Diego
 92039,19,0,0,0,0,0,0,La Jolla,San  Diego
-92040,21,25,13,9,3,605,0,Lakeside,San  Diego
+92040,21,25,13,9,3,605,63922169.31,Lakeside,San  Diego
 92046,18,0,0,0,0,0,0,Escondido,San  Diego
 92049,18,0,0,0,0,0,0,Oceanside,San  Diego
 92051,18,0,0,0,0,0,0,Oceanside,San  Diego
 92052,18,0,0,0,0,0,0,Oceanside,San  Diego
-92054,18,24,10,13,1,449,0,Oceanside,San  Diego
+92054,18,24,10,13,1,449,48697242.47,Oceanside,San  Diego
 92055,18,0,0,0,0,0,0,Camp Pendleton,San  Diego
-92056,18,103,38,46,19,8202,0,Oceanside,San  Diego
-92057,18,1,0,1,0,19,0,Oceanside,San  Diego
-92058,18,26,16,7,3,877,0,#N/A,#N/A
+92056,18,103,38,46,19,8202,1699521819,Oceanside,San  Diego
+92057,18,1,0,1,0,19,2168526.9,Oceanside,San  Diego
+92058,18,26,16,7,3,877,141437227.3,#N/A,#N/A
 92059,18,1,0,1,0,15,0,Pala,San  Diego
 92060,18,0,0,0,0,0,0,Palomar Mountain,San  Diego
-92061,18,1,1,0,0,10,0,Pauma Valley,San  Diego
-92064,21,147,54,56,37,8470,0,Poway,San  Diego
-92065,18,20,13,6,1,277,0,Ramona,San  Diego
+92061,18,1,1,0,0,10,500000,Pauma Valley,San  Diego
+92064,21,147,54,56,37,8470,2919742928,Poway,San  Diego
+92065,18,20,13,6,1,277,30672694.14,Ramona,San  Diego
 92066,21,0,0,0,0,0,0,Ranchita,San  Diego
-92067,18,1,1,0,0,8,0,Rancho Santa Fe,San  Diego
+92067,18,1,1,0,0,8,524612.01,Rancho Santa Fe,San  Diego
 92068,18,0,0,0,0,0,0,San Luis Rey,San  Diego
-92069,18,56,23,21,12,1487,0,San Marcos,San  Diego
-92070,18,1,0,1,0,38,0,Santa Ysabel,San  Diego
-92071,19,67,25,33,9,1814,0,Santee,San  Diego
+92069,18,56,23,21,12,1487,205794909.4,San Marcos,San  Diego
+92070,18,1,0,1,0,38,2470832.1,Santa Ysabel,San  Diego
+92071,19,67,25,33,9,1814,228674510.5,Santee,San  Diego
 92072,19,0,0,0,0,0,0,Santee,San  Diego
 92074,21,0,0,0,0,0,0,Poway,San  Diego
-92075,18,22,11,10,1,381,0,Solana Beach,San  Diego
-92078,18,81,42,26,13,2411,0,San Marcos,San  Diego
+92075,18,22,11,10,1,381,229569809.1,Solana Beach,San  Diego
+92078,18,81,42,26,13,2411,757966354.1,San Marcos,San  Diego
 92079,18,0,0,0,0,0,0,San Marcos,San  Diego
-92081,18,202,74,78,50,7931,0,Vista,San  Diego
-92082,18,10,4,5,1,224,0,Valley Center,San  Diego
-92083,18,11,9,1,1,177,0,Vista,San  Diego
-92084,18,13,6,5,2,1037,0,Vista,San  Diego
+92081,18,202,74,78,50,7931,1531545096,Vista,San  Diego
+92082,18,10,4,5,1,224,41051048.88,Valley Center,San  Diego
+92083,18,11,9,1,1,177,19623256.9,Vista,San  Diego
+92084,18,13,6,5,2,1037,243805746,Vista,San  Diego
 92085,18,0,0,0,0,0,0,Vista,San  Diego
-92086,21,1,1,0,0,9,0,Warner Springs,San  Diego
+92086,21,1,1,0,0,9,966189.98,Warner Springs,San  Diego
 92088,18,0,0,0,0,0,0,Fallbrook,San  Diego
 92090,0,0,0,0,0,0,0,El Cajon,San  Diego
-92091,18,1,1,0,0,6,0,Rancho Santa Fe,San  Diego
+92091,18,1,1,0,0,6,493184,Rancho Santa Fe,San  Diego
 92092,19,0,0,0,0,0,0,La Jolla,San  Diego
 92093,19,3,0,0,3,853,0,La Jolla,San  Diego
 92096,18,0,0,0,0,0,0,San Marcos,San  Diego
-92101,19,100,50,33,17,6957,0,San Diego,San  Diego
-92102,19,17,5,5,7,634,0,San Diego,San  Diego
-92103,19,12,7,4,1,166,0,San Diego,San  Diego
-92104,19,14,8,6,0,198,0,San Diego,San  Diego
-92105,19,8,3,4,1,475,0,San Diego,San  Diego
-92106,19,24,14,6,4,880,0,San Diego,San  Diego
-92107,19,7,3,4,0,105,0,San Diego,San  Diego
-92108,19,69,26,31,12,3804,0,San Diego,San  Diego
-92109,19,23,8,11,4,518,0,San Diego,San  Diego
-92110,19,51,25,16,10,1538,0,San Diego,San  Diego
-92111,19,92,43,36,13,2530,0,San Diego,San  Diego
+92101,19,100,50,33,17,6957,3426278787,San Diego,San  Diego
+92102,19,17,5,5,7,634,94886089.21,San Diego,San  Diego
+92103,19,12,7,4,1,166,21798664.09,San Diego,San  Diego
+92104,19,14,8,6,0,198,20813640.29,San Diego,San  Diego
+92105,19,8,3,4,1,475,11580046.07,San Diego,San  Diego
+92106,19,24,14,6,4,880,53414678.96,San Diego,San  Diego
+92107,19,7,3,4,0,105,7247293.04,San Diego,San  Diego
+92108,19,69,26,31,12,3804,580583774.5,San Diego,San  Diego
+92109,19,23,8,11,4,518,83640722.52,San Diego,San  Diego
+92110,19,51,25,16,10,1538,162099533.6,San Diego,San  Diego
+92111,19,92,43,36,13,2530,469901868.7,San Diego,San  Diego
 92112,19,0,0,0,0,0,0,San Diego,San  Diego
-92113,19,55,17,27,11,8468,0,San Diego,San  Diego
-92114,19,8,1,6,1,210,0,San Diego,San  Diego
-92115,19,5,4,1,0,77,0,San Diego,San  Diego
-92116,19,8,4,4,0,110,0,San Diego,San  Diego
-92117,19,17,11,5,1,250,0,San Diego,San  Diego
-92118,19,11,7,0,4,502,0,Coronado,San  Diego
-92119,19,2,1,1,0,22,0,San Diego,San  Diego
-92120,19,18,11,5,2,323,0,San Diego,San  Diego
-92121,21,619,200,261,158,38019,0,San Diego,San  Diego
-92122,19,31,12,14,5,1344,0,San Diego,San  Diego
-92123,19,158,43,64,51,13816,0,San Diego,San  Diego
-92124,19,4,2,1,1,115,0,San Diego,San  Diego
-92126,21,90,44,36,10,2045,0,San Diego,San  Diego
-92127,18,99,29,39,31,8831,0,San Diego,San  Diego
-92128,21,40,12,16,12,3378,0,San Diego,San  Diego
-92129,21,7,3,4,0,82,0,San Diego,San  Diego
-92130,21,71,24,30,17,6521,0,San Diego,San  Diego
-92131,21,73,23,32,18,3302,0,San Diego,San  Diego
-92132,19,3,2,0,1,116,0,San Diego,San  Diego
+92113,19,55,17,27,11,8468,431321661.6,San Diego,San  Diego
+92114,19,8,1,6,1,210,25940524.89,San Diego,San  Diego
+92115,19,5,4,1,0,77,4829580.01,San Diego,San  Diego
+92116,19,8,4,4,0,110,7231598.87,San Diego,San  Diego
+92117,19,17,11,5,1,250,31947085.16,San Diego,San  Diego
+92118,19,11,7,0,4,502,45483375.76,Coronado,San  Diego
+92119,19,2,1,1,0,22,1655079.01,San Diego,San  Diego
+92120,19,18,11,5,2,323,35566621.49,San Diego,San  Diego
+92121,21,619,200,261,158,38019,56831867757,San Diego,San  Diego
+92122,19,31,12,14,5,1344,4612952120,San Diego,San  Diego
+92123,19,158,43,64,51,13816,7389059675,San Diego,San  Diego
+92124,19,4,2,1,1,115,46886534,San Diego,San  Diego
+92126,21,90,44,36,10,2045,335699866.9,San Diego,San  Diego
+92127,18,99,29,39,31,8831,4909220280,San Diego,San  Diego
+92128,21,40,12,16,12,3378,260023907.1,San Diego,San  Diego
+92129,21,7,3,4,0,82,8948197.08,San Diego,San  Diego
+92130,21,71,24,30,17,6521,7123723797,San Diego,San  Diego
+92131,21,73,23,32,18,3302,2195050884,San Diego,San  Diego
+92132,19,3,2,0,1,116,5157677.1,San Diego,San  Diego
 92133,0,0,0,0,0,0,0,San Diego,San  Diego
 92134,19,0,0,0,0,0,0,San Diego,San  Diego
 92135,19,2,0,0,2,1062,0,San Diego,San  Diego
@@ -698,12 +698,12 @@
 92150,21,0,0,0,0,0,0,San Diego,San  Diego
 92152,19,0,0,0,0,0,0,San Diego,San  Diego
 92153,19,0,0,0,0,0,0,San Diego,San  Diego
-92154,19,176,56,73,47,12090,0,San Diego,San  Diego
+92154,19,176,56,73,47,12090,1338803864,San Diego,San  Diego
 92155,19,0,0,0,0,0,0,San Diego,San  Diego
 92158,19,0,0,0,0,0,0,San Diego,San  Diego
 92159,19,0,0,0,0,0,0,San Diego,San  Diego
 92160,19,0,0,0,0,0,0,San Diego,San  Diego
-92161,19,1,1,0,0,6,0,San Diego,San  Diego
+92161,19,1,1,0,0,6,350504.01,San Diego,San  Diego
 92162,19,0,0,0,0,0,0,San Diego,San  Diego
 92163,19,0,0,0,0,0,0,San Diego,San  Diego
 92164,19,0,0,0,0,0,0,San Diego,San  Diego
@@ -715,7 +715,7 @@
 92170,19,0,0,0,0,0,0,San Diego,San  Diego
 92171,19,0,0,0,0,0,0,San Diego,San  Diego
 92172,21,0,0,0,0,0,0,San Diego,San  Diego
-92173,19,4,2,2,0,57,0,San Ysidro,San  Diego
+92173,19,4,2,2,0,57,11561237.2,San Ysidro,San  Diego
 92174,19,0,0,0,0,0,0,San Diego,San  Diego
 92175,19,0,0,0,0,0,0,San Diego,San  Diego
 92176,19,0,0,0,0,0,0,San Diego,San  Diego
@@ -736,87 +736,87 @@
 92197,19,0,0,0,0,0,0,San Diego,San  Diego
 92198,21,0,0,0,0,0,0,San Diego,San  Diego
 92199,21,0,0,0,0,0,0,San Diego,San  Diego
-92201,20,22,14,7,1,295,0,Indio,Riverside
+92201,20,22,14,7,1,295,47312902.64,Indio,Riverside
 92202,20,0,0,0,0,0,0,Indio,Riverside
-92203,20,8,5,2,1,129,0,Indio,Riverside
+92203,20,8,5,2,1,129,10211545.87,Indio,Riverside
 92210,20,0,0,0,0,0,0,Indian Wells,Riverside
-92211,20,30,16,10,4,560,0,Palm Desert,Riverside
-92220,20,12,7,4,1,201,0,Banning,Riverside
+92211,20,30,16,10,4,560,51472636.31,Palm Desert,Riverside
+92220,20,12,7,4,1,201,35163763.88,Banning,Riverside
 92222,21,0,0,0,0,0,0,Bard,Imperial
-92223,20,18,8,6,4,571,0,Beaumont,Riverside
-92225,11,2,1,1,0,36,0,Blythe,Riverside
+92223,20,18,8,6,4,571,148451120.8,Beaumont,Riverside
+92225,11,2,1,1,0,36,5249276.9,Blythe,Riverside
 92226,20,0,0,0,0,0,0,Blythe,Riverside
-92227,21,13,3,6,4,714,0,Brawley,Imperial
-92230,20,3,1,2,0,82,0,Cabazon,Riverside
-92231,21,30,9,10,11,3578,0,Calexico,Imperial
+92227,21,13,3,6,4,714,71246326.7,Brawley,Imperial
+92230,20,3,1,2,0,82,1007964,Cabazon,Riverside
+92231,21,30,9,10,11,3578,67327175.05,Calexico,Imperial
 92232,21,0,0,0,0,0,0,Calexico,Imperial
-92233,21,3,0,2,1,147,0,Calipatria,Imperial
-92234,20,11,9,2,0,95,0,Cathedral City,Riverside
+92233,21,3,0,2,1,147,826503.99,Calipatria,Imperial
+92234,20,11,9,2,0,95,9238160.89,Cathedral City,Riverside
 92235,20,0,0,0,0,0,0,Cathedral City,Riverside
-92236,20,5,0,2,3,486,0,Coachella,Riverside
+92236,20,5,0,2,3,486,150073285.9,Coachella,Riverside
 92239,20,0,0,0,0,0,0,Desert Center,Riverside
-92240,20,6,2,2,2,394,0,Desert Hot Springs,Riverside
-92241,20,1,0,0,1,55,0,Desert Hot Springs,Riverside
+92240,20,6,2,2,2,394,10734095.12,Desert Hot Springs,Riverside
+92241,20,1,0,0,1,55,1697415,Desert Hot Springs,Riverside
 92242,11,0,0,0,0,0,0,Earp,San  Bernardino
-92243,21,31,13,13,5,842,0,El Centro,Imperial
+92243,21,31,13,13,5,842,101312480.8,El Centro,Imperial
 92244,21,0,0,0,0,0,0,El Centro,Imperial
 92247,20,0,0,0,0,0,0,La Quinta,Riverside
 92248,20,0,0,0,0,0,0,La Quinta,Riverside
-92249,21,3,1,1,1,100,0,Heber,Imperial
-92250,21,2,1,1,0,21,0,Holtville,Imperial
-92251,21,10,4,5,1,244,0,Imperial,Imperial
+92249,21,3,1,1,1,100,9481624.02,Heber,Imperial
+92250,21,2,1,1,0,21,4323977.11,Holtville,Imperial
+92251,21,10,4,5,1,244,19768960.87,Imperial,Imperial
 92252,20,0,0,0,0,0,0,Joshua Tree,San  Bernardino
-92253,20,7,3,3,1,198,0,La Quinta,Riverside
-92254,20,4,0,2,2,174,0,Mecca,Riverside
+92253,20,7,3,3,1,198,14480125.81,La Quinta,Riverside
+92254,20,4,0,2,2,174,8984328.8,Mecca,Riverside
 92255,20,0,0,0,0,0,0,Palm Desert,Riverside
-92256,20,1,1,0,0,7,0,Morongo Valley,San  Bernardino
+92256,20,1,1,0,0,7,582778.99,Morongo Valley,San  Bernardino
 92257,21,0,0,0,0,0,0,Niland,Imperial
-92258,20,3,2,1,0,31,0,North Palm Springs,Riverside
+92258,20,3,2,1,0,31,6503498.1,North Palm Springs,Riverside
 92259,21,0,0,0,0,0,0,Ocotillo,Imperial
-92260,20,8,7,1,0,94,0,Palm Desert,Riverside
+92260,20,8,7,1,0,94,6849592.89,Palm Desert,Riverside
 92261,20,0,0,0,0,0,0,Palm Desert,Riverside
-92262,20,13,5,6,2,577,0,Palm Springs,Riverside
+92262,20,13,5,6,2,577,14785776.04,Palm Springs,Riverside
 92263,20,0,0,0,0,0,0,Palm Springs,Riverside
-92264,20,9,4,4,1,478,0,Palm Springs,Riverside
+92264,20,9,4,4,1,478,21508330.66,Palm Springs,Riverside
 92266,21,0,0,0,0,0,0,Palo Verde,Imperial
 92267,20,0,0,0,0,0,0,Parker Dam,San  Bernardino
 92268,20,0,0,0,0,0,0,Pioneertown,San  Bernardino
-92270,20,6,6,0,0,47,0,Rancho Mirage,Riverside
+92270,20,6,6,0,0,47,7855466.01,Rancho Mirage,Riverside
 92273,21,0,0,0,0,0,0,Seeley,Imperial
-92274,20,5,3,1,1,88,0,Thermal,Riverside
+92274,20,5,3,1,1,88,21388655,Thermal,Riverside
 92275,21,0,0,0,0,0,0,Salton City,Imperial
-92276,20,15,7,7,1,233,0,Thousand Palms,Riverside
-92277,20,1,1,0,0,10,0,Twentynine Palms,San  Bernardino
+92276,20,15,7,7,1,233,22428657.3,Thousand Palms,Riverside
+92277,20,1,1,0,0,10,894990.98,Twentynine Palms,San  Bernardino
 92278,20,0,0,0,0,0,0,Twentynine Palms,San  Bernardino
 92280,20,0,0,0,0,0,0,Vidal,San  Bernardino
 92281,21,0,0,0,0,0,0,Westmorland,Imperial
-92282,20,1,0,1,0,31,0,White Water,Riverside
+92282,20,1,0,1,0,31,8931493.8,White Water,Riverside
 92283,21,0,0,0,0,0,0,Winterhaven,Imperial
-92284,20,5,4,1,0,47,0,Yucca Valley,San  Bernardino
+92284,20,5,4,1,0,47,7296851.93,Yucca Valley,San  Bernardino
 92285,20,0,0,0,0,0,0,Landers,San  Bernardino
 92286,20,0,0,0,0,0,0,Yucca Valley,San  Bernardino
 92292,0,0,0,0,0,0,0,Palm Springs,Riverside
-92301,11,32,7,18,7,1513,0,Adelanto,San  Bernardino
+92301,11,32,7,18,7,1513,82330310.61,Adelanto,San  Bernardino
 92304,20,0,0,0,0,0,0,Amboy,San  Bernardino
 92305,11,0,0,0,0,0,0,Angelus Oaks,San  Bernardino
-92307,11,13,6,6,1,408,0,Apple Valley,San  Bernardino
-92308,11,15,8,6,1,282,0,Apple Valley,San  Bernardino
+92307,11,13,6,6,1,408,27229897.79,Apple Valley,San  Bernardino
+92308,11,15,8,6,1,282,23875252.72,Apple Valley,San  Bernardino
 92309,11,0,0,0,0,0,0,Baker,San  Bernardino
 92310,11,1,0,0,1,73,0,Fort Irwin,San  Bernardino
-92311,11,9,5,2,2,294,0,Barstow,San  Bernardino
+92311,11,9,5,2,2,294,7309754.99,Barstow,San  Bernardino
 92312,11,0,0,0,0,0,0,Barstow,San  Bernardino
-92313,20,7,3,3,1,395,0,Grand Terrace,San  Bernardino
-92314,11,1,0,1,0,20,0,Big Bear City,San  Bernardino
-92315,11,2,1,1,0,26,0,Big Bear Lake,San  Bernardino
-92316,20,34,7,21,6,1878,0,Bloomington,San  Bernardino
-92317,11,1,0,1,0,15,0,Blue Jay,San  Bernardino
+92313,20,7,3,3,1,395,64461797.7,Grand Terrace,San  Bernardino
+92314,11,1,0,1,0,20,605423.99,Big Bear City,San  Bernardino
+92315,11,2,1,1,0,26,2176462.1,Big Bear Lake,San  Bernardino
+92316,20,34,7,21,6,1878,98962267.17,Bloomington,San  Bernardino
+92317,11,1,0,1,0,15,4384552,Blue Jay,San  Bernardino
 92318,20,0,0,0,0,0,0,Bryn Mawr,San  Bernardino
-92320,20,7,4,3,0,83,0,Calimesa,Riverside
+92320,20,7,4,3,0,83,19461307.5,Calimesa,Riverside
 92321,11,0,0,0,0,0,0,Cedar Glen,San  Bernardino
 92322,11,0,0,0,0,0,0,Cedarpines Park,San  Bernardino
 92323,11,0,0,0,0,0,0,Cima,San  Bernardino
-92324,20,58,22,24,12,2253,0,Colton,San  Bernardino
-92325,11,2,1,1,0,21,0,Crestline,San  Bernardino
+92324,20,58,22,24,12,2253,195874080.2,Colton,San  Bernardino
+92325,11,2,1,1,0,21,2471657.01,Crestline,San  Bernardino
 92326,11,0,0,0,0,0,0,Crest Park,San  Bernardino
 92327,11,0,0,0,0,0,0,Daggett,San  Bernardino
 92328,7,0,0,0,0,0,0,Death Valley,Inyo
@@ -825,62 +825,62 @@
 92332,11,0,0,0,0,0,0,Essex,San  Bernardino
 92333,11,0,0,0,0,0,0,Fawnskin,San  Bernardino
 92334,11,0,0,0,0,0,0,Fontana,San  Bernardino
-92335,11,80,33,33,14,2964,0,Fontana,San  Bernardino
-92336,11,25,14,9,2,714,0,Fontana,San  Bernardino
-92337,11,83,28,34,21,3459,0,Fontana,San  Bernardino
+92335,11,80,33,33,14,2964,661995437.1,Fontana,San  Bernardino
+92336,11,25,14,9,2,714,165352886.3,Fontana,San  Bernardino
+92337,11,83,28,34,21,3459,546570336.3,Fontana,San  Bernardino
 92338,11,0,0,0,0,0,0,Ludlow,San  Bernardino
-92339,20,1,1,0,0,6,0,Forest Falls,San  Bernardino
+92339,20,1,1,0,0,6,722998.02,Forest Falls,San  Bernardino
 92340,11,0,0,0,0,0,0,Hesperia,San  Bernardino
 92341,11,0,0,0,0,0,0,Green Valley Lake,San  Bernardino
 92342,11,2,1,0,1,60,0,Helendale,San  Bernardino
 92344,11,1,0,1,0,21,0,Hesperia,San  Bernardino
-92345,11,43,22,16,5,903,0,Hesperia,San  Bernardino
-92346,20,10,1,5,4,572,0,Highland,San  Bernardino
+92345,11,43,22,16,5,903,122670018.2,Hesperia,San  Bernardino
+92346,20,10,1,5,4,572,61304416.09,Highland,San  Bernardino
 92347,11,0,0,0,0,0,0,Hinkley,San  Bernardino
 92350,20,0,0,0,0,0,0,Loma Linda,San  Bernardino
 92352,11,2,1,1,0,56,0,Lake Arrowhead,San  Bernardino
-92354,20,6,2,2,2,275,0,Loma Linda,San  Bernardino
+92354,20,6,2,2,2,275,15000089.98,Loma Linda,San  Bernardino
 92356,11,3,0,0,3,425,0,Lucerne Valley,San  Bernardino
 92357,20,0,0,0,0,0,0,Loma Linda,San  Bernardino
-92358,11,1,0,1,0,20,0,Lytle Creek,San  Bernardino
-92359,20,7,3,4,0,114,0,Mentone,San  Bernardino
-92363,11,1,1,0,0,9,0,Needles,San  Bernardino
+92358,11,1,0,1,0,20,1811969,Lytle Creek,San  Bernardino
+92359,20,7,3,4,0,114,18570446.98,Mentone,San  Bernardino
+92363,11,1,1,0,0,9,941102.98,Needles,San  Bernardino
 92364,11,0,0,0,0,0,0,Nipton,San  Bernardino
-92365,11,2,1,0,1,90,0,Newberry Springs,San  Bernardino
+92365,11,2,1,0,1,90,491237.01,Newberry Springs,San  Bernardino
 92366,11,0,0,0,0,0,0,Mountain Pass,San  Bernardino
-92368,11,2,1,0,1,65,0,Oro Grande,San  Bernardino
+92368,11,2,1,0,1,65,408520.01,Oro Grande,San  Bernardino
 92369,20,0,0,0,0,0,0,Patton,San  Bernardino
-92371,11,2,2,0,0,15,0,Phelan,San  Bernardino
+92371,11,2,2,0,0,15,1519016.99,Phelan,San  Bernardino
 92372,11,0,0,0,0,0,0,Pinon Hills,San  Bernardino
-92373,20,28,15,12,1,455,0,Redlands,San  Bernardino
-92374,20,28,13,7,8,2017,0,Redlands,San  Bernardino
+92373,20,28,15,12,1,455,494303457.8,Redlands,San  Bernardino
+92374,20,28,13,7,8,2017,43422132.55,Redlands,San  Bernardino
 92375,20,0,0,0,0,0,0,Redlands,San  Bernardino
-92376,20,32,12,16,4,769,0,Rialto,San  Bernardino
-92377,20,16,2,8,6,900,0,Rialto,San  Bernardino
+92376,20,32,12,16,4,769,136229617.1,Rialto,San  Bernardino
+92377,20,16,2,8,6,900,186916769.9,Rialto,San  Bernardino
 92378,11,0,0,0,0,0,0,Rimforest,San  Bernardino
-92382,11,1,1,0,0,8,0,Running Springs,San  Bernardino
+92382,11,1,1,0,0,8,879197,Running Springs,San  Bernardino
 92384,7,0,0,0,0,0,0,Shoshone,Inyo
 92385,11,0,0,0,0,0,0,Skyforest,San  Bernardino
 92386,11,0,0,0,0,0,0,Sugarloaf,San  Bernardino
 92389,7,0,0,0,0,0,0,Tecopa,Inyo
 92391,11,0,0,0,0,0,0,Twin Peaks,San  Bernardino
-92392,11,9,4,3,2,485,0,Victorville,San  Bernardino
+92392,11,9,4,3,2,485,9497299.72,Victorville,San  Bernardino
 92393,11,0,0,0,0,0,0,Victorville,San  Bernardino
-92394,11,12,3,7,2,290,0,Victorville,San  Bernardino
-92395,11,7,3,3,1,142,0,Victorville,San  Bernardino
-92397,11,1,1,0,0,9,0,Wrightwood,San  Bernardino
+92394,11,12,3,7,2,290,84421924.63,Victorville,San  Bernardino
+92395,11,7,3,3,1,142,4894850.01,Victorville,San  Bernardino
+92397,11,1,1,0,0,9,313950.99,Wrightwood,San  Bernardino
 92398,11,0,0,0,0,0,0,Yermo,San  Bernardino
-92399,20,16,9,5,2,393,0,Yucaipa,San  Bernardino
-92401,20,8,4,3,1,158,0,San Bernardino,San  Bernardino
+92399,20,16,9,5,2,393,58523245.08,Yucaipa,San  Bernardino
+92401,20,8,4,3,1,158,16563760.79,San Bernardino,San  Bernardino
 92402,20,0,0,0,0,0,0,San Bernardino,San  Bernardino
 92403,20,0,0,0,0,0,0,San Bernardino,San  Bernardino
-92404,20,4,2,0,2,113,0,San Bernardino,San  Bernardino
-92405,20,5,4,1,0,41,0,San Bernardino,San  Bernardino
+92404,20,4,2,0,2,113,4590220.89,San Bernardino,San  Bernardino
+92405,20,5,4,1,0,41,4844148.01,San Bernardino,San  Bernardino
 92406,20,0,0,0,0,0,0,San Bernardino,San  Bernardino
-92407,20,29,8,13,8,1087,0,San Bernardino,San  Bernardino
-92408,20,79,29,39,11,2635,0,San Bernardino,San  Bernardino
-92410,20,19,8,6,5,696,0,San Bernardino,San  Bernardino
-92411,20,1,0,0,1,100,0,San Bernardino,San  Bernardino
+92407,20,29,8,13,8,1087,130393010.5,San Bernardino,San  Bernardino
+92408,20,79,29,39,11,2635,366600939.7,San Bernardino,San  Bernardino
+92410,20,19,8,6,5,696,59430340.9,San Bernardino,San  Bernardino
+92411,20,1,0,0,1,100,7337350.8,San Bernardino,San  Bernardino
 92412,20,0,0,0,0,0,0,San Bernardino,San  Bernardino
 92413,20,0,0,0,0,0,0,San Bernardino,San  Bernardino
 92414,20,0,0,0,0,0,0,San Bernardino,San  Bernardino
@@ -889,135 +889,135 @@
 92423,20,0,0,0,0,0,0,San Bernardino,San  Bernardino
 92424,20,0,0,0,0,0,0,San Bernardino,San  Bernardino
 92427,20,0,0,0,0,0,0,San Bernardino,San  Bernardino
-92501,20,36,20,14,2,627,0,Riverside,Riverside
+92501,20,36,20,14,2,627,87269858.71,Riverside,Riverside
 92502,20,0,0,0,0,0,0,Riverside,Riverside
-92503,20,57,32,23,2,1996,0,Riverside,Riverside
-92504,20,51,16,23,12,1926,0,Riverside,Riverside
-92505,20,14,7,6,1,332,0,Riverside,Riverside
-92506,20,6,4,1,1,185,0,Riverside,Riverside
-92507,20,156,53,68,35,7496,0,Riverside,Riverside
-92508,20,13,4,5,4,500,0,Riverside,Riverside
-92509,20,51,14,26,11,2631,0,Riverside,Riverside
+92503,20,57,32,23,2,1996,125219187.1,Riverside,Riverside
+92504,20,51,16,23,12,1926,127454207.1,Riverside,Riverside
+92505,20,14,7,6,1,332,50228438.81,Riverside,Riverside
+92506,20,6,4,1,1,185,25948484.01,Riverside,Riverside
+92507,20,156,53,68,35,7496,1494173998,Riverside,Riverside
+92508,20,13,4,5,4,500,62723003.79,Riverside,Riverside
+92509,20,51,14,26,11,2631,344648253.3,Riverside,Riverside
 92513,20,0,0,0,0,0,0,Riverside,Riverside
 92514,20,0,0,0,0,0,0,Riverside,Riverside
 92515,20,0,0,0,0,0,0,Riverside,Riverside
 92516,11,0,0,0,0,0,0,Riverside,Riverside
 92517,20,0,0,0,0,0,0,Riverside,Riverside
-92518,20,8,3,3,2,432,0,March Air Reserve Base,Riverside
+92518,20,8,3,3,2,432,65052624.02,March Air Reserve Base,Riverside
 92519,20,0,0,0,0,0,0,Riverside,Riverside
 92521,20,0,0,0,0,0,0,Riverside,Riverside
-92522,20,1,0,1,0,11,0,Riverside,Riverside
-92530,20,35,21,10,4,888,0,Lake Elsinore,Riverside
+92522,20,1,0,1,0,11,1103055,Riverside,Riverside
+92530,20,35,21,10,4,888,125649213.6,Lake Elsinore,Riverside
 92531,20,0,0,0,0,0,0,Lake Elsinore,Riverside
-92532,20,6,5,1,0,65,0,Lake Elsinore,Riverside
-92536,20,1,0,1,0,15,0,Aguanga,Riverside
+92532,20,6,5,1,0,65,7263990.91,Lake Elsinore,Riverside
+92536,20,1,0,1,0,15,349263.01,Aguanga,Riverside
 92539,20,0,0,0,0,0,0,Anza,Riverside
-92543,20,12,7,2,3,298,0,Hemet,Riverside
-92544,20,5,5,0,0,34,0,Hemet,Riverside
-92545,20,5,1,1,3,417,0,Hemet,Riverside
+92543,20,12,7,2,3,298,16008143.25,Hemet,Riverside
+92544,20,5,5,0,0,34,2131462,Hemet,Riverside
+92545,20,5,1,1,3,417,50348735.38,Hemet,Riverside
 92546,20,0,0,0,0,0,0,Hemet,Riverside
-92548,20,1,1,0,0,6,0,Homeland,Riverside
-92549,20,2,1,0,1,87,0,Idyllwild,Riverside
-92551,20,9,5,1,3,620,0,Moreno Valley,Riverside
+92548,20,1,1,0,0,6,282617.99,Homeland,Riverside
+92549,20,2,1,0,1,87,10564328.9,Idyllwild,Riverside
+92551,20,9,5,1,3,620,22771252.02,Moreno Valley,Riverside
 92552,20,0,0,0,0,0,0,Moreno Valley,Riverside
-92553,20,17,6,10,1,307,0,Moreno Valley,Riverside
+92553,20,17,6,10,1,307,52126871.9,Moreno Valley,Riverside
 92554,20,0,0,0,0,0,0,Moreno Valley,Riverside
 92555,20,2,1,1,0,59,0,Moreno Valley,Riverside
 92556,20,0,0,0,0,0,0,Moreno Valley,Riverside
-92557,20,2,1,1,0,21,0,Moreno Valley,Riverside
+92557,20,2,1,1,0,21,2078923,Moreno Valley,Riverside
 92561,20,0,0,0,0,0,0,Mountain Center,Riverside
-92562,20,80,42,33,5,2061,0,Murrieta,Riverside
-92563,20,23,11,9,3,1008,0,Murrieta,Riverside
+92562,20,80,42,33,5,2061,423206250.9,Murrieta,Riverside
+92563,20,23,11,9,3,1008,56824442.57,Murrieta,Riverside
 92564,20,0,0,0,0,0,0,Murrieta,Riverside
-92567,20,2,1,1,0,36,0,Nuevo,Riverside
-92570,20,34,10,11,13,1639,0,Perris,Riverside
-92571,20,23,4,11,8,1456,0,Perris,Riverside
+92567,20,2,1,1,0,36,463800.01,Nuevo,Riverside
+92570,20,34,10,11,13,1639,203950962.7,Perris,Riverside
+92571,20,23,4,11,8,1456,303959865.4,Perris,Riverside
 92572,20,0,0,0,0,0,0,Perris,Riverside
 92581,20,0,0,0,0,0,0,San Jacinto,Riverside
-92582,20,6,4,1,1,129,0,San Jacinto,Riverside
-92583,20,9,3,5,1,259,0,San Jacinto,Riverside
-92584,20,4,1,2,1,138,0,Menifee,Riverside
-92585,20,6,3,2,1,163,0,Sun City,Riverside
-92586,20,2,0,2,0,59,0,Sun City,Riverside
-92587,20,5,5,0,0,41,0,Sun City,Riverside
+92582,20,6,4,1,1,129,17966321.09,San Jacinto,Riverside
+92583,20,9,3,5,1,259,21436322.53,San Jacinto,Riverside
+92584,20,4,1,2,1,138,7970456.1,Menifee,Riverside
+92585,20,6,3,2,1,163,24593251.79,Sun City,Riverside
+92586,20,2,0,2,0,59,5062451.9,Sun City,Riverside
+92587,20,5,5,0,0,41,2361443.99,Sun City,Riverside
 92589,20,1,1,0,0,7,0,Temecula,Riverside
-92590,20,140,63,59,18,5525,0,Temecula,Riverside
-92591,20,33,15,7,11,1609,0,Temecula,Riverside
-92592,20,28,19,9,0,363,0,Temecula,Riverside
+92590,20,140,63,59,18,5525,817823534,Temecula,Riverside
+92591,20,33,15,7,11,1609,139439030.9,Temecula,Riverside
+92592,20,28,19,9,0,363,65891172.7,Temecula,Riverside
 92593,20,0,0,0,0,0,0,Temecula,Riverside
-92595,20,8,7,0,1,135,0,Wildomar,Riverside
-92596,20,4,4,0,0,28,0,Winchester,Riverside
+92595,20,8,7,0,1,135,12450345.95,Wildomar,Riverside
+92596,20,4,4,0,0,28,3794414,Winchester,Riverside
 92599,20,0,0,0,0,0,0,Perris,Riverside
-92602,17,18,3,14,1,468,0,Irvine,Orange
-92603,17,2,0,2,0,26,0,Irvine,Orange
-92604,17,9,6,3,0,131,0,Irvine,Orange
+92602,17,18,3,14,1,468,162051062.6,Irvine,Orange
+92603,17,2,0,2,0,26,1485723.09,Irvine,Orange
+92604,17,9,6,3,0,131,16661597.13,Irvine,Orange
 92605,16,0,0,0,0,0,0,Huntington Beach,Orange
-92606,17,99,32,41,26,4646,0,Irvine,Orange
-92607,17,1,1,0,0,7,0,Laguna Niguel,Orange
+92606,17,99,32,41,26,4646,5729610256,Irvine,Orange
+92607,17,1,1,0,0,7,692407.01,Laguna Niguel,Orange
 92609,17,0,0,0,0,0,0,El Toro,Orange
-92610,17,50,13,20,17,3417,0,Foothill Ranch,Orange
-92612,17,74,25,32,17,8123,0,Irvine,Orange
-92614,17,254,82,122,50,18273,0,Irvine,Orange
-92615,16,1,0,0,1,50,0,Huntington Beach,Orange
-92616,17,1,1,0,0,7,0,Irvine,Orange
-92617,17,32,11,8,13,8738,0,Irvine,Orange
-92618,17,477,139,219,119,28809,0,Irvine,Orange
+92610,17,50,13,20,17,3417,980138837.8,Foothill Ranch,Orange
+92612,17,74,25,32,17,8123,2147693973,Irvine,Orange
+92614,17,254,82,122,50,18273,10130640222,Irvine,Orange
+92615,16,1,0,0,1,50,306030.01,Huntington Beach,Orange
+92616,17,1,1,0,0,7,866634.01,Irvine,Orange
+92617,17,32,11,8,13,8738,4538112973,Irvine,Orange
+92618,17,477,139,219,119,28809,11154062201,Irvine,Orange
 92619,17,0,0,0,0,0,0,Irvine,Orange
-92620,17,9,6,3,0,109,0,Irvine,Orange
+92620,17,9,6,3,0,109,10217522.98,Irvine,Orange
 92623,17,0,0,0,0,0,0,Irvine,Orange
-92624,17,4,3,1,0,54,0,Capistrano Beach,Orange
-92625,17,6,5,1,0,78,0,Corona Del Mar,Orange
-92626,16,164,58,75,31,7620,0,Costa Mesa,Orange
-92627,16,39,21,15,3,5847,0,Costa Mesa,Orange
+92624,17,4,3,1,0,54,5117354.08,Capistrano Beach,Orange
+92625,17,6,5,1,0,78,3234772.1,Corona Del Mar,Orange
+92626,16,164,58,75,31,7620,4180577831,Costa Mesa,Orange
+92627,16,39,21,15,3,5847,220918509.1,Costa Mesa,Orange
 92628,16,0,0,0,0,0,0,Costa Mesa,Orange
-92629,17,12,8,4,0,186,0,Dana Point,Orange
-92630,17,121,45,56,20,6163,0,Lake Forest,Orange
-92637,17,1,1,0,0,10,0,Laguna Woods,Orange
-92646,16,7,3,4,0,131,0,Huntington Beach,Orange
-92647,16,100,45,38,17,4723,0,Huntington Beach,Orange
-92648,16,18,8,6,4,721,0,Huntington Beach,Orange
-92649,16,165,64,81,20,4594,0,Huntington Beach,Orange
+92629,17,12,8,4,0,186,20336846.06,Dana Point,Orange
+92630,17,121,45,56,20,6163,981289805.2,Lake Forest,Orange
+92637,17,1,1,0,0,10,1268249,Laguna Woods,Orange
+92646,16,7,3,4,0,131,6039995.01,Huntington Beach,Orange
+92647,16,100,45,38,17,4723,1684419621,Huntington Beach,Orange
+92648,16,18,8,6,4,721,133322269.3,Huntington Beach,Orange
+92649,16,165,64,81,20,4594,845611662.8,Huntington Beach,Orange
 92650,17,0,0,0,0,0,0,East Irvine,Orange
-92651,17,24,11,11,2,508,0,Laguna Beach,Orange
+92651,17,24,11,11,2,508,88900491.86,Laguna Beach,Orange
 92652,17,0,0,0,0,0,0,Laguna Beach,Orange
-92653,17,65,40,24,1,967,0,Laguna Hills,Orange
+92653,17,65,40,24,1,967,254778442.6,Laguna Hills,Orange
 92654,17,0,0,0,0,0,0,Laguna Hills,Orange
 92655,17,0,0,0,0,0,0,Midway City,Orange
-92656,17,59,18,25,16,2806,0,Aliso Viejo,Orange
-92657,17,5,2,3,0,74,0,Newport Coast,Orange
+92656,17,59,18,25,16,2806,1120416089,Aliso Viejo,Orange
+92657,17,5,2,3,0,74,3037619.88,Newport Coast,Orange
 92658,17,0,0,0,0,0,0,Newport Beach,Orange
 92659,17,0,0,0,0,0,0,Newport Beach,Orange
-92660,17,95,46,32,17,4827,0,Newport Beach,Orange
+92660,17,95,46,32,17,4827,2720805385,Newport Beach,Orange
 92661,17,0,0,0,0,0,0,Newport Beach,Orange
 92662,17,0,0,0,0,0,0,Newport Beach,Orange
-92663,17,27,14,11,2,441,0,Newport Beach,Orange
-92672,17,27,9,17,1,494,0,San Clemente,Orange
-92673,17,60,30,23,7,1808,0,San Clemente,Orange
-92674,17,1,1,0,0,10,0,San Clemente,Orange
-92675,17,30,22,7,1,374,0,San Juan Capistrano,Orange
+92663,17,27,14,11,2,441,52667690.86,Newport Beach,Orange
+92672,17,27,9,17,1,494,126574847.6,San Clemente,Orange
+92673,17,60,30,23,7,1808,2735586364,San Clemente,Orange
+92674,17,1,1,0,0,10,8589119.9,San Clemente,Orange
+92675,17,30,22,7,1,374,78531173.47,San Juan Capistrano,Orange
 92676,17,0,0,0,0,0,0,Silverado,Orange
-92677,17,26,14,6,6,1096,0,Laguna Niguel,Orange
+92677,17,26,14,6,6,1096,75830095,Laguna Niguel,Orange
 92678,17,0,0,0,0,0,0,Trabuco Canyon,Orange
-92679,17,4,3,1,0,42,0,Trabuco Canyon,Orange
-92683,16,33,19,11,3,873,0,Westminster,Orange
+92679,17,4,3,1,0,42,5494554.09,Trabuco Canyon,Orange
+92683,16,33,19,11,3,873,67034864.32,Westminster,Orange
 92684,16,0,0,0,0,0,0,Westminster,Orange
 92685,16,0,0,0,0,0,0,Westminster,Orange
-92688,17,66,22,34,10,3945,0,Rancho Santa Margarita,Orange
+92688,17,66,22,34,10,3945,1602186276,Rancho Santa Margarita,Orange
 92690,17,0,0,0,0,0,0,Mission Viejo,Orange
-92691,17,29,15,9,5,771,0,Mission Viejo,Orange
-92692,17,8,5,3,0,91,0,Mission Viejo,Orange
+92691,17,29,15,9,5,771,671824904.7,Mission Viejo,Orange
+92692,17,8,5,3,0,91,10520128.99,Mission Viejo,Orange
 92693,17,0,0,0,0,0,0,San Juan Capistrano,Orange
-92694,17,12,7,4,1,188,0,Ladera Ranch,Orange
+92694,17,12,7,4,1,188,22866235.02,Ladera Ranch,Orange
 92697,17,1,0,0,1,464,0,Irvine,Orange
 92698,17,1,0,0,1,54,0,Aliso Viejo,Orange
-92701,16,29,14,12,3,622,0,Santa Ana,Orange
+92701,16,29,14,12,3,622,80439126.75,Santa Ana,Orange
 92702,16,0,0,0,0,0,0,Santa Ana,Orange
-92703,16,22,12,7,3,699,0,Santa Ana,Orange
-92704,16,169,63,67,39,8421,0,Santa Ana,Orange
-92705,16,241,99,103,39,14087,0,Santa Ana,Orange
-92706,16,4,2,1,1,93,0,Santa Ana,Orange
-92707,16,79,24,41,14,3104,0,Santa Ana,Orange
-92708,16,83,31,39,13,5910,0,Fountain Valley,Orange
+92703,16,22,12,7,3,699,619145777,Santa Ana,Orange
+92704,16,169,63,67,39,8421,2836819598,Santa Ana,Orange
+92705,16,241,99,103,39,14087,2881732554,Santa Ana,Orange
+92706,16,4,2,1,1,93,14126484.97,Santa Ana,Orange
+92707,16,79,24,41,14,3104,3275221495,Santa Ana,Orange
+92708,16,83,31,39,13,5910,1781804242,Fountain Valley,Orange
 92709,0,0,0,0,0,0,0,Irvine,Orange
 92710,0,0,0,0,0,0,0,Irvine,Orange
 92711,16,0,0,0,0,0,0,Santa Ana,Orange
@@ -1025,18 +1025,18 @@
 92725,16,0,0,0,0,0,0,Santa Ana,Orange
 92728,16,0,0,0,0,0,0,Fountain Valley,Orange
 92735,0,0,0,0,0,0,0,Santa Ana,Orange
-92780,15,113,47,46,20,3132,0,Tustin,Orange
+92780,15,113,47,46,20,3132,612786888.5,Tustin,Orange
 92781,15,0,0,0,0,0,0,Tustin,Orange
-92782,15,7,3,3,1,135,0,Tustin,Orange
+92782,15,7,3,3,1,135,40207472.18,Tustin,Orange
 92799,16,0,0,0,0,0,0,Santa Ana,Orange
-92801,15,107,38,51,18,4222,0,Anaheim,Orange
-92802,15,11,5,4,2,408,0,Anaheim,Orange
+92801,15,107,38,51,18,4222,1178376930,Anaheim,Orange
+92802,15,11,5,4,2,408,41612872.3,Anaheim,Orange
 92803,15,0,0,0,0,0,0,Anaheim,Orange
-92804,15,7,3,3,1,202,0,Anaheim,Orange
-92805,15,90,35,37,18,3849,0,Anaheim,Orange
-92806,15,274,104,118,52,12691,0,Anaheim,Orange
-92807,15,168,57,72,39,7800,0,Anaheim,Orange
-92808,15,17,10,3,4,542,0,Anaheim,Orange
+92804,15,7,3,3,1,202,78053936.88,Anaheim,Orange
+92805,15,90,35,37,18,3849,1007730889,Anaheim,Orange
+92806,15,274,104,118,52,12691,1894986184,Anaheim,Orange
+92807,15,168,57,72,39,7800,1429671657,Anaheim,Orange
+92808,15,17,10,3,4,542,43974815.89,Anaheim,Orange
 92809,15,0,0,0,0,0,0,Anaheim,Orange
 92811,15,0,0,0,0,0,0,Atwood,Orange
 92812,15,0,0,0,0,0,0,Anaheim,Orange
@@ -1044,107 +1044,107 @@
 92815,15,0,0,0,0,0,0,Anaheim,Orange
 92816,15,0,0,0,0,0,0,Anaheim,Orange
 92817,15,0,0,0,0,0,0,Anaheim,Orange
-92821,15,205,76,84,45,10281,0,Brea,Orange
+92821,15,205,76,84,45,10281,7590442218,Brea,Orange
 92822,15,0,0,0,0,0,0,Brea,Orange
-92823,15,4,2,1,1,105,0,Brea,Orange
+92823,15,4,2,1,1,105,26939948.02,Brea,Orange
 92825,15,0,0,0,0,0,0,Anaheim,Orange
-92831,15,107,34,51,22,3764,0,Fullerton,Orange
-92832,15,23,11,12,0,335,0,Fullerton,Orange
-92833,15,46,14,20,12,1647,0,Fullerton,Orange
+92831,15,107,34,51,22,3764,1241075716,Fullerton,Orange
+92832,15,23,11,12,0,335,40495094.63,Fullerton,Orange
+92833,15,46,14,20,12,1647,206708461,Fullerton,Orange
 92834,15,0,0,0,0,0,0,Fullerton,Orange
-92835,15,15,8,4,3,372,0,Fullerton,Orange
+92835,15,15,8,4,3,372,98728912.03,Fullerton,Orange
 92836,15,0,0,0,0,0,0,Fullerton,Orange
 92837,15,0,0,0,0,0,0,Fullerton,Orange
 92838,15,0,0,0,0,0,0,Fullerton,Orange
-92840,16,6,4,2,0,90,0,Garden Grove,Orange
-92841,16,123,29,57,37,6228,0,Garden Grove,Orange
+92840,16,6,4,2,0,90,7731289.89,Garden Grove,Orange
+92841,16,123,29,57,37,6228,2493321215,Garden Grove,Orange
 92842,16,0,0,0,0,0,0,Garden Grove,Orange
-92843,16,30,17,10,3,513,0,Garden Grove,Orange
-92844,16,1,1,0,0,10,0,Garden Grove,Orange
-92845,16,1,1,0,0,6,0,Garden Grove,Orange
+92843,16,30,17,10,3,513,67222464.65,Garden Grove,Orange
+92844,16,1,1,0,0,10,498643.99,Garden Grove,Orange
+92845,16,1,1,0,0,6,3564358,Garden Grove,Orange
 92846,16,0,0,0,0,0,0,Garden Grove,Orange
 92850,15,0,0,0,0,0,0,Anaheim,Orange
 92856,15,0,0,0,0,0,0,Orange,Orange
 92857,15,0,0,0,0,0,0,Orange,Orange
 92859,15,0,0,0,0,0,0,Orange,Orange
-92860,11,32,13,11,8,1066,0,Norco,Riverside
-92861,15,2,1,1,0,46,0,Villa Park,Orange
+92860,11,32,13,11,8,1066,161106933.7,Norco,Riverside
+92861,15,2,1,1,0,46,2641825.09,Villa Park,Orange
 92862,15,0,0,0,0,0,0,Orange,Orange
 92863,15,0,0,0,0,0,0,Orange,Orange
 92864,15,0,0,0,0,0,0,Orange,Orange
-92865,15,87,27,36,24,3562,0,Orange,Orange
-92866,15,6,3,3,0,92,0,Orange,Orange
-92867,15,104,42,49,13,3381,0,Orange,Orange
-92868,15,84,36,34,14,3234,0,Orange,Orange
-92869,15,5,5,0,0,37,0,Orange,Orange
-92870,15,94,37,50,7,2006,0,Placentia,Orange
+92865,15,87,27,36,24,3562,368187989.8,Orange,Orange
+92866,15,6,3,3,0,92,12729985.97,Orange,Orange
+92867,15,104,42,49,13,3381,909276580.5,Orange,Orange
+92868,15,84,36,34,14,3234,1282903152,Orange,Orange
+92869,15,5,5,0,0,37,2234477.94,Orange,Orange
+92870,15,94,37,50,7,2006,347578041.8,Placentia,Orange
 92871,15,0,0,0,0,0,0,Placentia,Orange
 92877,11,0,0,0,0,0,0,Corona,Riverside
-92878,11,143,50,52,41,6342,0,Corona,Riverside
-92879,11,134,38,58,38,8773,0,Corona,Riverside
-92880,11,5,3,1,1,333,0,Corona,Riverside
-92881,20,32,11,16,5,1056,0,Corona,Riverside
-92882,20,43,16,17,10,1411,0,Corona,Riverside
-92883,20,32,11,16,5,805,0,Corona,Riverside
+92878,11,143,50,52,41,6342,764146706.7,Corona,Riverside
+92879,11,134,38,58,38,8773,8081049209,Corona,Riverside
+92880,11,5,3,1,1,333,41151115.01,Corona,Riverside
+92881,20,32,11,16,5,1056,179089388.4,Corona,Riverside
+92882,20,43,16,17,10,1411,701390439,Corona,Riverside
+92883,20,32,11,16,5,805,161729950.9,Corona,Riverside
 92885,15,0,0,0,0,0,0,Yorba Linda,Orange
-92886,15,16,10,4,2,297,0,Yorba Linda,Orange
-92887,15,51,24,20,7,1170,0,Yorba Linda,Orange
+92886,15,16,10,4,2,297,33220238.74,Yorba Linda,Orange
+92887,15,51,24,20,7,1170,144796940.3,Yorba Linda,Orange
 92899,15,0,0,0,0,0,0,Anaheim,Orange
-93001,5,34,16,14,4,703,0,Ventura,Ventura
+93001,5,34,16,14,4,703,67189239.4,Ventura,Ventura
 93002,5,0,0,0,0,0,0,Ventura,Ventura
-93003,5,120,51,57,12,3212,0,Ventura,Ventura
-93004,5,7,2,3,2,338,0,Ventura,Ventura
+93003,5,120,51,57,12,3212,392353664.8,Ventura,Ventura
+93004,5,7,2,3,2,338,14669065.19,Ventura,Ventura
 93005,5,0,0,0,0,0,0,Ventura,Ventura
 93006,5,0,0,0,0,0,0,Ventura,Ventura
 93007,5,0,0,0,0,0,0,Ventura,Ventura
 93009,5,0,0,0,0,0,0,Ventura,Ventura
-93010,5,25,15,9,1,475,0,Camarillo,Ventura
+93010,5,25,15,9,1,475,59077354.23,Camarillo,Ventura
 93011,5,0,0,0,0,0,0,Camarillo,Ventura
-93012,5,159,59,63,37,6551,0,Camarillo,Ventura
-93013,5,34,9,17,8,2034,0,Carpinteria,Santa  Barbara
+93012,5,159,59,63,37,6551,1947282586,Camarillo,Ventura
+93013,5,34,9,17,8,2034,205644262.7,Carpinteria,Santa  Barbara
 93014,5,0,0,0,0,0,0,Carpinteria,Santa  Barbara
-93015,5,6,3,1,2,262,0,Fillmore,Ventura
+93015,5,6,3,1,2,262,5063326.91,Fillmore,Ventura
 93016,5,0,0,0,0,0,0,Fillmore,Ventura
 93020,5,0,0,0,0,0,0,Moorpark,Ventura
-93021,5,51,19,22,10,1990,0,Moorpark,Ventura
-93022,5,1,0,1,0,23,0,Oak View,Ventura
-93023,5,10,8,2,0,95,0,Ojai,Ventura
+93021,5,51,19,22,10,1990,327124318.4,Moorpark,Ventura
+93022,5,1,0,1,0,23,2519947.1,Oak View,Ventura
+93023,5,10,8,2,0,95,12944162.16,Ojai,Ventura
 93024,5,0,0,0,0,0,0,Ojai,Ventura
-93030,5,102,34,41,27,7570,0,Oxnard,Ventura
+93030,5,102,34,41,27,7570,703485203.4,Oxnard,Ventura
 93031,5,0,0,0,0,0,0,Oxnard,Ventura
 93032,5,0,0,0,0,0,0,Oxnard,Ventura
-93033,5,42,12,19,11,2070,0,Oxnard,Ventura
+93033,5,42,12,19,11,2070,313105136.8,Oxnard,Ventura
 93034,5,0,0,0,0,0,0,Oxnard,Ventura
-93035,5,1,0,1,0,16,0,Oxnard,Ventura
-93036,5,24,13,7,4,2021,0,Oxnard,Ventura
+93035,5,1,0,1,0,16,1598156,Oxnard,Ventura
+93036,5,24,13,7,4,2021,26463953.7,Oxnard,Ventura
 93040,5,0,0,0,0,0,0,Piru,Ventura
-93041,5,6,3,0,3,348,0,Port Hueneme,Ventura
+93041,5,6,3,0,3,348,22095378.57,Port Hueneme,Ventura
 93042,5,1,0,0,1,250,0,Point Mugu Nawc,Ventura
-93043,5,4,1,2,1,81,0,Port Hueneme Cbc Base,Ventura
+93043,5,4,1,2,1,81,706395.98,Port Hueneme Cbc Base,Ventura
 93044,5,0,0,0,0,0,0,Port Hueneme,Ventura
-93060,5,23,11,7,5,721,0,Santa Paula,Ventura
+93060,5,23,11,7,5,721,721934985.6,Santa Paula,Ventura
 93061,5,0,0,0,0,0,0,Santa Paula,Ventura
 93062,5,0,0,0,0,0,0,Simi Valley,Ventura
-93063,5,56,21,30,5,1570,0,Simi Valley,Ventura
+93063,5,56,21,30,5,1570,742296955.8,Simi Valley,Ventura
 93064,5,0,0,0,0,0,0,Brandeis,Ventura
-93065,5,83,31,34,18,3543,0,Simi Valley,Ventura
-93066,5,4,3,1,0,42,0,Somis,Ventura
+93065,5,83,31,34,18,3543,480890005.1,Simi Valley,Ventura
+93066,5,4,3,1,0,42,3803476.98,Somis,Ventura
 93067,5,0,0,0,0,0,0,Summerland,Santa  Barbara
 93093,0,0,0,0,0,0,0,Simi Valley,Ventura
 93094,5,0,0,0,0,0,0,Simi Valley,Ventura
 93099,5,0,0,0,0,0,0,Simi Valley,Ventura
-93101,5,49,29,19,1,640,0,Santa Barbara,Santa  Barbara
+93101,5,49,29,19,1,640,124099441.1,Santa Barbara,Santa  Barbara
 93102,5,0,0,0,0,0,0,Santa Barbara,Santa  Barbara
-93103,5,19,10,7,2,422,0,Santa Barbara,Santa  Barbara
-93105,5,16,6,10,0,245,0,Santa Barbara,Santa  Barbara
+93103,5,19,10,7,2,422,69749814.9,Santa Barbara,Santa  Barbara
+93105,5,16,6,10,0,245,108531871.2,Santa Barbara,Santa  Barbara
 93106,5,1,1,0,0,9,0,Santa Barbara,Santa  Barbara
 93107,5,0,0,0,0,0,0,Santa Barbara,Santa  Barbara
-93108,5,6,4,2,0,62,0,Santa Barbara,Santa  Barbara
-93109,5,2,2,0,0,13,0,Santa Barbara,Santa  Barbara
-93110,5,4,3,1,0,44,0,Santa Barbara,Santa  Barbara
-93111,5,23,7,10,6,1464,0,Santa Barbara,Santa  Barbara
+93108,5,6,4,2,0,62,138418742.4,Santa Barbara,Santa  Barbara
+93109,5,2,2,0,0,13,1279716.02,Santa Barbara,Santa  Barbara
+93110,5,4,3,1,0,44,16959350.03,Santa Barbara,Santa  Barbara
+93111,5,23,7,10,6,1464,385663113,Santa Barbara,Santa  Barbara
 93116,5,0,0,0,0,0,0,Goleta,Santa  Barbara
-93117,5,133,51,45,37,7910,0,Goleta,Santa  Barbara
+93117,5,133,51,45,37,7910,6743230341,Goleta,Santa  Barbara
 93118,5,0,0,0,0,0,0,Goleta,Santa  Barbara
 93120,5,0,0,0,0,0,0,Santa Barbara,Santa  Barbara
 93121,5,0,0,0,0,0,0,Santa Barbara,Santa  Barbara
@@ -1155,87 +1155,87 @@
 93190,5,0,0,0,0,0,0,Santa Barbara,Santa  Barbara
 93199,5,0,0,0,0,0,0,Goleta,Santa  Barbara
 93201,6,0,0,0,0,0,0,Alpaugh,Tulare
-93202,7,1,1,0,0,8,0,Armona,Kings
-93203,6,13,5,5,3,836,0,Arvin,Kern
+93202,7,1,1,0,0,8,1140864,Armona,Kings
+93203,6,13,5,5,3,836,11544604.14,Arvin,Kern
 93204,7,0,0,0,0,0,0,Avenal,Kings
 93205,6,0,0,0,0,0,0,Bodfish,Kern
-93206,6,3,2,1,0,36,0,Buttonwillow,Kern
+93206,6,3,2,1,0,36,3605545,Buttonwillow,Kern
 93207,6,0,0,0,0,0,0,California Hot Springs,Tulare
 93208,6,0,0,0,0,0,0,Camp Nelson,Tulare
-93210,7,4,2,1,1,205,0,Coalinga,Fresno
-93212,7,7,4,3,0,108,0,Corcoran,Kings
-93215,7,22,7,7,8,1851,0,Delano,Kern
+93210,7,4,2,1,1,205,4798952.02,Coalinga,Fresno
+93212,7,7,4,3,0,108,48328642.19,Corcoran,Kings
+93215,7,22,7,7,8,1851,354769289.2,Delano,Kern
 93218,6,0,0,0,0,0,0,Ducor,Tulare
-93219,6,2,0,2,0,50,0,Earlimart,Tulare
-93220,6,2,0,1,1,535,0,Edison,Kern
-93221,6,11,1,6,4,563,0,Exeter,Tulare
+93219,6,2,0,2,0,50,25626351.02,Earlimart,Tulare
+93220,6,2,0,1,1,535,77080521.1,Edison,Kern
+93221,6,11,1,6,4,563,89322630.1,Exeter,Tulare
 93222,6,0,0,0,0,0,0,Frazier Park,Kern
-93223,6,3,1,2,0,71,0,Farmersville,Tulare
+93223,6,3,1,2,0,71,6435961.2,Farmersville,Tulare
 93224,6,0,0,0,0,0,0,Fellows,Kern
-93225,6,2,1,0,1,4906,0,Frazier Park,Kern
+93225,6,2,1,0,1,4906,486750.99,Frazier Park,Kern
 93226,6,0,0,0,0,0,0,Glennville,Kern
-93227,6,1,1,0,0,6,0,Goshen,Tulare
-93230,7,26,9,12,5,939,0,Hanford,Kings
+93227,6,1,1,0,0,6,472256.99,Goshen,Tulare
+93230,7,26,9,12,5,939,249870952.9,Hanford,Kings
 93232,7,0,0,0,0,0,0,Hanford,Kings
 93234,7,0,0,0,0,0,0,Huron,Fresno
 93235,6,0,0,0,0,0,0,Ivanhoe,Tulare
 93237,6,0,0,0,0,0,0,Kaweah,Tulare
 93238,6,0,0,0,0,0,0,Kernville,Kern
-93239,7,1,0,0,1,100,0,Kettleman City,Kings
-93240,6,1,1,0,0,8,0,Lake Isabella,Kern
-93241,6,1,1,0,0,10,0,Lamont,Kern
+93239,7,1,0,0,1,100,9707989.7,Kettleman City,Kings
+93240,6,1,1,0,0,8,1113124,Lake Isabella,Kern
+93241,6,1,1,0,0,10,947327.02,Lamont,Kern
 93243,6,1,0,0,1,479,0,Lebec,Kern
 93244,6,1,1,0,0,8,0,Lemon Cove,Tulare
-93245,7,8,2,2,4,1806,0,Lemoore,Kings
+93245,7,8,2,2,4,1806,8602606.79,Lemoore,Kings
 93246,7,0,0,0,0,0,0,Lemoore,Kings
-93247,6,10,3,4,3,475,0,Lindsay,Tulare
+93247,6,10,3,4,3,475,18207068.94,Lindsay,Tulare
 93249,6,0,0,0,0,0,0,Lost Hills,Kern
-93250,6,2,0,1,1,119,0,Mc Farland,Kern
+93250,6,2,0,1,1,119,18596597,Mc Farland,Kern
 93251,6,0,0,0,0,0,0,Mc Kittrick,Kern
 93252,6,1,0,0,1,103,0,Maricopa,Kern
 93254,5,0,0,0,0,0,0,New Cuyama,Santa  Barbara
 93255,6,0,0,0,0,0,0,Onyx,Kern
-93256,6,5,2,2,1,4004,0,Pixley,Tulare
-93257,6,22,9,9,4,603,0,Porterville,Tulare
+93256,6,5,2,2,1,4004,35497951.1,Pixley,Tulare
+93257,6,22,9,9,4,603,16866108.34,Porterville,Tulare
 93260,6,0,0,0,0,0,0,Posey,Tulare
 93261,6,0,0,0,0,0,0,Richgrove,Tulare
 93262,6,0,0,0,0,0,0,Sequoia National Park,Tulare
-93263,6,16,3,9,4,627,0,Shafter,Kern
+93263,6,16,3,9,4,627,299441896.7,Shafter,Kern
 93265,6,0,0,0,0,0,0,Springville,Tulare
-93266,7,2,0,2,0,53,0,Stratford,Kings
-93267,6,4,2,1,1,196,0,Strathmore,Tulare
-93268,6,5,2,3,0,95,0,Taft,Kern
-93270,6,6,3,1,2,792,0,Terra Bella,Tulare
-93271,6,1,1,0,0,9,0,Three Rivers,Tulare
-93272,6,2,2,0,0,14,0,Tipton,Tulare
-93274,6,47,29,10,8,1698,0,Tulare,Tulare
+93266,7,2,0,2,0,53,11329080.03,Stratford,Kings
+93267,6,4,2,1,1,196,4700937,Strathmore,Tulare
+93268,6,5,2,3,0,95,9301322.9,Taft,Kern
+93270,6,6,3,1,2,792,65505533,Terra Bella,Tulare
+93271,6,1,1,0,0,9,1452356,Three Rivers,Tulare
+93272,6,2,2,0,0,14,725314.02,Tipton,Tulare
+93274,6,47,29,10,8,1698,87018536.51,Tulare,Tulare
 93275,6,0,0,0,0,0,0,Tulare,Tulare
 93276,6,0,0,0,0,0,0,Tupman,Kern
-93277,6,8,2,5,1,138,0,Visalia,Tulare
+93277,6,8,2,5,1,138,5608029.94,Visalia,Tulare
 93278,6,0,0,0,0,0,0,Visalia,Tulare
 93279,6,0,0,0,0,0,0,Visalia,Tulare
-93280,6,6,3,2,1,207,0,Wasco,Kern
+93280,6,6,3,2,1,207,307514097,Wasco,Kern
 93282,7,0,0,0,0,0,0,Waukena,Tulare
 93283,6,0,0,0,0,0,0,Weldon,Kern
 93285,6,0,0,0,0,0,0,Wofford Heights,Kern
-93286,6,5,2,3,0,85,0,Woodlake,Tulare
+93286,6,5,2,3,0,85,17973889.9,Woodlake,Tulare
 93287,6,0,0,0,0,0,0,Woody,Kern
 93290,6,0,0,0,0,0,0,Visalia,Tulare
-93291,6,58,19,25,14,2482,0,Visalia,Tulare
-93292,6,18,10,5,3,332,0,Visalia,Tulare
-93301,6,34,17,15,2,547,0,Bakersfield,Kern
+93291,6,58,19,25,14,2482,579117658.8,Visalia,Tulare
+93292,6,18,10,5,3,332,82657231.63,Visalia,Tulare
+93301,6,34,17,15,2,547,435083748,Bakersfield,Kern
 93302,6,0,0,0,0,0,0,Bakersfield,Kern
 93303,6,0,0,0,0,0,0,Bakersfield,Kern
-93304,6,6,3,3,0,60,0,Bakersfield,Kern
-93305,6,15,6,6,3,347,0,Bakersfield,Kern
-93306,6,1,0,1,0,13,0,Bakersfield,Kern
-93307,6,32,13,16,3,1832,0,Bakersfield,Kern
-93308,6,127,62,41,24,3854,0,Bakersfield,Kern
-93309,6,16,8,8,0,207,0,Bakersfield,Kern
-93311,6,17,6,7,4,483,0,Bakersfield,Kern
-93312,6,6,2,4,0,86,0,Bakersfield,Kern
-93313,6,31,13,11,7,951,0,Bakersfield,Kern
-93314,6,9,8,1,0,99,0,Bakersfield,Kern
+93304,6,6,3,3,0,60,4608501.95,Bakersfield,Kern
+93305,6,15,6,6,3,347,33536706.87,Bakersfield,Kern
+93306,6,1,0,1,0,13,3215595,Bakersfield,Kern
+93307,6,32,13,16,3,1832,1180140417,Bakersfield,Kern
+93308,6,127,62,41,24,3854,798897141.2,Bakersfield,Kern
+93309,6,16,8,8,0,207,20383649.21,Bakersfield,Kern
+93311,6,17,6,7,4,483,120666612.6,Bakersfield,Kern
+93312,6,6,2,4,0,86,9574088.93,Bakersfield,Kern
+93313,6,31,13,11,7,951,94219348.36,Bakersfield,Kern
+93314,6,9,8,1,0,99,6900605.93,Bakersfield,Kern
 93380,6,0,0,0,0,0,0,Bakersfield,Kern
 93381,0,0,0,0,0,0,0,Bakersfield,Kern
 93382,0,0,0,0,0,0,0,Bakersfield,Kern
@@ -1247,202 +1247,202 @@
 93388,6,0,0,0,0,0,0,Bakersfield,Kern
 93389,6,0,0,0,0,0,0,Bakersfield,Kern
 93390,6,0,0,0,0,0,0,Bakersfield,Kern
-93401,4,106,42,53,11,2503,0,San Luis Obispo,San  Luis  Obispo
-93402,4,4,3,1,0,42,0,Los Osos,San  Luis  Obispo
+93401,4,106,42,53,11,2503,431473551.5,San Luis Obispo,San  Luis  Obispo
+93402,4,4,3,1,0,42,4428647.93,Los Osos,San  Luis  Obispo
 93403,4,0,0,0,0,0,0,San Luis Obispo,San  Luis  Obispo
-93405,4,3,3,0,0,29,0,San Luis Obispo,San  Luis  Obispo
+93405,4,3,3,0,0,29,1345872.02,San Luis Obispo,San  Luis  Obispo
 93406,4,0,0,0,0,0,0,San Luis Obispo,San  Luis  Obispo
-93407,4,2,1,1,0,42,0,San Luis Obispo,San  Luis  Obispo
+93407,4,2,1,1,0,42,1579060,San Luis Obispo,San  Luis  Obispo
 93408,4,1,0,1,0,32,0,San Luis Obispo,San  Luis  Obispo
 93409,4,0,0,0,0,0,0,San Luis Obispo,San  Luis  Obispo
 93410,4,0,0,0,0,0,0,San Luis Obispo,San  Luis  Obispo
 93412,4,0,0,0,0,0,0,Los Osos,San  Luis  Obispo
-93420,4,14,6,7,1,309,0,Arroyo Grande,San  Luis  Obispo
+93420,4,14,6,7,1,309,32740259.27,Arroyo Grande,San  Luis  Obispo
 93421,4,0,0,0,0,0,0,Arroyo Grande,San  Luis  Obispo
-93422,4,14,10,4,0,126,0,Atascadero,San  Luis  Obispo
+93422,4,14,10,4,0,126,10552916.91,Atascadero,San  Luis  Obispo
 93423,4,0,0,0,0,0,0,Atascadero,San  Luis  Obispo
 93424,4,2,1,0,1,97,0,Avila Beach,San  Luis  Obispo
-93426,3,1,1,0,0,6,0,Bradley,Monterey
-93427,5,20,11,4,5,868,0,Buellton,Santa  Barbara
-93428,4,2,0,2,0,47,0,Cambria,San  Luis  Obispo
+93426,3,1,1,0,0,6,3322506.9,Bradley,Monterey
+93427,5,20,11,4,5,868,171787750.3,Buellton,Santa  Barbara
+93428,4,2,0,2,0,47,5103798.1,Cambria,San  Luis  Obispo
 93429,5,0,0,0,0,0,0,Casmalia,Santa  Barbara
 93430,4,0,0,0,0,0,0,Cayucos,San  Luis  Obispo
 93432,4,1,1,0,0,9,0,Creston,San  Luis  Obispo
-93433,4,12,8,2,2,313,0,Grover Beach,San  Luis  Obispo
-93434,5,1,0,1,0,12,0,Guadalupe,Santa  Barbara
-93435,4,1,0,1,0,13,0,Harmony,San  Luis  Obispo
-93436,5,34,19,14,1,497,0,Lompoc,Santa  Barbara
+93433,4,12,8,2,2,313,16392763.95,Grover Beach,San  Luis  Obispo
+93434,5,1,0,1,0,12,4092237.9,Guadalupe,Santa  Barbara
+93435,4,1,0,1,0,13,972436.01,Harmony,San  Luis  Obispo
+93436,5,34,19,14,1,497,191731658,Lompoc,Santa  Barbara
 93437,5,10,3,1,6,1290,0,Lompoc,Santa  Barbara
 93438,5,0,0,0,0,0,0,Lompoc,Santa  Barbara
 93440,5,0,0,0,0,0,0,Los Alamos,Santa  Barbara
-93441,5,6,4,1,1,133,0,Los Olivos,Santa  Barbara
-93442,4,4,2,2,0,36,0,Morro Bay,San  Luis  Obispo
+93441,5,6,4,1,1,133,16197234.03,Los Olivos,Santa  Barbara
+93442,4,4,2,2,0,36,2369736,Morro Bay,San  Luis  Obispo
 93443,4,0,0,0,0,0,0,Morro Bay,San  Luis  Obispo
-93444,4,6,2,3,1,139,0,Nipomo,San  Luis  Obispo
+93444,4,6,2,3,1,139,31649904.86,Nipomo,San  Luis  Obispo
 93445,4,0,0,0,0,0,0,Oceano,San  Luis  Obispo
-93446,4,106,47,51,8,2394,0,Paso Robles,San  Luis  Obispo
+93446,4,106,47,51,8,2394,411454816.7,Paso Robles,San  Luis  Obispo
 93447,4,0,0,0,0,0,0,Paso Robles,San  Luis  Obispo
 93448,4,0,0,0,0,0,0,Pismo Beach,San  Luis  Obispo
 93449,4,1,0,1,0,27,0,Pismo Beach,San  Luis  Obispo
-93451,4,2,1,1,0,26,0,San Miguel,San  Luis  Obispo
+93451,4,2,1,1,0,26,963702.02,San Miguel,San  Luis  Obispo
 93452,4,0,0,0,0,0,0,San Simeon,San  Luis  Obispo
 93453,4,0,0,0,0,0,0,Santa Margarita,San  Luis  Obispo
-93454,5,23,11,11,1,458,0,Santa Maria,Santa  Barbara
-93455,5,52,21,20,11,2932,0,Santa Maria,Santa  Barbara
+93454,5,23,11,11,1,458,56949270.85,Santa Maria,Santa  Barbara
+93455,5,52,21,20,11,2932,600140427.1,Santa Maria,Santa  Barbara
 93456,5,0,0,0,0,0,0,Santa Maria,Santa  Barbara
 93457,5,0,0,0,0,0,0,Santa Maria,Santa  Barbara
-93458,5,11,4,4,3,678,0,Santa Maria,Santa  Barbara
-93460,5,7,4,3,0,74,0,Santa Ynez,Santa  Barbara
-93461,5,2,1,1,0,36,0,Shandon,San  Luis  Obispo
-93463,5,9,6,3,0,99,0,Solvang,Santa  Barbara
+93458,5,11,4,4,3,678,35725259.36,Santa Maria,Santa  Barbara
+93460,5,7,4,3,0,74,15493839.99,Santa Ynez,Santa  Barbara
+93461,5,2,1,1,0,36,861519.99,Shandon,San  Luis  Obispo
+93463,5,9,6,3,0,99,15345170.32,Solvang,Santa  Barbara
 93464,5,0,0,0,0,0,0,Solvang,Santa  Barbara
-93465,4,9,6,3,0,87,0,Templeton,San  Luis  Obispo
+93465,4,9,6,3,0,87,14198980.93,Templeton,San  Luis  Obispo
 93475,4,0,0,0,0,0,0,Oceano,San  Luis  Obispo
 93483,4,0,0,0,0,0,0,Grover Beach,San  Luis  Obispo
-93501,6,14,2,8,4,1055,0,Mojave,Kern
+93501,6,14,2,8,4,1055,57373687.02,Mojave,Kern
 93502,6,0,0,0,0,0,0,Mojave,Kern
 93504,6,0,0,0,0,0,0,California City,Kern
-93505,6,3,1,1,1,122,0,California City,Kern
-93510,8,1,1,0,0,9,0,Acton,Los  Angeles
+93505,6,3,1,1,1,122,3451158,California City,Kern
+93510,8,1,1,0,0,9,666405.98,Acton,Los  Angeles
 93512,7,0,0,0,0,0,0,Benton,Mono
 93513,7,0,0,0,0,0,0,Big Pine,Inyo
-93514,7,6,4,2,0,78,0,Bishop,Inyo
+93514,7,6,4,2,0,78,5618839.1,Bishop,Inyo
 93515,7,0,0,0,0,0,0,Bishop,Inyo
 93516,6,1,0,0,1,900,0,Boron,Kern
 93517,0,0,0,0,0,0,0,Bridgeport,Mono
 93518,6,0,0,0,0,0,0,Caliente,Kern
 93519,6,0,0,0,0,0,0,Cantil,Kern
-93522,7,1,0,1,0,20,0,Darwin,Inyo
+93522,7,1,0,1,0,20,1026778,Darwin,Inyo
 93523,6,1,1,0,0,10,0,Edwards,Kern
 93524,6,4,1,2,1,1418,0,Edwards,Kern
 93526,7,0,0,0,0,0,0,Independence,Inyo
-93527,6,3,2,1,0,33,0,Inyokern,Kern
+93527,6,3,2,1,0,33,2579705.99,Inyokern,Kern
 93528,6,0,0,0,0,0,0,Johannesburg,Kern
-93529,7,1,1,0,0,9,0,June Lake,Mono
+93529,7,1,1,0,0,9,9388878.8,June Lake,Mono
 93530,7,0,0,0,0,0,0,Keeler,Inyo
 93531,6,0,0,0,0,0,0,Keene,Kern
 93532,8,0,0,0,0,0,0,Lake Hughes,Los  Angeles
-93534,8,21,13,6,2,467,0,Lancaster,Los  Angeles
-93535,8,25,12,7,6,718,0,Lancaster,Los  Angeles
-93536,8,4,1,2,1,101,0,Lancaster,Los  Angeles
+93534,8,21,13,6,2,467,53931296.32,Lancaster,Los  Angeles
+93535,8,25,12,7,6,718,92682551.41,Lancaster,Los  Angeles
+93536,8,4,1,2,1,101,4259625.9,Lancaster,Los  Angeles
 93539,8,0,0,0,0,0,0,Lancaster,Los  Angeles
 93542,7,1,1,0,0,6,0,Little Lake,Inyo
 93543,8,2,1,0,1,95,0,Littlerock,Los  Angeles
 93544,8,0,0,0,0,0,0,Llano,Los  Angeles
 93545,7,0,0,0,0,0,0,Lone Pine,Inyo
-93546,7,7,6,1,0,86,0,Mammoth Lakes,Mono
+93546,7,7,6,1,0,86,7094059.19,Mammoth Lakes,Mono
 93549,7,0,0,0,0,0,0,Olancha,Inyo
-93550,8,23,16,5,2,617,0,Palmdale,Los  Angeles
-93551,8,20,8,7,5,593,0,Palmdale,Los  Angeles
-93552,8,1,1,0,0,9,0,Palmdale,Los  Angeles
+93550,8,23,16,5,2,617,24990692.65,Palmdale,Los  Angeles
+93551,8,20,8,7,5,593,52244149.99,Palmdale,Los  Angeles
+93552,8,1,1,0,0,9,486732.01,Palmdale,Los  Angeles
 93553,8,1,0,1,0,20,0,Pearblossom,Los  Angeles
 93554,6,0,0,0,0,0,0,Randsburg,Kern
-93555,6,19,8,7,4,585,0,Ridgecrest,Kern
+93555,6,19,8,7,4,585,38973686.01,Ridgecrest,Kern
 93556,6,0,0,0,0,0,0,Ridgecrest,Kern
 93558,11,0,0,0,0,0,0,Red Mountain,San  Bernardino
-93560,6,3,3,0,0,25,0,Rosamond,Kern
-93561,6,9,2,5,2,440,0,Tehachapi,Kern
-93562,20,1,1,0,0,10,0,Trona,San  Bernardino
+93560,6,3,3,0,0,25,4369195.1,Rosamond,Kern
+93561,6,9,2,5,2,440,18305832.19,Tehachapi,Kern
+93562,20,1,1,0,0,10,420681,Trona,San  Bernardino
 93563,8,0,0,0,0,0,0,Valyermo,Los  Angeles
 93581,6,0,0,0,0,0,0,Tehachapi,Kern
 93584,8,0,0,0,0,0,0,Lancaster,Los  Angeles
 93586,8,0,0,0,0,0,0,Lancaster,Los  Angeles
 93590,8,0,0,0,0,0,0,Palmdale,Los  Angeles
-93591,8,2,1,0,1,72,0,Palmdale,Los  Angeles
+93591,8,2,1,0,1,72,4641388.9,Palmdale,Los  Angeles
 93592,11,0,0,0,0,0,0,Trona,San  Bernardino
 93596,6,0,0,0,0,0,0,Boron,Kern
 93599,8,1,0,0,1,4000,0,Palmdale,Los  Angeles
 93601,7,0,0,0,0,0,0,Ahwahnee,Madera
-93602,7,2,2,0,0,13,0,Auberry,Fresno
+93602,7,2,2,0,0,13,1781995.01,Auberry,Fresno
 93603,6,0,0,0,0,0,0,Badger,Tulare
 93604,7,0,0,0,0,0,0,Bass Lake,Madera
 93605,7,0,0,0,0,0,0,Big Creek,Fresno
 93606,7,0,0,0,0,0,0,Biola,Fresno
 93607,7,0,0,0,0,0,0,Burrel,Fresno
 93608,7,0,0,0,0,0,0,Cantua Creek,Fresno
-93609,7,4,0,2,2,186,0,Caruthers,Fresno
-93610,7,7,3,3,1,144,0,Chowchilla,Madera
-93611,7,17,9,4,4,1136,0,Clovis,Fresno
-93612,7,25,10,7,8,1056,0,Clovis,Fresno
+93609,7,4,0,2,2,186,23563454.7,Caruthers,Fresno
+93610,7,7,3,3,1,144,12259717.97,Chowchilla,Madera
+93611,7,17,9,4,4,1136,587140253.5,Clovis,Fresno
+93612,7,25,10,7,8,1056,171413792.3,Clovis,Fresno
 93613,7,0,0,0,0,0,0,Clovis,Fresno
-93614,7,3,3,0,0,24,0,Coarsegold,Madera
+93614,7,3,3,0,0,24,2369181,Coarsegold,Madera
 93615,6,0,0,0,0,0,0,Cutler,Tulare
-93616,7,6,2,3,1,130,0,Del Rey,Fresno
-93618,6,6,1,5,0,163,0,Dinuba,Tulare
-93619,7,3,2,1,0,24,0,Clovis,Fresno
-93620,7,3,3,0,0,21,0,Dos Palos,Merced
+93616,7,6,2,3,1,130,17217331.47,Del Rey,Fresno
+93618,6,6,1,5,0,163,15295754.11,Dinuba,Tulare
+93619,7,3,2,1,0,24,2904890.11,Clovis,Fresno
+93620,7,3,3,0,0,21,3836540.1,Dos Palos,Merced
 93621,7,0,0,0,0,0,0,Dunlap,Fresno
-93622,7,2,0,2,0,40,0,Firebaugh,Fresno
+93622,7,2,0,2,0,40,2026475,Firebaugh,Fresno
 93623,7,0,0,0,0,0,0,Fish Camp,Mariposa
-93624,7,1,0,0,1,50,0,Five Points,Fresno
-93625,7,11,4,5,2,313,0,Fowler,Fresno
-93626,7,2,2,0,0,13,0,Friant,Fresno
+93624,7,1,0,0,1,50,9182317.7,Five Points,Fresno
+93625,7,11,4,5,2,313,42418706.44,Fowler,Fresno
+93626,7,2,2,0,0,13,3586056.9,Friant,Fresno
 93627,7,0,0,0,0,0,0,Helm,Fresno
 93628,7,0,0,0,0,0,0,Hume,Fresno
-93630,7,11,4,4,3,452,0,Kerman,Fresno
-93631,7,16,3,9,4,809,0,Kingsburg,Fresno
+93630,7,11,4,4,3,452,19670315.82,Kerman,Fresno
+93631,7,16,3,9,4,809,37591341.98,Kingsburg,Fresno
 93633,6,0,0,0,0,0,0,Kings Canyon National Pk,Tulare
 93634,7,0,0,0,0,0,0,Lakeshore,Fresno
-93635,7,14,6,5,3,761,0,Los Banos,Merced
-93636,7,10,6,3,1,192,0,Madera,Madera
-93637,7,43,13,20,10,1972,0,Madera,Madera
-93638,7,19,11,5,3,522,0,Madera,Madera
+93635,7,14,6,5,3,761,226829101,Los Banos,Merced
+93636,7,10,6,3,1,192,32113873.83,Madera,Madera
+93637,7,43,13,20,10,1972,179225353,Madera,Madera
+93638,7,19,11,5,3,522,36888789.1,Madera,Madera
 93639,7,0,0,0,0,0,0,Madera,Madera
-93640,7,2,2,0,0,16,0,Mendota,Fresno
+93640,7,2,2,0,0,16,1756514.97,Mendota,Fresno
 93641,7,0,0,0,0,0,0,Miramonte,Fresno
 93642,7,0,0,0,0,0,0,Mono Hot Springs,Fresno
-93643,7,1,1,0,0,10,0,North Fork,Madera
-93644,7,2,1,1,0,31,0,Oakhurst,Madera
+93643,7,1,1,0,0,10,329631,North Fork,Madera
+93644,7,2,1,1,0,31,4235974.89,Oakhurst,Madera
 93645,7,0,0,0,0,0,0,O Neals,Madera
-93646,7,1,0,1,0,35,0,Orange Cove,Fresno
+93646,7,1,0,1,0,35,2721910,Orange Cove,Fresno
 93647,6,0,0,0,0,0,0,Orosi,Tulare
-93648,7,5,0,3,2,383,0,Parlier,Fresno
+93648,7,5,0,3,2,383,119870819.3,Parlier,Fresno
 93649,7,0,0,0,0,0,0,Piedra,Fresno
-93650,7,1,0,1,0,30,0,Fresno,Fresno
+93650,7,1,0,1,0,30,3903515.1,Fresno,Fresno
 93651,7,0,0,0,0,0,0,Prather,Fresno
 93652,7,0,0,0,0,0,0,Raisin City,Fresno
 93653,7,1,1,0,0,6,0,Raymond,Madera
-93654,7,16,4,5,7,1775,0,Reedley,Fresno
-93656,7,1,1,0,0,6,0,Riverdale,Fresno
-93657,7,24,3,12,9,1332,0,Sanger,Fresno
-93660,7,1,1,0,0,8,0,San Joaquin,Fresno
+93654,7,16,4,5,7,1775,192654404.9,Reedley,Fresno
+93656,7,1,1,0,0,6,383071.99,Riverdale,Fresno
+93657,7,24,3,12,9,1332,111705449.9,Sanger,Fresno
+93660,7,1,1,0,0,8,2711436,San Joaquin,Fresno
 93661,7,0,0,0,0,0,0,Santa Rita Park,Merced
-93662,7,13,3,6,4,1325,0,Selma,Fresno
+93662,7,13,3,6,4,1325,207618363,Selma,Fresno
 93664,7,0,0,0,0,0,0,Shaver Lake,Fresno
-93665,7,2,1,1,0,30,0,South Dos Palos,Merced
+93665,7,2,1,1,0,30,5520538.9,South Dos Palos,Merced
 93666,6,0,0,0,0,0,0,Sultana,Tulare
-93667,7,1,1,0,0,7,0,Tollhouse,Fresno
-93668,7,1,1,0,0,10,0,Tranquillity,Fresno
+93667,7,1,1,0,0,7,765697,Tollhouse,Fresno
+93668,7,1,1,0,0,10,625635.98,Tranquillity,Fresno
 93669,7,0,0,0,0,0,0,Wishon,Madera
 93670,6,0,0,0,0,0,0,Yettem,Tulare
-93673,6,2,0,0,2,330,0,Traver,Tulare
+93673,6,2,0,0,2,330,23174314,Traver,Tulare
 93675,7,0,0,0,0,0,0,Squaw Valley,Fresno
-93701,7,4,2,1,1,213,0,Fresno,Fresno
-93702,7,7,3,1,3,639,0,Fresno,Fresno
-93703,7,17,5,9,3,525,0,Fresno,Fresno
-93704,7,7,5,1,1,154,0,Fresno,Fresno
-93705,7,2,2,0,0,16,0,Fresno,Fresno
-93706,7,65,16,39,10,4265,0,Fresno,Fresno
+93701,7,4,2,1,1,213,32893694,Fresno,Fresno
+93702,7,7,3,1,3,639,938669323.2,Fresno,Fresno
+93703,7,17,5,9,3,525,63344353.1,Fresno,Fresno
+93704,7,7,5,1,1,154,4899638.86,Fresno,Fresno
+93705,7,2,2,0,0,16,1493832.02,Fresno,Fresno
+93706,7,65,16,39,10,4265,425396804.7,Fresno,Fresno
 93707,7,0,0,0,0,0,0,Fresno,Fresno
 93708,7,0,0,0,0,0,0,Fresno,Fresno
 93709,7,0,0,0,0,0,0,Fresno,Fresno
-93710,7,8,6,1,1,146,0,Fresno,Fresno
-93711,7,34,19,12,3,1062,0,Fresno,Fresno
+93710,7,8,6,1,1,146,11504707.91,Fresno,Fresno
+93711,7,34,19,12,3,1062,75319737.37,Fresno,Fresno
 93712,7,0,0,0,0,0,0,Fresno,Fresno
 93714,7,0,0,0,0,0,0,Fresno,Fresno
 93715,7,0,0,0,0,0,0,Fresno,Fresno
 93716,7,0,0,0,0,0,0,Fresno,Fresno
 93717,7,0,0,0,0,0,0,Fresno,Fresno
 93718,7,0,0,0,0,0,0,Fresno,Fresno
-93720,7,16,10,5,1,247,0,Fresno,Fresno
-93721,7,40,16,20,4,995,0,Fresno,Fresno
-93722,7,57,23,25,9,1449,0,Fresno,Fresno
-93723,7,1,1,0,0,6,0,Fresno,Fresno
+93720,7,16,10,5,1,247,24038012.87,Fresno,Fresno
+93721,7,40,16,20,4,995,187217673.5,Fresno,Fresno
+93722,7,57,23,25,9,1449,445156709.4,Fresno,Fresno
+93723,7,1,1,0,0,6,560629.01,Fresno,Fresno
 93724,7,0,0,0,0,0,0,Fresno,Fresno
-93725,7,102,25,51,26,7316,0,Fresno,Fresno
-93726,7,5,4,1,0,51,0,Fresno,Fresno
-93727,7,83,40,37,6,2595,0,Fresno,Fresno
-93728,7,4,1,2,1,129,0,Fresno,Fresno
+93725,7,102,25,51,26,7316,513497322.1,Fresno,Fresno
+93726,7,5,4,1,0,51,2127549.02,Fresno,Fresno
+93727,7,83,40,37,6,2595,266513619,Fresno,Fresno
+93728,7,4,1,2,1,129,7038084.1,Fresno,Fresno
 93729,7,0,0,0,0,0,0,Fresno,Fresno
 93730,7,1,0,1,0,25,0,Fresno,Fresno
 93737,7,0,0,0,0,0,0,#N/A,#N/A
@@ -1476,103 +1476,103 @@
 93794,7,0,0,0,0,0,0,Fresno,Fresno
 93844,7,0,0,0,0,0,0,Fresno,Fresno
 93888,7,0,0,0,0,0,0,Fresno,Fresno
-93901,3,44,23,15,6,1506,0,Salinas,Monterey
+93901,3,44,23,15,6,1506,240819573.8,Salinas,Monterey
 93902,3,0,0,0,0,0,0,Salinas,Monterey
-93905,3,7,4,2,1,140,0,Salinas,Monterey
-93906,3,3,2,1,0,37,0,Salinas,Monterey
-93907,3,11,6,5,0,126,0,Salinas,Monterey
-93908,3,14,8,4,2,372,0,Salinas,Monterey
+93905,3,7,4,2,1,140,19542957.01,Salinas,Monterey
+93906,3,3,2,1,0,37,3586559.1,Salinas,Monterey
+93907,3,11,6,5,0,126,20572055.66,Salinas,Monterey
+93908,3,14,8,4,2,372,418413491.6,Salinas,Monterey
 93912,3,0,0,0,0,0,0,Salinas,Monterey
 93915,3,0,0,0,0,0,0,Salinas,Monterey
 93921,3,0,0,0,0,0,0,Carmel By The Sea,Monterey
 93922,0,0,0,0,0,0,0,Carmel,Monterey
-93923,3,1,1,0,0,7,0,Carmel,Monterey
-93924,3,9,8,1,0,105,0,Carmel Valley,Monterey
+93923,3,1,1,0,0,7,2154709.1,Carmel,Monterey
+93924,3,9,8,1,0,105,14068412.08,Carmel Valley,Monterey
 93925,3,0,0,0,0,0,0,Chualar,Monterey
-93926,3,11,7,2,2,1236,0,Gonzales,Monterey
-93927,3,2,1,1,0,32,0,Greenfield,Monterey
-93930,3,6,2,3,1,175,0,King City,Monterey
+93926,3,11,7,2,2,1236,154977906.5,Gonzales,Monterey
+93927,3,2,1,1,0,32,367628.01,Greenfield,Monterey
+93930,3,6,2,3,1,175,38745291,King City,Monterey
 93932,3,0,0,0,0,0,0,Lockwood,Monterey
-93933,3,10,3,5,2,310,0,Marina,Monterey
-93940,3,45,23,19,3,852,0,Monterey,Monterey
+93933,3,10,3,5,2,310,33342304.39,Marina,Monterey
+93940,3,45,23,19,3,852,643403578,Monterey,Monterey
 93942,3,0,0,0,0,0,0,Monterey,Monterey
 93943,3,1,1,0,0,9,0,Monterey,Monterey
-93950,3,2,2,0,0,16,0,Pacific Grove,Monterey
+93950,3,2,2,0,0,16,2573120.88,Pacific Grove,Monterey
 93953,3,0,0,0,0,0,0,Pebble Beach,Monterey
-93954,3,2,2,0,0,15,0,San Lucas,Monterey
-93955,3,9,5,3,1,153,0,Seaside,Monterey
-93960,3,6,3,2,1,129,0,Soledad,Monterey
-93962,0,1,0,1,0,48,0,Spreckels,Monterey
-94002,2,20,10,8,2,375,0,Belmont,San  Mateo
-94005,2,35,8,16,11,1640,0,Brisbane,San  Mateo
-94010,2,80,32,33,15,2554,0,Burlingame,San  Mateo
+93954,3,2,2,0,0,15,2208075,San Lucas,Monterey
+93955,3,9,5,3,1,153,16031720.01,Seaside,Monterey
+93960,3,6,3,2,1,129,12768421.9,Soledad,Monterey
+93962,0,1,0,1,0,48,28261921,Spreckels,Monterey
+94002,2,20,10,8,2,375,37546056.21,Belmont,San  Mateo
+94005,2,35,8,16,11,1640,544272142.7,Brisbane,San  Mateo
+94010,2,80,32,33,15,2554,1556923944,Burlingame,San  Mateo
 94011,2,0,0,0,0,0,0,Burlingame,San  Mateo
-94014,2,12,9,3,0,194,0,Daly City,San  Mateo
-94015,2,5,3,2,0,51,0,Daly City,San  Mateo
+94014,2,12,9,3,0,194,49005047.13,Daly City,San  Mateo
+94015,2,5,3,2,0,51,4489032.99,Daly City,San  Mateo
 94017,2,0,0,0,0,0,0,Daly City,San  Mateo
-94018,2,1,0,1,0,26,0,El Granada,San  Mateo
-94019,2,13,8,4,1,283,0,Half Moon Bay,San  Mateo
-94020,2,1,0,1,0,20,0,La Honda,San  Mateo
-94022,3,13,5,7,1,259,0,Los Altos,Santa  Clara
-94024,3,13,7,6,0,156,0,Los Altos,Santa  Clara
-94025,2,84,37,28,19,5380,0,Menlo Park,San  Mateo
+94018,2,1,0,1,0,26,5411922,El Granada,San  Mateo
+94019,2,13,8,4,1,283,29476006.41,Half Moon Bay,San  Mateo
+94020,2,1,0,1,0,20,3693427.1,La Honda,San  Mateo
+94022,3,13,5,7,1,259,98109438.39,Los Altos,Santa  Clara
+94024,3,13,7,6,0,156,13420642.09,Los Altos,Santa  Clara
+94025,2,84,37,28,19,5380,1569473275,Menlo Park,San  Mateo
 94026,2,0,0,0,0,0,0,Menlo Park,San  Mateo
-94027,2,2,1,1,0,19,0,Atherton,San  Mateo
-94028,2,4,3,1,0,55,0,Portola Valley,San  Mateo
-94030,2,4,4,0,0,29,0,Millbrae,San  Mateo
+94027,2,2,1,1,0,19,3520686,Atherton,San  Mateo
+94028,2,4,3,1,0,55,7014070.01,Portola Valley,San  Mateo
+94030,2,4,4,0,0,29,4555792.89,Millbrae,San  Mateo
 94035,2,7,1,2,4,632,0,Mountain View,Santa  Clara
 94037,2,0,0,0,0,0,0,Montara,San  Mateo
-94038,2,1,0,1,0,15,0,Moss Beach,San  Mateo
+94038,2,1,0,1,0,15,1486128,Moss Beach,San  Mateo
 94039,0,0,0,0,0,0,0,Mountain View,Santa  Clara
-94040,3,23,13,7,3,551,0,Mountain View,Santa  Clara
-94041,3,14,5,6,3,325,0,Mountain View,Santa  Clara
-94043,2,106,34,37,35,9243,0,Mountain View,Santa  Clara
-94044,2,5,3,2,0,58,0,Pacifica,San  Mateo
+94040,3,23,13,7,3,551,77017322.92,Mountain View,Santa  Clara
+94041,3,14,5,6,3,325,42042044.16,Mountain View,Santa  Clara
+94043,2,106,34,37,35,9243,1061011739,Mountain View,Santa  Clara
+94044,2,5,3,2,0,58,3967230.1,Pacifica,San  Mateo
 94060,2,0,0,0,0,0,0,Pescadero,San  Mateo
-94061,2,8,6,1,1,145,0,Redwood City,San  Mateo
-94062,2,11,6,5,0,163,0,Redwood City,San  Mateo
-94063,2,96,49,27,20,4012,0,Redwood City,San  Mateo
+94061,2,8,6,1,1,145,52240361.82,Redwood City,San  Mateo
+94062,2,11,6,5,0,163,19285539.3,Redwood City,San  Mateo
+94063,2,96,49,27,20,4012,753745573.5,Redwood City,San  Mateo
 94064,2,0,0,0,0,0,0,Redwood City,San  Mateo
-94065,2,49,16,19,14,6621,0,Redwood City,San  Mateo
-94066,2,7,5,2,0,76,0,San Bruno,San  Mateo
-94070,2,95,57,25,13,2706,0,San Carlos,San  Mateo
-94074,2,1,1,0,0,6,0,San Gregorio,San  Mateo
-94080,2,263,81,112,70,25877,0,South San Francisco,San  Mateo
-94085,3,86,23,44,19,4922,0,Sunnyvale,Santa  Clara
-94086,3,41,15,13,13,4672,0,Sunnyvale,Santa  Clara
-94087,3,7,5,2,0,91,0,Sunnyvale,Santa  Clara
-94088,3,1,1,0,0,8,0,Sunnyvale,Santa  Clara
-94089,2,98,31,40,27,8918,0,Sunnyvale,Santa  Clara
+94065,2,49,16,19,14,6621,4562058506,Redwood City,San  Mateo
+94066,2,7,5,2,0,76,33895966.9,San Bruno,San  Mateo
+94070,2,95,57,25,13,2706,710299289.1,San Carlos,San  Mateo
+94074,2,1,1,0,0,6,2085706,San Gregorio,San  Mateo
+94080,2,263,81,112,70,25877,5498758931,South San Francisco,San  Mateo
+94085,3,86,23,44,19,4922,1038404499,Sunnyvale,Santa  Clara
+94086,3,41,15,13,13,4672,12600915523,Sunnyvale,Santa  Clara
+94087,3,7,5,2,0,91,6690038.91,Sunnyvale,Santa  Clara
+94088,3,1,1,0,0,8,260080.01,Sunnyvale,Santa  Clara
+94089,2,98,31,40,27,8918,9040881356,Sunnyvale,Santa  Clara
 94101,2,0,0,0,0,0,0,San Francisco,San  Francisco
-94102,2,14,9,4,1,186,0,San Francisco,San  Francisco
-94103,2,92,41,40,11,3550,0,San Francisco,San  Francisco
-94104,2,79,32,34,13,2318,0,San Francisco,San  Francisco
-94105,2,73,21,37,15,2971,0,San Francisco,San  Francisco
-94107,2,98,47,40,11,2466,0,San Francisco,San  Francisco
-94108,2,26,16,6,4,927,0,San Francisco,San  Francisco
-94109,2,19,10,8,1,677,0,San Francisco,San  Francisco
-94110,2,44,21,18,5,1039,0,San Francisco,San  Francisco
-94111,2,80,32,36,12,6680,0,San Francisco,San  Francisco
-94112,2,3,1,2,0,44,0,San Francisco,San  Francisco
-94114,2,10,7,1,2,310,0,San Francisco,San  Francisco
-94115,2,14,8,4,2,530,0,San Francisco,San  Francisco
-94116,2,4,3,1,0,43,0,San Francisco,San  Francisco
-94117,2,10,8,2,0,111,0,San Francisco,San  Francisco
-94118,2,6,5,1,0,54,0,San Francisco,San  Francisco
+94102,2,14,9,4,1,186,4263711.98,San Francisco,San  Francisco
+94103,2,92,41,40,11,3550,2286451320,San Francisco,San  Francisco
+94104,2,79,32,34,13,2318,3401668036,San Francisco,San  Francisco
+94105,2,73,21,37,15,2971,960587837.1,San Francisco,San  Francisco
+94107,2,98,47,40,11,2466,1155453208,San Francisco,San  Francisco
+94108,2,26,16,6,4,927,2761475075,San Francisco,San  Francisco
+94109,2,19,10,8,1,677,36005275.81,San Francisco,San  Francisco
+94110,2,44,21,18,5,1039,266560034.4,San Francisco,San  Francisco
+94111,2,80,32,36,12,6680,11184119814,San Francisco,San  Francisco
+94112,2,3,1,2,0,44,2916645,San Francisco,San  Francisco
+94114,2,10,7,1,2,310,55584734.03,San Francisco,San  Francisco
+94115,2,14,8,4,2,530,84390870.41,San Francisco,San  Francisco
+94116,2,4,3,1,0,43,14407702.99,San Francisco,San  Francisco
+94117,2,10,8,2,0,111,9282522.87,San Francisco,San  Francisco
+94118,2,6,5,1,0,54,8500355.32,San Francisco,San  Francisco
 94119,2,0,0,0,0,0,0,San Francisco,San  Francisco
-94121,2,4,2,2,0,46,0,San Francisco,San  Francisco
-94122,2,6,4,1,1,5100,0,San Francisco,San  Francisco
-94123,2,11,7,4,0,142,0,San Francisco,San  Francisco
-94124,2,83,46,33,4,1354,0,San Francisco,San  Francisco
+94121,2,4,2,2,0,46,8191797.78,San Francisco,San  Francisco
+94122,2,6,4,1,1,5100,5704204.07,San Francisco,San  Francisco
+94123,2,11,7,4,0,142,986746756.2,San Francisco,San  Francisco
+94124,2,83,46,33,4,1354,208955079.6,San Francisco,San  Francisco
 94125,2,0,0,0,0,0,0,San Francisco,San  Francisco
-94127,2,2,2,0,0,17,0,San Francisco,San  Francisco
-94128,2,2,1,1,0,19,0,San Francisco,San  Mateo
-94129,2,6,3,3,0,102,0,San Francisco,San  Francisco
-94130,2,1,1,0,0,10,0,San Francisco,San  Francisco
-94131,2,2,1,1,0,33,0,San Francisco,San  Francisco
-94132,2,5,1,2,2,607,0,San Francisco,San  Francisco
-94133,2,17,10,4,3,488,0,San Francisco,San  Francisco
-94134,2,3,1,1,1,102,0,San Francisco,San  Francisco
+94127,2,2,2,0,0,17,951184.99,San Francisco,San  Francisco
+94128,2,2,1,1,0,19,3939605.99,San Francisco,San  Mateo
+94129,2,6,3,3,0,102,11939317.2,San Francisco,San  Francisco
+94130,2,1,1,0,0,10,5189762.1,San Francisco,San  Francisco
+94131,2,2,1,1,0,33,1072320.97,San Francisco,San  Francisco
+94132,2,5,1,2,2,607,337910630,San Francisco,San  Francisco
+94133,2,17,10,4,3,488,189805493.8,San Francisco,San  Francisco
+94134,2,3,1,1,1,102,29664334,San Francisco,San  Francisco
 94137,2,0,0,0,0,0,0,San Francisco,San  Francisco
 94139,2,0,0,0,0,0,0,San Francisco,San  Francisco
 94140,2,0,0,0,0,0,0,San Francisco,San  Francisco
@@ -1585,7 +1585,7 @@
 94151,2,0,0,0,0,0,0,San Francisco,San  Francisco
 94153,2,0,0,0,0,0,0,San Francisco,San  Francisco
 94154,2,0,0,0,0,0,0,San Francisco,San  Francisco
-94158,2,19,6,7,6,1193,0,San Francisco,San  Francisco
+94158,2,19,6,7,6,1193,280002888.7,San Francisco,San  Francisco
 94159,2,0,0,0,0,0,0,San Francisco,San  Francisco
 94160,2,0,0,0,0,0,0,San Francisco,San  Francisco
 94161,2,0,0,0,0,0,0,San Francisco,San  Francisco
@@ -1596,7 +1596,7 @@
 94172,2,0,0,0,0,0,0,San Francisco,San  Francisco
 94177,2,0,0,0,0,0,0,San Francisco,San  Francisco
 94188,2,0,0,0,0,0,0,San Francisco,San  Francisco
-94203,2,1,1,0,0,9,0,Sacramento,Sacramento
+94203,2,1,1,0,0,9,1123108,Sacramento,Sacramento
 94204,2,0,0,0,0,0,0,Sacramento,Sacramento
 94205,2,0,0,0,0,0,0,Sacramento,Sacramento
 94206,2,0,0,0,0,0,0,Sacramento,Sacramento
@@ -1655,119 +1655,119 @@
 94296,2,0,0,0,0,0,0,Sacramento,Sacramento
 94297,2,0,0,0,0,0,0,Sacramento,Sacramento
 94298,2,0,0,0,0,0,0,Sacramento,Sacramento
-94301,2,24,18,6,0,280,0,Palo Alto,Santa  Clara
+94301,2,24,18,6,0,280,58222427.09,Palo Alto,Santa  Clara
 94302,0,0,0,0,0,0,0,Palo Alto,Santa  Clara
-94303,2,63,20,38,5,1548,0,Palo Alto,Santa  Clara
-94304,3,65,25,18,22,12139,0,Palo Alto,Santa  Clara
-94305,2,5,2,2,1,307,0,Stanford,Santa  Clara
-94306,2,29,12,15,2,736,0,Palo Alto,Santa  Clara
-94401,2,23,15,3,5,783,0,San Mateo,San  Mateo
-94402,2,29,10,15,4,1141,0,San Mateo,San  Mateo
-94403,2,20,11,9,0,292,0,San Mateo,San  Mateo
-94404,2,45,17,13,15,1942,0,San Mateo,San  Mateo
-94501,2,65,25,28,12,2828,0,Alameda,Alameda
-94502,2,20,6,9,5,1264,0,Alameda,Alameda
-94503,2,18,7,7,4,704,0,American Canyon,Napa
-94505,2,1,1,0,0,10,0,#N/A,#N/A
-94506,2,5,2,3,0,104,0,Danville,Contra  Costa
-94507,2,3,1,2,0,41,0,Alamo,Contra  Costa
-94508,2,6,5,1,0,53,0,Angwin,Napa
-94509,2,26,12,9,5,744,0,Antioch,Contra  Costa
-94510,2,74,31,32,11,2253,0,Benicia,Solano
+94303,2,63,20,38,5,1548,949153531.4,Palo Alto,Santa  Clara
+94304,3,65,25,18,22,12139,1.11817E+11,Palo Alto,Santa  Clara
+94305,2,5,2,2,1,307,2674780.02,Stanford,Santa  Clara
+94306,2,29,12,15,2,736,103346802.3,Palo Alto,Santa  Clara
+94401,2,23,15,3,5,783,161428740,San Mateo,San  Mateo
+94402,2,29,10,15,4,1141,1181578296,San Mateo,San  Mateo
+94403,2,20,11,9,0,292,49170110.73,San Mateo,San  Mateo
+94404,2,45,17,13,15,1942,28443612490,San Mateo,San  Mateo
+94501,2,65,25,28,12,2828,532989998.5,Alameda,Alameda
+94502,2,20,6,9,5,1264,3118278718,Alameda,Alameda
+94503,2,18,7,7,4,704,185739641,American Canyon,Napa
+94505,2,1,1,0,0,10,426122.99,#N/A,#N/A
+94506,2,5,2,3,0,104,4585200,Danville,Contra  Costa
+94507,2,3,1,2,0,41,5226828,Alamo,Contra  Costa
+94508,2,6,5,1,0,53,9076006.9,Angwin,Napa
+94509,2,26,12,9,5,744,56402423.43,Antioch,Contra  Costa
+94510,2,74,31,32,11,2253,357834933.2,Benicia,Solano
 94511,2,0,0,0,0,0,0,Bethel Island,Contra  Costa
 94512,2,0,0,0,0,0,0,Birds Landing,Solano
-94513,2,8,5,1,2,199,0,Brentwood,Contra  Costa
-94514,2,3,1,2,0,55,0,Byron,Contra  Costa
-94515,2,34,23,9,2,503,0,Calistoga,Napa
+94513,2,8,5,1,2,199,22525389.86,Brentwood,Contra  Costa
+94514,2,3,1,2,0,55,6858261.8,Byron,Contra  Costa
+94515,2,34,23,9,2,503,73113962.33,Calistoga,Napa
 94517,2,1,0,1,0,42,0,Clayton,Contra  Costa
-94518,2,17,9,6,2,409,0,Concord,Contra  Costa
-94519,2,2,1,1,0,23,0,Concord,Contra  Costa
-94520,2,86,40,34,12,4466,0,Concord,Contra  Costa
-94521,2,1,1,0,0,8,0,Concord,Contra  Costa
+94518,2,17,9,6,2,409,29441533.16,Concord,Contra  Costa
+94519,2,2,1,1,0,23,1940309.01,Concord,Contra  Costa
+94520,2,86,40,34,12,4466,473333307.4,Concord,Contra  Costa
+94521,2,1,1,0,0,8,974347,Concord,Contra  Costa
 94522,0,0,0,0,0,0,0,Concord,Contra  Costa
-94523,2,22,15,7,0,279,0,Pleasant Hill,Contra  Costa
-94525,2,1,0,0,1,550,0,Crockett,Contra  Costa
-94526,2,14,7,7,0,221,0,Danville,Contra  Costa
+94523,2,22,15,7,0,279,61883886,Pleasant Hill,Contra  Costa
+94525,2,1,0,0,1,550,33426517,Crockett,Contra  Costa
+94526,2,14,7,7,0,221,23549542.38,Danville,Contra  Costa
 94527,2,0,0,0,0,0,0,Concord,Contra  Costa
 94528,2,0,0,0,0,0,0,Diablo,Contra  Costa
-94530,2,2,2,0,0,15,0,El Cerrito,Contra  Costa
-94531,2,6,3,3,0,73,0,Antioch,Contra  Costa
-94533,2,39,11,15,13,2664,0,Fairfield,Solano
-94534,2,43,14,17,12,1844,0,Fairfield,Solano
+94530,2,2,2,0,0,15,524775.03,El Cerrito,Contra  Costa
+94531,2,6,3,3,0,73,8039500.11,Antioch,Contra  Costa
+94533,2,39,11,15,13,2664,336080326.1,Fairfield,Solano
+94534,2,43,14,17,12,1844,462627980.6,Fairfield,Solano
 94535,2,1,0,1,0,30,0,Travis Afb,Solano
-94536,2,8,6,1,1,150,0,Fremont,Alameda
-94538,2,339,85,141,113,26210,0,Fremont,Alameda
-94539,2,119,45,48,26,13320,0,Fremont,Alameda
+94536,2,8,6,1,1,150,33997731.2,Fremont,Alameda
+94538,2,339,85,141,113,26210,22742544005,Fremont,Alameda
+94539,2,119,45,48,26,13320,3181495053,Fremont,Alameda
 94540,0,0,0,0,0,0,0,Hayward,Alameda
-94541,2,15,8,6,1,244,0,Hayward,Alameda
-94542,2,2,2,0,0,13,0,Hayward,Alameda
-94544,2,84,28,27,29,4178,0,Hayward,Alameda
-94545,2,228,83,99,46,9045,0,Hayward,Alameda
-94546,2,4,2,2,0,48,0,Castro Valley,Alameda
-94547,2,18,3,11,4,3039,0,Hercules,Contra  Costa
+94541,2,15,8,6,1,244,23201610.59,Hayward,Alameda
+94542,2,2,2,0,0,13,1581435.98,Hayward,Alameda
+94544,2,84,28,27,29,4178,698651649.6,Hayward,Alameda
+94545,2,228,83,99,46,9045,2355478160,Hayward,Alameda
+94546,2,4,2,2,0,48,5075885,Castro Valley,Alameda
+94547,2,18,3,11,4,3039,2824023329,Hercules,Contra  Costa
 94548,2,0,0,0,0,0,0,Knightsen,Contra  Costa
-94549,2,16,9,6,1,264,0,Lafayette,Contra  Costa
-94550,2,52,17,24,11,2184,0,Livermore,Alameda
-94551,2,111,45,43,23,10973,0,Livermore,Alameda
+94549,2,16,9,6,1,264,33192389.11,Lafayette,Contra  Costa
+94550,2,52,17,24,11,2184,501418680.9,Livermore,Alameda
+94551,2,111,45,43,23,10973,1665845068,Livermore,Alameda
 94552,2,0,0,0,0,0,0,Castro Valley,Alameda
-94553,2,39,21,13,5,958,0,Martinez,Contra  Costa
-94555,2,19,3,9,7,1811,0,Fremont,Alameda
-94556,2,3,2,1,0,29,0,Moraga,Contra  Costa
-94558,2,160,76,68,16,3740,0,Napa,Napa
-94559,2,60,31,24,5,1862,0,Napa,Napa
-94560,2,91,25,41,25,5520,0,Newark,Alameda
-94561,2,4,2,2,0,40,0,Oakley,Contra  Costa
-94562,2,15,5,8,2,411,0,Oakville,Napa
-94563,2,9,6,1,2,182,0,Orinda,Contra  Costa
-94564,2,3,2,1,0,38,0,Pinole,Contra  Costa
-94565,2,43,14,19,10,1822,0,Pittsburg,Contra  Costa
-94566,2,77,34,35,8,1841,0,Pleasanton,Alameda
-94567,2,1,1,0,0,8,0,Pope Valley,Napa
-94568,2,27,9,16,2,606,0,Dublin,Alameda
+94553,2,39,21,13,5,958,87346673.45,Martinez,Contra  Costa
+94555,2,19,3,9,7,1811,3758955403,Fremont,Alameda
+94556,2,3,2,1,0,29,1494166.02,Moraga,Contra  Costa
+94558,2,160,76,68,16,3740,1170091727,Napa,Napa
+94559,2,60,31,24,5,1862,138783740.7,Napa,Napa
+94560,2,91,25,41,25,5520,1685515412,Newark,Alameda
+94561,2,4,2,2,0,40,5764649.83,Oakley,Contra  Costa
+94562,2,15,5,8,2,411,93975902.21,Oakville,Napa
+94563,2,9,6,1,2,182,60716481.09,Orinda,Contra  Costa
+94564,2,3,2,1,0,38,3227019.01,Pinole,Contra  Costa
+94565,2,43,14,19,10,1822,351122472.8,Pittsburg,Contra  Costa
+94566,2,77,34,35,8,1841,697032436.3,Pleasanton,Alameda
+94567,2,1,1,0,0,8,863821.98,Pope Valley,Napa
+94568,2,27,9,16,2,606,281329712.1,Dublin,Alameda
 94569,2,0,0,0,0,0,0,Port Costa,Contra  Costa
-94571,2,5,3,2,0,78,0,Rio Vista,Solano
-94572,2,4,3,1,0,35,0,Rodeo,Contra  Costa
-94573,2,12,2,5,5,590,0,Rutherford,Napa
-94574,2,83,46,27,10,1737,0,Saint Helena,Napa
-94576,2,1,1,0,0,10,0,Deer Park,Napa
-94577,2,143,60,51,32,7124,0,San Leandro,Alameda
-94578,2,13,5,5,3,649,0,San Leandro,Alameda
-94579,2,2,1,0,1,98,0,San Leandro,Alameda
-94580,2,6,1,2,3,1243,0,San Lorenzo,Alameda
-94581,2,1,1,0,0,6,0,Napa,Napa
-94582,2,2,0,2,0,60,0,San Ramon,Contra  Costa
-94583,2,74,32,26,16,4229,0,San Ramon,Contra  Costa
-94585,2,6,4,2,0,71,0,Suisun City,Solano
-94586,2,4,1,1,2,148,0,Sunol,Alameda
-94587,2,105,33,50,22,4579,0,Union City,Alameda
-94588,2,103,31,43,29,9281,0,Pleasanton,Alameda
-94589,2,2,1,1,0,33,0,Vallejo,Solano
-94590,2,12,6,4,2,374,0,Vallejo,Solano
+94571,2,5,3,2,0,78,9538607.8,Rio Vista,Solano
+94572,2,4,3,1,0,35,7852566.81,Rodeo,Contra  Costa
+94573,2,12,2,5,5,590,87190961.09,Rutherford,Napa
+94574,2,83,46,27,10,1737,1363717355,Saint Helena,Napa
+94576,2,1,1,0,0,10,990342.97,Deer Park,Napa
+94577,2,143,60,51,32,7124,2085893420,San Leandro,Alameda
+94578,2,13,5,5,3,649,246573120,San Leandro,Alameda
+94579,2,2,1,0,1,98,42323820,San Leandro,Alameda
+94580,2,6,1,2,3,1243,96082202.3,San Lorenzo,Alameda
+94581,2,1,1,0,0,6,264524.01,Napa,Napa
+94582,2,2,0,2,0,60,1323371.02,San Ramon,Contra  Costa
+94583,2,74,32,26,16,4229,2.08418E+11,San Ramon,Contra  Costa
+94585,2,6,4,2,0,71,14588976,Suisun City,Solano
+94586,2,4,1,1,2,148,3637991.1,Sunol,Alameda
+94587,2,105,33,50,22,4579,704362616.8,Union City,Alameda
+94588,2,103,31,43,29,9281,6498910245,Pleasanton,Alameda
+94589,2,2,1,1,0,33,1398113.09,Vallejo,Solano
+94590,2,12,6,4,2,374,125120758.1,Vallejo,Solano
 94591,2,0,0,0,0,0,0,Vallejo,Solano
-94592,2,13,1,10,2,352,0,Vallejo,Solano
-94595,2,3,2,0,1,395,0,Walnut Creek,Contra  Costa
-94596,2,45,10,23,12,2047,0,Walnut Creek,Contra  Costa
-94597,2,16,6,7,3,882,0,Walnut Creek,Contra  Costa
-94598,2,8,3,2,3,721,0,Walnut Creek,Contra  Costa
-94599,2,17,4,11,2,493,0,Yountville,Napa
-94601,2,36,13,21,2,768,0,Oakland,Alameda
-94602,2,4,3,1,0,40,0,Oakland,Alameda
-94603,2,10,5,2,3,342,0,Oakland,Alameda
-94605,2,5,2,3,0,69,0,Oakland,Alameda
-94606,2,12,4,6,2,357,0,Oakland,Alameda
-94607,2,61,25,28,8,1544,0,Oakland,Alameda
-94608,2,104,32,49,23,4478,0,Emeryville,Alameda
-94609,2,10,5,4,1,184,0,Oakland,Alameda
-94610,2,5,2,2,1,92,0,Oakland,Alameda
-94611,2,8,6,2,0,105,0,Oakland,Alameda
-94612,2,77,27,36,14,4277,0,Oakland,Alameda
+94592,2,13,1,10,2,352,63470642.06,Vallejo,Solano
+94595,2,3,2,0,1,395,2980164.02,Walnut Creek,Contra  Costa
+94596,2,45,10,23,12,2047,1713191668,Walnut Creek,Contra  Costa
+94597,2,16,6,7,3,882,311314682,Walnut Creek,Contra  Costa
+94598,2,8,3,2,3,721,987813601.9,Walnut Creek,Contra  Costa
+94599,2,17,4,11,2,493,62242105.69,Yountville,Napa
+94601,2,36,13,21,2,768,156144752.5,Oakland,Alameda
+94602,2,4,3,1,0,40,4712502.02,Oakland,Alameda
+94603,2,10,5,2,3,342,48394007.05,Oakland,Alameda
+94605,2,5,2,3,0,69,2460620.97,Oakland,Alameda
+94606,2,12,4,6,2,357,26262272.29,Oakland,Alameda
+94607,2,61,25,28,8,1544,1767338315,Oakland,Alameda
+94608,2,104,32,49,23,4478,3173179714,Emeryville,Alameda
+94609,2,10,5,4,1,184,32531329.13,Oakland,Alameda
+94610,2,5,2,2,1,92,61194588.62,Oakland,Alameda
+94611,2,8,6,2,0,105,18372345.48,Oakland,Alameda
+94612,2,77,27,36,14,4277,8239340173,Oakland,Alameda
 94613,2,0,0,0,0,0,0,Oakland,Alameda
 94614,2,1,1,0,0,9,0,Oakland,Alameda
 94615,2,0,0,0,0,0,0,Oakland,Alameda
-94618,2,5,4,1,0,41,0,Oakland,Alameda
-94619,2,2,2,0,0,19,0,Oakland,Alameda
+94618,2,5,4,1,0,41,1426592.98,Oakland,Alameda
+94619,2,2,2,0,0,19,2429776.9,Oakland,Alameda
 94620,2,0,0,0,0,0,0,Piedmont,Alameda
-94621,2,40,15,17,8,1842,0,Oakland,Alameda
+94621,2,40,15,17,8,1842,263169952.1,Oakland,Alameda
 94622,2,0,0,0,0,0,0,Oakland,Alameda
 94623,2,0,0,0,0,0,0,Oakland,Alameda
 94624,2,0,0,0,0,0,0,Oakland,Alameda
@@ -1776,61 +1776,61 @@
 94660,2,0,0,0,0,0,0,Oakland,Alameda
 94662,2,0,0,0,0,0,0,Emeryville,Alameda
 94666,2,0,0,0,0,0,0,Oakland,Alameda
-94702,2,10,6,3,1,240,0,Berkeley,Alameda
-94703,2,4,3,1,0,44,0,Berkeley,Alameda
-94704,2,18,11,5,2,323,0,Berkeley,Alameda
-94705,2,4,2,2,0,47,0,Berkeley,Alameda
-94706,2,1,1,0,0,7,0,Albany,Alameda
-94707,2,7,5,2,0,65,0,Berkeley,Alameda
-94708,2,3,1,1,1,100,0,Berkeley,Alameda
-94709,2,3,1,2,0,64,0,Berkeley,Alameda
-94710,2,100,42,43,15,4869,0,Berkeley,Alameda
-94720,2,3,2,1,0,35,0,Berkeley,Alameda
-94801,2,26,7,12,7,1143,0,Richmond,Contra  Costa
+94702,2,10,6,3,1,240,70636093.83,Berkeley,Alameda
+94703,2,4,3,1,0,44,2942360.06,Berkeley,Alameda
+94704,2,18,11,5,2,323,30319309,Berkeley,Alameda
+94705,2,4,2,2,0,47,8751851.9,Berkeley,Alameda
+94706,2,1,1,0,0,7,938377.98,Albany,Alameda
+94707,2,7,5,2,0,65,11733249.98,Berkeley,Alameda
+94708,2,3,1,1,1,100,12669054.51,Berkeley,Alameda
+94709,2,3,1,2,0,64,4289129.1,Berkeley,Alameda
+94710,2,100,42,43,15,4869,387315324.2,Berkeley,Alameda
+94720,2,3,2,1,0,35,5023977.09,Berkeley,Alameda
+94801,2,26,7,12,7,1143,238277644.8,Richmond,Contra  Costa
 94802,2,0,0,0,0,0,0,Richmond,Contra  Costa
 94803,2,0,0,0,0,0,0,El Sobrante,Contra  Costa
-94804,2,58,20,22,16,3091,0,Richmond,Contra  Costa
-94805,2,1,1,0,0,10,0,Richmond,Contra  Costa
-94806,2,24,15,6,3,463,0,San Pablo,Contra  Costa
+94804,2,58,20,22,16,3091,1553952213,Richmond,Contra  Costa
+94805,2,1,1,0,0,10,3318696,Richmond,Contra  Costa
+94806,2,24,15,6,3,463,48641080.7,San Pablo,Contra  Costa
 94807,2,0,0,0,0,0,0,Richmond,Contra  Costa
 94808,2,0,0,0,0,0,0,Richmond,Contra  Costa
 94820,2,0,0,0,0,0,0,El Sobrante,Contra  Costa
-94901,2,54,24,22,8,1458,0,San Rafael,Marin
-94903,2,15,8,6,1,278,0,San Rafael,Marin
-94904,2,6,1,2,3,509,0,Greenbrae,Marin
+94901,2,54,24,22,8,1458,2703973527,San Rafael,Marin
+94903,2,15,8,6,1,278,44984401.91,San Rafael,Marin
+94904,2,6,1,2,3,509,1483094.99,Greenbrae,Marin
 94912,2,0,0,0,0,0,0,San Rafael,Marin
 94913,2,0,0,0,0,0,0,San Rafael,Marin
 94915,2,0,0,0,0,0,0,San Rafael,Marin
-94920,2,6,6,0,0,52,0,Belvedere Tiburon,Marin
+94920,2,6,6,0,0,52,4359690,Belvedere Tiburon,Marin
 94922,2,0,0,0,0,0,0,Bodega,Sonoma
 94923,2,0,0,0,0,0,0,Bodega Bay,Sonoma
 94924,2,0,0,0,0,0,0,Bolinas,Marin
-94925,2,5,1,4,0,116,0,Corte Madera,Marin
+94925,2,5,1,4,0,116,61437364,Corte Madera,Marin
 94926,2,0,0,0,0,0,0,Cotati,Sonoma
-94928,2,34,17,10,7,1222,0,Rohnert Park,Sonoma
+94928,2,34,17,10,7,1222,309474428.1,Rohnert Park,Sonoma
 94929,0,0,0,0,0,0,0,Dillon Beach,Marin
-94930,2,1,0,1,0,21,0,Fairfax,Marin
-94931,2,13,7,6,0,204,0,Cotati,Sonoma
+94930,2,1,0,1,0,21,10126211,Fairfax,Marin
+94931,2,13,7,6,0,204,18033048.87,Cotati,Sonoma
 94933,2,0,0,0,0,0,0,Forest Knolls,Marin
 94938,2,0,0,0,0,0,0,Lagunitas,Marin
-94939,2,7,4,1,2,181,0,Larkspur,Marin
+94939,2,7,4,1,2,181,120665332,Larkspur,Marin
 94940,2,0,0,0,0,0,0,Marshall,Marin
-94941,2,10,6,3,1,257,0,Mill Valley,Marin
-94945,2,16,10,4,2,423,0,Novato,Marin
-94946,2,2,2,0,0,12,0,Nicasio,Marin
-94947,2,7,6,1,0,53,0,Novato,Marin
-94949,2,27,14,11,2,1449,0,Novato,Marin
-94951,2,2,2,0,0,16,0,Penngrove,Sonoma
-94952,2,37,19,14,4,1516,0,Petaluma,Sonoma
+94941,2,10,6,3,1,257,43362709.29,Mill Valley,Marin
+94945,2,16,10,4,2,423,63576282.7,Novato,Marin
+94946,2,2,2,0,0,12,904383.99,Nicasio,Marin
+94947,2,7,6,1,0,53,8543247.89,Novato,Marin
+94949,2,27,14,11,2,1449,569808313.2,Novato,Marin
+94951,2,2,2,0,0,16,2637174.99,Penngrove,Sonoma
+94952,2,37,19,14,4,1516,610977027.7,Petaluma,Sonoma
 94953,2,0,0,0,0,0,0,Petaluma,Sonoma
-94954,2,71,27,30,14,2199,0,Petaluma,Sonoma
+94954,2,71,27,30,14,2199,454727966,Petaluma,Sonoma
 94955,0,0,0,0,0,0,0,Petaluma,Sonoma
-94956,2,2,1,1,0,18,0,Point Reyes Station,Marin
-94957,2,1,1,0,0,8,0,Ross,Marin
-94960,2,4,2,2,0,57,0,San Anselmo,Marin
+94956,2,2,1,1,0,18,7324930.88,Point Reyes Station,Marin
+94957,2,1,1,0,0,8,667618.99,Ross,Marin
+94960,2,4,2,2,0,57,5856214.8,San Anselmo,Marin
 94963,2,0,0,0,0,0,0,San Geronimo,Marin
 94964,2,0,0,0,0,0,0,San Quentin,Marin
-94965,2,19,15,4,0,215,0,Sausalito,Marin
+94965,2,19,15,4,0,215,49831881.59,Sausalito,Marin
 94966,0,0,0,0,0,0,0,Sausalito,Marin
 94970,2,0,0,0,0,0,0,Stinson Beach,Marin
 94971,0,0,0,0,0,0,0,Tomales,Marin
@@ -1842,89 +1842,89 @@
 94977,2,0,0,0,0,0,0,Larkspur,Marin
 94979,2,0,0,0,0,0,0,San Anselmo,Marin
 94998,2,0,0,0,0,0,0,Novato,Marin
-95001,3,1,1,0,0,6,0,Aptos,Santa  Cruz
-95002,2,9,1,2,6,7489,0,Alviso,Santa  Clara
-95003,3,12,6,6,0,173,0,Aptos,Santa  Cruz
-95004,3,3,0,3,0,96,0,Aromas,Monterey
-95005,3,1,1,0,0,7,0,Ben Lomond,Santa  Cruz
-95006,3,1,0,1,0,36,0,Boulder Creek,Santa  Cruz
-95008,3,79,29,42,8,2380,0,Campbell,Santa  Clara
-95010,3,3,2,1,0,30,0,Capitola,Santa  Cruz
-95012,3,8,3,2,3,350,0,Castroville,Monterey
+95001,3,1,1,0,0,6,913248,Aptos,Santa  Cruz
+95002,2,9,1,2,6,7489,2715543032,Alviso,Santa  Clara
+95003,3,12,6,6,0,173,56633524.05,Aptos,Santa  Cruz
+95004,3,3,0,3,0,96,2408660.9,Aromas,Monterey
+95005,3,1,1,0,0,7,296435,Ben Lomond,Santa  Cruz
+95006,3,1,0,1,0,36,2926769,Boulder Creek,Santa  Cruz
+95008,3,79,29,42,8,2380,1778915048,Campbell,Santa  Clara
+95010,3,3,2,1,0,30,5908208.09,Capitola,Santa  Cruz
+95012,3,8,3,2,3,350,28838746.8,Castroville,Monterey
 95013,0,0,0,0,0,0,0,Coyote,Santa  Clara
-95014,3,35,15,14,6,2407,0,Cupertino,Santa  Clara
+95014,3,35,15,14,6,2407,3.91277E+11,Cupertino,Santa  Clara
 95015,0,0,0,0,0,0,0,Cupertino,Santa  Clara
-95017,3,1,0,0,1,100,0,Davenport,Santa  Cruz
-95018,3,1,1,0,0,10,0,Felton,Santa  Cruz
+95017,3,1,0,0,1,100,41858685,Davenport,Santa  Cruz
+95018,3,1,1,0,0,10,3481317,Felton,Santa  Cruz
 95019,3,0,0,0,0,0,0,Freedom,Santa  Cruz
-95020,3,56,28,25,3,1038,0,Gilroy,Santa  Clara
+95020,3,56,28,25,3,1038,179151964.2,Gilroy,Santa  Clara
 95021,3,0,0,0,0,0,0,Gilroy,Santa  Clara
-95023,3,46,15,22,9,1927,0,Hollister,San  Benito
+95023,3,46,15,22,9,1927,407153002.1,Hollister,San  Benito
 95024,3,0,0,0,0,0,0,Hollister,San  Benito
-95030,3,12,4,8,0,217,0,Los Gatos,Santa  Clara
-95032,3,31,9,16,6,1125,0,Los Gatos,Santa  Clara
-95033,3,5,2,3,0,85,0,Los Gatos,Santa  Cruz
-95035,2,227,60,99,68,21063,0,Milpitas,Santa  Clara
+95030,3,12,4,8,0,217,13246841.14,Los Gatos,Santa  Clara
+95032,3,31,9,16,6,1125,131879369.6,Los Gatos,Santa  Clara
+95033,3,5,2,3,0,85,12872071.81,Los Gatos,Santa  Cruz
+95035,2,227,60,99,68,21063,18619076577,Milpitas,Santa  Clara
 95036,0,0,0,0,0,0,0,Milpitas,Santa  Clara
-95037,3,100,34,48,18,4443,0,Morgan Hill,Santa  Clara
+95037,3,100,34,48,18,4443,959529882.3,Morgan Hill,Santa  Clara
 95038,0,0,0,0,0,0,0,Morgan Hill,Santa  Clara
-95039,3,4,2,1,1,250,0,Moss Landing,Monterey
+95039,3,4,2,1,1,250,89589613.87,Moss Landing,Monterey
 95041,3,0,0,0,0,0,0,Mount Hermon,Santa  Cruz
 95042,3,0,0,0,0,0,0,New Almaden,Santa  Clara
 95043,3,1,0,1,0,13,0,Paicines,San  Benito
-95045,3,5,2,0,3,1231,0,San Juan Bautista,San  Benito
-95046,3,8,7,1,0,99,0,San Martin,Santa  Clara
-95050,3,114,49,41,24,5261,0,Santa Clara,Santa  Clara
-95051,3,62,20,26,16,7807,0,Santa Clara,Santa  Clara
+95045,3,5,2,0,3,1231,165358924,San Juan Bautista,San  Benito
+95046,3,8,7,1,0,99,8496036.18,San Martin,Santa  Clara
+95050,3,114,49,41,24,5261,672159909.6,Santa Clara,Santa  Clara
+95051,3,62,20,26,16,7807,68141911137,Santa Clara,Santa  Clara
 95052,3,0,0,0,0,0,0,Santa Clara,Santa  Clara
 95053,0,0,0,0,0,0,0,Santa Clara,Santa  Clara
-95054,2,382,138,168,76,26161,0,Santa Clara,Santa  Clara
+95054,2,382,138,168,76,26161,99483821160,Santa Clara,Santa  Clara
 95055,3,0,0,0,0,0,0,Santa Clara,Santa  Clara
-95060,3,66,30,28,8,2342,0,Santa Cruz,Santa  Cruz
+95060,3,66,30,28,8,2342,295699924.4,Santa Cruz,Santa  Cruz
 95061,3,0,0,0,0,0,0,Santa Cruz,Santa  Cruz
-95062,3,23,12,8,3,510,0,Santa Cruz,Santa  Cruz
+95062,3,23,12,8,3,510,84162051.17,Santa Cruz,Santa  Cruz
 95063,3,0,0,0,0,0,0,Santa Cruz,Santa  Cruz
 95064,3,0,0,0,0,0,0,Santa Cruz,Santa  Cruz
-95065,3,5,4,1,0,43,0,Santa Cruz,Santa  Cruz
-95066,3,39,13,21,5,1644,0,Scotts Valley,Santa  Cruz
-95070,3,16,14,2,0,152,0,Saratoga,Santa  Clara
-95073,3,9,2,6,1,333,0,Soquel,Santa  Cruz
+95065,3,5,4,1,0,43,5000231.1,Santa Cruz,Santa  Cruz
+95066,3,39,13,21,5,1644,1940740996,Scotts Valley,Santa  Cruz
+95070,3,16,14,2,0,152,19065600.81,Saratoga,Santa  Clara
+95073,3,9,2,6,1,333,13069938.08,Soquel,Santa  Cruz
 95075,0,0,0,0,0,0,0,Tres Pinos,San  Benito
-95076,3,63,28,25,10,1768,0,Watsonville,Santa  Cruz
+95076,3,63,28,25,10,1768,883636002.8,Watsonville,Santa  Cruz
 95077,3,0,0,0,0,0,0,Watsonville,Santa  Cruz
-95101,0,1,0,0,1,65,0,San Jose,Santa  Clara
+95101,0,1,0,0,1,65,25508743,San Jose,Santa  Clara
 95103,3,0,0,0,0,0,0,San Jose,Santa  Clara
 95106,3,0,0,0,0,0,0,San Jose,Santa  Clara
 95108,3,0,0,0,0,0,0,San Jose,Santa  Clara
-95110,3,69,27,26,16,8494,0,San Jose,Santa  Clara
-95111,3,22,13,7,2,419,0,San Jose,Santa  Clara
-95112,3,160,67,69,24,4068,0,San Jose,Santa  Clara
-95113,3,30,15,14,1,572,0,San Jose,Santa  Clara
-95116,3,6,3,3,0,59,0,San Jose,Santa  Clara
-95117,3,10,6,4,0,167,0,San Jose,Santa  Clara
-95118,3,1,1,0,0,10,0,San Jose,Santa  Clara
-95119,3,49,7,22,20,9265,0,San Jose,Santa  Clara
-95120,3,5,1,3,1,555,0,San Jose,Santa  Clara
-95121,3,3,2,1,0,31,0,San Jose,Santa  Clara
-95122,3,6,1,2,3,285,0,San Jose,Santa  Clara
-95123,3,6,5,0,1,466,0,San Jose,Santa  Clara
-95124,3,9,5,3,1,1120,0,San Jose,Santa  Clara
-95125,3,34,19,8,7,1269,0,San Jose,Santa  Clara
-95126,3,27,11,9,7,955,0,San Jose,Santa  Clara
-95127,3,3,2,1,0,31,0,San Jose,Santa  Clara
-95128,3,17,8,8,1,1805,0,San Jose,Santa  Clara
-95129,3,9,8,1,0,75,0,San Jose,Santa  Clara
+95110,3,69,27,26,16,8494,930462000.4,San Jose,Santa  Clara
+95111,3,22,13,7,2,419,42025662.7,San Jose,Santa  Clara
+95112,3,160,67,69,24,4068,1069137817,San Jose,Santa  Clara
+95113,3,30,15,14,1,572,56063995.09,San Jose,Santa  Clara
+95116,3,6,3,3,0,59,10277458.1,San Jose,Santa  Clara
+95117,3,10,6,4,0,167,15351525.01,San Jose,Santa  Clara
+95118,3,1,1,0,0,10,483549,San Jose,Santa  Clara
+95119,3,49,7,22,20,9265,17415316419,San Jose,Santa  Clara
+95120,3,5,1,3,1,555,3607544.91,San Jose,Santa  Clara
+95121,3,3,2,1,0,31,3267215.91,San Jose,Santa  Clara
+95122,3,6,1,2,3,285,29759041.9,San Jose,Santa  Clara
+95123,3,6,5,0,1,466,1535018.98,San Jose,Santa  Clara
+95124,3,9,5,3,1,1120,3162163026,San Jose,Santa  Clara
+95125,3,34,19,8,7,1269,112923132.1,San Jose,Santa  Clara
+95126,3,27,11,9,7,955,205492630.8,San Jose,Santa  Clara
+95127,3,3,2,1,0,31,1844353.02,San Jose,Santa  Clara
+95128,3,17,8,8,1,1805,6306897701,San Jose,Santa  Clara
+95129,3,9,8,1,0,75,6480079.01,San Jose,Santa  Clara
 95130,3,0,0,0,0,0,0,San Jose,Santa  Clara
-95131,3,317,112,134,71,22226,0,San Jose,Santa  Clara
-95132,2,5,3,1,1,121,0,San Jose,Santa  Clara
-95133,3,36,16,14,6,1976,0,San Jose,Santa  Clara
-95134,2,173,37,68,68,33553,0,San Jose,Santa  Clara
-95135,3,8,5,2,1,143,0,San Jose,Santa  Clara
-95136,3,10,5,4,1,192,0,San Jose,Santa  Clara
-95138,3,50,12,22,16,2968,0,San Jose,Santa  Clara
-95139,3,1,0,1,0,23,0,San Jose,Santa  Clara
+95131,3,317,112,134,71,22226,17712127385,San Jose,Santa  Clara
+95132,2,5,3,1,1,121,10778519.89,San Jose,Santa  Clara
+95133,3,36,16,14,6,1976,358457186.3,San Jose,Santa  Clara
+95134,2,173,37,68,68,33553,72135903291,San Jose,Santa  Clara
+95135,3,8,5,2,1,143,8594306.81,San Jose,Santa  Clara
+95136,3,10,5,4,1,192,30736376.72,San Jose,Santa  Clara
+95138,3,50,12,22,16,2968,2014368027,San Jose,Santa  Clara
+95139,3,1,0,1,0,23,687788.01,San Jose,Santa  Clara
 95140,2,0,0,0,0,0,0,Mount Hamilton,Santa  Clara
-95148,3,3,3,0,0,20,0,San Jose,Santa  Clara
+95148,3,3,3,0,0,20,1707824.95,San Jose,Santa  Clara
 95150,3,0,0,0,0,0,0,San Jose,Santa  Clara
 95151,3,0,0,0,0,0,0,San Jose,Santa  Clara
 95153,3,0,0,0,0,0,0,San Jose,Santa  Clara
@@ -1935,7 +1935,7 @@
 95158,3,0,0,0,0,0,0,San Jose,Santa  Clara
 95160,3,0,0,0,0,0,0,San Jose,Santa  Clara
 95161,3,0,0,0,0,0,0,San Jose,Santa  Clara
-95164,3,1,0,0,1,99,0,San Jose,Santa  Clara
+95164,3,1,0,0,1,99,445805940,San Jose,Santa  Clara
 95170,3,0,0,0,0,0,0,San Jose,Santa  Clara
 95172,3,0,0,0,0,0,0,San Jose,Santa  Clara
 95173,3,0,0,0,0,0,0,San Jose,Santa  Clara
@@ -1946,40 +1946,40 @@
 95194,3,0,0,0,0,0,0,San Jose,Santa  Clara
 95196,3,0,0,0,0,0,0,San Jose,Santa  Clara
 95201,0,0,0,0,0,0,0,Stockton,San  Joaquin
-95202,7,5,4,0,1,145,0,Stockton,San  Joaquin
-95203,7,28,13,13,2,763,0,Stockton,San  Joaquin
-95204,7,7,5,2,0,82,0,Stockton,San  Joaquin
-95205,7,48,15,28,5,1873,0,Stockton,San  Joaquin
-95206,7,71,23,29,19,2848,0,Stockton,San  Joaquin
-95207,7,5,5,0,0,36,0,Stockton,San  Joaquin
-95209,7,1,1,0,0,6,0,Stockton,San  Joaquin
-95210,7,3,2,0,1,66,0,Stockton,San  Joaquin
-95212,7,6,3,1,2,191,0,Stockton,San  Joaquin
-95215,7,37,10,19,8,1596,0,Stockton,San  Joaquin
-95219,7,11,6,4,1,391,0,Stockton,San  Joaquin
-95220,7,13,2,11,0,269,0,Acampo,San  Joaquin
-95222,7,3,3,0,0,26,0,Angels Camp,Calaveras
-95223,7,1,0,1,0,30,0,Arnold,Calaveras
+95202,7,5,4,0,1,145,7755708.8,Stockton,San  Joaquin
+95203,7,28,13,13,2,763,65636344.46,Stockton,San  Joaquin
+95204,7,7,5,2,0,82,6477209.1,Stockton,San  Joaquin
+95205,7,48,15,28,5,1873,1078263253,Stockton,San  Joaquin
+95206,7,71,23,29,19,2848,370218195.4,Stockton,San  Joaquin
+95207,7,5,5,0,0,36,2297311.99,Stockton,San  Joaquin
+95209,7,1,1,0,0,6,312938.99,Stockton,San  Joaquin
+95210,7,3,2,0,1,66,8788953.9,Stockton,San  Joaquin
+95212,7,6,3,1,2,191,230187615,Stockton,San  Joaquin
+95215,7,37,10,19,8,1596,243235977.8,Stockton,San  Joaquin
+95219,7,11,6,4,1,391,26517760.2,Stockton,San  Joaquin
+95220,7,13,2,11,0,269,65116010.8,Acampo,San  Joaquin
+95222,7,3,3,0,0,26,2426922.99,Angels Camp,Calaveras
+95223,7,1,0,1,0,30,2196444,Arnold,Calaveras
 95224,7,0,0,0,0,0,0,Avery,Calaveras
 95225,7,0,0,0,0,0,0,Burson,Calaveras
-95227,7,1,1,0,0,6,0,Clements,San  Joaquin
-95228,7,1,1,0,0,10,0,Copperopolis,Calaveras
+95227,7,1,1,0,0,6,396727,Clements,San  Joaquin
+95228,7,1,1,0,0,10,354407.01,Copperopolis,Calaveras
 95229,7,0,0,0,0,0,0,Douglas Flat,Calaveras
-95230,7,1,0,1,0,12,0,Farmington,San  Joaquin
-95231,7,6,1,5,0,96,0,French Camp,San  Joaquin
+95230,7,1,0,1,0,12,9891910.6,Farmington,San  Joaquin
+95231,7,6,1,5,0,96,6051477.23,French Camp,San  Joaquin
 95232,7,0,0,0,0,0,0,Glencoe,Calaveras
 95233,7,0,0,0,0,0,0,Hathaway Pines,Calaveras
-95236,7,5,0,5,0,156,0,Linden,San  Joaquin
-95237,7,5,1,1,3,256,0,Lockeford,San  Joaquin
-95240,7,82,35,30,17,3502,0,Lodi,San  Joaquin
-95242,7,13,5,7,1,244,0,Lodi,San  Joaquin
-95245,7,1,1,0,0,9,0,Mokelumne Hill,Calaveras
+95236,7,5,0,5,0,156,15130314.8,Linden,San  Joaquin
+95237,7,5,1,1,3,256,6357732,Lockeford,San  Joaquin
+95240,7,82,35,30,17,3502,1314256672,Lodi,San  Joaquin
+95242,7,13,5,7,1,244,29964836.11,Lodi,San  Joaquin
+95245,7,1,1,0,0,9,4169570,Mokelumne Hill,Calaveras
 95246,7,0,0,0,0,0,0,Mountain Ranch,Calaveras
-95247,7,8,4,4,0,148,0,Murphys,Calaveras
-95249,7,3,2,1,0,31,0,San Andreas,Calaveras
+95247,7,8,4,4,0,148,18797249.02,Murphys,Calaveras
+95249,7,3,2,1,0,31,1351520,San Andreas,Calaveras
 95250,7,0,0,0,0,0,0,Sheep Ranch,Calaveras
-95251,7,2,1,1,0,22,0,Vallecito,Calaveras
-95252,7,4,1,1,2,570,0,Valley Springs,Calaveras
+95251,7,2,1,1,0,22,2421965.01,Vallecito,Calaveras
+95252,7,4,1,1,2,570,5737257.03,Valley Springs,Calaveras
 95253,7,0,0,0,0,0,0,Victor,San  Joaquin
 95255,7,0,0,0,0,0,0,West Point,Calaveras
 95257,7,0,0,0,0,0,0,Wilseyville,Calaveras
@@ -1987,161 +1987,161 @@
 95267,7,0,0,0,0,0,0,Stockton,San  Joaquin
 95269,7,0,0,0,0,0,0,Stockton,San  Joaquin
 95296,7,0,0,0,0,0,0,Stockton,San  Joaquin
-95301,7,24,12,7,5,773,0,Atwater,Merced
-95303,7,1,0,1,0,13,0,Ballico,Merced
-95304,7,31,5,17,9,1666,0,Tracy,San  Joaquin
+95301,7,24,12,7,5,773,79225180.92,Atwater,Merced
+95303,7,1,0,1,0,13,1787748,Ballico,Merced
+95304,7,31,5,17,9,1666,197086385.7,Tracy,San  Joaquin
 95305,0,0,0,0,0,0,0,Big Oak Flat,Tuolumne
 95306,7,0,0,0,0,0,0,Catheys Valley,Mariposa
-95307,7,23,9,11,3,629,0,Ceres,Stanislaus
+95307,7,23,9,11,3,629,138265472.7,Ceres,Stanislaus
 95309,0,0,0,0,0,0,0,Chinese Camp,Tuolumne
-95310,7,2,2,0,0,20,0,Columbia,Tuolumne
+95310,7,2,2,0,0,20,1926809.02,Columbia,Tuolumne
 95311,7,0,0,0,0,0,0,Coulterville,Mariposa
 95312,7,0,0,0,0,0,0,Cressey,Merced
-95313,7,2,1,1,0,37,0,Crows Landing,Stanislaus
-95315,7,1,1,0,0,10,0,Delhi,Merced
-95316,7,6,1,5,0,159,0,Denair,Stanislaus
+95313,7,2,1,1,0,37,362614.99,Crows Landing,Stanislaus
+95315,7,1,1,0,0,10,1628479,Delhi,Merced
+95316,7,6,1,5,0,159,11021879,Denair,Stanislaus
 95317,7,0,0,0,0,0,0,El Nido,Merced
 95318,7,0,0,0,0,0,0,El Portal,Mariposa
 95319,0,0,0,0,0,0,0,Empire,Stanislaus
-95320,7,12,4,3,5,476,0,Escalon,San  Joaquin
+95320,7,12,4,3,5,476,43106972.82,Escalon,San  Joaquin
 95321,7,0,0,0,0,0,0,Groveland,Tuolumne
-95322,7,4,2,0,2,445,0,Gustine,Merced
-95323,7,5,2,3,0,102,0,Hickman,Stanislaus
-95324,7,8,2,3,3,838,0,Hilmar,Merced
+95322,7,4,2,0,2,445,1732387.96,Gustine,Merced
+95323,7,5,2,3,0,102,23591909.3,Hickman,Stanislaus
+95324,7,8,2,3,3,838,282640486.7,Hilmar,Merced
 95325,7,0,0,0,0,0,0,Hornitos,Mariposa
-95326,7,14,3,8,3,652,0,Hughson,Stanislaus
-95327,7,3,2,1,0,60,0,Jamestown,Tuolumne
+95326,7,14,3,8,3,652,87931936.84,Hughson,Stanislaus
+95327,7,3,2,1,0,60,586086.99,Jamestown,Tuolumne
 95328,0,0,0,0,0,0,0,Keyes,Stanislaus
-95329,7,1,0,1,0,30,0,La Grange,Stanislaus
-95330,7,25,8,4,13,1953,0,Lathrop,San  Joaquin
-95333,7,1,0,1,0,20,0,Le Grand,Merced
-95334,7,10,2,2,6,3422,0,Livingston,Merced
-95336,7,18,3,13,2,504,0,Manteca,San  Joaquin
-95337,7,9,3,5,1,347,0,Manteca,San  Joaquin
-95338,7,3,0,2,1,96,0,Mariposa,Mariposa
-95340,7,5,3,1,1,104,0,Merced,Merced
-95341,7,20,4,11,5,603,0,Merced,Merced
+95329,7,1,0,1,0,30,712143,La Grange,Stanislaus
+95330,7,25,8,4,13,1953,187391270.7,Lathrop,San  Joaquin
+95333,7,1,0,1,0,20,4095780.8,Le Grand,Merced
+95334,7,10,2,2,6,3422,1254524071,Livingston,Merced
+95336,7,18,3,13,2,504,564972748.1,Manteca,San  Joaquin
+95337,7,9,3,5,1,347,155382180.1,Manteca,San  Joaquin
+95338,7,3,0,2,1,96,22972143.11,Mariposa,Mariposa
+95340,7,5,3,1,1,104,16746628,Merced,Merced
+95341,7,20,4,11,5,603,90408610.9,Merced,Merced
 95343,7,0,0,0,0,0,0,Merced,Merced
 95344,7,0,0,0,0,0,0,Merced,Merced
 95345,7,0,0,0,0,0,0,Midpines,Mariposa
-95346,7,1,0,1,0,30,0,Mi Wuk Village,Tuolumne
-95348,7,12,3,4,5,1189,0,Merced,Merced
-95350,7,14,5,8,1,320,0,Modesto,Stanislaus
-95351,7,40,17,17,6,1731,0,Modesto,Stanislaus
+95346,7,1,0,1,0,30,2498040,Mi Wuk Village,Tuolumne
+95348,7,12,3,4,5,1189,118877388,Merced,Merced
+95350,7,14,5,8,1,320,159764142.4,Modesto,Stanislaus
+95351,7,40,17,17,6,1731,577592635.7,Modesto,Stanislaus
 95353,7,0,0,0,0,0,0,Modesto,Stanislaus
-95354,7,47,14,22,11,5193,0,Modesto,Stanislaus
-95355,7,3,1,1,1,92,0,Modesto,Stanislaus
-95356,7,34,17,12,5,1086,0,Modesto,Stanislaus
-95357,7,22,6,6,10,2517,0,Modesto,Stanislaus
-95358,7,22,5,9,8,2406,0,Modesto,Stanislaus
-95360,7,9,3,3,3,444,0,Newman,Stanislaus
-95361,7,25,10,9,6,929,0,Oakdale,Stanislaus
-95363,7,10,7,3,0,111,0,Patterson,Stanislaus
-95365,7,1,1,0,0,10,0,Planada,Merced
-95366,7,18,5,9,4,629,0,Ripon,San  Joaquin
-95367,7,5,2,3,0,86,0,Riverbank,Stanislaus
-95368,7,3,1,0,2,150,0,Salida,Stanislaus
+95354,7,47,14,22,11,5193,2837052816,Modesto,Stanislaus
+95355,7,3,1,1,1,92,417908.01,Modesto,Stanislaus
+95356,7,34,17,12,5,1086,154346830.5,Modesto,Stanislaus
+95357,7,22,6,6,10,2517,178873635.2,Modesto,Stanislaus
+95358,7,22,5,9,8,2406,266186618.6,Modesto,Stanislaus
+95360,7,9,3,3,3,444,74046713.72,Newman,Stanislaus
+95361,7,25,10,9,6,929,186120595.8,Oakdale,Stanislaus
+95363,7,10,7,3,0,111,18949064.3,Patterson,Stanislaus
+95365,7,1,1,0,0,10,260270,Planada,Merced
+95366,7,18,5,9,4,629,217326184.5,Ripon,San  Joaquin
+95367,7,5,2,3,0,86,16328306.09,Riverbank,Stanislaus
+95368,7,3,1,0,2,150,68235703.02,Salida,Stanislaus
 95369,7,0,0,0,0,0,0,Snelling,Merced
-95370,7,17,9,5,3,410,0,Sonora,Tuolumne
-95372,7,1,0,1,0,13,0,Soulsbyville,Tuolumne
-95374,7,1,0,1,0,25,0,Stevinson,Merced
-95376,7,24,10,10,4,1785,0,Tracy,San  Joaquin
-95377,7,20,3,14,3,691,0,Tracy,San  Joaquin
+95370,7,17,9,5,3,410,32603126.07,Sonora,Tuolumne
+95372,7,1,0,1,0,13,1760873,Soulsbyville,Tuolumne
+95374,7,1,0,1,0,25,5230085.8,Stevinson,Merced
+95376,7,24,10,10,4,1785,45954130.16,Tracy,San  Joaquin
+95377,7,20,3,14,3,691,147524003.6,Tracy,San  Joaquin
 95378,7,0,0,0,0,0,0,Tracy,San  Joaquin
 95379,7,0,0,0,0,0,0,Tuolumne,Tuolumne
-95380,7,71,34,26,11,2308,0,Turlock,Stanislaus
-95382,7,10,2,6,2,379,0,Turlock,Stanislaus
-95383,7,1,1,0,0,6,0,Twain Harte,Tuolumne
-95385,0,2,2,0,0,17,0,Vernalis,San  Joaquin
-95386,7,8,4,3,1,483,0,Waterford,Stanislaus
-95387,7,2,1,1,0,37,0,Westley,Stanislaus
+95380,7,71,34,26,11,2308,365223603.3,Turlock,Stanislaus
+95382,7,10,2,6,2,379,27266489.57,Turlock,Stanislaus
+95383,7,1,1,0,0,6,439125,Twain Harte,Tuolumne
+95385,0,2,2,0,0,17,2471302,Vernalis,San  Joaquin
+95386,7,8,4,3,1,483,10471529.02,Waterford,Stanislaus
+95387,7,2,1,1,0,37,6397064,Westley,Stanislaus
 95388,7,0,0,0,0,0,0,Winton,Merced
 95389,7,0,0,0,0,0,0,Yosemite National Park,Mariposa
-95391,7,1,0,1,0,12,0,Tracy,San  Joaquin
-95401,2,37,16,16,5,863,0,Santa Rosa,Sonoma
-95403,2,87,34,37,16,5464,0,Santa Rosa,Sonoma
-95404,2,20,8,12,0,294,0,Santa Rosa,Sonoma
-95405,2,6,4,2,0,70,0,Santa Rosa,Sonoma
-95407,2,54,22,25,7,1856,0,Santa Rosa,Sonoma
-95409,2,4,3,0,1,82,0,Santa Rosa,Sonoma
+95391,7,1,0,1,0,12,905402,Tracy,San  Joaquin
+95401,2,37,16,16,5,863,113473176.1,Santa Rosa,Sonoma
+95403,2,87,34,37,16,5464,6542944999,Santa Rosa,Sonoma
+95404,2,20,8,12,0,294,36832513.99,Santa Rosa,Sonoma
+95405,2,6,4,2,0,70,8022812.97,Santa Rosa,Sonoma
+95407,2,54,22,25,7,1856,164556325.4,Santa Rosa,Sonoma
+95409,2,4,3,0,1,82,11050579,Santa Rosa,Sonoma
 95410,1,0,0,0,0,0,0,Albion,Mendocino
-95412,2,1,1,0,0,8,0,Annapolis,Sonoma
-95415,1,2,1,1,0,53,0,Boonville,Mendocino
+95412,2,1,1,0,0,8,382467.99,Annapolis,Sonoma
+95415,1,2,1,1,0,53,7665003.9,Boonville,Mendocino
 95416,2,0,0,0,0,0,0,Boyes Hot Springs,Sonoma
-95417,1,1,0,0,1,230,0,Branscomb,Mendocino
+95417,1,1,0,0,1,230,1587196.9,Branscomb,Mendocino
 95418,0,1,0,0,1,51,0,Calpella,Mendocino
 95419,2,0,0,0,0,0,0,Camp Meeker,Sonoma
 95420,0,0,0,0,0,0,0,Caspar,Mendocino
-95421,2,2,2,0,0,14,0,Cazadero,Sonoma
+95421,2,2,2,0,0,14,475508.99,Cazadero,Sonoma
 95422,1,0,0,0,0,0,0,Clearlake,Lake
 95423,1,0,0,0,0,0,0,Clearlake Oaks,Lake
-95425,2,11,5,5,1,198,0,Cloverdale,Sonoma
+95425,2,11,5,5,1,198,43906119.82,Cloverdale,Sonoma
 95426,0,0,0,0,0,0,0,Cobb,Lake
-95427,1,1,0,1,0,15,0,Comptche,Mendocino
+95427,1,1,0,1,0,15,2391525,Comptche,Mendocino
 95428,1,0,0,0,0,0,0,Covelo,Mendocino
 95430,2,0,0,0,0,0,0,Duncans Mills,Sonoma
 95432,1,0,0,0,0,0,0,Elk,Mendocino
 95433,2,0,0,0,0,0,0,El Verano,Sonoma
-95435,1,1,0,1,0,11,0,Finley,Lake
-95436,2,3,0,3,0,57,0,Forestville,Sonoma
-95437,1,4,1,2,1,108,0,Fort Bragg,Mendocino
+95435,1,1,0,1,0,11,7267676.8,Finley,Lake
+95436,2,3,0,3,0,57,10387306.9,Forestville,Sonoma
+95437,1,4,1,2,1,108,17654644.12,Fort Bragg,Mendocino
 95439,2,0,0,0,0,0,0,Fulton,Sonoma
-95441,2,13,6,7,0,179,0,Geyserville,Sonoma
-95442,2,6,4,2,0,107,0,Glen Ellen,Sonoma
-95444,2,1,0,1,0,28,0,Graton,Sonoma
+95441,2,13,6,7,0,179,37702935.24,Geyserville,Sonoma
+95442,2,6,4,2,0,107,11639169.82,Glen Ellen,Sonoma
+95444,2,1,0,1,0,28,5209475,Graton,Sonoma
 95445,1,0,0,0,0,0,0,Gualala,Mendocino
-95446,2,1,0,0,1,200,0,Guerneville,Sonoma
-95448,2,85,39,36,10,1835,0,Healdsburg,Sonoma
-95449,1,7,6,0,1,288,0,Hopland,Mendocino
+95446,2,1,0,0,1,200,42086529,Guerneville,Sonoma
+95448,2,85,39,36,10,1835,324870569.6,Healdsburg,Sonoma
+95449,1,7,6,0,1,288,56188828.9,Hopland,Mendocino
 95450,2,0,0,0,0,0,0,Jenner,Sonoma
-95451,1,4,2,2,0,57,0,Kelseyville,Lake
-95452,2,7,5,0,2,174,0,Kenwood,Sonoma
-95453,1,9,5,4,0,146,0,Lakeport,Lake
+95451,1,4,2,2,0,57,4161005.12,Kelseyville,Lake
+95452,2,7,5,0,2,174,8944698.13,Kenwood,Sonoma
+95453,1,9,5,4,0,146,21650925.03,Lakeport,Lake
 95454,1,0,0,0,0,0,0,Laytonville,Mendocino
 95456,1,0,0,0,0,0,0,Littleriver,Mendocino
-95457,1,3,2,1,0,51,0,Lower Lake,Lake
+95457,1,3,2,1,0,51,1494604.1,Lower Lake,Lake
 95458,1,0,0,0,0,0,0,Lucerne,Lake
 95459,0,0,0,0,0,0,0,Manchester,Mendocino
-95460,1,1,1,0,0,6,0,Mendocino,Mendocino
-95461,1,3,2,1,0,32,0,Middletown,Lake
+95460,1,1,1,0,0,6,493717.01,Mendocino,Mendocino
+95461,1,3,2,1,0,32,9363500.77,Middletown,Lake
 95462,2,0,0,0,0,0,0,Monte Rio,Sonoma
 95463,1,0,0,0,0,0,0,Navarro,Mendocino
 95464,1,0,0,0,0,0,0,Nice,Lake
-95465,2,1,1,0,0,10,0,Occidental,Sonoma
-95466,1,5,2,3,0,92,0,Philo,Mendocino
+95465,2,1,1,0,0,10,982385.99,Occidental,Sonoma
+95466,1,5,2,3,0,92,16838139.4,Philo,Mendocino
 95467,1,0,0,0,0,0,0,Hidden Valley Lake,Lake
 95468,0,0,0,0,0,0,0,Point Arena,Mendocino
-95469,1,1,1,0,0,8,0,Potter Valley,Mendocino
-95470,1,9,6,3,0,108,0,Redwood Valley,Mendocino
-95472,2,45,27,16,2,940,0,Sebastopol,Sonoma
-95476,2,65,37,24,4,1107,0,Sonoma,Sonoma
+95469,1,1,1,0,0,8,975149.99,Potter Valley,Mendocino
+95470,1,9,6,3,0,108,9098082.1,Redwood Valley,Mendocino
+95472,2,45,27,16,2,940,132515090.4,Sebastopol,Sonoma
+95476,2,65,37,24,4,1107,186979722.5,Sonoma,Sonoma
 95480,2,0,0,0,0,0,0,Stewarts Point,Sonoma
-95482,1,30,14,12,4,777,0,Ukiah,Mendocino
-95485,1,1,1,0,0,7,0,Upper Lake,Lake
+95482,1,30,14,12,4,777,67059812.27,Ukiah,Mendocino
+95485,1,1,1,0,0,7,929750.98,Upper Lake,Lake
 95486,2,0,0,0,0,0,0,Villa Grande,Sonoma
 95487,2,0,0,0,0,0,0,Vineburg,Sonoma
-95490,1,10,2,5,3,449,0,Willits,Mendocino
-95492,2,27,17,7,3,438,0,Windsor,Sonoma
+95490,1,10,2,5,3,449,30928212.03,Willits,Mendocino
+95492,2,27,17,7,3,438,92145375.32,Windsor,Sonoma
 95493,0,0,0,0,0,0,0,Witter Springs,Lake
-95494,1,1,1,0,0,8,0,Yorkville,Mendocino
+95494,1,1,1,0,0,8,615794,Yorkville,Mendocino
 95497,2,0,0,0,0,0,0,The Sea Ranch,Sonoma
-95501,1,22,11,6,5,669,0,Eureka,Humboldt
-95503,1,2,1,1,0,36,0,Eureka,Humboldt
+95501,1,22,11,6,5,669,66978320.11,Eureka,Humboldt
+95503,1,2,1,1,0,36,4518860.21,Eureka,Humboldt
 95511,1,0,0,0,0,0,0,Alderpoint,Humboldt
 95514,1,0,0,0,0,0,0,Blocksburg,Humboldt
 95518,0,0,0,0,0,0,0,Arcata,Humboldt
-95519,1,4,3,0,1,69,0,Mckinleyville,Humboldt
-95521,1,28,11,10,7,1542,0,Arcata,Humboldt
+95519,1,4,3,0,1,69,1973561.98,Mckinleyville,Humboldt
+95521,1,28,11,10,7,1542,116410450.7,Arcata,Humboldt
 95524,1,0,0,0,0,0,0,Bayside,Humboldt
-95525,1,3,2,1,0,26,0,Blue Lake,Humboldt
+95525,1,3,2,1,0,26,1380786,Blue Lake,Humboldt
 95526,1,0,0,0,0,0,0,Bridgeville,Humboldt
 95528,1,0,0,0,0,0,0,Carlotta,Humboldt
-95531,1,7,5,2,0,100,0,Crescent City,Del  Norte
+95531,1,7,5,2,0,100,7102271.9,Crescent City,Del  Norte
 95532,1,0,0,0,0,0,0,Crescent City,Del  Norte
-95536,1,2,2,0,0,12,0,Ferndale,Humboldt
-95537,1,1,0,1,0,25,0,Fields Landing,Humboldt
-95540,1,8,6,2,0,93,0,Fortuna,Humboldt
-95542,1,1,1,0,0,6,0,Garberville,Humboldt
+95536,1,2,2,0,0,12,1501271.01,Ferndale,Humboldt
+95537,1,1,0,1,0,25,1486902,Fields Landing,Humboldt
+95540,1,8,6,2,0,93,9825420.11,Fortuna,Humboldt
+95542,1,1,1,0,0,6,775211.99,Garberville,Humboldt
 95543,1,0,0,0,0,0,0,Gasquet,Del  Norte
 95545,1,0,0,0,0,0,0,Honeydew,Humboldt
 95546,1,0,0,0,0,0,0,Hoopa,Humboldt
@@ -2155,256 +2155,256 @@
 95555,1,0,0,0,0,0,0,Orick,Humboldt
 95556,1,0,0,0,0,0,0,Orleans,Humboldt
 95558,1,0,0,0,0,0,0,Petrolia,Humboldt
-95560,1,1,1,0,0,9,0,Redway,Humboldt
+95560,1,1,1,0,0,9,466022.01,Redway,Humboldt
 95562,1,0,0,0,0,0,0,Rio Dell,Humboldt
-95564,1,3,1,2,0,73,0,Samoa,Humboldt
+95564,1,3,1,2,0,73,3330813.97,Samoa,Humboldt
 95565,0,1,0,1,0,18,0,Scotia,Humboldt
-95567,1,1,1,0,0,8,0,Smith River,Del  Norte
-95569,1,1,1,0,0,6,0,Redcrest,Humboldt
+95567,1,1,1,0,0,8,2143378,Smith River,Del  Norte
+95569,1,1,1,0,0,6,251596.99,Redcrest,Humboldt
 95570,1,0,0,0,0,0,0,Trinidad,Humboldt
 95571,1,0,0,0,0,0,0,Weott,Humboldt
 95573,1,0,0,0,0,0,0,Willow Creek,Humboldt
 95585,1,0,0,0,0,0,0,Leggett,Mendocino
 95587,1,0,0,0,0,0,0,Piercy,Mendocino
-95589,1,1,1,0,0,7,0,Whitethorn,Humboldt
+95589,1,1,1,0,0,7,970290.01,Whitethorn,Humboldt
 95595,1,0,0,0,0,0,0,Zenia,Trinity
-95602,2,31,12,15,4,656,0,Auburn,Placer
-95603,2,33,17,13,3,806,0,Auburn,Placer
+95602,2,31,12,15,4,656,102995178.6,Auburn,Placer
+95603,2,33,17,13,3,806,55303638.55,Auburn,Placer
 95604,2,0,0,0,0,0,0,Auburn,Placer
-95605,2,25,9,12,4,1077,0,West Sacramento,Yolo
+95605,2,25,9,12,4,1077,336130945.3,West Sacramento,Yolo
 95606,2,0,0,0,0,0,0,Brooks,Yolo
 95607,0,0,0,0,0,0,0,Capay,Yolo
-95608,2,13,7,6,0,140,0,Carmichael,Sacramento
-95610,2,6,4,2,0,69,0,Citrus Heights,Sacramento
+95608,2,13,7,6,0,140,19480437.82,Carmichael,Sacramento
+95610,2,6,4,2,0,69,9773575.99,Citrus Heights,Sacramento
 95611,0,0,0,0,0,0,0,Citrus Heights,Sacramento
-95612,2,2,2,0,0,16,0,Clarksburg,Yolo
+95612,2,2,2,0,0,16,3251905.87,Clarksburg,Yolo
 95613,0,0,0,0,0,0,0,Coloma,El  Dorado
-95614,2,1,1,0,0,10,0,Cool,El  Dorado
-95615,2,3,2,1,0,33,0,Courtland,Sacramento
-95616,2,19,14,5,0,213,0,Davis,Yolo
+95614,2,1,1,0,0,10,3600554,Cool,El  Dorado
+95615,2,3,2,1,0,33,4100235.02,Courtland,Sacramento
+95616,2,19,14,5,0,213,31393170.71,Davis,Yolo
 95617,0,0,0,0,0,0,0,Davis,Yolo
-95618,2,35,9,19,7,1146,0,Davis,Yolo
-95619,2,22,13,9,0,244,0,Diamond Springs,El  Dorado
-95620,2,26,6,13,7,1029,0,Dixon,Solano
-95621,2,4,2,2,0,41,0,Citrus Heights,Sacramento
-95623,2,1,1,0,0,8,0,El Dorado,El  Dorado
-95624,2,28,14,9,5,876,0,Elk Grove,Sacramento
+95618,2,35,9,19,7,1146,196699353,Davis,Yolo
+95619,2,22,13,9,0,244,42908341.18,Diamond Springs,El  Dorado
+95620,2,26,6,13,7,1029,43979558.19,Dixon,Solano
+95621,2,4,2,2,0,41,2970246.99,Citrus Heights,Sacramento
+95623,2,1,1,0,0,8,2028759,El Dorado,El  Dorado
+95624,2,28,14,9,5,876,102259192.2,Elk Grove,Sacramento
 95625,0,0,0,0,0,0,0,Elmira,Solano
 95626,2,0,0,0,0,0,0,Elverta,Sacramento
-95627,2,1,1,0,0,6,0,Esparto,Yolo
-95628,2,10,8,2,0,97,0,Fair Oaks,Sacramento
+95627,2,1,1,0,0,6,475026.99,Esparto,Yolo
+95628,2,10,8,2,0,97,19672094.78,Fair Oaks,Sacramento
 95629,2,0,0,0,0,0,0,Fiddletown,Amador
-95630,2,63,25,22,16,5130,0,Folsom,Sacramento
+95630,2,63,25,22,16,5130,210387236.1,Folsom,Sacramento
 95631,2,0,0,0,0,0,0,Foresthill,Placer
-95632,2,14,7,6,1,317,0,Galt,Sacramento
+95632,2,14,7,6,1,317,23888752.75,Galt,Sacramento
 95633,2,0,0,0,0,0,0,Garden Valley,El  Dorado
-95634,2,3,2,1,0,32,0,Georgetown,El  Dorado
-95635,2,1,0,1,0,14,0,Greenwood,El  Dorado
+95634,2,3,2,1,0,32,4484302.96,Georgetown,El  Dorado
+95635,2,1,0,1,0,14,3731395,Greenwood,El  Dorado
 95636,2,0,0,0,0,0,0,Grizzly Flats,El  Dorado
 95637,2,0,0,0,0,0,0,Guinda,Yolo
 95638,0,0,0,0,0,0,0,Herald,Sacramento
 95639,2,0,0,0,0,0,0,Hood,Sacramento
-95640,2,6,3,0,3,438,0,Ione,Amador
-95641,0,2,1,1,0,26,0,Isleton,Sacramento
-95642,2,4,4,0,0,31,0,Jackson,Amador
+95640,2,6,3,0,3,438,11074489.17,Ione,Amador
+95641,0,2,1,1,0,26,473731.01,Isleton,Sacramento
+95642,2,4,4,0,0,31,3467856.91,Jackson,Amador
 95645,2,0,0,0,0,0,0,Knights Landing,Yolo
-95648,2,25,8,9,8,1127,0,Lincoln,Placer
-95650,2,25,13,11,1,376,0,Loomis,Placer
+95648,2,25,8,9,8,1127,151419197.2,Lincoln,Placer
+95650,2,25,13,11,1,376,52828715.82,Loomis,Placer
 95651,2,0,0,0,0,0,0,Lotus,El  Dorado
-95652,2,20,8,7,5,1214,0,Mcclellan,Sacramento
+95652,2,20,8,7,5,1214,263205947.4,Mcclellan,Sacramento
 95653,0,0,0,0,0,0,0,Madison,Yolo
-95654,2,2,2,0,0,15,0,Martell,Amador
-95655,2,2,0,1,1,195,0,Mather,Sacramento
+95654,2,2,2,0,0,15,9924775.1,Martell,Amador
+95655,2,2,0,1,1,195,50741286,Mather,Sacramento
 95656,2,0,0,0,0,0,0,Mount Aukum,El  Dorado
-95658,2,3,0,3,0,56,0,Newcastle,Placer
-95659,0,1,1,0,0,9,0,Nicolaus,Sutter
-95660,2,27,13,8,6,1124,0,North Highlands,Sacramento
-95661,2,35,15,17,3,936,0,Roseville,Placer
-95662,2,5,5,0,0,38,0,Orangevale,Sacramento
-95663,2,1,1,0,0,6,0,Penryn,Placer
+95658,2,3,0,3,0,56,12854763.2,Newcastle,Placer
+95659,0,1,1,0,0,9,924458.98,Nicolaus,Sutter
+95660,2,27,13,8,6,1124,203060586.5,North Highlands,Sacramento
+95661,2,35,15,17,3,936,360473503.6,Roseville,Placer
+95662,2,5,5,0,0,38,2940944.02,Orangevale,Sacramento
+95663,2,1,1,0,0,6,1417757,Penryn,Placer
 95664,2,0,0,0,0,0,0,Pilot Hill,El  Dorado
-95665,2,1,1,0,0,9,0,Pine Grove,Amador
-95666,2,2,1,1,0,38,0,Pioneer,Amador
-95667,2,14,5,6,3,380,0,Placerville,El  Dorado
-95668,2,1,0,1,0,11,0,Pleasant Grove,Sutter
-95669,2,13,11,2,0,142,0,Plymouth,Amador
-95670,2,47,23,16,8,1250,0,Rancho Cordova,Sacramento
+95665,2,1,1,0,0,9,481247.99,Pine Grove,Amador
+95666,2,2,1,1,0,38,3203714.09,Pioneer,Amador
+95667,2,14,5,6,3,380,36610149.61,Placerville,El  Dorado
+95668,2,1,0,1,0,11,2205406.9,Pleasant Grove,Sutter
+95669,2,13,11,2,0,142,11099846.96,Plymouth,Amador
+95670,2,47,23,16,8,1250,475474645.3,Rancho Cordova,Sacramento
 95672,2,0,0,0,0,0,0,Rescue,El  Dorado
-95673,2,5,3,1,1,387,0,Rio Linda,Sacramento
+95673,2,5,3,1,1,387,208414850.1,Rio Linda,Sacramento
 95674,2,0,0,0,0,0,0,Rio Oso,Sutter
 95675,2,0,0,0,0,0,0,River Pines,Amador
-95677,2,33,22,9,2,548,0,Rocklin,Placer
-95678,2,47,16,25,6,1200,0,Roseville,Placer
+95677,2,33,22,9,2,548,64496775.99,Rocklin,Placer
+95678,2,47,16,25,6,1200,143405337.8,Roseville,Placer
 95679,2,0,0,0,0,0,0,Rumsey,Yolo
 95680,0,0,0,0,0,0,0,Ryde,Sacramento
-95681,2,1,1,0,0,10,0,Sheridan,Placer
-95682,2,13,4,7,2,280,0,Shingle Springs,El  Dorado
+95681,2,1,1,0,0,10,4284534.9,Sheridan,Placer
+95682,2,13,4,7,2,280,26361942.9,Shingle Springs,El  Dorado
 95683,2,0,0,0,0,0,0,Sloughhouse,Sacramento
 95684,2,0,0,0,0,0,0,Somerset,El  Dorado
 95685,2,0,0,0,0,0,0,Sutter Creek,Amador
 95686,7,0,0,0,0,0,0,Thornton,San  Joaquin
-95687,2,7,7,0,0,57,0,Vacaville,Solano
-95688,2,41,15,19,7,3570,0,Vacaville,Solano
+95687,2,7,7,0,0,57,1581231,Vacaville,Solano
+95688,2,41,15,19,7,3570,307414364.3,Vacaville,Solano
 95689,2,0,0,0,0,0,0,Volcano,Amador
-95690,2,1,0,0,1,57,0,Walnut Grove,Sacramento
-95691,2,70,25,38,7,1800,0,West Sacramento,Yolo
+95690,2,1,0,0,1,57,6105418.2,Walnut Grove,Sacramento
+95691,2,70,25,38,7,1800,282093065.4,West Sacramento,Yolo
 95692,2,0,0,0,0,0,0,Wheatland,Yuba
-95693,2,1,0,0,1,87,0,Wilton,Sacramento
-95694,2,5,2,2,1,140,0,Winters,Yolo
-95695,2,18,7,8,3,452,0,Woodland,Yolo
+95693,2,1,0,0,1,87,2110842,Wilton,Sacramento
+95694,2,5,2,2,1,140,13953839.01,Winters,Yolo
+95695,2,18,7,8,3,452,243245148.4,Woodland,Yolo
 95696,2,0,0,0,0,0,0,Vacaville,Solano
 95697,0,0,0,0,0,0,0,Yolo,Yolo
-95698,2,2,1,1,0,40,0,Zamora,Yolo
+95698,2,2,1,1,0,40,6073937.9,Zamora,Yolo
 95699,2,0,0,0,0,0,0,Drytown,Amador
-95701,2,1,1,0,0,6,0,Alta,Placer
+95701,2,1,1,0,0,6,1827411.1,Alta,Placer
 95703,0,0,0,0,0,0,0,Applegate,Placer
-95709,2,4,3,1,0,52,0,Camino,El  Dorado
+95709,2,4,3,1,0,52,2194545.99,Camino,El  Dorado
 95712,1,0,0,0,0,0,0,Chicago Park,Nevada
-95713,2,4,2,1,1,101,0,Colfax,Placer
+95713,2,4,2,1,1,101,3207153.97,Colfax,Placer
 95714,2,0,0,0,0,0,0,Dutch Flat,Placer
 95715,2,0,0,0,0,0,0,Emigrant Gap,Placer
 95717,2,0,0,0,0,0,0,Gold Run,Placer
 95720,2,0,0,0,0,0,0,Kyburz,El  Dorado
-95721,0,1,1,0,0,9,0,Echo Lake,El  Dorado
-95722,2,2,1,1,0,21,0,Meadow Vista,Placer
-95726,2,2,2,0,0,15,0,Pollock Pines,El  Dorado
+95721,0,1,1,0,0,9,433505,Echo Lake,El  Dorado
+95722,2,2,1,1,0,21,3322438.11,Meadow Vista,Placer
+95726,2,2,2,0,0,15,2003053.92,Pollock Pines,El  Dorado
 95728,1,0,0,0,0,0,0,Soda Springs,Nevada
 95735,0,0,0,0,0,0,0,Twin Bridges,El  Dorado
 95736,2,0,0,0,0,0,0,Weimar,Placer
-95741,2,2,1,0,1,591,0,Rancho Cordova,Sacramento
-95742,2,98,47,39,12,4514,0,Rancho Cordova,Sacramento
-95746,2,8,5,3,0,113,0,Granite Bay,Placer
-95747,2,22,12,8,2,4801,0,Roseville,Placer
-95757,2,4,2,2,0,53,0,Elk Grove,Sacramento
-95758,2,7,3,1,3,385,0,Elk Grove,Sacramento
+95741,2,2,1,0,1,591,1769220,Rancho Cordova,Sacramento
+95742,2,98,47,39,12,4514,1744279140,Rancho Cordova,Sacramento
+95746,2,8,5,3,0,113,17983865.9,Granite Bay,Placer
+95747,2,22,12,8,2,4801,431003971.6,Roseville,Placer
+95757,2,4,2,2,0,53,9114679.77,Elk Grove,Sacramento
+95758,2,7,3,1,3,385,27917212.89,Elk Grove,Sacramento
 95759,2,0,0,0,0,0,0,Elk Grove,Sacramento
-95762,2,39,12,15,12,2480,0,El Dorado Hills,El  Dorado
+95762,2,39,12,15,12,2480,189420911.7,El Dorado Hills,El  Dorado
 95763,0,0,0,0,0,0,0,Folsom,Sacramento
-95765,2,32,20,9,3,809,0,Rocklin,Placer
-95776,2,55,12,30,13,2049,0,Woodland,Yolo
+95765,2,32,20,9,3,809,61318070.01,Rocklin,Placer
+95776,2,55,12,30,13,2049,305453060.1,Woodland,Yolo
 95798,2,0,0,0,0,0,0,West Sacramento,Yolo
-95811,2,38,15,19,4,924,0,#N/A,#N/A
+95811,2,38,15,19,4,924,86880602.66,#N/A,#N/A
 95812,2,0,0,0,0,0,0,Sacramento,Sacramento
-95814,2,26,10,14,2,556,0,Sacramento,Sacramento
-95815,2,31,13,14,4,782,0,Sacramento,Sacramento
-95816,2,21,11,8,2,2864,0,Sacramento,Sacramento
-95817,2,4,3,1,0,36,0,Sacramento,Sacramento
-95818,2,8,3,3,2,382,0,Sacramento,Sacramento
-95819,2,7,6,1,0,57,0,Sacramento,Sacramento
-95820,2,14,3,7,4,706,0,Sacramento,Sacramento
-95821,2,5,4,0,1,129,0,Sacramento,Sacramento
-95822,2,13,5,6,2,359,0,Sacramento,Sacramento
-95823,2,8,6,2,0,117,0,Sacramento,Sacramento
-95824,2,7,3,4,0,121,0,Sacramento,Sacramento
-95825,2,26,13,12,1,421,0,Sacramento,Sacramento
-95826,2,51,22,20,9,2150,0,Sacramento,Sacramento
-95827,2,27,8,16,3,725,0,Sacramento,Sacramento
-95828,2,66,26,25,15,6713,0,Sacramento,Sacramento
-95829,2,7,5,2,0,91,0,Sacramento,Sacramento
-95830,2,2,1,1,0,29,0,Sacramento,Sacramento
-95831,2,9,3,6,0,172,0,Sacramento,Sacramento
-95832,2,1,0,1,0,15,0,Sacramento,Sacramento
-95833,2,25,10,11,4,660,0,Sacramento,Sacramento
-95834,2,56,21,28,7,1643,0,Sacramento,Sacramento
-95835,2,3,2,1,0,45,0,Sacramento,Sacramento
+95814,2,26,10,14,2,556,25319132.85,Sacramento,Sacramento
+95815,2,31,13,14,4,782,78982112.59,Sacramento,Sacramento
+95816,2,21,11,8,2,2864,569229798,Sacramento,Sacramento
+95817,2,4,3,1,0,36,6849493.98,Sacramento,Sacramento
+95818,2,8,3,3,2,382,51460646.87,Sacramento,Sacramento
+95819,2,7,6,1,0,57,5369119.1,Sacramento,Sacramento
+95820,2,14,3,7,4,706,78015741.95,Sacramento,Sacramento
+95821,2,5,4,0,1,129,601907.01,Sacramento,Sacramento
+95822,2,13,5,6,2,359,40881282.2,Sacramento,Sacramento
+95823,2,8,6,2,0,117,17962195.06,Sacramento,Sacramento
+95824,2,7,3,4,0,121,12257632.01,Sacramento,Sacramento
+95825,2,26,13,12,1,421,34646740.1,Sacramento,Sacramento
+95826,2,51,22,20,9,2150,226809217.9,Sacramento,Sacramento
+95827,2,27,8,16,3,725,129308454.2,Sacramento,Sacramento
+95828,2,66,26,25,15,6713,487689119.8,Sacramento,Sacramento
+95829,2,7,5,2,0,91,14541557.09,Sacramento,Sacramento
+95830,2,2,1,1,0,29,4567786.2,Sacramento,Sacramento
+95831,2,9,3,6,0,172,14906285.12,Sacramento,Sacramento
+95832,2,1,0,1,0,15,5218767.2,Sacramento,Sacramento
+95833,2,25,10,11,4,660,283762558.1,Sacramento,Sacramento
+95834,2,56,21,28,7,1643,171224115.8,Sacramento,Sacramento
+95835,2,3,2,1,0,45,2837292.01,Sacramento,Sacramento
 95837,2,1,0,0,1,67,0,Sacramento,Sacramento
-95838,2,31,9,19,3,882,0,Sacramento,Sacramento
-95841,2,10,7,3,0,131,0,Sacramento,Sacramento
-95842,2,4,1,2,1,111,0,Sacramento,Sacramento
+95838,2,31,9,19,3,882,144715192.6,Sacramento,Sacramento
+95841,2,10,7,3,0,131,27205471.09,Sacramento,Sacramento
+95842,2,4,1,2,1,111,25479465.9,Sacramento,Sacramento
 95843,2,0,0,0,0,0,0,Antelope,Sacramento
 95851,2,0,0,0,0,0,0,Sacramento,Sacramento
 95852,2,0,0,0,0,0,0,Sacramento,Sacramento
 95853,2,0,0,0,0,0,0,Sacramento,Sacramento
-95864,2,3,1,0,2,159,0,Sacramento,Sacramento
+95864,2,3,1,0,2,159,8737820.1,Sacramento,Sacramento
 95865,2,0,0,0,0,0,0,Sacramento,Sacramento
 95866,2,0,0,0,0,0,0,Sacramento,Sacramento
 95867,2,0,0,0,0,0,0,Sacramento,Sacramento
 95887,2,0,0,0,0,0,0,Sacramento,Sacramento
 95894,2,0,0,0,0,0,0,Sacramento,Sacramento
-95901,2,15,9,4,2,567,0,Marysville,Yuba
+95901,2,15,9,4,2,567,10734174.92,Marysville,Yuba
 95903,2,3,1,2,0,38,0,Beale Afb,Yuba
-95912,1,6,1,3,2,256,0,Arbuckle,Colusa
+95912,1,6,1,3,2,256,48095489.87,Arbuckle,Colusa
 95913,0,1,0,0,1,133,0,Artois,Glenn
 95914,1,0,0,0,0,0,0,Bangor,Butte
 95916,1,0,0,0,0,0,0,Berry Creek,Butte
-95917,1,2,0,1,1,85,0,Biggs,Butte
-95918,2,1,1,0,0,6,0,Browns Valley,Yuba
+95917,1,2,0,1,1,85,3856170.9,Biggs,Butte
+95918,2,1,1,0,0,6,2478926.9,Browns Valley,Yuba
 95919,2,0,0,0,0,0,0,Brownsville,Yuba
 95922,2,0,0,0,0,0,0,Camptonville,Yuba
 95923,1,0,0,0,0,0,0,Canyon Dam,Plumas
 95924,1,0,0,0,0,0,0,Cedar Ridge,Nevada
-95926,1,5,2,3,0,90,0,Chico,Butte
+95926,1,5,2,3,0,90,10708777.09,Chico,Butte
 95927,1,0,0,0,0,0,0,Chico,Butte
-95928,1,44,20,16,8,1693,0,Chico,Butte
+95928,1,44,20,16,8,1693,777314905.9,Chico,Butte
 95929,1,0,0,0,0,0,0,Chico,Butte
-95932,1,4,2,1,1,141,0,Colusa,Colusa
-95934,1,1,1,0,0,6,0,Crescent Mills,Plumas
+95932,1,4,2,1,1,141,4823390.2,Colusa,Colusa
+95934,1,1,1,0,0,6,498773.99,Crescent Mills,Plumas
 95935,2,0,0,0,0,0,0,Dobbins,Yuba
 95936,1,0,0,0,0,0,0,Downieville,Sierra
-95938,1,6,2,3,1,250,0,Durham,Butte
+95938,1,6,2,3,1,250,40100864.48,Durham,Butte
 95939,1,0,0,0,0,0,0,Elk Creek,Glenn
 95940,1,0,0,0,0,0,0,Feather Falls,Butte
 95941,0,0,0,0,0,0,0,Forbestown,Butte
-95942,1,2,2,0,0,14,0,Forest Ranch,Butte
-95943,1,2,1,1,0,49,0,Glenn,Glenn
-95945,1,42,26,13,3,707,0,Grass Valley,Nevada
+95942,1,2,2,0,0,14,819661,Forest Ranch,Butte
+95943,1,2,1,1,0,49,16218134.03,Glenn,Glenn
+95945,1,42,26,13,3,707,89392052.73,Grass Valley,Nevada
 95946,1,1,0,0,1,86,0,Penn Valley,Nevada
 95947,1,0,0,0,0,0,0,Greenville,Plumas
-95948,1,8,2,3,3,438,0,Gridley,Butte
-95949,1,11,4,5,2,279,0,Grass Valley,Nevada
+95948,1,8,2,3,3,438,42037802.6,Gridley,Butte
+95949,1,11,4,5,2,279,83594177.68,Grass Valley,Nevada
 95950,0,0,0,0,0,0,0,Grimes,Colusa
 95951,1,0,0,0,0,0,0,Hamilton City,Glenn
-95953,2,3,0,0,3,720,0,Live Oak,Sutter
-95954,1,1,1,0,0,10,0,Magalia,Butte
-95955,1,3,1,2,0,52,0,Maxwell,Colusa
-95957,2,1,0,1,0,34,0,Meridian,Sutter
-95958,0,1,0,1,0,35,0,Nelson,Butte
-95959,1,19,9,5,5,927,0,Nevada City,Nevada
+95953,2,3,0,0,3,720,37387541.2,Live Oak,Sutter
+95954,1,1,1,0,0,10,273649.99,Magalia,Butte
+95955,1,3,1,2,0,52,8807380,Maxwell,Colusa
+95957,2,1,0,1,0,34,3966729.9,Meridian,Sutter
+95958,0,1,0,1,0,35,4955721.9,Nelson,Butte
+95959,1,19,9,5,5,927,160081072.2,Nevada City,Nevada
 95960,1,0,0,0,0,0,0,North San Juan,Nevada
-95961,2,14,5,7,2,361,0,Olivehurst,Yuba
+95961,2,14,5,7,2,361,54214881.67,Olivehurst,Yuba
 95962,2,0,0,0,0,0,0,Oregon House,Yuba
-95963,1,13,5,6,2,363,0,Orland,Glenn
-95965,1,18,6,8,4,721,0,Oroville,Butte
-95966,1,9,4,4,1,225,0,Oroville,Butte
+95963,1,13,5,6,2,363,20776424.01,Orland,Glenn
+95965,1,18,6,8,4,721,55495490.03,Oroville,Butte
+95966,1,9,4,4,1,225,8399432.21,Oroville,Butte
 95968,1,0,0,0,0,0,0,Palermo,Butte
-95969,1,3,2,0,1,340,0,Paradise,Butte
+95969,1,3,2,0,1,340,1368639,Paradise,Butte
 95970,1,0,0,0,0,0,0,Princeton,Colusa
-95971,1,4,1,1,2,742,0,Quincy,Plumas
-95973,1,34,12,19,3,663,0,Chico,Butte
-95974,1,1,0,0,1,255,0,Richvale,Butte
+95971,1,4,1,1,2,742,3962146.11,Quincy,Plumas
+95973,1,34,12,19,3,663,142454032.8,Chico,Butte
+95974,1,1,0,0,1,255,38858040,Richvale,Butte
 95975,1,0,0,0,0,0,0,Rough And Ready,Nevada
 95977,1,1,1,0,0,7,0,Smartville,Nevada
 95979,1,0,0,0,0,0,0,Stonyford,Colusa
 95980,1,0,0,0,0,0,0,Storrie,Plumas
 95981,0,0,0,0,0,0,0,Strawberry Valley,Yuba
-95982,2,1,0,1,0,38,0,Sutter,Sutter
+95982,2,1,0,1,0,38,4244653.2,Sutter,Sutter
 95983,1,0,0,0,0,0,0,Taylorsville,Plumas
 95984,1,0,0,0,0,0,0,Twain,Plumas
-95987,1,4,2,2,0,62,0,Williams,Colusa
-95988,1,9,3,3,3,326,0,Willows,Glenn
-95991,2,24,14,7,3,825,0,Yuba City,Sutter
-95993,2,18,10,5,3,906,0,Yuba City,Sutter
-96001,1,28,13,14,1,610,0,Redding,Shasta
-96002,1,33,17,13,3,671,0,Redding,Shasta
-96003,1,31,12,15,4,755,0,Redding,Shasta
-96007,1,19,8,9,2,489,0,Anderson,Shasta
+95987,1,4,2,2,0,62,10077888.12,Williams,Colusa
+95988,1,9,3,3,3,326,94603771.9,Willows,Glenn
+95991,2,24,14,7,3,825,67339271.93,Yuba City,Sutter
+95993,2,18,10,5,3,906,334135651,Yuba City,Sutter
+96001,1,28,13,14,1,610,84507764.45,Redding,Shasta
+96002,1,33,17,13,3,671,62523932.84,Redding,Shasta
+96003,1,31,12,15,4,755,87416187.51,Redding,Shasta
+96007,1,19,8,9,2,489,1281828676,Anderson,Shasta
 96008,1,0,0,0,0,0,0,Bella Vista,Shasta
 96009,1,0,0,0,0,0,0,Bieber,Lassen
 96010,1,0,0,0,0,0,0,Big Bar,Trinity
-96013,1,3,1,2,0,74,0,Burney,Shasta
+96013,1,3,1,2,0,74,5182361.1,Burney,Shasta
 96014,1,0,0,0,0,0,0,Callahan,Siskiyou
 96015,1,0,0,0,0,0,0,Canby,Modoc
 96016,1,0,0,0,0,0,0,Cassel,Shasta
-96019,1,3,1,1,1,650,0,Shasta Lake,Shasta
+96019,1,3,1,1,1,650,2626001.02,Shasta Lake,Shasta
 96020,0,2,0,1,1,124,0,Chester,Plumas
-96021,1,7,1,2,4,693,0,Corning,Tehama
-96022,1,2,0,2,0,45,0,Cottonwood,Shasta
+96021,1,7,1,2,4,693,10792725.87,Corning,Tehama
+96022,1,2,0,2,0,45,3678150,Cottonwood,Shasta
 96024,1,0,0,0,0,0,0,Douglas City,Trinity
-96025,1,1,0,1,0,23,0,Dunsmuir,Siskiyou
-96027,1,1,0,1,0,13,0,Etna,Siskiyou
+96025,1,1,0,1,0,23,262405.99,Dunsmuir,Siskiyou
+96027,1,1,0,1,0,13,405786.99,Etna,Siskiyou
 96028,1,0,0,0,0,0,0,Fall River Mills,Shasta
 96029,1,0,0,0,0,0,0,Flournoy,Tehama
-96032,1,1,1,0,0,8,0,Fort Jones,Siskiyou
+96032,1,1,1,0,0,8,273110,Fort Jones,Siskiyou
 96033,1,0,0,0,0,0,0,French Gulch,Shasta
 96035,1,0,0,0,0,0,0,Gerber,Tehama
 96037,1,0,0,0,0,0,0,Greenview,Siskiyou
@@ -2415,28 +2415,28 @@
 96044,1,0,0,0,0,0,0,Hornbrook,Siskiyou
 96046,1,0,0,0,0,0,0,Hyampom,Trinity
 96047,1,0,0,0,0,0,0,Igo,Shasta
-96048,1,1,0,1,0,15,0,Junction City,Trinity
+96048,1,1,0,1,0,15,2499470,Junction City,Trinity
 96049,1,0,0,0,0,0,0,Redding,Shasta
 96051,1,1,1,0,0,10,0,Lakehead,Shasta
-96052,1,2,1,1,0,26,0,Lewiston,Trinity
+96052,1,2,1,1,0,26,343454,Lewiston,Trinity
 96054,1,0,0,0,0,0,0,Lookout,Modoc
 96055,1,0,0,0,0,0,0,Los Molinos,Tehama
 96056,1,0,0,0,0,0,0,Mcarthur,Lassen
 96057,1,0,0,0,0,0,0,Mccloud,Siskiyou
 96058,1,0,0,0,0,0,0,Macdoel,Siskiyou
 96059,1,0,0,0,0,0,0,Manton,Tehama
-96062,1,1,0,1,0,12,0,Millville,Shasta
+96062,1,1,0,1,0,12,318050,Millville,Shasta
 96064,1,0,0,0,0,0,0,Montague,Siskiyou
 96065,1,0,0,0,0,0,0,Montgomery Creek,Shasta
-96067,1,3,2,1,0,35,0,Mount Shasta,Siskiyou
+96067,1,3,2,1,0,35,3373141.99,Mount Shasta,Siskiyou
 96069,1,0,0,0,0,0,0,Oak Run,Shasta
 96070,1,0,0,0,0,0,0,Obrien,Shasta
-96073,1,2,2,0,0,14,0,Palo Cedro,Shasta
+96073,1,2,2,0,0,14,3330813.09,Palo Cedro,Shasta
 96074,1,0,0,0,0,0,0,Paskenta,Tehama
 96075,1,0,0,0,0,0,0,Paynes Creek,Tehama
 96076,1,0,0,0,0,0,0,Platina,Shasta
 96078,1,0,0,0,0,0,0,Proberta,Tehama
-96080,1,14,6,7,1,724,0,Red Bluff,Tehama
+96080,1,14,6,7,1,724,19682988.08,Red Bluff,Tehama
 96084,1,0,0,0,0,0,0,Round Mountain,Shasta
 96085,1,0,0,0,0,0,0,Scott Bar,Siskiyou
 96086,1,0,0,0,0,0,0,Seiad Valley,Siskiyou
@@ -2446,13 +2446,13 @@
 96091,1,0,0,0,0,0,0,Trinity Center,Trinity
 96092,0,0,0,0,0,0,0,Vina,Tehama
 96093,1,0,0,0,0,0,0,Weaverville,Trinity
-96094,1,2,1,1,0,25,0,Weed,Siskiyou
+96094,1,2,1,1,0,25,385791.99,Weed,Siskiyou
 96096,1,0,0,0,0,0,0,Whitmore,Shasta
-96097,1,11,4,5,2,350,0,Yreka,Siskiyou
-96101,1,1,0,1,0,12,0,Alturas,Modoc
+96097,1,11,4,5,2,350,31526699.05,Yreka,Siskiyou
+96101,1,1,0,1,0,12,267259,Alturas,Modoc
 96103,1,0,0,0,0,0,0,Blairsden-graeagle,Plumas
 96104,1,0,0,0,0,0,0,Cedarville,Modoc
-96105,1,1,0,1,0,12,0,Chilcoot,Plumas
+96105,1,1,0,1,0,12,2046152.1,Chilcoot,Plumas
 96106,1,0,0,0,0,0,0,Clio,Plumas
 96107,7,0,0,0,0,0,0,Coleville,Mono
 96109,1,0,0,0,0,0,0,Doyle,Lassen
@@ -2470,20 +2470,20 @@
 96124,1,0,0,0,0,0,0,Calpine,Sierra
 96126,1,0,0,0,0,0,0,Sierraville,Sierra
 96128,1,0,0,0,0,0,0,Standish,Lassen
-96130,1,3,3,0,0,24,0,Susanville,Lassen
+96130,1,3,3,0,0,24,6074895.91,Susanville,Lassen
 96132,0,0,0,0,0,0,0,Termo,Lassen
 96133,7,0,0,0,0,0,0,Topaz,Mono
 96134,1,0,0,0,0,0,0,Tulelake,Siskiyou
 96135,1,0,0,0,0,0,0,Vinton,Plumas
 96137,1,0,0,0,0,0,0,Westwood,Lassen
-96140,2,1,0,1,0,25,0,Carnelian Bay,Placer
+96140,2,1,0,1,0,25,2393904,Carnelian Bay,Placer
 96141,2,0,0,0,0,0,0,Homewood,Placer
 96142,2,0,0,0,0,0,0,Tahoma,El  Dorado
-96143,2,1,1,0,0,6,0,Kings Beach,Placer
-96145,2,3,2,1,0,27,0,Tahoe City,Placer
-96146,2,2,2,0,0,16,0,Olympic Valley,Placer
-96148,2,2,2,0,0,13,0,Tahoe Vista,Placer
-96150,2,9,7,2,0,92,0,South Lake Tahoe,El  Dorado
+96143,2,1,1,0,0,6,313982.99,Kings Beach,Placer
+96145,2,3,2,1,0,27,1645874.98,Tahoe City,Placer
+96146,2,2,2,0,0,16,2638282.9,Olympic Valley,Placer
+96148,2,2,2,0,0,13,1484007.99,Tahoe Vista,Placer
+96150,2,9,7,2,0,92,7531605.9,South Lake Tahoe,El  Dorado
 96151,2,0,0,0,0,0,0,South Lake Tahoe,El  Dorado
 96152,2,0,0,0,0,0,0,South Lake Tahoe,El  Dorado
 96154,2,0,0,0,0,0,0,South Lake Tahoe,El  Dorado
@@ -2491,5 +2491,5 @@
 96156,2,0,0,0,0,0,0,South Lake Tahoe,El  Dorado
 96158,2,0,0,0,0,0,0,South Lake Tahoe,El  Dorado
 96160,0,0,0,0,0,0,0,Truckee,Nevada
-96161,1,10,6,4,0,106,0,Truckee,Nevada
+96161,1,10,6,4,0,106,8399095.95,Truckee,Nevada
 96162,2,0,0,0,0,0,0,Truckee,Nevada

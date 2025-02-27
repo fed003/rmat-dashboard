@@ -5,7 +5,6 @@ import Papa from "papaparse";
 import { type RmatData } from "@/types/RmatData";
 import { type ZipCodeData } from "@/types/ZipCodeData";
 import { type ChangeData } from "@/types/ChangeData";
-import type { Feature, GeoJSON } from "geojson";
 
 export const useStore = defineStore("dataStore", () => {
 	// state
@@ -42,18 +41,11 @@ export const useStore = defineStore("dataStore", () => {
 		Papa.parse(text, {
 			header: true,
 			transform: (value, header) => {
-				if (
-					[
-						"ZipCode",
-						"TotalNumberOfCompanies",
-						"TotalSales",
-						"TotalEmployees",
-						"RmatNumber",
-					].includes(header.toString())
-				) {
-					return Number(value);
+				if (["City", "County"].includes(header.toString())) {
+					return value;
 				}
-				return value;
+				let result = Number(value);
+				return isNaN(result) ? 0 : result;
 			},
 			complete: (result) => {
 				zipcodeData.value = result.data as ZipCodeData[];
