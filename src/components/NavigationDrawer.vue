@@ -4,19 +4,39 @@
 			<v-list density="compact">
 				<v-list-item>
 					<v-select
-						v-model="selectedAdvisor"
-						:items="advisorOptions"
-						label="Filter by Client Advisor"
+						v-model="selectedAdsRep"
+						:items="adsOptions"
+						label="Filter by Ads Rep"
 						clearable
+						multiple
 					></v-select>
 				</v-list-item>
 				<v-list-item>
 					<v-select
-						v-model="selectedRMAT"
+						v-model="selectedAdvisor"
+						:items="advisorOptions"
+						label="Filter by Client Advisor"
+						clearable
+						multiple
+					></v-select>
+				</v-list-item>
+				<v-list-item>
+					<v-select
+						v-model="selectedRmat"
 						:items="rmatOptions"
 						label="Filter by RMAT"
 						clearable
+						multiple
 					></v-select>
+				</v-list-item>
+				<v-list-item>
+					<v-autocomplete
+						v-model="selectedCounty"
+						:items="countyOptions"
+						label="Filter by County"
+						clearable
+						multiple
+					></v-autocomplete>
 				</v-list-item>
 				<v-list-item>
 					<v-text-field
@@ -25,48 +45,82 @@
 						clearable
 					></v-text-field>
 				</v-list-item>
+				<v-list-item>
+					<v-select
+						v-model="selectedGrouping"
+						:items="groupByOptions"
+						label="Select Grouping"
+					></v-select>
+				</v-list-item>
 			</v-list>
 			<change-log class="change-log-flex" />
 		</div>
 	</v-navigation-drawer>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { computed } from "vue";
 import { useStore } from "../stores/dataStore";
-
+import { GroupByOption, groupByOptions } from "../types";
 import ChangeLog from "./ChangeLog.vue";
 
-const selectedRMAT = defineModel("selectedRMAT", {
-	type: [Number, null],
-	default: null,
+const selectedRmat = defineModel<number[] | undefined>("selectedRmat", {
+	default: undefined,
 });
 
-const selectedAdvisor = defineModel("selectedAdvisor", {
-	type: [String, null],
-	default: null,
+const selectedAdsRep = defineModel<string[] | undefined>("selectedAdsRep", {
+	default: undefined,
 });
 
-const zipcodeSearch = defineModel("zipcodeSearch", {
-	type: String,
-	default: "",
+const selectedAdvisor = defineModel<string[] | undefined>("selectedAdvisor", {
+	default: undefined,
+});
+
+const selectedCounty = defineModel<string[] | undefined>("selectedCounty", {
+	default: undefined,
+});
+
+const zipcodeSearch = defineModel<string | undefined>("zipcodeSearch", {
+	default: undefined,
+});
+
+const selectedGrouping = defineModel<string>("selectedGrouping", {
+	required: true,
 });
 
 const store = useStore();
 
+const adsOptions = computed(() => {
+	return store.adsRepOptions;
+});
+
 const advisorOptions = computed(() => {
-	return store.clientAdvisorOptions.sort();
+	return store.clientAdvisorOptions;
+});
+
+const countyOptions = computed(() => {
+	return store.countyOptions;
 });
 
 const rmatOptions = computed(() => {
-	const rmats = store.rmatData;
+	if (!selectedAdsRep.value && !selectedAdvisor.value) {
+		return store.rmatOptions;
+	}
 
 	return [
 		...new Set(
-			(selectedAdvisor.value
-				? rmats.filter((rmat) => rmat.clientAdvisor == selectedAdvisor.value)
-				: rmats
-			).map((r) => r.rmatNumber)
+			store.rmatData
+				.filter(
+					(rmat) =>
+						(!selectedAdsRep.value ||
+							selectedAdsRep.value.length === 0 ||
+							(rmat.AdsRep && selectedAdsRep.value.includes(rmat.AdsRep))) &&
+						(!selectedAdvisor.value ||
+							selectedAdvisor.value.length === 0 ||
+							(rmat.ClientAdvisor &&
+								selectedAdvisor.value.includes(rmat.ClientAdvisor)))
+				)
+				.map((r) => r.RmatNumber)
 		),
 	].sort((a, b) => a - b);
 });
@@ -92,12 +146,5 @@ const rmatOptions = computed(() => {
 .change-log-flex {
 	flex: 1 1 auto; /* Expand to fill remaining space */
 	overflow: hidden; /* Contain scrolling within component */
-}
-
-.zip-tooltip {
-	background-color: rgba(255, 255, 255, 0.9);
-	padding: 8px;
-	border-radius: 4px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 </style>

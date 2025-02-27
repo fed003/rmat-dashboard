@@ -24,16 +24,24 @@
 </template>
 
 <script setup>
-import { ref, watch, computed } from "vue";
+import { ref, watch, onMounted } from "vue";
 import { LMap, LTileLayer, LGeoJson } from "@vue-leaflet/vue-leaflet";
 import { useStore } from "../stores/dataStore";
 import geoJsonData from "../assets/ca_california_zip_codes_geo.min.json";
+import "leaflet/dist/leaflet.css";
+import L from "leaflet";
+import markerIcon from "leaflet/dist/images/marker-icon.png";
+import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
+import markerShadow from "leaflet/dist/images/marker-shadow.png";
 
 // Props
 const props = defineProps({
 	zipcodes: { type: Array, required: true },
-	selectedRMAT: { type: [Number, null], default: null },
-	selectedAdvisor: { type: [String, null], default: null },
+	selectedRmat: { type: [Array, null], default: null },
+	selectedAdvisor: { type: [Array, null], default: null },
+	selectedAdsRep: { type: [Array, null], default: null },
+	selectedCounty: { type: [Array, null], default: null },
+	selectedGrouping: { type: String },
 });
 
 // Emits
@@ -50,36 +58,44 @@ const dfltZoom = 6;
 const zoom = ref(dfltZoom);
 const center = ref(dfltCenter);
 const leafletMap = ref(null);
-const mapKey = ref("");
+const mapKey = ref(0);
+
+onMounted(() => {
+	delete L.Icon.Default.prototype._getIconUrl;
+	L.Icon.Default.mergeOptions({
+		iconRetinaUrl: markerIcon2x,
+		iconUrl: markerIcon,
+		shadowUrl: markerShadow,
+	});
+});
 
 // GeoJSON styling
 const geoJsonStyle = (feature) => {
 	const zipcode = feature.properties.ZCTA5CE10;
-	const zipData = props.zipcodes.find((z) => z.zipCode == zipcode);
-	const rmat = zipData?.rmatNumber;
-	const advisor = zipData?.clientAdvisor;
-	// Default color unless matched by filter
-	let color = zipData?.color || unassignedMapColor;
+	const zipData = props.zipcodes.find((z) => z.ZipCode == zipcode);
+	// const rmat = zipData?.RmatNumber;
+	// const advisor = zipData?.RmatData?.ClientAdvisor;
+	// const adsRep = zipData?.RmatData?.AdsRep;
 
-	// Check if we need to filter
-	if (props.selectedRMAT || props.selectedAdvisor) {
-		//  If this zipcode is assigned, then we check the filter
-		if (zipData) {
-			if (
-				(props.selectedRMAT && rmat != Number(props.selectedRMAT)) ||
-				(props.selectedAdvisor && advisor != props.selectedAdvisor)
-			) {
-				color = darkMapColor;
-			}
-		}
-	}
+	const filterColor =
+		props.selectedRmat?.length > 0 ||
+		props.selectedAdvisor?.length > 0 ||
+		props.selectedAdsRep?.length > 0
+			? darkMapColor
+			: unassignedMapColor;
+
+	// Default color unless matched by filter
+	let color =
+		props.selectedGrouping === "AdsRep"
+			? zipData?.RmatData?.AdsRepColor || filterColor
+			: zipData?.RmatData?.ClientAdvisorColor || filterColor;
 
 	return {
 		fillColor: color,
-		weight: 2,
+		weight: 1.5,
 		opacity: 1,
-		color: "white",
-		fillOpacity: 0.7,
+		color: "#F5F5F5",
+		fillOpacity: 0.4,
 	};
 };
 
@@ -88,77 +104,80 @@ function updateMapKey() {
 }
 
 function resetMapZoom() {
-	console.log("Resetting map...");
 	center.value = dfltCenter;
 	zoom.value = dfltZoom;
-	leafletMap.value.leafletObject.setView(dfltCenter, dfltZoom); // Reset to default
+	if (leafletMap.value?.leafletObject) {
+		leafletMap.value.leafletObject.setView(dfltCenter, dfltZoom); // Reset to default
+		updateMapKey();
+	}
 }
 
-watch(
-	() => props.zipcodes,
-	() => {
-		updateMapKey();
-	},
-	{ deep: true }
-);
-
 // Watch filters and zoom to selected regions
-watch([() => props.selectedRMAT, () => props.selectedAdvisor], () => {
-	//	Reset map key to force re-render
-	updateMapKey();
+watch(
+	[() => props.zipcodes, () => props.selectedGrouping],
+	() => {
+		// If the map is not yet loaded, stop here
+		if (!leafletMap.value?.leafletObject) {
+			return;
+		}
 
-	// Reset map if no filters are selected
-	if (!props.selectedRMAT && !props.selectedAdvisor) {
-		resetMapZoom();
-		return;
-	}
+		// Reset map if no filters are selected
+		if (
+			!props.selectedRmat?.length > 0 &&
+			!props.selectedAdvisor?.length > 0 &&
+			!props.selectedAdsRep?.length > 0 &&
+			!props.selectedCounty?.length > 0
+		) {
+			resetMapZoom();
+			return;
+		}
 
-	const selectedZipcodes = props.zipcodes.filter((zip) => {
-		return (
-			(props.selectedRMAT && zip.rmatNumber === Number(props.selectedRMAT)) ||
-			(props.selectedAdvisor && zip.clientAdvisor === props.selectedAdvisor)
-		);
-	});
+		// If no zipcodes are selected, reset map
+		if (props.zipcodes.length === 0) {
+			resetMapZoom();
+			return;
+		}
 
-	if (selectedZipcodes.length === 0) {
-		resetMapZoom();
-		return;
-	}
-
-	const bounds = {
-		latMin: undefined,
-		latMax: undefined,
-		lngMin: undefined,
-		lngMax: undefined,
-	};
-	selectedZipcodes.forEach((company) => {
-		const feature = geoJsonData.features.find(
-			(f) => f.properties.ZCTA5CE10 === String(company.zipCode)
-		);
-		if (feature) {
-			feature.geometry.coordinates[0].forEach((coord) =>
-				coord.forEach((c) => {
-					if (c[0]) {
+		const bounds = {
+			latMin: undefined,
+			latMax: undefined,
+			lngMin: undefined,
+			lngMax: undefined,
+		};
+		props.zipcodes.forEach((zip) => {
+			const feature = geoJsonData.features.find(
+				(f) => f.properties.ZCTA5CE10 === String(zip.ZipCode)
+			);
+			if (feature) {
+				feature.geometry.coordinates[0].forEach((c) => {
+					if (typeof c[0] == "number") {
 						bounds.lngMin = Math.min(bounds.lngMin ?? c[0], c[0]);
 						bounds.lngMax = Math.max(bounds.lngMax ?? c[0], c[0]);
 					}
-					if (c[1]) {
+					if (typeof c[1] == "number") {
 						bounds.latMin = Math.min(bounds.latMin ?? c[1], c[1]);
 						bounds.latMax = Math.max(bounds.latMax ?? c[1], c[1]);
 					}
-				})
-			);
-		}
-	});
+				});
+			}
+		});
 
-	leafletMap.value.leafletObject.fitBounds(
-		[
-			[bounds.latMin, bounds.lngMin],
-			[bounds.latMax, bounds.lngMax],
-		],
-		{ padding: [50, 50] }
-	);
-});
+		if (!bounds.latMin || !bounds.latMax || !bounds.lngMin || !bounds.lngMax) {
+			return;
+		}
+
+		updateMapKey();
+
+		leafletMap.value.leafletObject.fitBounds(
+			[
+				[bounds.latMin, bounds.lngMin],
+				[bounds.latMax, bounds.lngMax],
+			],
+			{ padding: [50, 50] }
+		);
+	},
+	{ deep: true }
+);
 
 const onGeoJsonClick = (event) => {
 	const zipcode = Number(event.layer.feature.properties.ZCTA5CE10);
@@ -168,7 +187,7 @@ const onGeoJsonClick = (event) => {
 const onGeoJsonHover = (event) => {
 	const zipcode = event.layer.feature.properties.ZCTA5CE10;
 	const zipData =
-		props.zipcodes.find((z) => String(z.zipCode) === zipcode) || null;
+		props.zipcodes.find((z) => String(z.ZipCode) === zipcode) || null;
 	store.setHoveredZipData(zipData);
 };
 

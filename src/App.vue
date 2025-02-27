@@ -7,153 +7,179 @@
 			</v-toolbar>
 		</v-app-bar>
 
-		<navigation-drawer
-			v-model="drawer"
-			v-model:selected-r-m-a-t="selectedRMAT"
-			v-model:selected-advisor="selectedAdvisor"
-			v-model:zipcode-search="zipcodeSearch"
-		/>
+		<section v-if="!loading">
+			<navigation-drawer
+				v-model="drawer"
+				v-model:selected-ads-rep="selectedAdsRep"
+				v-model:selected-advisor="selectedAdvisor"
+				v-model:selected-rmat="selectedRmat"
+				v-model:selected-county="selectedCounty"
+				v-model:zipcode-search="zipcodeSearch"
+				v-model:selected-grouping="selectedGrouping"
+			/>
 
-		<v-main>
-			<v-container fluid>
-				<v-row>
-					<v-col cols="12">
-						<rmat-map
-							:zipcodes="filteredZipcodes"
-							:selected-r-m-a-t="selectedRMAT"
-							:selected-advisor="selectedAdvisor"
-							@zipcode-clicked="openRMATDialog"
-							@zipcode-hovered="onZipcodeHovered"
-							@zipcode-left="onZipcodeLeft"
-						/>
-					</v-col>
-				</v-row>
-				<v-row>
-					<v-col cols="12">
-						<rmat-data-table
-							:zipcodes="filteredZipcodes"
-							@row-clicked="openRMATDialog"
-						/>
-					</v-col>
-				</v-row>
-			</v-container>
+			<v-main>
+				<v-container fluid>
+					<v-row>
+						<v-col cols="12">
+							<rmat-map
+								:zipcodes="filteredZipcodes"
+								:selected-grouping="selectedGrouping"
+								:selected-rmat="selectedRmat"
+								:selected-advisor="selectedAdvisor"
+								:selected-ads-rep="selectedAdsRep"
+								:selected-county="selectedCounty"
+								@zipcode-clicked="openRMATDialog"
+							/>
+						</v-col>
+					</v-row>
+					<v-row>
+						<v-col cols="12">
+							<rmat-data-table
+								:zipcodes="filteredZipcodes"
+								:group-by="selectedGrouping"
+							/>
+						</v-col>
+					</v-row>
+				</v-container>
 
-			<v-dialog v-model="dialog" max-width="600">
-				<v-card
-					:title="`RMAT for Zip Code ${selectedZipCode.zipCode}`"
-					:subtitle="selectedZipCode.clientAdvisor"
-				>
-					<v-card-text>
-						<v-table density="compact" class="mb-4">
-							<thead>
-								<tr class="text-center">
-									<th>RMAT</th>
-									<th>Total Companies</th>
-									<th>Total Employees</th>
-									<th>Total Sales</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr class="text-center">
-									<td>{{ selectedZipCode.rmatNumber }}</td>
-									<td>{{ selectedZipCode.totalNumberOfCompanies }}</td>
-									<td>{{ selectedZipCode.totalEmployees }}</td>
-									<td>${{ selectedZipCode.totalSales.toLocaleString() }}</td>
-								</tr>
-							</tbody>
-						</v-table>
-						<v-select
-							v-model="newRMAT"
-							:items="rmatOptions"
-							label="New RMAT"
-						></v-select>
-					</v-card-text>
-					<v-card-actions>
-						<v-spacer></v-spacer>
-						<v-btn color="primary" @click="saveRMATChange">Save</v-btn>
-						<v-btn @click="dialog = false">Cancel</v-btn>
-					</v-card-actions>
-				</v-card>
-			</v-dialog>
-
-			<v-snackbar v-model="snackbar" :color="snackbarColor" timeout="3000">
-				{{ snackbarMessage }}
-				<template #actions>
-					<v-btn color="white" variant="text" @click="snackbar = false"
-						>Close</v-btn
+				<v-dialog v-model="dialog" max-width="600">
+					<v-card
+						:title="`RMAT for Zip Code ${selectedZipCode.zipCode}`"
+						:subtitle="selectedZipCode.clientAdvisor"
 					>
-				</template>
-			</v-snackbar>
+						<v-card-text>
+							<v-table density="compact" class="mb-4">
+								<thead>
+									<tr class="text-center">
+										<th>RMAT</th>
+										<th>Total Companies</th>
+										<th>Total Employees</th>
+										<th>Total Sales</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="text-center">
+										<td>{{ selectedZipCode?.RmatNumber }}</td>
+										<td>{{ selectedZipCode?.TotalNumberOfCompanies }}</td>
+										<td>{{ selectedZipCode?.TotalEmployees }}</td>
+										<td>${{ selectedZipCode?.TotalSales.toLocaleString() }}</td>
+									</tr>
+								</tbody>
+							</v-table>
+							<v-select
+								v-model="newRMAT"
+								:items="store.rmatOptionDetails"
+								label="New RMAT"
+							></v-select>
+						</v-card-text>
+						<v-card-actions>
+							<v-spacer></v-spacer>
+							<v-btn color="primary" @click="saveRMATChange">Save</v-btn>
+							<v-btn @click="dialog = false">Cancel</v-btn>
+						</v-card-actions>
+					</v-card>
+				</v-dialog>
 
-			<v-overlay :model-value="loading" class="align-center justify-center">
-				<v-progress-circular indeterminate size="128" color="primary">
-					{{ loadingMessage }}
-				</v-progress-circular>
-			</v-overlay>
+				<v-snackbar v-model="snackbar" :color="snackbarColor" timeout="3000">
+					{{ snackbarMessage }}
+					<template #actions>
+						<v-btn color="white" variant="text" @click="snackbar = false"
+							>Close</v-btn
+						>
+					</template>
+				</v-snackbar>
 
-			<v-card class="hover-card">
-				<zip-code-data-card />
-			</v-card>
-		</v-main>
+				<v-card class="hover-card">
+					<zip-code-data-card />
+				</v-card>
+			</v-main>
+		</section>
+
+		<v-overlay :model-value="loading" class="align-center justify-center">
+			<v-progress-circular indeterminate size="128" color="primary">
+				{{ loadingMessage }}
+			</v-progress-circular>
+		</v-overlay>
 	</v-app>
 </template>
 
-<script setup>
-import { ref, computed, onMounted } from "vue";
+<script setup lang="ts">
+import { type Ref, ref, computed, onMounted, onBeforeMount } from "vue";
 import { useStore } from "./stores/dataStore";
+import { ZipCodeData, groupByOptions } from "./types/index";
 import NavigationDrawer from "./components/NavigationDrawer.vue";
 import RmatMap from "./components/RmatMap.vue";
 import RmatDataTable from "./components/RmatDataTable.vue";
 import ZipCodeDataCard from "./components/ZipCodeDataCard.vue";
-import L from "leaflet";
-import markerIcon from "leaflet/dist/images/marker-icon.png";
-import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
-import markerShadow from "leaflet/dist/images/marker-shadow.png";
 
 const store = useStore();
 
-const selectedRMAT = ref(null);
-const selectedAdvisor = ref(null);
-const zipcodeSearch = ref("");
-const dialog = ref(false);
-const selectedZipCode = ref(null);
-const newRMAT = ref(null);
+const selectedAdsRep: Ref<string[] | undefined> = ref(undefined);
+const selectedAdvisor: Ref<string[] | undefined> = ref(undefined);
+const selectedRmat: Ref<number[] | undefined> = ref(undefined);
+const selectedCounty: Ref<string[] | undefined> = ref(undefined);
+const zipcodeSearch: Ref<string | undefined> = ref("");
+const selectedGrouping: Ref<string> = ref(groupByOptions[0].value);
 
-const rmatOptions = computed(() =>
-	[...new Set(store.rmatData.map((r) => r.rmatNumber))].sort((a, b) => a - b)
-);
+const selectedZipCode: Ref<ZipCodeData | null> = ref(null);
+const newRMAT: Ref<string | null> = ref(null);
 
-const drawer = ref(true);
-
-const snackbar = ref(false);
-const snackbarColor = ref("success");
-const snackbarMessage = ref("");
-
-const loading = ref(false);
+const loading = ref(true);
 const loadingMessage = ref("Loading Data...");
-const hoveredZipData = ref(null);
 
-const filteredZipcodes = computed(() => {
-	loading.value = true;
-	loadingMessage.value = "Filtering Data...";
+const dialog = ref(false);
+const drawer = ref(true);
+const snackbar = ref(false);
+const snackbarColor: Ref<string> = ref("success");
+const snackbarMessage: Ref<string> = ref("");
 
-	if (!selectedRMAT.value && !selectedAdvisor.value && !zipcodeSearch.value) {
-		loading.value = false;
+const filteredZipcodes: Ref<ZipCodeData[]> = computed(() => {
+	if (
+		(!selectedAdsRep.value || selectedAdsRep.value.length === 0) &&
+		(!selectedAdvisor.value || selectedAdvisor.value.length === 0) &&
+		(selectedRmat.value == null ||
+			selectedRmat.value == undefined ||
+			selectedRmat.value.length === 0) &&
+		(!selectedCounty.value || selectedCounty.value.length === 0) &&
+		!zipcodeSearch.value
+	) {
 		return store.zipcodeData;
 	}
 
+	loading.value = true;
+	loadingMessage.value = "Filtering Data...";
+
 	const result = store.zipcodeData.filter((item) => {
-		const matchesRMAT = selectedRMAT.value
-			? item.rmatNumber === selectedRMAT.value
+		const matchesAdsRep = selectedAdsRep.value
+			? selectedAdsRep.value.includes(item.RmatData?.AdsRep)
 			: true;
+
 		const matchesAdvisor = selectedAdvisor.value
-			? item.clientAdvisor === selectedAdvisor.value
+			? selectedAdvisor.value.includes(item.RmatData?.ClientAdvisor)
 			: true;
-		const matchesSearch =
-			zipcodeSearch.value.length > 0
-				? String(item.zipCode).includes(zipcodeSearch.value)
+
+		const matchesRMAT = selectedRmat.value
+			? selectedRmat.value.includes(item.RmatData?.RmatNumber)
+			: true;
+
+		const matchesCounty =
+			selectedCounty.value?.length > 0
+				? selectedCounty.value.includes(item.County)
 				: true;
-		return matchesRMAT && matchesAdvisor && matchesSearch;
+
+		const matchesSearch =
+			zipcodeSearch.value && zipcodeSearch.value.length > 0
+				? String(item.ZipCode).includes(zipcodeSearch.value)
+				: true;
+
+		return (
+			matchesAdsRep &&
+			matchesAdvisor &&
+			matchesRMAT &&
+			matchesCounty &&
+			matchesSearch
+		);
 	});
 
 	loading.value = false;
@@ -165,13 +191,15 @@ const loadFiles = async () => {
 		loading.value = true;
 		loadingMessage.value = "Loading Data...";
 
-		const rmatResponse = await fetch("RMATs.csv"); // Updated filename
-		const rmatText = await rmatResponse.text();
-		store.loadRMATData({ text: () => rmatText });
+		let rmatDataTask = store.loadRMATData("RMATs.csv");
+		let zipDataTask = store.loadZipcodeData("ZipCodes.csv");
 
-		const zipResponse = await fetch("ZipCodes.csv"); // Updated filename
-		const zipText = await zipResponse.text();
-		store.loadZipcodeData({ text: () => zipText });
+		await Promise.all([rmatDataTask, zipDataTask]);
+		store.mergeRmatData();
+
+		snackbarMessage.value = "Data files loaded successfully";
+		snackbarColor.value = "success";
+		snackbar.value = true;
 	} catch (error) {
 		console.error(error);
 		snackbarMessage.value = "Error loading data files";
@@ -182,16 +210,10 @@ const loadFiles = async () => {
 	}
 };
 
-const openRMATDialog = (zipcode) => {
-	const zipCodeObject = store.zipcodeData.find((z) => z.zipCode === zipcode);
-	selectedZipCode.value = zipCodeObject ?? {
-		zipCode: zipcode,
-		rmatNumber: null,
-		totalNumberOfCompanies: 0,
-		totalEmployees: 0,
-		totalSales: 0,
-	};
-	newRMAT.value = zipCodeObject ? zipCodeObject.rmatNumber : null;
+const openRMATDialog = (zipcode: number) => {
+	const zipCodeObject = store.zipcodeData.find((z) => z.ZipCode === zipcode);
+	selectedZipCode.value = zipCodeObject ?? null;
+	newRMAT.value = zipCodeObject?.RmatNumber ?? null;
 	dialog.value = true;
 };
 
@@ -215,23 +237,8 @@ const saveRMATChange = () => {
 	dialog.value = false;
 };
 
-const onZipcodeHovered = (zipData) => {
-	hoveredZipData.value = zipData;
-};
-
-const onZipcodeLeft = () => {
-	hoveredZipData.value = null;
-};
-
-onMounted(() => {
-	delete L.Icon.Default.prototype._getIconUrl;
-	L.Icon.Default.mergeOptions({
-		iconRetinaUrl: markerIcon2x,
-		iconUrl: markerIcon,
-		shadowUrl: markerShadow,
-	});
-
-	loadFiles();
+onBeforeMount(async () => {
+	await loadFiles();
 });
 </script>
 
