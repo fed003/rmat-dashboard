@@ -5,20 +5,27 @@ import Papa from "papaparse";
 import { type RmatData } from "@/types/RmatData";
 import { type ZipCodeData } from "@/types/ZipCodeData";
 import { type ChangeData } from "@/types/ChangeData";
+import type { Feature, GeoJSON } from "geojson";
 
 export const useStore = defineStore("dataStore", () => {
 	// state
 	const rmatData: Ref<RmatData[]> = ref([]);
 	const zipcodeData: Ref<ZipCodeData[]> = ref([]);
-	const hoveredZipData: Ref<ZipCodeData | undefined> = ref();
+	const hoveredZipData: Ref<ZipCodeData | null> = ref(null);
 	const changeLog: Ref<ChangeData[]> = ref([]);
 
-	async function getTextFileFromPath(path: string) {
+	const geoJsonData: Ref<GeoJSON | undefined> = ref();
+
+	const getTextFileFromPath = async (path: string) => {
 		const response = await fetch(path);
 		return await response.text();
-	}
+	};
 
 	// actions
+	const loadGeoJsonData = async (file: string) => {
+		geoJsonData.value = await fetch(file).then((res) => res.json());
+	};
+
 	const loadRMATData = async (file: string) => {
 		const text = await getTextFileFromPath(file);
 		Papa.parse(text, {
@@ -33,7 +40,7 @@ export const useStore = defineStore("dataStore", () => {
 		});
 
 		//	Merge RMAT data into Zipcode data
-		mergeRmatData();
+		// mergeRmatData();
 	};
 
 	const loadZipcodeData = async (file: string) => {
@@ -60,7 +67,7 @@ export const useStore = defineStore("dataStore", () => {
 		});
 
 		//	Merge RMAT data into Zipcode data
-		mergeRmatData();
+		// mergeRmatData();
 	};
 
 	const mergeRmatData = async () => {
@@ -133,7 +140,7 @@ export const useStore = defineStore("dataStore", () => {
 		changeLog.value = [];
 	};
 
-	const setHoveredZipData = (zipData: ZipCodeData) => {
+	const setHoveredZipData = (zipData: ZipCodeData | null) => {
 		hoveredZipData.value = zipData;
 	};
 
@@ -157,10 +164,13 @@ export const useStore = defineStore("dataStore", () => {
 	return {
 		rmatData,
 		zipcodeData,
+		geoJsonData,
 		hoveredZipData,
 		changeLog,
 		loadRMATData,
 		loadZipcodeData,
+		loadGeoJsonData,
+		mergeRmatData,
 		assignRMAT,
 		revertChanges,
 		setHoveredZipData,

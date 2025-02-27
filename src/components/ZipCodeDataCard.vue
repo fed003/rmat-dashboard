@@ -1,48 +1,39 @@
 <template>
 	<v-list density="compact" class="elevation-1">
 		<v-list-item class="pb-0 border-b">
-			<strong>RMAT:</strong> {{ displayedHoveredZipData.rmatNumber }}
+			<strong>RMAT:</strong> {{ store.hoveredZipData?.RmatNumber }}
 		</v-list-item>
 		<v-list-item class="pb-0 border-b">
-			<strong>ZipCode:</strong> {{ displayedHoveredZipData.zipCode }}
+			<strong>ZipCode:</strong> {{ store.hoveredZipData?.ZipCode }}
+		</v-list-item>
+		<v-list-item class="pb-0 border-b">
+			<strong>Ads Rep:</strong>
+			{{ store.hoveredZipData?.RmatData?.AdsRep }}
 		</v-list-item>
 		<v-list-item class="pb-0 border-b">
 			<strong>Advisor:</strong>
-			{{ displayedHoveredZipData.clientAdvisor }}
+			{{ store.hoveredZipData?.RmatData?.ClientAdvisor }}
 		</v-list-item>
 		<v-list-item class="pb-0 border-b">
 			<strong>Employees:</strong>
-			{{ displayedHoveredZipData.totalEmployees }}
+			{{ store.hoveredZipData?.TotalEmployees }}
 		</v-list-item>
 		<v-list-item class="pb-0 border-b">
 			<strong>Sales:</strong>
-			{{ formatCurrency(displayedHoveredZipData.totalSales) }}
+			{{ formatCurrency(store.hoveredZipData?.TotalSales) }}
 		</v-list-item>
 		<v-list-item class="pb-0 border-b">
 			<strong>Companies:</strong>
-			{{ displayedHoveredZipData.totalNumberOfCompanies }}
+			{{ store.hoveredZipData?.TotalNumberOfCompanies }}
 		</v-list-item>
 	</v-list>
 </template>
 
-<script setup>
-import { computed } from "vue";
+<script setup lang="ts">
 import { useStore } from "../stores/dataStore";
 import { formatCurrency } from "../utilities/formatters";
 
 const store = useStore();
-const displayedHoveredZipData = computed(() => {
-	return (
-		store.hoveredZipData ?? {
-			zipCode: "",
-			totalNumberOfCompanies: "",
-			totalSales: "",
-			totalEmployees: "",
-			rmatNumber: "",
-			clientAdvisor: "",
-		}
-	);
-});
 </script>
 
 <style lang="scss" scoped></style>

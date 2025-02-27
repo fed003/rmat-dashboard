@@ -23,11 +23,11 @@
 				<template #default="{ item }">
 					<v-list-item class="border-b hover-item">
 						<v-list-item-title>
-							Zip {{ item.zipCode }}: RMAT {{ item.oldRmat }} →
+							Zip {{ item.ZipCode }}: RMAT {{ item.OldRmat }} →
 							{{ item.newRmat }}
 						</v-list-item-title>
 						<v-list-item-subtitle>
-							{{ new Date(item.timestamp).toLocaleString() }}
+							{{ new Date(item.TimeStamp).toLocaleString() }}
 						</v-list-item-subtitle>
 					</v-list-item>
 				</template>
@@ -36,7 +36,7 @@
 	</v-card>
 </template>
 
-<script setup>
+<script setup lang-="ts">
 import { useStore } from "../stores/dataStore";
 const store = useStore();
 </script>

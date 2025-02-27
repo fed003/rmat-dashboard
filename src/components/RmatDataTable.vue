@@ -2,7 +2,7 @@
 	<v-data-table
 		:headers="rmatHeaders"
 		:items="rmatTotals"
-		:group-by="[{ key: groupByKey, order: 'asc' }]"
+		:group-by="[{ key: groupBy, order: 'asc' }]"
 		:items-per-page="25"
 	>
 		<template #group-header="{ item, toggleGroup, isGroupOpen }">
@@ -83,11 +83,6 @@ const rmatHeaders = ref([
 	{ title: "Total Companies", value: "TotalNumberOfCompanies" },
 	{ title: "Total Sales", value: "TotalSales" },
 ]);
-
-const groupByKey = computed(() => {
-	console.log(props.groupBy);
-	return props.groupBy;
-});
 
 //	Summarize the data by RMAT, this will  be our table input
 const rmatTotals: Ref<RmatTotal[]> = computed(() => {

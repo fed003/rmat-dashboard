@@ -60,24 +60,24 @@ import { useStore } from "../stores/dataStore";
 import { GroupByOption } from "../types";
 import ChangeLog from "./ChangeLog.vue";
 
-const selectedRmat = defineModel<number | null>("selectedRmat", {
-	default: null,
+const selectedRmat = defineModel<number | undefined>("selectedRmat", {
+	default: undefined,
 });
 
-const selectedAdsRep = defineModel<string | null>("selectedAdsRep", {
-	default: null,
+const selectedAdsRep = defineModel<string | undefined>("selectedAdsRep", {
+	default: undefined,
 });
 
-const selectedAdvisor = defineModel<string | null>("selectedAdvisor", {
-	default: null,
+const selectedAdvisor = defineModel<string | undefined>("selectedAdvisor", {
+	default: undefined,
 });
 
-const selectedCounty = defineModel<string | null>("selectedCounty", {
-	default: null,
+const selectedCounty = defineModel<string | undefined>("selectedCounty", {
+	default: undefined,
 });
 
-const zipcodeSearch = defineModel<string | null>("zipcodeSearch", {
-	default: null,
+const zipcodeSearch = defineModel<string | undefined>("zipcodeSearch", {
+	default: undefined,
 });
 
 const selectedGrouping = defineModel<GroupByOption>("selectedGrouping", {
