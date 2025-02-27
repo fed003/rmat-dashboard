@@ -86,7 +86,6 @@ const rmatHeaders = ref([
 
 //	Summarize the data by RMAT, this will  be our table input
 const rmatTotals: Ref<RmatTotal[]> = computed(() => {
-	console.log("Computing RMAT totals", props.groupBy);
 	const totals: Record<number, RmatTotal> = {};
 
 	function addToRmat(

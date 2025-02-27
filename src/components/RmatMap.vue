@@ -24,7 +24,7 @@
 </template>
 
 <script setup>
-import { ref, watch, computed } from "vue";
+import { ref, watch } from "vue";
 import { LMap, LTileLayer, LGeoJson } from "@vue-leaflet/vue-leaflet";
 import { useStore } from "../stores/dataStore";
 import geoJsonData from "../assets/ca_california_zip_codes_geo.min.json";
@@ -55,20 +55,13 @@ const center = ref(dfltCenter);
 const leafletMap = ref(null);
 const mapKey = ref(0);
 
-watch(
-	() => props.selectedGrouping,
-	() => {
-		updateMapKey();
-	}
-);
-
 // GeoJSON styling
 const geoJsonStyle = (feature) => {
 	const zipcode = feature.properties.ZCTA5CE10;
 	const zipData = props.zipcodes.find((z) => z.ZipCode == zipcode);
-	const rmat = zipData?.RmatNumber;
-	const advisor = zipData?.RmatData?.ClientAdvisor;
-	const adsRep = zipData?.RmatData?.AdsRep;
+	// const rmat = zipData?.RmatNumber;
+	// const advisor = zipData?.RmatData?.ClientAdvisor;
+	// const adsRep = zipData?.RmatData?.AdsRep;
 
 	const filterColor =
 		props.selectedRmat?.length > 0 ||
@@ -97,39 +90,34 @@ function updateMapKey() {
 }
 
 function resetMapZoom() {
-	console.log("Resetting map...");
 	center.value = dfltCenter;
 	zoom.value = dfltZoom;
-	leafletMap.value.leafletObject.setView(dfltCenter, dfltZoom); // Reset to default
+	if (leafletMap.value?.leafletObject) {
+		leafletMap.value.leafletObject.setView(dfltCenter, dfltZoom); // Reset to default
+		updateMapKey();
+	}
 }
 
-watch(
-	() => props.zipcodes,
-	() => {
-		updateMapKey();
-	},
-	{ deep: true }
-);
-
 // Watch filters and zoom to selected regions
-watch([() => props.selectedRmat, () => props.selectedAdvisor], () => {
-	//	Reset map key to force re-render
-	updateMapKey();
+watch([() => props.zipcodes, () => props.selectedGrouping], () => {
+	// If the map is not yet loaded, stop here
+	if (!leafletMap.value?.leafletObject) {
+		return;
+	}
 
 	// Reset map if no filters are selected
-	if (!props.selectedRmat && !props.selectedAdvisor) {
+	if (
+		!props.selectedRmat?.length > 0 &&
+		!props.selectedAdvisor?.length > 0 &&
+		!props.selectedAdsRep?.length > 0 &&
+		!props.selectedCounty?.length > 0
+	) {
 		resetMapZoom();
 		return;
 	}
 
-	const selectedZipcodes = props.zipcodes.filter((zip) => {
-		return (
-			(props.selectedRmat && zip.rmatNumber === Number(props.selectedRmat)) ||
-			(props.selectedAdvisor && zip.clientAdvisor === props.selectedAdvisor)
-		);
-	});
-
-	if (selectedZipcodes.length === 0) {
+	// If no zipcodes are selected, reset map
+	if (props.zipcodes.length === 0) {
 		resetMapZoom();
 		return;
 	}
@@ -140,25 +128,29 @@ watch([() => props.selectedRmat, () => props.selectedAdvisor], () => {
 		lngMin: undefined,
 		lngMax: undefined,
 	};
-	selectedZipcodes.forEach((company) => {
+	props.zipcodes.forEach((zip) => {
 		const feature = geoJsonData.features.find(
-			(f) => f.properties.ZCTA5CE10 === String(company.zipCode)
+			(f) => f.properties.ZCTA5CE10 === String(zip.ZipCode)
 		);
 		if (feature) {
-			feature.geometry.coordinates[0].forEach((coord) =>
-				coord.forEach((c) => {
-					if (c[0]) {
-						bounds.lngMin = Math.min(bounds.lngMin ?? c[0], c[0]);
-						bounds.lngMax = Math.max(bounds.lngMax ?? c[0], c[0]);
-					}
-					if (c[1]) {
-						bounds.latMin = Math.min(bounds.latMin ?? c[1], c[1]);
-						bounds.latMax = Math.max(bounds.latMax ?? c[1], c[1]);
-					}
-				})
-			);
+			feature.geometry.coordinates[0].forEach((c) => {
+				if (typeof c[0] == "number") {
+					bounds.lngMin = Math.min(bounds.lngMin ?? c[0], c[0]);
+					bounds.lngMax = Math.max(bounds.lngMax ?? c[0], c[0]);
+				}
+				if (typeof c[1] == "number") {
+					bounds.latMin = Math.min(bounds.latMin ?? c[1], c[1]);
+					bounds.latMax = Math.max(bounds.latMax ?? c[1], c[1]);
+				}
+			});
 		}
 	});
+
+	if (!bounds.latMin || !bounds.latMax || !bounds.lngMin || !bounds.lngMax) {
+		return;
+	}
+
+	updateMapKey();
 
 	leafletMap.value.leafletObject.fitBounds(
 		[

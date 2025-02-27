@@ -14,18 +14,12 @@ export const useStore = defineStore("dataStore", () => {
 	const hoveredZipData: Ref<ZipCodeData | null> = ref(null);
 	const changeLog: Ref<ChangeData[]> = ref([]);
 
-	const geoJsonData: Ref<GeoJSON | undefined> = ref();
-
 	const getTextFileFromPath = async (path: string) => {
 		const response = await fetch(path);
 		return await response.text();
 	};
 
 	// actions
-	const loadGeoJsonData = async (file: string) => {
-		geoJsonData.value = await fetch(file).then((res) => res.json());
-	};
-
 	const loadRMATData = async (file: string) => {
 		const text = await getTextFileFromPath(file);
 		Papa.parse(text, {
@@ -177,12 +171,10 @@ export const useStore = defineStore("dataStore", () => {
 	return {
 		rmatData,
 		zipcodeData,
-		geoJsonData,
 		hoveredZipData,
 		changeLog,
 		loadRMATData,
 		loadZipcodeData,
-		loadGeoJsonData,
 		mergeRmatData,
 		assignRMAT,
 		revertChanges,

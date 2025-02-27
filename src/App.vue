@@ -156,11 +156,7 @@ const filteredZipcodes: Ref<ZipCodeData[]> = computed(() => {
 	loading.value = true;
 	loadingMessage.value = "Filtering Data...";
 
-	console.log("Filtering data...", selectedCounty.value);
-
 	const result = store.zipcodeData.filter((item) => {
-		console.log(item.County, selectedCounty.value.includes(item.County));
-
 		const matchesAdsRep = selectedAdsRep.value
 			? selectedAdsRep.value.includes(item.RmatData?.AdsRep)
 			: true;
@@ -199,7 +195,6 @@ const filteredZipcodes: Ref<ZipCodeData[]> = computed(() => {
 const loadFiles = async () => {
 	try {
 		loading.value = true;
-		console.log("Loading data files...", loading.value);
 		loadingMessage.value = "Loading Data...";
 
 		let rmatDataTask = store.loadRMATData("RMATs.csv");
