@@ -14,7 +14,7 @@
 		"sourceMap": true,
 		"resolveJsonModule": true,
 		"baseUrl": ".",
-		"types": ["vite/client", "vuetify"],
+		"types": ["vite/client", "vuetify", "leaflet"],
 		"paths": {
 			"@/*": ["src/*"]
 		}

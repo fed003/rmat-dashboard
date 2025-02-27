@@ -38,7 +38,6 @@
 							<rmat-data-table
 								:zipcodes="filteredZipcodes"
 								:group-by="selectedGrouping"
-								@row-clicked="openRMATDialog"
 							/>
 						</v-col>
 					</v-row>
@@ -108,12 +107,7 @@
 <script setup lang="ts">
 import { type Ref, ref, computed, onMounted, onBeforeMount } from "vue";
 import { useStore } from "./stores/dataStore";
-import {
-	GroupByOption,
-	RmatData,
-	ZipCodeData,
-	groupByOptions,
-} from "./types/index";
+import { ZipCodeData, groupByOptions } from "./types/index";
 import NavigationDrawer from "./components/NavigationDrawer.vue";
 import RmatMap from "./components/RmatMap.vue";
 import RmatDataTable from "./components/RmatDataTable.vue";
@@ -140,13 +134,13 @@ const snackbar = ref(false);
 const snackbarColor: Ref<string> = ref("success");
 const snackbarMessage: Ref<string> = ref("");
 
-const hoveredZipData: Ref<ZipCodeData | null> = ref(null);
-
 const filteredZipcodes: Ref<ZipCodeData[]> = computed(() => {
 	if (
 		(!selectedAdsRep.value || selectedAdsRep.value.length === 0) &&
 		(!selectedAdvisor.value || selectedAdvisor.value.length === 0) &&
-		(selectedRmat.value !== null || selectedRmat.value.length === 0) &&
+		(selectedRmat.value == null ||
+			selectedRmat.value == undefined ||
+			selectedRmat.value.length === 0) &&
 		(!selectedCounty.value || selectedCounty.value.length === 0) &&
 		!zipcodeSearch.value
 	) {
@@ -216,10 +210,10 @@ const loadFiles = async () => {
 	}
 };
 
-const openRMATDialog = (zipcode: ZipCodeData) => {
+const openRMATDialog = (zipcode: number) => {
 	const zipCodeObject = store.zipcodeData.find((z) => z.ZipCode === zipcode);
-	selectedZipCode.value = zipCodeObject;
-	newRMAT.value = zipCodeObject ? zipCodeObject.RmatNumber : null;
+	selectedZipCode.value = zipCodeObject ?? null;
+	newRMAT.value = zipCodeObject?.RmatNumber ?? null;
 	dialog.value = true;
 };
 

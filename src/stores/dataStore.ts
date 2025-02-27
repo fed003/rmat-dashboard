@@ -182,6 +182,7 @@ export const useStore = defineStore("dataStore", () => {
 		clientAdvisorOptions,
 		adsRepOptions,
 		rmatOptions,
+		rmatOptionDetails,
 		countyOptions,
 	};
 });

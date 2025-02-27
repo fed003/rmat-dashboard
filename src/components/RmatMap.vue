@@ -24,10 +24,15 @@
 </template>
 
 <script setup>
-import { ref, watch } from "vue";
+import { ref, watch, onMounted } from "vue";
 import { LMap, LTileLayer, LGeoJson } from "@vue-leaflet/vue-leaflet";
 import { useStore } from "../stores/dataStore";
 import geoJsonData from "../assets/ca_california_zip_codes_geo.min.json";
+import "leaflet/dist/leaflet.css";
+import L from "leaflet";
+import markerIcon from "leaflet/dist/images/marker-icon.png";
+import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
+import markerShadow from "leaflet/dist/images/marker-shadow.png";
 
 // Props
 const props = defineProps({
@@ -54,6 +59,15 @@ const zoom = ref(dfltZoom);
 const center = ref(dfltCenter);
 const leafletMap = ref(null);
 const mapKey = ref(0);
+
+onMounted(() => {
+	delete L.Icon.Default.prototype._getIconUrl;
+	L.Icon.Default.mergeOptions({
+		iconRetinaUrl: markerIcon2x,
+		iconUrl: markerIcon,
+		shadowUrl: markerShadow,
+	});
+});
 
 // GeoJSON styling
 const geoJsonStyle = (feature) => {
