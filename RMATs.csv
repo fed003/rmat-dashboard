@@ -1,23 +1,23 @@
-﻿rmatNumber,clientAdvisor,color
-0,Unassigned,#D3D3D3
-1,Tia Brooks,#FF0000
-2,Tia Brooks,#FF0000
-3,Tia Brooks,#FF0000
-7,Tia Brooks,#FF0000
-11,Tia Brooks,#FF0000
-4,Terri Dixon,#00FF00
-5,Terri Dixon,#00FF00
-6,Terri Dixon,#00FF00
-8,Terri Dixon,#00FF00
-9,Terri Dixon,#00FF00
-10,Terri Dixon,#00FF00
-15,Shanon Summerour,#0000FF
-16,Shanon Summerour,#0000FF
-17,Shanon Summerour,#0000FF
-18,Shanon Summerour,#0000FF
-19,Shanon Summerour,#0000FF
-21,Shanon Summerour,#0000FF
-12,Rosanna Fong,#FFA500
-13,Rosanna Fong,#FFA500
-14,Rosanna Fong,#FFA500
-20,Rosanna Fong,#FFA500
+﻿RmatNumber,AdsRep,ClientAdvisor,AdsRepColor,ClientAdvisorColor
+1,Tia Brooks,Cynthia Amador Diaz,#FF0000,#0000FF
+2,Tia Brooks,Cynthia Amador Diaz,#FF0000,#0000FF
+3,Tia Brooks,Kathy McinTyre,#FF0000,#808000
+4,Terri Dixon,Doug Waterman,#00FF00,#FFFF00
+5,Terri Dixon,Doug Waterman,#00FF00,#FFFF00
+6,Terri Dixon,Joe Bockrath,#00FF00,#FF00FF
+7,Tia Brooks,Linda Rosenberg,#FF0000,#008000
+8,Terri Dixon,Linda Rosenberg,#00FF00,#008000
+9,Terri Dixon,HM Stemler,#00FF00,#00FFFF
+10,Terri Dixon,HM Stemler,#00FF00,#00FFFF
+11,Tia Brooks,Amanda Cheyney,#FF0000,#FF0000
+12,Rosanna Fong,Christian Park,#FFA500,#00FF00
+13,Rosanna Fong,Christian Park,#FFA500,#00FF00
+14,Rosanna Fong,Marty Furman,#FFA500,#800080
+15,Shanon Summerour,Marty Furman,#0000FF,#800080
+16,Shanon Summerour,John Gran,#0000FF,#800000
+17,Shanon Summerour,John Gran,#0000FF,#800000
+18,Shanon Summerour,Roz Lower,#0000FF,#000080
+19,Shanon Summerour,Roz Lower,#0000FF,#000080
+20,Rosanna Fong,Robert Curl,#FFA500,#008080
+21,Shanon Summerour,Robert Curl,#0000FF,#008080
+0,Unassigned,Unassigned,#D3D3D3,#7F7F00
