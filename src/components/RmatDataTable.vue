@@ -112,6 +112,18 @@ const rmatTotals: Ref<RmatTotal[]> = computed(() => {
 			} as RmatTotal;
 		}
 
+		if (isNaN(companies)) {
+			companies = 0;
+		}
+
+		if (isNaN(employees)) {
+			employees = 0;
+		}
+
+		if (isNaN(sales)) {
+			sales = 0;
+		}
+
 		if (type === "new" || type === "both") {
 			totals[rmatNumber].TotalNumberOfCompanies += companies;
 			totals[rmatNumber].TotalSales += sales;
