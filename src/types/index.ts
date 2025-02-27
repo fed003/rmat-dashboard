@@ -1,10 +1,6 @@
 import { type RmatData } from "./RmatData";
 import { type ZipCodeData } from "./ZipCodeData";
 import { type ChangeData } from "./ChangeData";
+import { type GroupByOption, groupByOptions } from "./GroupByOption";
 
-enum GroupByOption {
-	AdsRep = "Ads Rep",
-	ClientAdvisor = "Client Advisor",
-}
-
-export { RmatData, ZipCodeData, ChangeData, GroupByOption };
+export { RmatData, ZipCodeData, ChangeData, GroupByOption, groupByOptions };

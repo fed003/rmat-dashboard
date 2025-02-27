@@ -161,6 +161,19 @@ export const useStore = defineStore("dataStore", () => {
 		[...new Set(zipcodeData.value.map((z) => z.County))].sort()
 	);
 
+	const rmatOptionDetails = computed(() =>
+		[
+			...new Set(
+				rmatData.value.map((r) => {
+					return {
+						value: r.RmatNumber,
+						title: `${r.RmatNumber} - ${r.ClientAdvisor} - ${r.AdsRep}`,
+					};
+				})
+			),
+		].sort((a, b) => a.value - b.value)
+	);
+
 	return {
 		rmatData,
 		zipcodeData,

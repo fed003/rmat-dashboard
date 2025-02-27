@@ -61,16 +61,16 @@
 								</thead>
 								<tbody>
 									<tr class="text-center">
-										<td>{{ selectedZipCode.RmatNumber }}</td>
-										<td>{{ selectedZipCode.totalNumberOfCompanies }}</td>
-										<td>{{ selectedZipCode.totalEmployees }}</td>
-										<td>${{ selectedZipCode.totalSales.toLocaleString() }}</td>
+										<td>{{ selectedZipCode?.RmatNumber }}</td>
+										<td>{{ selectedZipCode?.TotalNumberOfCompanies }}</td>
+										<td>{{ selectedZipCode?.TotalEmployees }}</td>
+										<td>${{ selectedZipCode?.TotalSales.toLocaleString() }}</td>
 									</tr>
 								</tbody>
 							</v-table>
 							<v-select
 								v-model="newRMAT"
-								:items="store.rmatOptions"
+								:items="store.rmatOptionDetails"
 								label="New RMAT"
 							></v-select>
 						</v-card-text>
@@ -108,7 +108,12 @@
 <script setup lang="ts">
 import { type Ref, ref, computed, onMounted, onBeforeMount } from "vue";
 import { useStore } from "./stores/dataStore";
-import { GroupByOption, RmatData, ZipCodeData } from "./types/index";
+import {
+	GroupByOption,
+	RmatData,
+	ZipCodeData,
+	groupByOptions,
+} from "./types/index";
 import NavigationDrawer from "./components/NavigationDrawer.vue";
 import RmatMap from "./components/RmatMap.vue";
 import RmatDataTable from "./components/RmatDataTable.vue";
@@ -116,12 +121,12 @@ import ZipCodeDataCard from "./components/ZipCodeDataCard.vue";
 
 const store = useStore();
 
-const selectedAdsRep: Ref<string | undefined> = ref(undefined);
-const selectedAdvisor: Ref<string | undefined> = ref(undefined);
-const selectedRmat: Ref<number | undefined> = ref(undefined);
-const selectedCounty: Ref<string | undefined> = ref(undefined);
+const selectedAdsRep: Ref<string[] | undefined> = ref(undefined);
+const selectedAdvisor: Ref<string[] | undefined> = ref(undefined);
+const selectedRmat: Ref<number[] | undefined> = ref(undefined);
+const selectedCounty: Ref<string[] | undefined> = ref(undefined);
 const zipcodeSearch: Ref<string | undefined> = ref("");
-const selectedGrouping: Ref<GroupByOption> = ref(GroupByOption.AdsRep);
+const selectedGrouping: Ref<string> = ref(groupByOptions[0].value);
 
 const selectedZipCode: Ref<ZipCodeData | null> = ref(null);
 const newRMAT: Ref<string | null> = ref(null);
@@ -139,10 +144,10 @@ const hoveredZipData: Ref<ZipCodeData | null> = ref(null);
 
 const filteredZipcodes: Ref<ZipCodeData[]> = computed(() => {
 	if (
-		!selectedAdsRep.value &&
-		!selectedAdvisor.value &&
-		selectedRmat.value !== null &&
-		!selectedCounty.value &&
+		(!selectedAdsRep.value || selectedAdsRep.value.length === 0) &&
+		(!selectedAdvisor.value || selectedAdvisor.value.length === 0) &&
+		(selectedRmat.value !== null || selectedRmat.value.length === 0) &&
+		(!selectedCounty.value || selectedCounty.value.length === 0) &&
 		!zipcodeSearch.value
 	) {
 		return store.zipcodeData;
@@ -151,27 +156,33 @@ const filteredZipcodes: Ref<ZipCodeData[]> = computed(() => {
 	loading.value = true;
 	loadingMessage.value = "Filtering Data...";
 
+	console.log("Filtering data...", selectedCounty.value);
+
 	const result = store.zipcodeData.filter((item) => {
+		console.log(item.County, selectedCounty.value.includes(item.County));
+
 		const matchesAdsRep = selectedAdsRep.value
-			? item.RmatData?.AdsRep === selectedAdsRep.value
+			? selectedAdsRep.value.includes(item.RmatData?.AdsRep)
 			: true;
 
 		const matchesAdvisor = selectedAdvisor.value
-			? item.RmatData?.ClientAdvisor === selectedAdvisor.value
+			? selectedAdvisor.value.includes(item.RmatData?.ClientAdvisor)
 			: true;
 
 		const matchesRMAT = selectedRmat.value
-			? item.RmatNumber === selectedRmat.value
+			? selectedRmat.value.includes(item.RmatData?.RmatNumber)
 			: true;
 
-		const matchesCounty = selectedCounty.value
-			? item.County === selectedCounty.value
-			: true;
+		const matchesCounty =
+			selectedCounty.value?.length > 0
+				? selectedCounty.value.includes(item.County)
+				: true;
 
 		const matchesSearch =
 			zipcodeSearch.value && zipcodeSearch.value.length > 0
 				? String(item.ZipCode).includes(zipcodeSearch.value)
 				: true;
+
 		return (
 			matchesAdsRep &&
 			matchesAdvisor &&

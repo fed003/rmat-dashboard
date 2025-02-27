@@ -57,12 +57,12 @@
 
 <script setup lang="ts">
 import { type Ref, ref, computed } from "vue";
-import { type ZipCodeData, GroupByOption } from "../types";
+import { type ZipCodeData } from "../types";
 import { formatCurrency } from "../utilities/formatters";
 
 const props = defineProps<{
 	zipcodes: ZipCodeData[];
-	groupBy: GroupByOption;
+	groupBy: string;
 }>();
 
 interface RmatTotal {
@@ -86,6 +86,7 @@ const rmatHeaders = ref([
 
 //	Summarize the data by RMAT, this will  be our table input
 const rmatTotals: Ref<RmatTotal[]> = computed(() => {
+	console.log("Computing RMAT totals", props.groupBy);
 	const totals: Record<number, RmatTotal> = {};
 
 	function addToRmat(

@@ -32,20 +32,12 @@ import geoJsonData from "../assets/ca_california_zip_codes_geo.min.json";
 // Props
 const props = defineProps({
 	zipcodes: { type: Array, required: true },
-	selectedRmat: { type: [Number, null], default: null },
-	selectedAdvisor: { type: [String, null], default: null },
-	selectedAdsRep: { type: [String, null], default: null },
-	selectedCounty: { type: [String, null], default: null },
-	selectedGrouping: { type: [String, null], default: "AdsRep" },
+	selectedRmat: { type: [Array, null], default: null },
+	selectedAdvisor: { type: [Array, null], default: null },
+	selectedAdsRep: { type: [Array, null], default: null },
+	selectedCounty: { type: [Array, null], default: null },
+	selectedGrouping: { type: String },
 });
-
-watch(
-	() => props.selectedGrouping,
-	() => {
-		console.log("Selected grouping changed", props.selectedGrouping);
-		updateMapKey();
-	}
-);
 
 // Emits
 const emit = defineEmits(["zipcode-clicked"]);
@@ -63,6 +55,13 @@ const center = ref(dfltCenter);
 const leafletMap = ref(null);
 const mapKey = ref(0);
 
+watch(
+	() => props.selectedGrouping,
+	() => {
+		updateMapKey();
+	}
+);
+
 // GeoJSON styling
 const geoJsonStyle = (feature) => {
 	const zipcode = feature.properties.ZCTA5CE10;
@@ -71,32 +70,25 @@ const geoJsonStyle = (feature) => {
 	const advisor = zipData?.RmatData?.ClientAdvisor;
 	const adsRep = zipData?.RmatData?.AdsRep;
 
+	const filterColor =
+		props.selectedRmat?.length > 0 ||
+		props.selectedAdvisor?.length > 0 ||
+		props.selectedAdsRep?.length > 0
+			? darkMapColor
+			: unassignedMapColor;
+
 	// Default color unless matched by filter
 	let color =
 		props.selectedGrouping === "AdsRep"
-			? zipData?.RmatData?.AdsRepColor || unassignedMapColor
-			: zipData?.RmatData?.ClientAdvisorColor || unassignedMapColor;
-
-	// Check if we need to filter
-	if (props.selectedRmat || props.selectedAdvisor || props.selectedAdsRep) {
-		//  If this zipcode is assigned, then we check the filter
-		if (zipData) {
-			if (
-				(props.selectedRmat && rmat != Number(props.selectedRmat)) ||
-				(props.selectedAdvisor && advisor != props.selectedAdvisor) ||
-				(props.selectedAdsRep && adsRep != props.selectedAdsRep)
-			) {
-				color = darkMapColor;
-			}
-		}
-	}
+			? zipData?.RmatData?.AdsRepColor || filterColor
+			: zipData?.RmatData?.ClientAdvisorColor || filterColor;
 
 	return {
 		fillColor: color,
-		weight: 2,
+		weight: 1.5,
 		opacity: 1,
-		color: "white",
-		fillOpacity: 0.7,
+		color: "#F5F5F5",
+		fillOpacity: 0.4,
 	};
 };
 

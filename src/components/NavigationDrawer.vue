@@ -8,6 +8,7 @@
 						:items="adsOptions"
 						label="Filter by Ads Rep"
 						clearable
+						multiple
 					></v-select>
 				</v-list-item>
 				<v-list-item>
@@ -16,6 +17,7 @@
 						:items="advisorOptions"
 						label="Filter by Client Advisor"
 						clearable
+						multiple
 					></v-select>
 				</v-list-item>
 				<v-list-item>
@@ -24,15 +26,17 @@
 						:items="rmatOptions"
 						label="Filter by RMAT"
 						clearable
+						multiple
 					></v-select>
 				</v-list-item>
 				<v-list-item>
-					<v-select
+					<v-autocomplete
 						v-model="selectedCounty"
 						:items="countyOptions"
 						label="Filter by County"
 						clearable
-					></v-select>
+						multiple
+					></v-autocomplete>
 				</v-list-item>
 				<v-list-item>
 					<v-text-field
@@ -57,22 +61,22 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useStore } from "../stores/dataStore";
-import { GroupByOption } from "../types";
+import { GroupByOption, groupByOptions } from "../types";
 import ChangeLog from "./ChangeLog.vue";
 
-const selectedRmat = defineModel<number | undefined>("selectedRmat", {
+const selectedRmat = defineModel<number[] | undefined>("selectedRmat", {
 	default: undefined,
 });
 
-const selectedAdsRep = defineModel<string | undefined>("selectedAdsRep", {
+const selectedAdsRep = defineModel<string[] | undefined>("selectedAdsRep", {
 	default: undefined,
 });
 
-const selectedAdvisor = defineModel<string | undefined>("selectedAdvisor", {
+const selectedAdvisor = defineModel<string[] | undefined>("selectedAdvisor", {
 	default: undefined,
 });
 
-const selectedCounty = defineModel<string | undefined>("selectedCounty", {
+const selectedCounty = defineModel<string[] | undefined>("selectedCounty", {
 	default: undefined,
 });
 
@@ -80,21 +84,11 @@ const zipcodeSearch = defineModel<string | undefined>("zipcodeSearch", {
 	default: undefined,
 });
 
-const selectedGrouping = defineModel<GroupByOption>("selectedGrouping", {
+const selectedGrouping = defineModel<string>("selectedGrouping", {
 	required: true,
 });
 
 const store = useStore();
-
-const groupByOptions = computed(() => {
-	return Object.keys(GroupByOption).map((key) => {
-		const typedKey = key as keyof typeof GroupByOption;
-		return {
-			title: GroupByOption[typedKey],
-			value: key,
-		};
-	});
-});
 
 const adsOptions = computed(() => {
 	return store.adsRepOptions;
@@ -118,9 +112,13 @@ const rmatOptions = computed(() => {
 			store.rmatData
 				.filter(
 					(rmat) =>
-						(selectedAdvisor.value &&
-							rmat.ClientAdvisor == selectedAdvisor.value) ||
-						(selectedAdsRep.value && rmat.AdsRep == selectedAdsRep.value)
+						(!selectedAdsRep.value ||
+							selectedAdsRep.value.length === 0 ||
+							(rmat.AdsRep && selectedAdsRep.value.includes(rmat.AdsRep))) &&
+						(!selectedAdvisor.value ||
+							selectedAdvisor.value.length === 0 ||
+							(rmat.ClientAdvisor &&
+								selectedAdvisor.value.includes(rmat.ClientAdvisor)))
 				)
 				.map((r) => r.RmatNumber)
 		),
