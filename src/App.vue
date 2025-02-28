@@ -21,7 +21,7 @@
 			<v-main>
 				<v-container fluid>
 					<v-row>
-						<v-col cols="12">
+						<v-col cols="12" class="map-wrapper">
 							<rmat-map
 								:zipcodes="filteredZipcodes"
 								:selected-grouping="selectedGrouping"
@@ -244,6 +244,10 @@ onBeforeMount(async () => {
 </script>
 
 <style scoped>
+.map-wrapper {
+	height: 60vh;
+}
+
 .hover-card {
 	position: fixed;
 	top: 80px;

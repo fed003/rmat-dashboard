@@ -2,7 +2,7 @@
 	<l-map
 		id="rmat-map"
 		ref="leafletMap"
-		style="height: 65vh; width: 100%"
+		style="height: 100%; width: 100%"
 		:zoom="dfltZoom"
 		:center="dfltCenter"
 	>

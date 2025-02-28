@@ -1,65 +1,76 @@
 <template>
 	<v-navigation-drawer app permanent width="310">
 		<div class="drawer-content">
-			<v-list density="compact">
-				<v-list-item>
-					<v-select
-						v-model="selectedAdsRep"
-						:items="adsOptions"
-						label="Filter by Ads Rep"
-						clearable
-						multiple
-					></v-select>
-				</v-list-item>
-				<v-list-item>
-					<v-select
-						v-model="selectedAdvisor"
-						:items="advisorOptions"
-						label="Filter by Client Advisor"
-						clearable
-						multiple
-					></v-select>
-				</v-list-item>
-				<v-list-item>
-					<v-select
-						v-model="selectedRmat"
-						:items="rmatOptions"
-						label="Filter by RMAT"
-						clearable
-						multiple
-					></v-select>
-				</v-list-item>
-				<v-list-item>
-					<v-autocomplete
-						v-model="selectedCounty"
-						:items="countyOptions"
-						label="Filter by County"
-						clearable
-						multiple
-					></v-autocomplete>
-				</v-list-item>
-				<v-list-item>
-					<v-text-field
-						v-model="zipcodeSearch"
-						label="Search by ZipCode"
-						clearable
-					></v-text-field>
-				</v-list-item>
-				<v-list-item>
-					<v-select
-						v-model="selectedGrouping"
-						:items="groupByOptions"
-						label="Select Grouping"
-					></v-select>
-				</v-list-item>
-			</v-list>
-			<change-log class="change-log-flex" />
+			<v-expansion-panels v-model="panels" multiple>
+				<v-expansion-panel title="Filters">
+					<v-expansion-panel-text>
+						<v-list density="compact">
+							<v-list-item>
+								<v-select
+									v-model="selectedAdsRep"
+									:items="adsOptions"
+									label="Filter by Ads Rep"
+									clearable
+									multiple
+								></v-select>
+							</v-list-item>
+							<v-list-item>
+								<v-select
+									v-model="selectedAdvisor"
+									:items="advisorOptions"
+									label="Filter by Client Advisor"
+									clearable
+									multiple
+								></v-select>
+							</v-list-item>
+							<v-list-item>
+								<v-select
+									v-model="selectedRmat"
+									:items="rmatOptions"
+									label="Filter by RMAT"
+									clearable
+									multiple
+								></v-select>
+							</v-list-item>
+							<v-list-item>
+								<v-autocomplete
+									v-model="selectedCounty"
+									:items="countyOptions"
+									label="Filter by County"
+									clearable
+									multiple
+								></v-autocomplete>
+							</v-list-item>
+							<v-list-item>
+								<v-text-field
+									v-model="zipcodeSearch"
+									label="Search by ZipCode"
+									clearable
+								></v-text-field>
+							</v-list-item>
+							<v-list-item>
+								<v-select
+									v-model="selectedGrouping"
+									:items="groupByOptions"
+									label="Select Grouping"
+								></v-select>
+							</v-list-item>
+						</v-list>
+					</v-expansion-panel-text>
+				</v-expansion-panel>
+
+				<v-expansion-panel title="Change Log">
+					<v-expansion-panel-text>
+						<change-log class="change-log-content" />
+					</v-expansion-panel-text>
+				</v-expansion-panel>
+			</v-expansion-panels>
 		</div>
 	</v-navigation-drawer>
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, ref } from "vue";
 import { useStore } from "../stores/dataStore";
 import { GroupByOption, groupByOptions } from "../types";
 import ChangeLog from "./ChangeLog.vue";
@@ -87,6 +98,8 @@ const selectedGrouping = defineModel<string>("selectedGrouping", {
 });
 
 const store = useStore();
+
+const panels = ref([0, 1]);
 
 const adsOptions = computed(() => {
 	return store.adsRepOptions;
@@ -134,6 +147,11 @@ const rmatOptions = computed(() => {
 	display: flex;
 	flex-direction: column;
 	height: 100%; /* Fill drawer height */
+}
+
+.v-expansion-panel >>> .v-expansion-panel-text__wrapper {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
 }
 
 .v-list {
