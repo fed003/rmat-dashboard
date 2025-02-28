@@ -3,7 +3,7 @@
 		:headers="rmatHeaders"
 		:items="rmatTotals"
 		:group-by="[{ key: groupBy, order: 'asc' }]"
-		:items-per-page="25"
+		:items-per-page="50"
 		hover
 	>
 		<template #group-header="{ item, toggleGroup, isGroupOpen }">
@@ -75,16 +75,17 @@ const props = defineProps<{
 	groupBy: string;
 }>();
 
-interface RmatTotal {
+interface GroupedData {
 	RmatNumber: number;
+	AdsRep: string;
+	ClientAdvisor: string;
+	County: string;
 	TotalEmployees: number;
 	TotalNumberOfCompanies: number;
 	SmallBusinesses: number;
 	MediumBusinesses: number;
 	LargeBusinesses: number;
 	TotalSales: number;
-	AdsRep: string;
-	ClientAdvisor: string;
 	OriginalNumberOfCompanies: number;
 	OriginalSales: number;
 	OriginalEmployees: number;
@@ -101,9 +102,8 @@ const rmatHeaders = ref([
 ]);
 
 //	Summarize the data by RMAT, this will  be our table input
-const rmatTotals: Ref<RmatTotal[]> = computed(() => {
-	console.log("Computing RMAT Totals");
-	const totals: Record<number, RmatTotal> = {};
+const rmatTotals: Ref<GroupedData[]> = computed(() => {
+	const totals: Record<number, GroupedData> = {};
 
 	function addToRmat(
 		rmatNumber: number,
@@ -112,11 +112,19 @@ const rmatTotals: Ref<RmatTotal[]> = computed(() => {
 		zip: ZipCodeData,
 		type: "new" | "original" | "both"
 	) {
-		if (!totals[rmatNumber]) {
-			totals[rmatNumber] = {
+		//	For AdsRep and ClientAdvisor, we only want to group by RMAT
+		let groupKey = rmatNumber;
+		//	If we're grouping by county, then we need to split by both RMAT and County
+		if (props.groupBy === "County") {
+			groupKey += `-${zip.County}`;
+		}
+
+		if (!totals[groupKey]) {
+			totals[groupKey] = {
 				RmatNumber: rmatNumber,
 				AdsRep: adsRep,
 				ClientAdvisor: clientAdvisor,
+				County: zip.County,
 				TotalNumberOfCompanies: 0,
 				SmallBusinesses: 0,
 				MediumBusinesses: 0,
@@ -127,7 +135,7 @@ const rmatTotals: Ref<RmatTotal[]> = computed(() => {
 				OriginalNumberOfCompanies: 0,
 				OriginalSales: 0,
 				OriginalEmployees: 0,
-			} as RmatTotal;
+			} as GroupedData;
 		}
 
 		function addNumber(value: any) {
@@ -138,21 +146,21 @@ const rmatTotals: Ref<RmatTotal[]> = computed(() => {
 		}
 
 		if (type === "new" || type === "both") {
-			totals[rmatNumber].TotalNumberOfCompanies += addNumber(
+			totals[groupKey].TotalNumberOfCompanies += addNumber(
 				zip.TotalNumberOfCompanies
 			);
-			totals[rmatNumber].SmallBusinesses += addNumber(zip.Small);
-			totals[rmatNumber].MediumBusinesses += addNumber(zip.Medium);
-			totals[rmatNumber].LargeBusinesses += addNumber(zip.Large);
-			totals[rmatNumber].TotalSales += addNumber(zip.TotalSales);
-			totals[rmatNumber].TotalEmployees += addNumber(zip.TotalEmployees);
+			totals[groupKey].SmallBusinesses += addNumber(zip.Small);
+			totals[groupKey].MediumBusinesses += addNumber(zip.Medium);
+			totals[groupKey].LargeBusinesses += addNumber(zip.Large);
+			totals[groupKey].TotalSales += addNumber(zip.TotalSales);
+			totals[groupKey].TotalEmployees += addNumber(zip.TotalEmployees);
 		}
 		if (type === "original" || type === "both") {
-			totals[rmatNumber].OriginalNumberOfCompanies += addNumber(
+			totals[groupKey].OriginalNumberOfCompanies += addNumber(
 				zip.TotalNumberOfCompanies
 			);
-			totals[rmatNumber].OriginalSales += addNumber(zip.TotalSales);
-			totals[rmatNumber].OriginalEmployees += addNumber(zip.TotalEmployees);
+			totals[groupKey].OriginalSales += addNumber(zip.TotalSales);
+			totals[groupKey].OriginalEmployees += addNumber(zip.TotalEmployees);
 		}
 	}
 

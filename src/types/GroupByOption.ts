@@ -6,4 +6,5 @@ export interface GroupByOption {
 export const groupByOptions: GroupByOption[] = [
 	{ title: "Ads Rep", value: "AdsRep" },
 	{ title: "Client Advisor", value: "ClientAdvisor" },
+	{ title: "County", value: "County" },
 ];
