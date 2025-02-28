@@ -27,7 +27,8 @@
 import { ref, watch, onMounted } from "vue";
 import { LMap, LTileLayer, LGeoJson } from "@vue-leaflet/vue-leaflet";
 import { useStore } from "../stores/dataStore";
-import geoJsonData from "../assets/ca_california_zip_codes_geo.min.json";
+import zipCodeGeoJson from "../assets/ca_california_zip_codes_geo.min.json";
+import countyGeoJson from "../assets/california-counties.json";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
@@ -50,6 +51,9 @@ const emit = defineEmits(["zipcode-clicked"]);
 
 // Store
 const store = useStore();
+
+// GeoJSON data - should not be reactive to prevent re-rendering
+let geoJsonData = zipCodeGeoJson;
 
 // Map state
 const darkMapColor = "#020202";
@@ -85,7 +89,9 @@ const geoJsonStyle = (feature) => {
 
 	// Default color unless matched by filter
 	let color =
-		props.selectedGrouping === "AdsRep"
+		props.selectedGrouping === "County"
+			? zipData?.CountyColor || filterColor
+			: props.selectedGrouping === "AdsRep"
 			? zipData?.RmatData?.AdsRepColor || filterColor
 			: zipData?.RmatData?.ClientAdvisorColor || filterColor;
 
@@ -153,9 +159,14 @@ watch(
 			lngMax: undefined,
 		};
 		props.zipcodes.forEach((zip) => {
-			const feature = geoJsonData.features.find(
-				(f) => f.properties.ZCTA5CE10 === String(zip.ZipCode)
-			);
+			//	Find the feature for the zip code or county
+			const feature =
+				props.selectedGrouping === "County"
+					? geoJsonData.features.find((f) => f.properties.NAME === zip.County)
+					: geoJsonData.features.find(
+							(f) => f.properties.ZCTA5CE10 === String(zip.ZipCode)
+					  );
+
 			if (feature) {
 				feature.geometry.coordinates[0].forEach((c) => {
 					if (typeof c[0] == "number") {
