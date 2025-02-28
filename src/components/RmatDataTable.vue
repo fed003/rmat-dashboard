@@ -4,6 +4,7 @@
 		:items="rmatTotals"
 		:group-by="[{ key: groupBy, order: 'asc' }]"
 		:items-per-page="50"
+		density="compact"
 		hover
 	>
 		<template #group-header="{ item, toggleGroup, isGroupOpen }">
@@ -17,50 +18,71 @@
 					></v-btn>
 				</td>
 				<td>{{ item.value }}</td>
-				<td
-					v-html="
-						displayValues(
-							item.items.reduce((acc, i) => acc + i.raw.TotalEmployees, 0),
+				<td>
+					<RmatDataTableGroupHeaderItem
+						:itemName="item.value"
+						:value="
+							item.items.reduce((acc, i) => acc + i.raw.TotalEmployees, 0)
+						"
+						:originalValue="
 							item.items.reduce((acc, i) => acc + i.raw.OriginalEmployees, 0)
-						)
-					"
-				></td>
-				<td
-					v-html="
-						displayValues(
+						"
+						:averageValue="groupAverages?.Employees"
+						:formatter="formatNumber"
+					/>
+				</td>
+				<td>
+					<RmatDataTableGroupHeaderItem
+						:itemName="item.value"
+						:value="
 							item.items.reduce(
 								(acc, i) => acc + i.raw.TotalNumberOfCompanies,
 								0
-							),
+							)
+						"
+						:originalValue="
 							item.items.reduce(
-								(acc, i) => acc + i.raw.OriginalNumberOfCompanies,
+								(acc, i) => acc + i.raw.TotalNumberOfCompanies,
 								0
 							)
-						)
-					"
-				></td>
-				<td>
-					{{ item.items.reduce((acc, i) => acc + i.raw.SmallBusinesses, 0) }}
+						"
+						:averageValue="groupAverages?.Companies"
+						:formatter="formatNumber"
+					/>
 				</td>
 				<td>
-					{{ item.items.reduce((acc, i) => acc + i.raw.MediumBusinesses, 0) }}
+					{{
+						item.items
+							.reduce((acc, i) => acc + i.raw.SmallBusinesses, 0)
+							.toLocaleString()
+					}}
 				</td>
 				<td>
-					{{ item.items.reduce((acc, i) => acc + i.raw.LargeBusinesses, 0) }}
+					{{
+						item.items
+							.reduce((acc, i) => acc + i.raw.MediumBusinesses, 0)
+							.toLocaleString()
+					}}
 				</td>
-				<td
-					v-html="
-						displayValues(
-							item.items.reduce((acc, i) => acc + i.raw.TotalSales, 0),
-							item.items.reduce((acc, i) => acc + i.raw.OriginalSales, 0),
-							formatCurrency
-						)
-					"
-				></td>
+				<td>
+					{{
+						item.items
+							.reduce((acc, i) => acc + i.raw.LargeBusinesses, 0)
+							.toLocaleString()
+					}}
+				</td>
+				<td>
+					<RmatDataTableGroupHeaderItem
+						:itemName="item.value"
+						:value="item.items.reduce((acc, i) => acc + i.raw.TotalSales, 0)"
+						:originalValue="
+							item.items.reduce((acc, i) => acc + i.raw.TotalSales, 0)
+						"
+						:averageValue="groupAverages?.Sales"
+						:formatter="formatCurrency"
+					/>
+				</td>
 			</tr>
-		</template>
-		<template #item.TotalSales="{ item }">
-			{{ formatCurrency(item.TotalSales) }}
 		</template>
 	</v-data-table>
 </template>
@@ -69,6 +91,7 @@
 import { type Ref, ref, computed } from "vue";
 import { type ZipCodeData } from "../types";
 import { formatCurrency } from "../utilities/formatters";
+import RmatDataTableGroupHeaderItem from "./RmatDataTableGroupHeaderItem.vue";
 
 const props = defineProps<{
 	zipcodes: ZipCodeData[];
@@ -86,20 +109,57 @@ interface GroupedData {
 	MediumBusinesses: number;
 	LargeBusinesses: number;
 	TotalSales: number;
+
 	OriginalNumberOfCompanies: number;
 	OriginalSales: number;
 	OriginalEmployees: number;
+
+	EmployeesAvgDelta: number;
+	CompaniesAvgDelta: number;
+	SalesAvgDelta: number;
+}
+
+interface GroupAverages {
+	Employees: number;
+	Companies: number;
+	Sales: number;
 }
 
 const rmatHeaders = ref([
-	{ title: "RMAT", value: "RmatNumber" },
-	{ title: "Total Employees", value: "TotalEmployees" },
-	{ title: "Total Companies", value: "SmallBusinesses" },
-	{ title: "Small ", value: "TotalNumberOfCompanies" },
-	{ title: "Medium ", value: "TotalNumberOfCompanies" },
-	{ title: "Large ", value: "TotalNumberOfCompanies" },
-	{ title: "Total Sales", value: "TotalSales" },
+	{ title: "RMAT", key: "RmatNumber" },
+	{
+		title: "Total Employees",
+		key: "TotalEmployees",
+		value: (item) => item.TotalEmployees.toLocaleString(),
+	},
+	{
+		title: "Total Companies",
+		key: "TotalNumberOfCompanies",
+		value: (item) => item.TotalNumberOfCompanies.toLocaleString(),
+	},
+	{
+		title: "Small ",
+		key: "SmallBusinesses",
+		value: (item) => item.SmallBusinesses.toLocaleString(),
+	},
+	{
+		title: "Medium ",
+		key: "MediumBusinesses",
+		value: (item) => item.MediumBusinesses.toLocaleString(),
+	},
+	{
+		title: "Large ",
+		key: "LargeBusinesses",
+		value: (item) => item.LargeBusinesses.toLocaleString(),
+	},
+	{
+		title: "Total Sales",
+		key: "TotalSales",
+		value: (item) => formatCurrency(item.TotalSales),
+	},
 ]);
+
+let groupAverages: GroupAverages | null = null;
 
 //	Summarize the data by RMAT, this will  be our table input
 const rmatTotals: Ref<GroupedData[]> = computed(() => {
@@ -113,7 +173,7 @@ const rmatTotals: Ref<GroupedData[]> = computed(() => {
 		type: "new" | "original" | "both"
 	) {
 		//	For AdsRep and ClientAdvisor, we only want to group by RMAT
-		let groupKey = rmatNumber;
+		let groupKey = rmatNumber.toString();
 		//	If we're grouping by county, then we need to split by both RMAT and County
 		if (props.groupBy === "County") {
 			groupKey += `-${zip.County}`;
@@ -135,6 +195,10 @@ const rmatTotals: Ref<GroupedData[]> = computed(() => {
 				OriginalNumberOfCompanies: 0,
 				OriginalSales: 0,
 				OriginalEmployees: 0,
+
+				EmployeesAvgDelta: 0,
+				CompaniesAvgDelta: 0,
+				SalesAvgDelta: 0,
 			} as GroupedData;
 		}
 
@@ -181,28 +245,82 @@ const rmatTotals: Ref<GroupedData[]> = computed(() => {
 	});
 
 	let result = Object.values(totals);
+
+	//	Calculate the average delta for each RMAT - as compared to the overall average values for all RMATS
+	const totalRmats = result.length;
+	const avgEmployees =
+		result.reduce((acc, i) => acc + i.TotalEmployees, 0) / totalRmats;
+	const avgCompanies =
+		result.reduce((acc, i) => acc + i.TotalNumberOfCompanies, 0) / totalRmats;
+	const avgSales =
+		result.reduce((acc, i) => acc + i.TotalSales, 0) / totalRmats;
+
+	result = result.map((rmat) => {
+		rmat.EmployeesAvgDelta = rmat.TotalEmployees - avgEmployees;
+		rmat.CompaniesAvgDelta = rmat.TotalNumberOfCompanies - avgCompanies;
+		rmat.SalesAvgDelta = rmat.TotalSales - avgSales;
+		return rmat;
+	});
+
+	//	Calculate the group averages
+	calculateGroupAverages(result);
+
 	return result;
 });
 
-const displayValues = (
-	value: number,
-	originalValue: number,
-	formatter?: (v: number) => string
-) => {
-	const displayValue = formatter ? formatter(value) : value;
-
-	if (value == originalValue) {
-		return displayValue;
+const calculateGroupAverages = (allRmatData: GroupedData[]) => {
+	if (props.groupBy === "County") {
+		//	We don't want to show averages by county so return an empty object
+		console.log("Group averages by county");
+		groupAverages = null;
 	}
 
-	let delta = value - originalValue;
-	const className = value > originalValue ? "success" : "error";
-	return `${
-		formatter ? formatter(value) : value
-	} <span class="text-${className} font-weight-bold">(${
-		formatter ? formatter(delta) : delta
-	})</span>`;
+	if (allRmatData.length === 0) {
+		console.log("No data to calculate group averages");
+		groupAverages = {
+			Employees: 0,
+			Companies: 0,
+			Sales: 0,
+		};
+	}
+
+	//	Create a map of groups so we can calculate the averages
+	const groups: Record<string, number> = {};
+
+	//	Filter out any "Unassigned" values
+	const rmatData = allRmatData.filter((r) =>
+		props.groupBy == "AdsRep"
+			? r.AdsRep !== "Unassigned"
+			: r.ClientAdvisor !== "Unassigned"
+	);
+
+	//	Get a count of how many groups we have based on the groupBy prop
+	const groupCount = rmatData.reduce((acc, r) => {
+		const groupKey = props.groupBy == "AdsRep" ? r.AdsRep : r.ClientAdvisor;
+		if (!groups[groupKey]) {
+			groups[groupKey] = 1;
+			return acc + 1;
+		}
+		return acc;
+	}, 0);
+
+	//	Now we can calculate the averages
+	const avgEmployees =
+		rmatData.reduce((acc, r) => acc + r.TotalEmployees, 0) / groupCount;
+	const avgCompanies =
+		rmatData.reduce((acc, r) => acc + r.TotalNumberOfCompanies, 0) / groupCount;
+	const avgSales =
+		rmatData.reduce((acc, r) => acc + r.TotalSales, 0) / groupCount;
+
+	//	Return the averages
+	groupAverages = {
+		Employees: avgEmployees,
+		Companies: avgCompanies,
+		Sales: avgSales,
+	};
 };
+
+const formatNumber = (v: number) => v.toLocaleString();
 </script>
 
 <style>

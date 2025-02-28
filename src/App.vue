@@ -46,8 +46,8 @@
 
 				<v-dialog v-model="dialog" max-width="600">
 					<v-card
-						:title="`RMAT for Zip Code ${selectedZipCode.zipCode}`"
-						:subtitle="selectedZipCode.clientAdvisor"
+						:title="`RMAT for Zip Code ${selectedZipCode?.zipCode}`"
+						:subtitle="selectedZipCode?.clientAdvisor"
 					>
 						<v-card-text>
 							<v-table density="compact" class="mb-4">
@@ -62,9 +62,15 @@
 								<tbody>
 									<tr class="text-center">
 										<td>{{ selectedZipCode?.RmatNumber }}</td>
-										<td>{{ selectedZipCode?.TotalNumberOfCompanies }}</td>
-										<td>{{ selectedZipCode?.TotalEmployees }}</td>
-										<td>${{ selectedZipCode?.TotalSales.toLocaleString() }}</td>
+										<td>
+											{{
+												selectedZipCode?.TotalNumberOfCompanies.toLocaleString()
+											}}
+										</td>
+										<td>
+											{{ selectedZipCode?.TotalEmployees.toLocaleString() }}
+										</td>
+										<td>${{ formatCurrency(selectedZipCode?.TotalSales) }}</td>
 									</tr>
 								</tbody>
 							</v-table>
@@ -109,6 +115,7 @@
 import { type Ref, ref, computed, onMounted, onBeforeMount } from "vue";
 import { useStore } from "./stores/dataStore";
 import { ZipCodeData, groupByOptions } from "./types/index";
+import { formatCurrency } from "./utilities/formatters";
 import NavigationDrawer from "./components/NavigationDrawer.vue";
 import RmatMap from "./components/RmatMap.vue";
 import RmatDataTable from "./components/RmatDataTable.vue";
