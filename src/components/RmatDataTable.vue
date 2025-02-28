@@ -4,6 +4,7 @@
 		:items="rmatTotals"
 		:group-by="[{ key: groupBy, order: 'asc' }]"
 		:items-per-page="25"
+		hover
 	>
 		<template #group-header="{ item, toggleGroup, isGroupOpen }">
 			<tr>
