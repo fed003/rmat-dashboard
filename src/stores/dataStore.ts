@@ -41,7 +41,7 @@ export const useStore = defineStore("dataStore", () => {
 		Papa.parse(text, {
 			header: true,
 			transform: (value, header) => {
-				if (["City", "County"].includes(header.toString())) {
+				if (["City", "County", "CountyColor"].includes(header.toString())) {
 					return value;
 				}
 				let result = Number(value);

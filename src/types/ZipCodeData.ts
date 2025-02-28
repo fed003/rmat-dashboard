@@ -12,6 +12,7 @@ export interface ZipCodeData {
 
 	City: string;
 	County: string;
+	CountyColor: string;
 
 	RmatNumber: number;
 	OriginalRmatNumber: number;

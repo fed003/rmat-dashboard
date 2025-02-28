@@ -80,9 +80,7 @@ const selectedCounty = defineModel<string[] | undefined>("selectedCounty", {
 	default: undefined,
 });
 
-const zipcodeSearch = defineModel<string | undefined>("zipcodeSearch", {
-	default: undefined,
-});
+const zipcodeSearch = defineModel<string>("zipcodeSearch");
 
 const selectedGrouping = defineModel<string>("selectedGrouping", {
 	required: true,

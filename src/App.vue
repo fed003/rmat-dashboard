@@ -29,6 +29,7 @@
 								:selected-advisor="selectedAdvisor"
 								:selected-ads-rep="selectedAdsRep"
 								:selected-county="selectedCounty"
+								:zipcode-search="zipcodeSearch"
 								@zipcode-clicked="openRMATDialog"
 							/>
 						</v-col>
@@ -119,7 +120,7 @@ const selectedAdsRep: Ref<string[] | undefined> = ref(undefined);
 const selectedAdvisor: Ref<string[] | undefined> = ref(undefined);
 const selectedRmat: Ref<number[] | undefined> = ref(undefined);
 const selectedCounty: Ref<string[] | undefined> = ref(undefined);
-const zipcodeSearch: Ref<string | undefined> = ref("");
+const zipcodeSearch: Ref<string> = ref("");
 const selectedGrouping: Ref<string> = ref(groupByOptions[0].value);
 
 const selectedZipCode: Ref<ZipCodeData | null> = ref(null);

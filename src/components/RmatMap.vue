@@ -2,9 +2,9 @@
 	<l-map
 		id="rmat-map"
 		ref="leafletMap"
-		v-model:zoom="zoom"
-		:center="center"
 		style="height: 65vh; width: 100%"
+		:zoom="dfltZoom"
+		:center="dfltCenter"
 	>
 		<l-tile-layer
 			url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -27,7 +27,8 @@
 import { ref, watch, onMounted } from "vue";
 import { LMap, LTileLayer, LGeoJson } from "@vue-leaflet/vue-leaflet";
 import { useStore } from "../stores/dataStore";
-import geoJsonData from "../assets/ca_california_zip_codes_geo.min.json";
+import zipCodeGeoJson from "../assets/ca_california_zip_codes_geo.min.json";
+import countyGeoJson from "../assets/california-counties.json";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
@@ -41,6 +42,7 @@ const props = defineProps({
 	selectedAdvisor: { type: [Array, null], default: null },
 	selectedAdsRep: { type: [Array, null], default: null },
 	selectedCounty: { type: [Array, null], default: null },
+	zipCodeSearch: { type: String },
 	selectedGrouping: { type: String },
 });
 
@@ -50,15 +52,19 @@ const emit = defineEmits(["zipcode-clicked"]);
 // Store
 const store = useStore();
 
+// GeoJSON data - should not be reactive to prevent re-rendering
+let geoJsonData = zipCodeGeoJson;
+
 // Map state
 const darkMapColor = "#020202";
 const unassignedMapColor = "#D3D3D3";
 const dfltCenter = [36.7783, -119.4179];
 const dfltZoom = 6;
-const zoom = ref(dfltZoom);
-const center = ref(dfltCenter);
+// const zoom = ref(dfltZoom);
+// const center = ref(dfltCenter);
 const leafletMap = ref(null);
 const mapKey = ref(0);
+let isManualZoom = false;
 
 onMounted(() => {
 	delete L.Icon.Default.prototype._getIconUrl;
@@ -73,9 +79,6 @@ onMounted(() => {
 const geoJsonStyle = (feature) => {
 	const zipcode = feature.properties.ZCTA5CE10;
 	const zipData = props.zipcodes.find((z) => z.ZipCode == zipcode);
-	// const rmat = zipData?.RmatNumber;
-	// const advisor = zipData?.RmatData?.ClientAdvisor;
-	// const adsRep = zipData?.RmatData?.AdsRep;
 
 	const filterColor =
 		props.selectedRmat?.length > 0 ||
@@ -86,7 +89,9 @@ const geoJsonStyle = (feature) => {
 
 	// Default color unless matched by filter
 	let color =
-		props.selectedGrouping === "AdsRep"
+		props.selectedGrouping === "County"
+			? zipData?.CountyColor || filterColor
+			: props.selectedGrouping === "AdsRep"
 			? zipData?.RmatData?.AdsRepColor || filterColor
 			: zipData?.RmatData?.ClientAdvisorColor || filterColor;
 
@@ -104,24 +109,38 @@ function updateMapKey() {
 }
 
 function resetMapZoom() {
-	center.value = dfltCenter;
-	zoom.value = dfltZoom;
+	// center.value = dfltCenter;
+	// zoom.value = dfltZoom;
 	if (leafletMap.value?.leafletObject) {
 		leafletMap.value.leafletObject.setView(dfltCenter, dfltZoom); // Reset to default
 		updateMapKey();
+		isManualZoom = false;
 	}
 }
 
-// Watch filters and zoom to selected regions
 watch(
-	[() => props.zipcodes, () => props.selectedGrouping],
+	[
+		() => props.selectedAdsRep,
+		() => props.selectedAdvisor,
+		() => props.selectedRmat,
+		() => props.selectedCounty,
+		() => props.zipCodeSearch,
+	],
 	() => {
+		//	At least one filter changed, so we need to check the map bounds
+
 		// If the map is not yet loaded, stop here
 		if (!leafletMap.value?.leafletObject) {
 			return;
 		}
 
-		// Reset map if no filters are selected
+		// If no zipcodes are selected, reset map
+		if (props.zipcodes.length === 0) {
+			resetMapZoom();
+			return;
+		}
+
+		// If no filters are selected, then reset the map
 		if (
 			!props.selectedRmat?.length > 0 &&
 			!props.selectedAdvisor?.length > 0 &&
@@ -132,12 +151,7 @@ watch(
 			return;
 		}
 
-		// If no zipcodes are selected, reset map
-		if (props.zipcodes.length === 0) {
-			resetMapZoom();
-			return;
-		}
-
+		//	Get the new bounds for the map
 		const bounds = {
 			latMin: undefined,
 			latMax: undefined,
@@ -145,9 +159,14 @@ watch(
 			lngMax: undefined,
 		};
 		props.zipcodes.forEach((zip) => {
-			const feature = geoJsonData.features.find(
-				(f) => f.properties.ZCTA5CE10 === String(zip.ZipCode)
-			);
+			//	Find the feature for the zip code or county
+			const feature =
+				props.selectedGrouping === "County"
+					? geoJsonData.features.find((f) => f.properties.NAME === zip.County)
+					: geoJsonData.features.find(
+							(f) => f.properties.ZCTA5CE10 === String(zip.ZipCode)
+					  );
+
 			if (feature) {
 				feature.geometry.coordinates[0].forEach((c) => {
 					if (typeof c[0] == "number") {
@@ -166,8 +185,6 @@ watch(
 			return;
 		}
 
-		updateMapKey();
-
 		leafletMap.value.leafletObject.fitBounds(
 			[
 				[bounds.latMin, bounds.lngMin],
@@ -175,8 +192,19 @@ watch(
 			],
 			{ padding: [50, 50] }
 		);
+	}
+);
+
+//	Need to trigger a map update when the selected grouping or the zipcodes change
+watch(
+	[() => props.selectedGrouping, () => props.zipcodes],
+	() => {
+		updateMapKey();
+		return;
 	},
-	{ deep: true }
+	{
+		deep: true,
+	}
 );
 
 const onGeoJsonClick = (event) => {
