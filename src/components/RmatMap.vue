@@ -38,12 +38,8 @@ import markerShadow from "leaflet/dist/images/marker-shadow.png";
 // Props
 const props = defineProps({
 	zipcodes: { type: Array, required: true },
-	selectedRmat: { type: [Array, null], default: null },
-	selectedAdvisor: { type: [Array, null], default: null },
-	selectedAdsRep: { type: [Array, null], default: null },
-	selectedCounty: { type: [Array, null], default: null },
-	zipCodeSearch: { type: String },
 	selectedGrouping: { type: String },
+	filterId: { type: [Number, undefined], default: undefined },
 });
 
 // Emits
@@ -60,8 +56,6 @@ const darkMapColor = "#020202";
 const unassignedMapColor = "#D3D3D3";
 const dfltCenter = [36.7783, -119.4179];
 const dfltZoom = 6;
-// const zoom = ref(dfltZoom);
-// const center = ref(dfltCenter);
 const leafletMap = ref(null);
 const mapKey = ref(0);
 let isManualZoom = false;
@@ -80,12 +74,7 @@ const geoJsonStyle = (feature) => {
 	const zipcode = feature.properties.ZCTA5CE10;
 	const zipData = props.zipcodes.find((z) => z.ZipCode == zipcode);
 
-	const filterColor =
-		props.selectedRmat?.length > 0 ||
-		props.selectedAdvisor?.length > 0 ||
-		props.selectedAdsRep?.length > 0
-			? darkMapColor
-			: unassignedMapColor;
+	const filterColor = darkMapColor;
 
 	// Default color unless matched by filter
 	let color =
@@ -117,13 +106,7 @@ function resetMapZoom() {
 }
 
 watch(
-	[
-		() => props.selectedAdsRep,
-		() => props.selectedAdvisor,
-		() => props.selectedRmat,
-		() => props.selectedCounty,
-		() => props.zipCodeSearch,
-	],
+	() => props.filterId,
 	() => {
 		//	At least one filter changed, so we need to check the map bounds
 
@@ -134,17 +117,6 @@ watch(
 
 		// If no zipcodes are selected, reset map
 		if (props.zipcodes.length === 0) {
-			resetMapZoom();
-			return;
-		}
-
-		// If no filters are selected, then reset the map
-		if (
-			!props.selectedRmat?.length > 0 &&
-			!props.selectedAdvisor?.length > 0 &&
-			!props.selectedAdsRep?.length > 0 &&
-			!props.selectedCounty?.length > 0
-		) {
 			resetMapZoom();
 			return;
 		}

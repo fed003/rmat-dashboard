@@ -7,7 +7,7 @@
 						<v-list density="compact">
 							<v-list-item>
 								<v-select
-									v-model="selectedAdsRep"
+									v-model="filterOptions.selectedAdsRep"
 									:items="adsOptions"
 									label="Filter by Ads Rep"
 									clearable
@@ -16,7 +16,7 @@
 							</v-list-item>
 							<v-list-item>
 								<v-select
-									v-model="selectedAdvisor"
+									v-model="filterOptions.selectedAdvisor"
 									:items="advisorOptions"
 									label="Filter by Client Advisor"
 									clearable
@@ -25,7 +25,7 @@
 							</v-list-item>
 							<v-list-item>
 								<v-select
-									v-model="selectedRmat"
+									v-model="filterOptions.selectedRmat"
 									:items="rmatOptions"
 									label="Filter by RMAT"
 									clearable
@@ -34,7 +34,7 @@
 							</v-list-item>
 							<v-list-item>
 								<v-autocomplete
-									v-model="selectedCounty"
+									v-model="filterOptions.selectedCounty"
 									:items="countyOptions"
 									label="Filter by County"
 									clearable
@@ -43,14 +43,14 @@
 							</v-list-item>
 							<v-list-item>
 								<v-text-field
-									v-model="zipcodeSearch"
+									v-model="filterOptions.zipcodeSearch"
 									label="Search by ZipCode"
 									clearable
 								></v-text-field>
 							</v-list-item>
 							<v-list-item>
 								<v-select
-									v-model="selectedGrouping"
+									v-model="filterOptions.selectedGrouping"
 									:items="groupByOptions"
 									label="Select Grouping"
 								></v-select>
@@ -75,38 +75,27 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { type Ref, computed, ref, onBeforeMount } from "vue";
 import { useStore } from "../stores/dataStore";
-import { GroupByOption, groupByOptions } from "../types";
+import { groupByOptions, FilterOptions } from "../types";
 import ChangeLog from "./ChangeLog.vue";
 
-const selectedRmat = defineModel<number[] | undefined>("selectedRmat", {
-	default: undefined,
-});
+let currentFilterOptions: FilterOptions = {
+	selectedAdsRep: [],
+	selectedAdvisor: [],
+	selectedRmat: [],
+	selectedCounty: [],
+	zipcodeSearch: "",
+	selectedGrouping: groupByOptions[0].value,
+};
 
-const selectedAdsRep = defineModel<string[] | undefined>("selectedAdsRep", {
-	default: undefined,
-});
-
-const selectedAdvisor = defineModel<string[] | undefined>("selectedAdvisor", {
-	default: undefined,
-});
-
-const selectedCounty = defineModel<string[] | undefined>("selectedCounty", {
-	default: undefined,
-});
-
-const zipcodeSearch = defineModel<string>("zipcodeSearch");
-
-const selectedGrouping = defineModel<string>("selectedGrouping", {
-	required: true,
-});
+const filterOptions: Ref<FilterOptions> = ref(currentFilterOptions);
 
 const store = useStore();
 
 const emit = defineEmits(["applyFilters"]);
 
-const panels = ref([0, 1]);
+const panels: Ref<number[]> = ref<number[]>([0, 1]);
 
 const adsOptions = computed(() => {
 	return store.adsRepOptions;
@@ -121,7 +110,12 @@ const countyOptions = computed(() => {
 });
 
 const rmatOptions = computed(() => {
-	if (!selectedAdsRep.value && !selectedAdvisor.value) {
+	if (
+		(!currentFilterOptions.selectedAdsRep ||
+			currentFilterOptions.selectedAdsRep.length == 0) &&
+		(!currentFilterOptions.selectedAdvisor ||
+			currentFilterOptions.selectedAdvisor.length == 0)
+	) {
 		return store.rmatOptions;
 	}
 
@@ -130,21 +124,34 @@ const rmatOptions = computed(() => {
 			store.rmatData
 				.filter(
 					(rmat) =>
-						(!selectedAdsRep.value ||
-							selectedAdsRep.value.length === 0 ||
-							(rmat.AdsRep && selectedAdsRep.value.includes(rmat.AdsRep))) &&
-						(!selectedAdvisor.value ||
-							selectedAdvisor.value.length === 0 ||
+						(!currentFilterOptions.selectedAdsRep ||
+							currentFilterOptions.selectedAdsRep.length === 0 ||
+							(rmat.AdsRep &&
+								currentFilterOptions.selectedAdsRep.includes(rmat.AdsRep))) &&
+						(!currentFilterOptions.selectedAdvisor ||
+							currentFilterOptions.selectedAdvisor.length === 0 ||
 							(rmat.ClientAdvisor &&
-								selectedAdvisor.value.includes(rmat.ClientAdvisor)))
+								currentFilterOptions.selectedAdvisor.includes(
+									rmat.ClientAdvisor
+								)))
 				)
 				.map((r) => r.RmatNumber)
 		),
 	].sort((a, b) => a - b);
 });
 
+const isDirty = computed(() => {
+	return (
+		JSON.stringify(currentFilterOptions) !== JSON.stringify(filterOptions.value)
+	);
+});
+
 const applyFilters = () => {
-	emit("applyFilters");
+	currentFilterOptions = filterOptions.value;
+	emit("applyFilters", {
+		filterOptions: currentFilterOptions,
+		isDirty: isDirty.value,
+	});
 };
 </script>
 
@@ -160,7 +167,7 @@ const applyFilters = () => {
 	height: 100%; /* Fill drawer height */
 }
 
-.v-expansion-panel >>> .v-expansion-panel-text__wrapper {
+:deep(.v-expansion-panel .v-expansion-panel-text__wrapper) {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
 }
