@@ -271,17 +271,17 @@ const rmatTotals: Ref<GroupedData[]> = computed(() => {
 const calculateGroupAverages = (allRmatData: GroupedData[]) => {
 	if (props.groupBy === "County") {
 		//	We don't want to show averages by county so return an empty object
-		console.log("Group averages by county");
 		groupAverages = null;
+		return;
 	}
 
 	if (allRmatData.length === 0) {
-		console.log("No data to calculate group averages");
 		groupAverages = {
 			Employees: 0,
 			Companies: 0,
 			Sales: 0,
 		};
+		return;
 	}
 
 	//	Create a map of groups so we can calculate the averages
@@ -314,9 +314,9 @@ const calculateGroupAverages = (allRmatData: GroupedData[]) => {
 
 	//	Return the averages
 	groupAverages = {
-		Employees: avgEmployees,
-		Companies: avgCompanies,
-		Sales: avgSales,
+		Employees: Math.round(avgEmployees),
+		Companies: Math.round(avgCompanies),
+		Sales: Math.round(avgSales),
 	};
 };
 
