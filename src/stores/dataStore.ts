@@ -31,9 +31,6 @@ export const useStore = defineStore("dataStore", () => {
 				rmatData.value = result.data as RmatData[];
 			},
 		});
-
-		//	Merge RMAT data into Zipcode data
-		// mergeRmatData();
 	};
 
 	const loadZipcodeData = async (file: string) => {
@@ -51,9 +48,6 @@ export const useStore = defineStore("dataStore", () => {
 				zipcodeData.value = result.data as ZipCodeData[];
 			},
 		});
-
-		//	Merge RMAT data into Zipcode data
-		// mergeRmatData();
 	};
 
 	const mergeRmatData = async () => {
