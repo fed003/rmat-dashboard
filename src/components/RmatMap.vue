@@ -109,8 +109,6 @@ function updateMapKey() {
 }
 
 function resetMapZoom() {
-	// center.value = dfltCenter;
-	// zoom.value = dfltZoom;
 	if (leafletMap.value?.leafletObject) {
 		leafletMap.value.leafletObject.setView(dfltCenter, dfltZoom); // Reset to default
 		updateMapKey();

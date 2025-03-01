@@ -55,6 +55,11 @@
 									label="Select Grouping"
 								></v-select>
 							</v-list-item>
+							<v-list-item>
+								<v-btn color="primary" block @click="applyFilters">
+									Apply Filters
+								</v-btn>
+							</v-list-item>
 						</v-list>
 					</v-expansion-panel-text>
 				</v-expansion-panel>
@@ -99,6 +104,8 @@ const selectedGrouping = defineModel<string>("selectedGrouping", {
 
 const store = useStore();
 
+const emit = defineEmits(["applyFilters"]);
+
 const panels = ref([0, 1]);
 
 const adsOptions = computed(() => {
@@ -135,6 +142,10 @@ const rmatOptions = computed(() => {
 		),
 	].sort((a, b) => a - b);
 });
+
+const applyFilters = () => {
+	emit("applyFilters");
+};
 </script>
 
 <style scoped>

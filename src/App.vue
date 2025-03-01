@@ -16,6 +16,7 @@
 				v-model:selected-county="selectedCounty"
 				v-model:zipcode-search="zipcodeSearch"
 				v-model:selected-grouping="selectedGrouping"
+				@apply-filters="onApplyFilters"
 			/>
 
 			<v-main>
@@ -23,7 +24,7 @@
 					<v-row>
 						<v-col cols="12" class="map-wrapper">
 							<rmat-map
-								:zipcodes="filteredZipcodes"
+								:zipcodes="displayedZipcodes"
 								:selected-grouping="selectedGrouping"
 								:selected-rmat="selectedRmat"
 								:selected-advisor="selectedAdvisor"
@@ -37,7 +38,7 @@
 					<v-row>
 						<v-col cols="12">
 							<rmat-data-table
-								:zipcodes="filteredZipcodes"
+								:zipcodes="displayedZipcodes"
 								:group-by="selectedGrouping"
 							/>
 						</v-col>
@@ -142,6 +143,8 @@ const snackbar = ref(false);
 const snackbarColor: Ref<string> = ref("success");
 const snackbarMessage: Ref<string> = ref("");
 
+const displayedZipcodes: Ref<ZipCodeData[]> = ref([]);
+
 const filteredZipcodes: Ref<ZipCodeData[]> = computed(() => {
 	if (
 		(!selectedAdsRep.value || selectedAdsRep.value.length === 0) &&
@@ -154,9 +157,6 @@ const filteredZipcodes: Ref<ZipCodeData[]> = computed(() => {
 	) {
 		return store.zipcodeData;
 	}
-
-	loading.value = true;
-	loadingMessage.value = "Filtering Data...";
 
 	const result = store.zipcodeData.filter((item) => {
 		const matchesAdsRep = selectedAdsRep.value
@@ -190,9 +190,18 @@ const filteredZipcodes: Ref<ZipCodeData[]> = computed(() => {
 		);
 	});
 
-	loading.value = false;
 	return result;
 });
+
+const onApplyFilters = () => {
+	loadingMessage.value = "Filtering Data...";
+	loading.value = true;
+
+	setTimeout(() => {
+		displayedZipcodes.value = filteredZipcodes.value;
+		loading.value = false;
+	}, 200);
+};
 
 const loadFiles = async () => {
 	try {
@@ -247,6 +256,9 @@ const saveRMATChange = () => {
 
 onBeforeMount(async () => {
 	await loadFiles();
+
+	// Set the displayed zipcodes to the filtered zipcodes
+	displayedZipcodes.value = filteredZipcodes.value;
 });
 </script>
 
