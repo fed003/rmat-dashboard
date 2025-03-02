@@ -25,7 +25,6 @@
 
 <script setup lang="ts">
 import { ref, watch, onMounted, Ref } from "vue";
-import { LMap, LTileLayer, LGeoJson } from "@vue-leaflet/vue-leaflet";
 import { useStore } from "../stores/dataStore";
 import { ZipCodeData } from "../types";
 import { FeatureCollection, Feature } from "geojson";
@@ -33,6 +32,8 @@ import L from "leaflet";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
+import { LMap, LTileLayer, LGeoJson } from "@vue-leaflet/vue-leaflet";
+
 import zipCodeGeoJson from "../assets/ca_california_zip_codes_geo.min.json";
 
 // Props
@@ -54,13 +55,15 @@ const store = useStore();
 let geoJsonData: FeatureCollection = zipCodeGeoJson;
 
 // Map state
-const darkMapColor = "#020202";
-const unassignedMapColor = "#D3D3D3";
-const dfltCenter: [number, number] = [36.7783, -119.4179];
-const dfltZoom = 6;
 const leafletMap: Ref<L.Map | null> = ref(null);
 const mapKey = ref(0);
 let isManualZoom = false;
+
+//	Constants
+const darkMapColor = "#020202";
+// const unassignedMapColor = "#D3D3D3";
+const dfltCenter: [number, number] = [36.7783, -119.4179];
+const dfltZoom = 6;
 
 onMounted(() => {
 	delete L.Icon.Default.prototype._getIconUrl;

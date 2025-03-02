@@ -10,4 +10,5 @@ declare module "@vue-leaflet/vue-leaflet" {
 	export const LPolyline: DefineComponent;
 	export const LPolygon: DefineComponent;
 	export const LRectangle: DefineComponent;
+	export const LGeoJson: DefineComponent;
 }

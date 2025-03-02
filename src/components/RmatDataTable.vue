@@ -86,6 +86,19 @@
 				</td>
 			</tr>
 		</template>
+		<template v-slot:body.append v-if="groupAverages">
+			<tr class="text-h6">
+				<th colspan="2" class="text-center">Averages:</th>
+				<th>{{ groupAverages.Employees.toLocaleString() }}</th>
+				<th>{{ groupAverages.Companies.toLocaleString() }}</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th>{{ formatCurrency(groupAverages.Sales) }}</th>
+
+				<!-- Add more columns as needed -->
+			</tr>
+		</template>
 	</v-data-table>
 </template>
 
@@ -126,8 +139,6 @@ interface GroupAverages {
 	Companies: number;
 	Sales: number;
 }
-
-const expandHeaders = ref(true);
 
 const rmatHeaders = ref([
 	{ title: "RMAT", key: "RmatNumber" },
@@ -277,6 +288,7 @@ const calculateGroupAverages = (allRmatData: GroupedData[]) => {
 		//	We don't want to show averages by county so return an empty object
 		console.log("Group averages by county");
 		groupAverages = null;
+		return;
 	}
 
 	if (allRmatData.length === 0) {
@@ -286,6 +298,7 @@ const calculateGroupAverages = (allRmatData: GroupedData[]) => {
 			Companies: 0,
 			Sales: 0,
 		};
+		return;
 	}
 
 	//	Create a map of groups so we can calculate the averages
