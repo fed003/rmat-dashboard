@@ -80,12 +80,12 @@
 </template>
 
 <script setup lang="ts">
-import { type Ref, computed, ref, onBeforeMount } from "vue";
+import { computed, ref } from "vue";
 import { useStore } from "../stores/dataStore";
 import { groupByOptions, FilterOptions } from "../types";
 import ChangeLog from "./ChangeLog.vue";
 
-const currentFilterOptions: Ref<FilterOptions> = ref({
+const currentFilterOptions = ref<FilterOptions>({
 	selectedAdsRep: [],
 	selectedAdvisor: [],
 	selectedRmat: [],
@@ -94,7 +94,7 @@ const currentFilterOptions: Ref<FilterOptions> = ref({
 	selectedGrouping: groupByOptions[0].value,
 });
 
-const filterOptions: Ref<FilterOptions> = ref({
+const filterOptions = ref<FilterOptions>({
 	...currentFilterOptions.value,
 });
 
@@ -102,7 +102,7 @@ const store = useStore();
 
 const emit = defineEmits(["applyFilters"]);
 
-const panel: Ref<number[]> = ref([0, 1]);
+const panel = ref<number[]>([0, 1]);
 
 const adsOptions = computed(() => {
 	return store.adsRepOptions;
