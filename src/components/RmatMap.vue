@@ -12,7 +12,7 @@
 			name="OpenStreetMap"
 		></l-tile-layer>
 		<l-geo-json
-			v-if="geoJsonData && !props.loading"
+			v-if="geoJsonData"
 			:geojson="geoJsonData"
 			:options-style="geoJsonStyle"
 			:key="mapKey"
@@ -23,40 +23,42 @@
 	</l-map>
 </template>
 
-<script setup>
-import { ref, watch, onMounted } from "vue";
+<script setup lang="ts">
+import { ref, watch, onMounted, Ref } from "vue";
 import { LMap, LTileLayer, LGeoJson } from "@vue-leaflet/vue-leaflet";
 import { useStore } from "../stores/dataStore";
-import zipCodeGeoJson from "../assets/ca_california_zip_codes_geo.min.json";
-import countyGeoJson from "../assets/california-counties.json";
-import "leaflet/dist/leaflet.css";
+import { ZipCodeData } from "../types";
+import { FeatureCollection, Feature } from "geojson";
 import L from "leaflet";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
+import zipCodeGeoJson from "../assets/ca_california_zip_codes_geo.min.json";
 
 // Props
-const props = defineProps({
-	zipcodes: { type: Array, required: true },
-	selectedGrouping: { type: String },
-	filterId: { type: [Number, undefined], default: undefined },
-});
+const props = defineProps<{
+	zipcodes: ZipCodeData[];
+	selectedGrouping?: string;
+	filterId?: number;
+}>();
 
 // Emits
-const emit = defineEmits(["zipcode-clicked"]);
+const emit = defineEmits<{
+	(event: "zipcode-clicked", zipcode: number): void;
+}>();
 
 // Store
 const store = useStore();
 
 // GeoJSON data - should not be reactive to prevent re-rendering
-let geoJsonData = zipCodeGeoJson;
+let geoJsonData: FeatureCollection = zipCodeGeoJson;
 
 // Map state
 const darkMapColor = "#020202";
 const unassignedMapColor = "#D3D3D3";
-const dfltCenter = [36.7783, -119.4179];
+const dfltCenter: [number, number] = [36.7783, -119.4179];
 const dfltZoom = 6;
-const leafletMap = ref(null);
+const leafletMap: Ref<L.Map | null> = ref(null);
 const mapKey = ref(0);
 let isManualZoom = false;
 
@@ -70,9 +72,9 @@ onMounted(() => {
 });
 
 // GeoJSON styling
-const geoJsonStyle = (feature) => {
-	const zipcode = feature.properties.ZCTA5CE10;
-	const zipData = props.zipcodes.find((z) => z.ZipCode == zipcode);
+const geoJsonStyle = (feature: Feature): L.PathOptions => {
+	const zipcode = feature.properties?.ZCTA5CE10;
+	const zipData = props.zipcodes.find((z) => z.ZipCode == Number(zipcode));
 
 	const filterColor = darkMapColor;
 
@@ -98,8 +100,8 @@ function updateMapKey() {
 }
 
 function resetMapZoom() {
-	if (leafletMap.value?.leafletObject) {
-		leafletMap.value.leafletObject.setView(dfltCenter, dfltZoom); // Reset to default
+	if (leafletMap.value) {
+		leafletMap.value.setView(dfltCenter, dfltZoom); // Reset to default
 		updateMapKey();
 		isManualZoom = false;
 	}
@@ -111,7 +113,7 @@ watch(
 		//	At least one filter changed, so we need to check the map bounds
 
 		// If the map is not yet loaded, stop here
-		if (!leafletMap.value?.leafletObject) {
+		if (!leafletMap.value) {
 			return;
 		}
 
@@ -123,18 +125,18 @@ watch(
 
 		//	Get the new bounds for the map
 		const bounds = {
-			latMin: undefined,
-			latMax: undefined,
-			lngMin: undefined,
-			lngMax: undefined,
+			latMin: undefined as number | undefined,
+			latMax: undefined as number | undefined,
+			lngMin: undefined as number | undefined,
+			lngMax: undefined as number | undefined,
 		};
 		props.zipcodes.forEach((zip) => {
 			//	Find the feature for the zip code or county
 			const feature =
 				props.selectedGrouping === "County"
-					? geoJsonData.features.find((f) => f.properties.NAME === zip.County)
+					? geoJsonData.features.find((f) => f.properties?.NAME === zip.County)
 					: geoJsonData.features.find(
-							(f) => f.properties.ZCTA5CE10 === String(zip.ZipCode)
+							(f) => f.properties?.ZCTA5CE10 === String(zip.ZipCode)
 					  );
 
 			if (feature) {
@@ -177,13 +179,15 @@ watch(
 	}
 );
 
-const onGeoJsonClick = (event) => {
-	const zipcode = Number(event.layer.feature.properties.ZCTA5CE10);
-	emit("zipcode-clicked", zipcode);
+const onGeoJsonClick = (event: L.LeafletMouseEvent) => {
+	const zipcode = Number(event.propagatedFrom.feature.properties?.ZCTA5CE10);
+	if (props.zipcodes.find((z) => z.ZipCode === zipcode)) {
+		emit("zipcode-clicked", zipcode);
+	}
 };
 
-const onGeoJsonHover = (event) => {
-	const zipcode = event.layer.feature.properties.ZCTA5CE10;
+const onGeoJsonHover = (event: L.LeafletMouseEvent) => {
+	const zipcode = event.propagatedFrom.feature.properties?.ZCTA5CE10;
 	const zipData =
 		props.zipcodes.find((z) => String(z.ZipCode) === zipcode) || null;
 	store.setHoveredZipData(zipData);
