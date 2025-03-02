@@ -1,7 +1,7 @@
 <template>
 	<v-navigation-drawer app permanent width="310">
 		<div class="drawer-content">
-			<v-expansion-panels v-model="panels" multiple>
+			<v-expansion-panels v-model="panel" variant="accordion" multiple>
 				<v-expansion-panel title="Filters">
 					<v-expansion-panel-text>
 						<v-list density="compact">
@@ -56,7 +56,12 @@
 								></v-select>
 							</v-list-item>
 							<v-list-item>
-								<v-btn color="primary" block @click="applyFilters">
+								<v-btn
+									color="primary"
+									block
+									:disabled="isDirty != true"
+									@click="applyFilters"
+								>
 									Apply Filters
 								</v-btn>
 							</v-list-item>
@@ -80,22 +85,24 @@ import { useStore } from "../stores/dataStore";
 import { groupByOptions, FilterOptions } from "../types";
 import ChangeLog from "./ChangeLog.vue";
 
-let currentFilterOptions: FilterOptions = {
+const currentFilterOptions: Ref<FilterOptions> = ref({
 	selectedAdsRep: [],
 	selectedAdvisor: [],
 	selectedRmat: [],
 	selectedCounty: [],
 	zipcodeSearch: "",
 	selectedGrouping: groupByOptions[0].value,
-};
+});
 
-const filterOptions: Ref<FilterOptions> = ref(currentFilterOptions);
+const filterOptions: Ref<FilterOptions> = ref({
+	...currentFilterOptions.value,
+});
 
 const store = useStore();
 
 const emit = defineEmits(["applyFilters"]);
 
-const panels: Ref<number[]> = ref<number[]>([0, 1]);
+const panel: Ref<number[]> = ref([0, 1]);
 
 const adsOptions = computed(() => {
 	return store.adsRepOptions;
@@ -111,10 +118,10 @@ const countyOptions = computed(() => {
 
 const rmatOptions = computed(() => {
 	if (
-		(!currentFilterOptions.selectedAdsRep ||
-			currentFilterOptions.selectedAdsRep.length == 0) &&
-		(!currentFilterOptions.selectedAdvisor ||
-			currentFilterOptions.selectedAdvisor.length == 0)
+		(!currentFilterOptions.value.selectedAdsRep ||
+			currentFilterOptions.value.selectedAdsRep.length == 0) &&
+		(!currentFilterOptions.value.selectedAdvisor ||
+			currentFilterOptions.value.selectedAdvisor.length == 0)
 	) {
 		return store.rmatOptions;
 	}
@@ -124,14 +131,16 @@ const rmatOptions = computed(() => {
 			store.rmatData
 				.filter(
 					(rmat) =>
-						(!currentFilterOptions.selectedAdsRep ||
-							currentFilterOptions.selectedAdsRep.length === 0 ||
+						(!currentFilterOptions.value.selectedAdsRep ||
+							currentFilterOptions.value.selectedAdsRep.length === 0 ||
 							(rmat.AdsRep &&
-								currentFilterOptions.selectedAdsRep.includes(rmat.AdsRep))) &&
-						(!currentFilterOptions.selectedAdvisor ||
-							currentFilterOptions.selectedAdvisor.length === 0 ||
+								currentFilterOptions.value.selectedAdsRep.includes(
+									rmat.AdsRep
+								))) &&
+						(!currentFilterOptions.value.selectedAdvisor ||
+							currentFilterOptions.value.selectedAdvisor.length === 0 ||
 							(rmat.ClientAdvisor &&
-								currentFilterOptions.selectedAdvisor.includes(
+								currentFilterOptions.value.selectedAdvisor.includes(
 									rmat.ClientAdvisor
 								)))
 				)
@@ -140,18 +149,60 @@ const rmatOptions = computed(() => {
 	].sort((a, b) => a - b);
 });
 
+const filterChanged = computed(() => {
+	// Check if any filter option has changed from its current value
+	return (
+		!arraysEqual(
+			currentFilterOptions.value.selectedAdsRep,
+			filterOptions.value.selectedAdsRep
+		) ||
+		!arraysEqual(
+			currentFilterOptions.value.selectedAdvisor,
+			filterOptions.value.selectedAdvisor
+		) ||
+		!arraysEqual(
+			currentFilterOptions.value.selectedRmat,
+			filterOptions.value.selectedRmat
+		) ||
+		!arraysEqual(
+			currentFilterOptions.value.selectedCounty,
+			filterOptions.value.selectedCounty
+		) ||
+		currentFilterOptions.value.zipcodeSearch !==
+			filterOptions.value.zipcodeSearch
+	);
+
+	// Helper function to compare arrays
+	function arraysEqual(
+		arr1: number[] | string[] | undefined,
+		arr2: number[] | string[] | undefined
+	) {
+		if (!arr1 && !arr2) return true;
+		if (!arr1 || !arr2) return false;
+		if (arr1.length !== arr2.length) return false;
+
+		// Sort arrays to ensure consistent comparison
+		const sorted1 = [...arr1].sort();
+		const sorted2 = [...arr2].sort();
+
+		return sorted1.every((val, index) => val === sorted2[index]);
+	}
+});
+
 const isDirty = computed(() => {
 	return (
-		JSON.stringify(currentFilterOptions) !== JSON.stringify(filterOptions.value)
+		filterChanged.value ||
+		currentFilterOptions.value.selectedGrouping !==
+			filterOptions.value.selectedGrouping
 	);
 });
 
 const applyFilters = () => {
-	currentFilterOptions = filterOptions.value;
 	emit("applyFilters", {
-		filterOptions: currentFilterOptions,
-		isDirty: isDirty.value,
+		filterOptions: filterOptions.value,
+		isDirty: filterChanged.value,
 	});
+	currentFilterOptions.value = { ...filterOptions.value };
 };
 </script>
 
