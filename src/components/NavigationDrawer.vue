@@ -1,13 +1,13 @@
 <template>
 	<v-navigation-drawer app permanent width="310">
 		<div class="drawer-content">
-			<v-expansion-panels v-model="panels" multiple>
+			<v-expansion-panels v-model="panel" variant="accordion" multiple>
 				<v-expansion-panel title="Filters">
 					<v-expansion-panel-text>
 						<v-list density="compact">
 							<v-list-item>
 								<v-select
-									v-model="selectedAdsRep"
+									v-model="filterOptions.selectedAdsRep"
 									:items="adsOptions"
 									label="Filter by Ads Rep"
 									clearable
@@ -16,7 +16,7 @@
 							</v-list-item>
 							<v-list-item>
 								<v-select
-									v-model="selectedAdvisor"
+									v-model="filterOptions.selectedAdvisor"
 									:items="advisorOptions"
 									label="Filter by Client Advisor"
 									clearable
@@ -25,7 +25,7 @@
 							</v-list-item>
 							<v-list-item>
 								<v-select
-									v-model="selectedRmat"
+									v-model="filterOptions.selectedRmat"
 									:items="rmatOptions"
 									label="Filter by RMAT"
 									clearable
@@ -34,7 +34,7 @@
 							</v-list-item>
 							<v-list-item>
 								<v-autocomplete
-									v-model="selectedCounty"
+									v-model="filterOptions.selectedCounty"
 									:items="countyOptions"
 									label="Filter by County"
 									clearable
@@ -43,17 +43,27 @@
 							</v-list-item>
 							<v-list-item>
 								<v-text-field
-									v-model="zipcodeSearch"
+									v-model="filterOptions.zipcodeSearch"
 									label="Search by ZipCode"
 									clearable
 								></v-text-field>
 							</v-list-item>
 							<v-list-item>
 								<v-select
-									v-model="selectedGrouping"
+									v-model="filterOptions.selectedGrouping"
 									:items="groupByOptions"
 									label="Select Grouping"
 								></v-select>
+							</v-list-item>
+							<v-list-item>
+								<v-btn
+									color="primary"
+									block
+									:disabled="isDirty != true"
+									@click="applyFilters"
+								>
+									Apply Filters
+								</v-btn>
 							</v-list-item>
 						</v-list>
 					</v-expansion-panel-text>
@@ -72,34 +82,27 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { useStore } from "../stores/dataStore";
-import { GroupByOption, groupByOptions } from "../types";
+import { groupByOptions, FilterOptions } from "../types";
 import ChangeLog from "./ChangeLog.vue";
 
-const selectedRmat = defineModel<number[] | undefined>("selectedRmat", {
-	default: undefined,
+const currentFilterOptions = ref<FilterOptions>({
+	selectedAdsRep: [],
+	selectedAdvisor: [],
+	selectedRmat: [],
+	selectedCounty: [],
+	zipcodeSearch: "",
+	selectedGrouping: groupByOptions[0].value,
 });
 
-const selectedAdsRep = defineModel<string[] | undefined>("selectedAdsRep", {
-	default: undefined,
-});
-
-const selectedAdvisor = defineModel<string[] | undefined>("selectedAdvisor", {
-	default: undefined,
-});
-
-const selectedCounty = defineModel<string[] | undefined>("selectedCounty", {
-	default: undefined,
-});
-
-const zipcodeSearch = defineModel<string>("zipcodeSearch");
-
-const selectedGrouping = defineModel<string>("selectedGrouping", {
-	required: true,
+const filterOptions = ref<FilterOptions>({
+	...currentFilterOptions.value,
 });
 
 const store = useStore();
 
-const panels = ref([0, 1]);
+const emit = defineEmits(["applyFilters"]);
+
+const panel = ref<number[]>([0, 1]);
 
 const adsOptions = computed(() => {
 	return store.adsRepOptions;
@@ -114,7 +117,12 @@ const countyOptions = computed(() => {
 });
 
 const rmatOptions = computed(() => {
-	if (!selectedAdsRep.value && !selectedAdvisor.value) {
+	if (
+		(!currentFilterOptions.value.selectedAdsRep ||
+			currentFilterOptions.value.selectedAdsRep.length == 0) &&
+		(!currentFilterOptions.value.selectedAdvisor ||
+			currentFilterOptions.value.selectedAdvisor.length == 0)
+	) {
 		return store.rmatOptions;
 	}
 
@@ -123,18 +131,79 @@ const rmatOptions = computed(() => {
 			store.rmatData
 				.filter(
 					(rmat) =>
-						(!selectedAdsRep.value ||
-							selectedAdsRep.value.length === 0 ||
-							(rmat.AdsRep && selectedAdsRep.value.includes(rmat.AdsRep))) &&
-						(!selectedAdvisor.value ||
-							selectedAdvisor.value.length === 0 ||
+						(!currentFilterOptions.value.selectedAdsRep ||
+							currentFilterOptions.value.selectedAdsRep.length === 0 ||
+							(rmat.AdsRep &&
+								currentFilterOptions.value.selectedAdsRep.includes(
+									rmat.AdsRep
+								))) &&
+						(!currentFilterOptions.value.selectedAdvisor ||
+							currentFilterOptions.value.selectedAdvisor.length === 0 ||
 							(rmat.ClientAdvisor &&
-								selectedAdvisor.value.includes(rmat.ClientAdvisor)))
+								currentFilterOptions.value.selectedAdvisor.includes(
+									rmat.ClientAdvisor
+								)))
 				)
 				.map((r) => r.RmatNumber)
 		),
 	].sort((a, b) => a - b);
 });
+
+const filterChanged = computed(() => {
+	// Check if any filter option has changed from its current value
+	return (
+		!arraysEqual(
+			currentFilterOptions.value.selectedAdsRep,
+			filterOptions.value.selectedAdsRep
+		) ||
+		!arraysEqual(
+			currentFilterOptions.value.selectedAdvisor,
+			filterOptions.value.selectedAdvisor
+		) ||
+		!arraysEqual(
+			currentFilterOptions.value.selectedRmat,
+			filterOptions.value.selectedRmat
+		) ||
+		!arraysEqual(
+			currentFilterOptions.value.selectedCounty,
+			filterOptions.value.selectedCounty
+		) ||
+		currentFilterOptions.value.zipcodeSearch !==
+			filterOptions.value.zipcodeSearch
+	);
+
+	// Helper function to compare arrays
+	function arraysEqual(
+		arr1: number[] | string[] | undefined,
+		arr2: number[] | string[] | undefined
+	) {
+		if (!arr1 && !arr2) return true;
+		if (!arr1 || !arr2) return false;
+		if (arr1.length !== arr2.length) return false;
+
+		// Sort arrays to ensure consistent comparison
+		const sorted1 = [...arr1].sort();
+		const sorted2 = [...arr2].sort();
+
+		return sorted1.every((val, index) => val === sorted2[index]);
+	}
+});
+
+const isDirty = computed(() => {
+	return (
+		filterChanged.value ||
+		currentFilterOptions.value.selectedGrouping !==
+			filterOptions.value.selectedGrouping
+	);
+});
+
+const applyFilters = () => {
+	emit("applyFilters", {
+		filterOptions: filterOptions.value,
+		isDirty: filterChanged.value,
+	});
+	currentFilterOptions.value = { ...filterOptions.value };
+};
 </script>
 
 <style scoped>
@@ -149,7 +218,7 @@ const rmatOptions = computed(() => {
 	height: 100%; /* Fill drawer height */
 }
 
-.v-expansion-panel >>> .v-expansion-panel-text__wrapper {
+:deep(.v-expansion-panel .v-expansion-panel-text__wrapper) {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
 }

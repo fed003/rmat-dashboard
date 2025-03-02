@@ -5,6 +5,7 @@
 		:group-by="[{ key: groupBy, order: 'asc' }]"
 		:items-per-page="50"
 		density="compact"
+		fixed-header
 		hover
 	>
 		<template #group-header="{ item, toggleGroup, isGroupOpen }">
@@ -18,6 +19,7 @@
 					></v-btn>
 				</td>
 				<td>{{ item.value }}</td>
+
 				<td>
 					<RmatDataTableGroupHeaderItem
 						:itemName="item.value"
@@ -84,6 +86,19 @@
 				</td>
 			</tr>
 		</template>
+		<template v-slot:body.append v-if="groupAverages">
+			<tr class="text-h6">
+				<th colspan="2" class="text-center">Averages:</th>
+				<th>{{ groupAverages.Employees.toLocaleString() }}</th>
+				<th>{{ groupAverages.Companies.toLocaleString() }}</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th>{{ formatCurrency(groupAverages.Sales) }}</th>
+
+				<!-- Add more columns as needed -->
+			</tr>
+		</template>
 	</v-data-table>
 </template>
 
@@ -128,34 +143,34 @@ interface GroupAverages {
 const rmatHeaders = ref([
 	{ title: "RMAT", key: "RmatNumber" },
 	{
-		title: "Total Employees",
 		key: "TotalEmployees",
-		value: (item) => item.TotalEmployees.toLocaleString(),
+		title: "Total Employees",
+		value: (item: GroupedData) => item.TotalEmployees.toLocaleString(),
 	},
 	{
-		title: "Total Companies",
 		key: "TotalNumberOfCompanies",
-		value: (item) => item.TotalNumberOfCompanies.toLocaleString(),
+		title: "Total Companies",
+		value: (item: GroupedData) => item.TotalNumberOfCompanies.toLocaleString(),
 	},
 	{
-		title: "Small ",
 		key: "SmallBusinesses",
-		value: (item) => item.SmallBusinesses.toLocaleString(),
+		title: "Small ",
+		value: (item: GroupedData) => item.SmallBusinesses.toLocaleString(),
 	},
 	{
-		title: "Medium ",
 		key: "MediumBusinesses",
-		value: (item) => item.MediumBusinesses.toLocaleString(),
+		title: "Medium ",
+		value: (item: GroupedData) => item.MediumBusinesses.toLocaleString(),
 	},
 	{
-		title: "Large ",
 		key: "LargeBusinesses",
-		value: (item) => item.LargeBusinesses.toLocaleString(),
+		title: "Large ",
+		value: (item: GroupedData) => item.LargeBusinesses.toLocaleString(),
 	},
 	{
-		title: "Total Sales",
 		key: "TotalSales",
-		value: (item) => formatCurrency(item.TotalSales),
+		title: "Total Sales",
+		value: (item: GroupedData) => formatCurrency(item.TotalSales),
 	},
 ]);
 
@@ -163,7 +178,7 @@ let groupAverages: GroupAverages | null = null;
 
 //	Summarize the data by RMAT, this will  be our table input
 const rmatTotals: Ref<GroupedData[]> = computed(() => {
-	const totals: Record<number, GroupedData> = {};
+	const totals: Record<string, GroupedData> = {};
 
 	function addToRmat(
 		rmatNumber: number,
